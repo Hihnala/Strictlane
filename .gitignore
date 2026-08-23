@@ -44,3 +44,6 @@ next-env.d.ts
 # AI tools
 .agents/
 .claude/
+
+# local reference/planning material — not part of the shipped app
+/docs
