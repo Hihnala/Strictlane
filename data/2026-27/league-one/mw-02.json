@@ -1,0 +1,189 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 2,
+  "matchweekDerived": false,
+  "source": "hand-entered; Sheffield Wednesday v Bradford played 20 Aug as a rearranged midweek fixture",
+  "importedAt": "2026-08-23T12:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-02-sheffield-wednesday-bradford",
+      "home": "sheffield-wednesday",
+      "away": "bradford",
+      "kickoff": "2026-08-20T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-doncaster-barnsley",
+      "home": "doncaster",
+      "away": "barnsley",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-luton-notts-county",
+      "home": "luton",
+      "away": "notts-county",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-afc-wimbledon-reading",
+      "home": "afc-wimbledon",
+      "away": "reading",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-bromley-cambridge",
+      "home": "bromley",
+      "away": "cambridge",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-leicester-burton",
+      "home": "leicester",
+      "away": "burton",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-mk-dons-huddersfield",
+      "home": "mk-dons",
+      "away": "huddersfield",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-peterborough-mansfield",
+      "home": "peterborough",
+      "away": "mansfield",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-stevenage-oxford",
+      "home": "stevenage",
+      "away": "oxford",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-stockport-blackpool",
+      "home": "stockport",
+      "away": "blackpool",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-wigan-leyton-orient",
+      "home": "wigan",
+      "away": "leyton-orient",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-02-wycombe-plymouth",
+      "home": "wycombe",
+      "away": "plymouth",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0617,
+        "probs": {
+          "1": 38.4,
+          "X": 27.3,
+          "2": 34.2
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 38,
+          "X": 27,
+          "2": 35
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Near coin-flip singled out of the draw. It drew."
+      }
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strictlane — homepage comp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto+Mono:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script>
+  try {
+    var t = localStorage.getItem("theme");
+    if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", t);
+  } catch (e) {}
+</script>
+<style>
+/* ==========================================================================
+   RASTI — design tokens (verbatim from docs/rasti-tokens.css)
+   ========================================================================== */
+:root {
+  --surface:        #ffffff;
+  --surface-sunken: #f4f6fa;
+  --surface-raised: #ffffff;
+  --line:           #e2e7f0;
+  --line-strong:    #c9d2e2;
+  --ink:            #16203a;
+  --ink-muted:      #5b6677;
+  --ink-faint:      #8a94a6;
+
+  --home:    #2563eb;   --home-bg: #e8effe;
+  --draw:    #5a6675;   --draw-bg: #edeff3;
+  --away:    #a6392e;   --away-bg: #faecea;
+
+  --brand-deep: #1e3a8a;
+  --focus:      #2563eb;
+
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body:    'Roboto', system-ui, sans-serif;
+  --font-data:    'Roboto Mono', ui-monospace, monospace;
+
+  --fs-display: 30px;  --lh-display: 1.1;   --ls-display: -0.025em;
+  --fs-h2:      21px;  --lh-h2:      1.25;  --ls-h2:      -0.015em;
+  --fs-h3:      15px;
+  --fs-body:    15px;  --lh-body:    1.62;
+  --fs-small:   13px;
+  --fs-label:   11px;  --ls-label:   0.14em;
+  --fs-data:    14px;
+  --fs-figure:  24px;
+
+  --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px;
+  --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px;
+
+  --r-mark: 2px;
+  --r-chip: 4px;
+  --r-card: 10px;
+  --r-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(22,32,58,0.05), 0 1px 12px rgba(22,32,58,0.04);
+  --maxw: 720px;
+  --gutter: 16px;
+  --tap-min: 44px;
+}
+
+[data-theme="dark"] {
+  --surface:        #0f1524;
+  --surface-sunken: #0a0f1a;
+  --surface-raised: #161e31;
+  --line:           #24304a;
+  --line-strong:    #35446a;
+  --ink:            #e7ecf5;
+  --ink-muted:      #9aa6bc;
+  --ink-faint:      #6b7891;
+
+  --home:    #6ea8ff;   --home-bg: #16294d;
+  --draw:    #93a0b5;   --draw-bg: #212936;
+  --away:    #e8776a;   --away-bg: #3a1f1c;
+
+  --brand-deep: #9ec1ff;
+  --focus:      #6ea8ff;
+
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+@media (min-width: 640px) {
+  :root { --fs-display: 38px; --fs-h2: 24px; }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: var(--surface-sunken); }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  background: var(--surface-sunken);
+  -webkit-font-smoothing: antialiased;
+}
+
+.data,
+.mark, .score, .stat-val, .prob-num,
+td.num, th.num {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+a { color: var(--home); }
+a.more { color: var(--ink); }
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--r-chip);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* --- coupon mark strip ------------------------------------------------ */
+.coupon { display: inline-grid; grid-template-columns: repeat(3, 26px); gap: 3px; vertical-align: middle; flex-shrink: 0; }
+.coupon .cell {
+  height: 26px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-mark);
+  font-family: var(--font-data);
+  font-size: 12px; font-weight: 600;
+  color: var(--ink-faint); background: transparent;
+  display: flex; align-items: center; justify-content: center;
+}
+.coupon .cell.on[data-sign="1"] { background: var(--home-bg); border-color: var(--home); color: var(--home); }
+.coupon .cell.on[data-sign="X"] { background: var(--draw-bg); border-color: var(--draw); color: var(--draw); }
+.coupon .cell.on[data-sign="2"] { background: var(--away-bg); border-color: var(--away); color: var(--away); }
+.coupon .cell.hit { box-shadow: inset 0 -3px 0 currentColor; }
+
+/* --- calibration bar --------------------------------------------------- */
+.calbar {
+  display: flex; width: 100%; height: 8px;
+  border-radius: var(--r-mark); overflow: hidden;
+  background: var(--surface-sunken);
+}
+.calbar span { display: block; height: 100%; }
+.calbar .p1 { background: var(--home); }
+.calbar .px { background: var(--draw); }
+.calbar .p2 { background: var(--away); }
+
+/* --- match row ----------------------------------------------------------*/
+.matchlist {
+  border: 1px solid var(--line); border-radius: var(--r-card);
+  background: var(--surface-raised); overflow: hidden;
+}
+.matchrow { padding: var(--s3) var(--s4); border-bottom: 1px solid var(--line); min-height: var(--tap-min); }
+.matchrow:last-child { border-bottom: none; }
+.matchrow-top { display: flex; align-items: center; gap: var(--s3); }
+.matchrow .teams { flex: 1; min-width: 0; }
+.matchrow .team { font-size: 14.5px; font-weight: 500; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.matchrow .score { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; flex-shrink: 0; }
+.matchrow-bottom { display: flex; align-items: center; gap: var(--s3); margin-top: var(--s2); }
+
+.verdict { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; flex-shrink: 0; }
+.verdict.hit  { color: var(--ink); }
+.verdict.miss { color: var(--ink-faint); }
+.verdict.hit::before  { content: "\2713"; margin-right: 4px; }
+.verdict.miss::before { content: "\2715"; margin-right: 4px; }
+
+/* --- tags ---------------------------------------------------------------*/
+.tag {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-data); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: var(--r-chip);
+  background: var(--surface-sunken); color: var(--ink-muted);
+  border: 1px solid var(--line);
+}
+.tag.pending    { background: transparent; color: var(--ink-faint); border-style: dashed; }
+
+/* --- stat cell ------------------------------------------------------------*/
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--s3); }
+.stat { border: 1px solid var(--line); border-radius: var(--r-card); padding: var(--s3) var(--s4); background: var(--surface-raised); }
+.stat-val { display: block; font-size: var(--fs-figure); font-weight: 600; line-height: 1.1; }
+.stat-label { display: block; margin-top: var(--s1); font-family: var(--font-data); font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
+.stat-sub { margin-top: var(--s1); font-size: 12px; color: var(--ink-muted); }
+
+/* --- layout shell ---------------------------------------------------------*/
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ==========================================================================
+   globals.css — chrome + page classes (verbatim from docs/files/globals.css)
+   ========================================================================== */
+.topbar { position: sticky; top: 0; z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line); }
+.topbar-inner { max-width: var(--maxw); margin: 0 auto; padding: var(--s3) var(--gutter);
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s3); }
+.wordmark { font-family: var(--font-display); font-weight: 800; font-size: 17px; letter-spacing: -0.01em;
+  color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: var(--s2); }
+.wordmark .glyph { font-weight: 600; font-size: 12px; width: 22px; height: 22px;
+  border: 1.5px solid var(--home); color: var(--home); border-radius: var(--r-mark);
+  display: inline-flex; align-items: center; justify-content: center; }
+
+.theme-toggle { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-muted); background: var(--surface-sunken);
+  border: 1px solid var(--line); border-radius: var(--r-pill); padding: 7px 14px; cursor: pointer;
+  min-height: 34px; min-width: 64px; }
+.theme-toggle:hover { color: var(--ink); border-color: var(--line-strong); }
+
+main { padding-bottom: var(--s8); }
+.section { padding: var(--s6) 0 0; }
+.sec-label { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-faint); }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-display);
+  line-height: var(--lh-display); letter-spacing: var(--ls-display); margin: var(--s2) 0 var(--s3); }
+p { margin-bottom: var(--s3); }
+.lede { color: var(--ink-muted); font-size: 16px; max-width: 52ch; }
+a.more { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none; }
+
+.leaguecard { display: flex; align-items: center; gap: var(--s3); padding: var(--s4);
+  border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface-raised);
+  text-decoration: none; color: var(--ink); margin-bottom: var(--s2); min-height: var(--tap-min); }
+.leaguecard .name { flex: 1; font-family: var(--font-display); font-weight: 700; font-size: 15px; }
+.leaguecard .meta { font-family: var(--font-data); font-size: 12px; color: var(--ink-muted); }
+
+.foot { border-top: 1px solid var(--line); margin-top: var(--s7); padding: var(--s5) 0 var(--s7);
+  background: var(--surface); }
+.foot p { font-size: 12.5px; color: var(--ink-muted); max-width: 60ch; }
+.foot a { color: var(--ink-muted); }
+
+.empty { padding: var(--s6) var(--s4); text-align: center; color: var(--ink-muted);
+  border: 1px dashed var(--line); border-radius: var(--r-card); font-size: 14px; }
+
+/* --- new: first-time-visitor intro (this brief's one new element) --------*/
+.intro { padding-top: var(--s5); }
+.intro p { color: var(--ink-muted); font-size: 14.5px; max-width: 62ch; margin-bottom: var(--s2); }
+
+/* ==========================================================================
+   Comp-only chrome — NOT part of Rasti. Strip before this becomes real code.
+   ========================================================================== */
+.comp-banner { background: #fff8e8; border: 1px dashed #b8860b; border-radius: var(--r-chip);
+  padding: var(--s3) var(--s4); margin: var(--s4) auto 0; max-width: var(--maxw);
+  font-family: var(--font-data); font-size: 12px; line-height: 1.6; color: #6b5300; }
+[data-theme="dark"] .comp-banner { background: #2a2210; border-color: #a37c1d; color: #e0c375; }
+.comp-banner b { letter-spacing: 0.08em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#"><span class="glyph">S</span>Strictlane</a>
+    <button class="theme-toggle" onclick="
+      var html = document.documentElement;
+      var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    ">Theme</button>
+  </div>
+</div>
+
+<div class="comp-banner">
+  <b>Comp note</b> — not final data. Round summary (7/13 correct, mean RPS 0.2304
+  vs market 0.2308, 8+0 system / 256 rows) is real, from
+  <span class="data">docs/2026-08-22.md</span>. Match rows use real final scores
+  from <span class="data">docs/mw-01.md</span> and
+  <span class="data">docs/mw-02.md</span>, but show 9 of that round's 13
+  matches — the full roster with real marks/odds isn't assembled as data yet.
+  Two rows carry documented forecasts (Forest–Leeds 41/30/29; West Ham 70%
+  home); the rest use illustrative probabilities for layout only. Top nav is
+  a placeholder (wordmark + toggle only) — the real 5-item nav belongs to
+  <span class="data">Nav.tsx</span>, out of scope for this brief.
+</div>
+
+<main class="wrap">
+
+  <div class="intro">
+    <p>Strictlane is a personal ledger — football forecasts made before
+    kickoff for the Premier League, Championship and League One, scored
+    against the closing betting market. Hits and misses both stay on the
+    record.</p>
+    <a class="more" href="/method">How the scoring works &rarr;</a>
+  </div>
+
+  <section class="section">
+    <div class="sec-label">Latest round &middot; 2026-08-22</div>
+    <h1>Vakio &middot; 22 Aug 2026</h1>
+    <p class="lede">8+0 system &middot; 8 doubles, 5 singles &middot; 256 rows</p>
+
+    <div class="matchlist" style="margin-top: var(--s4);">
+
+      <!-- Hull City 2-0 Manchester United — miss (illustrative forecast) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Hull City</div>
+            <div class="team">Manchester United</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 2; result 1">
+            <div class="cell" data-sign="1" style="color: var(--home)">1</div>
+            <div class="cell on" data-sign="X">X</div>
+            <div class="cell on" data-sign="2">2</div>
+          </div>
+          <div class="score data">2&ndash;0</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:28%"></span>
+              <span class="px" style="width:24%"></span>
+              <span class="p2" style="width:48%"></span>
+            </div>
+          </div>
+          <div class="verdict miss">Miss</div>
+        </div>
+      </div>
+
+      <!-- Brentford 3-0 Tottenham — hit (illustrative forecast) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Brentford</div>
+            <div class="team">Tottenham</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 1, X; result 1">
+            <div class="cell on hit" data-sign="1">1</div>
+            <div class="cell on" data-sign="X">X</div>
+            <div class="cell" data-sign="2">2</div>
+          </div>
+          <div class="score data">3&ndash;0</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:38%"></span>
+              <span class="px" style="width:27%"></span>
+              <span class="p2" style="width:35%"></span>
+            </div>
+          </div>
+          <div class="verdict hit">Hit</div>
+        </div>
+      </div>
+
+      <!-- Arsenal 3-0 Coventry City — hit (illustrative forecast) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Arsenal</div>
+            <div class="team">Coventry City</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 1; result 1">
+            <div class="cell on hit" data-sign="1">1</div>
+            <div class="cell" data-sign="X">X</div>
+            <div class="cell" data-sign="2">2</div>
+          </div>
+          <div class="score data">3&ndash;0</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:78%"></span>
+              <span class="px" style="width:14%"></span>
+              <span class="p2" style="width:8%"></span>
+            </div>
+          </div>
+          <div class="verdict hit">Hit</div>
+        </div>
+      </div>
+
+      <!-- Ipswich Town 2-1 Sunderland — hit (illustrative forecast) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Ipswich Town</div>
+            <div class="team">Sunderland</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 1; result 1">
+            <div class="cell on hit" data-sign="1">1</div>
+            <div class="cell" data-sign="X">X</div>
+            <div class="cell" data-sign="2">2</div>
+          </div>
+          <div class="score data">2&ndash;1</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:45%"></span>
+              <span class="px" style="width:29%"></span>
+              <span class="p2" style="width:26%"></span>
+            </div>
+          </div>
+          <div class="verdict hit">Hit</div>
+        </div>
+      </div>
+
+      <!-- Nottingham Forest 0-1 Leeds United — miss (REAL: 41/30/29, mw-01.md) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Nottingham Forest</div>
+            <div class="team">Leeds United</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 1, X; result 2">
+            <div class="cell on" data-sign="1">1</div>
+            <div class="cell on" data-sign="X">X</div>
+            <div class="cell hit" data-sign="2" style="color: var(--away)">2</div>
+          </div>
+          <div class="score data">0&ndash;1</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:41%"></span>
+              <span class="px" style="width:30%"></span>
+              <span class="p2" style="width:29%"></span>
+            </div>
+          </div>
+          <div class="verdict miss">Miss</div>
+        </div>
+      </div>
+
+      <!-- West Ham 1-2 Charlton — miss (REAL: 70% home, VOICE.md) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">West Ham United</div>
+            <div class="team">Charlton Athletic</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 1; result 2">
+            <div class="cell on" data-sign="1">1</div>
+            <div class="cell" data-sign="X">X</div>
+            <div class="cell hit" data-sign="2" style="color: var(--away)">2</div>
+          </div>
+          <div class="score data">1&ndash;2</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:70%"></span>
+              <span class="px" style="width:18%"></span>
+              <span class="p2" style="width:12%"></span>
+            </div>
+          </div>
+          <div class="verdict miss">Miss</div>
+        </div>
+      </div>
+
+      <!-- Preston North End 1-3 Wolverhampton — hit (illustrative forecast) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Preston North End</div>
+            <div class="team">Wolverhampton Wanderers</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 2; result 2">
+            <div class="cell" data-sign="1">1</div>
+            <div class="cell" data-sign="X">X</div>
+            <div class="cell on hit" data-sign="2">2</div>
+          </div>
+          <div class="score data">1&ndash;3</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:18%"></span>
+              <span class="px" style="width:22%"></span>
+              <span class="p2" style="width:60%"></span>
+            </div>
+          </div>
+          <div class="verdict hit">Hit</div>
+        </div>
+      </div>
+
+      <!-- Blackburn Rovers 2-1 Middlesbrough — hit (illustrative forecast) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Blackburn Rovers</div>
+            <div class="team">Middlesbrough</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked 1; result 1">
+            <div class="cell on hit" data-sign="1">1</div>
+            <div class="cell" data-sign="X">X</div>
+            <div class="cell" data-sign="2">2</div>
+          </div>
+          <div class="score data">2&ndash;1</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:38%"></span>
+              <span class="px" style="width:29%"></span>
+              <span class="p2" style="width:33%"></span>
+            </div>
+          </div>
+          <div class="verdict hit">Hit</div>
+        </div>
+      </div>
+
+      <!-- Swansea City 0-0 Sheffield United — hit (REAL: draw raised & paid, 2026-08-22.md) -->
+      <div class="matchrow">
+        <div class="matchrow-top">
+          <div class="teams">
+            <div class="team">Swansea City</div>
+            <div class="team">Sheffield United</div>
+          </div>
+          <div class="coupon" role="img" aria-label="Marked X; result X">
+            <div class="cell" data-sign="1">1</div>
+            <div class="cell on hit" data-sign="X">X</div>
+            <div class="cell" data-sign="2">2</div>
+          </div>
+          <div class="score data">0&ndash;0</div>
+        </div>
+        <div class="matchrow-bottom">
+          <div style="flex:1">
+            <div class="calbar">
+              <span class="p1" style="width:33%"></span>
+              <span class="px" style="width:34%"></span>
+              <span class="p2" style="width:33%"></span>
+            </div>
+          </div>
+          <div class="verdict hit">Hit</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="stat-grid" style="margin-top: var(--s4);">
+      <div class="stat">
+        <span class="stat-val data">7/13</span>
+        <span class="stat-label">Correct</span>
+        <span class="stat-sub">8.6 expected</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val data">0.2304</span>
+        <span class="stat-label">Mean RPS</span>
+        <span class="stat-sub">market 0.2308</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val data">&minus;0.0004</span>
+        <span class="stat-label">vs market</span>
+        <span class="stat-sub">ahead</span>
+      </div>
+    </div>
+
+    <p style="margin-top: var(--s3);">
+      <a class="more" href="/rounds/2026-08-22">Full round &rarr;</a>
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="sec-label">By league</div>
+
+    <a class="leaguecard" href="/2026-27/premier-league">
+      <span class="name">Premier League</span>
+      <span class="meta data">MW 1 &middot; 10/10</span>
+    </a>
+
+    <a class="leaguecard" href="/2026-27/championship">
+      <span class="name">Championship</span>
+      <span class="meta data">MW 2 &middot; 12/12</span>
+    </a>
+
+    <a class="leaguecard" href="/2026-27/league-one">
+      <span class="name">League One</span>
+      <span class="tag pending">No data</span>
+    </a>
+  </section>
+
+</main>
+
+<div class="foot">
+  <div class="wrap">
+    <p>Analysis, not betting advice. Problem gambling help: <a href="https://www.peluuri.fi" target="_blank" rel="noopener">Peluuri</a>.
+    &mdash; footer owned by <span class="data">Footer.tsx</span>, shown here for context only.</p>
+  </div>
+</div>
+
+</body>
+</html>

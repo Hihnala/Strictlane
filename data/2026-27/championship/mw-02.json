@@ -1,0 +1,340 @@
+{
+  "season": "2026-27",
+  "league": "championship",
+  "matchweek": 2,
+  "matchweekDerived": false,
+  "source": "hand-entered; forecasts and market probabilities from the logged 22 Aug 2026 Vakio round",
+  "importedAt": "2026-08-23T12:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e1-02-west-ham-charlton",
+      "home": "west-ham",
+      "away": "charlton",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0676,
+        "probs": {
+          "1": 68.9,
+          "X": 19.0,
+          "2": 12.1
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 70,
+          "X": 18,
+          "2": 12
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Nudged UP from the market on Charlton's absentee list. Worst adjustment of the round."
+      }
+    },
+    {
+      "id": "2026-27-e1-02-southampton-stoke",
+      "home": "southampton",
+      "away": "stoke",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0533,
+        "probs": {
+          "1": 58.2,
+          "X": 22.9,
+          "2": 18.9
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 54,
+          "X": 26,
+          "2": 20
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Shaded DOWN on the points deduction and coaching-ban turmoil. Saints won 3-1."
+      }
+    },
+    {
+      "id": "2026-27-e1-02-preston-wolves",
+      "home": "preston",
+      "away": "wolves",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0663,
+        "probs": {
+          "1": 22.7,
+          "X": 26.1,
+          "2": 51.2
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 23,
+          "X": 26,
+          "2": 51
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e1-02-blackburn-middlesbrough",
+      "home": "blackburn",
+      "away": "middlesbrough",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0613,
+        "probs": {
+          "1": 26.8,
+          "X": 27.7,
+          "2": 45.5
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 27,
+          "X": 28,
+          "2": 45
+        },
+        "marks": [
+          "X",
+          "2"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Marked X2 on a heavy under-2.5 profile. Blackburn won. Documented miss."
+      }
+    },
+    {
+      "id": "2026-27-e1-02-swansea-sheffield-united",
+      "home": "swansea",
+      "away": "sheffield-united",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0615,
+        "probs": {
+          "1": 39.6,
+          "X": 27.7,
+          "2": 32.7
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 41,
+          "X": 33,
+          "2": 26
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Draw raised from the market's 27.7 to 33 on the low-scoring profile, and covered by the double."
+      }
+    },
+    {
+      "id": "2026-27-e1-02-wrexham-watford",
+      "home": "wrexham",
+      "away": "watford",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0605,
+        "probs": {
+          "1": 49.6,
+          "X": 26.2,
+          "2": 24.2
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 47,
+          "X": 27,
+          "2": 26
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e1-02-derby-cardiff",
+      "home": "derby",
+      "away": "cardiff",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0621,
+        "probs": {
+          "1": 47.8,
+          "X": 26.9,
+          "2": 25.3
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 48,
+          "X": 27,
+          "2": 25
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Singled with X excluded at 27%. It drew."
+      }
+    },
+    {
+      "id": "2026-27-e1-02-qpr-bolton",
+      "home": "qpr",
+      "away": "bolton",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": {
+        "source": "oddsportal-avg",
+        "method": "proportional",
+        "overround": 0.0643,
+        "probs": {
+          "1": 49.7,
+          "X": 25.9,
+          "2": 24.4
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 50,
+          "X": 26,
+          "2": 24
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Singled with X excluded at 26%. It drew."
+      }
+    },
+    {
+      "id": "2026-27-e1-02-birmingham-bristol-city",
+      "home": "birmingham",
+      "away": "bristol-city",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-02-lincoln-portsmouth",
+      "home": "lincoln",
+      "away": "portsmouth",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-02-millwall-norwich",
+      "home": "millwall",
+      "away": "norwich",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-02-west-brom-burnley",
+      "home": "west-brom",
+      "away": "burnley",
+      "kickoff": "2026-08-23T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "forecast": null
+    }
+  ]
+}

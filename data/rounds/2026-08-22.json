@@ -1,0 +1,27 @@
+{
+  "id": "2026-08-22",
+  "name": "Lauantaivakio 1",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100568",
+  "system": {
+    "type": "8+0",
+    "singles": 5,
+    "doubles": 8,
+    "triples": 0,
+    "rows": 256
+  },
+  "matchIds": [
+    "2026-27-e0-01-everton-crystal-palace",
+    "2026-27-e0-01-nottingham-forest-leeds",
+    "2026-27-e0-01-ipswich-sunderland",
+    "2026-27-e0-01-brentford-tottenham",
+    "2026-27-e1-02-west-ham-charlton",
+    "2026-27-e1-02-southampton-stoke",
+    "2026-27-e1-02-preston-wolves",
+    "2026-27-e1-02-blackburn-middlesbrough",
+    "2026-27-e1-02-swansea-sheffield-united",
+    "2026-27-e1-02-wrexham-watford",
+    "2026-27-e1-02-derby-cardiff",
+    "2026-27-e1-02-qpr-bolton",
+    "2026-27-e2-02-wycombe-plymouth"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "asset": "Strictlane — default Open Graph image",
+  "output_path": "public/og-image.png",
+  "dimensions": { "width": 1200, "height": 630, "unit": "px", "aspect_ratio": "1.91:1" },
+  "format": "PNG",
+  "max_file_size_kb": 300,
+  "safe_area": {
+    "note": "Some platforms crop toward the edges. Keep all essential content (wordmark, marks, tagline) inside a centered 1100x570 safe area.",
+    "width": 1100,
+    "height": 570
+  },
+  "prompt": "A flat, minimal social-preview graphic for 'Strictlane', a football forecast-scoring website. Deep navy-black background (#0f1524), no gradient, no texture, no photorealism. Centered composition: the wordmark 'Strictlane' in a bold geometric sans-serif (Montserrat, weight 800) in off-white (#e7ecf5), sitting directly beside three small square badges reading '1', 'X', '2' — the badges have SHARP SQUARE corners (not rounded), thin 1px borders, and are colored respectively blue (#6ea8ff), slate-gray (#93a0b5), and brick-red (#e8776a), each color filling only that one badge, not the whole image. Below the wordmark, a short tagline in a plain grotesque sans-serif (Roboto), regular weight, muted light-gray (#9aa6bc): 'Forecasts, scored against the market.' Optionally, a small monospace line beneath in Roboto Mono, dim gray, reading 'RPS 0.2304 · MARKET 0.2308'. Generous empty space around all elements — quiet, restrained, editorial, not busy. No icons, no logos other than the described wordmark+badges, no illustrations, no photos, no team crests, no soccer ball or pitch imagery, no glow or drop shadows, no rounded rectangles, no gamified or flashy styling.",
+  "negative_prompt": "gradient background, glassmorphism, glow, neon, drop shadow, rounded corners on badges, stock photo, photorealistic scene, soccer ball icon, trophy icon, team crest, generic sports clipart, stadium photo, busy pattern, multiple accent colors mixed together, red-for-loss or green-for-win color coding, clutter, bevel, 3D render, gamification badges",
+  "style": {
+    "design_system": "Rasti (Strictlane's existing design system — reuse tokens exactly, invent nothing new)",
+    "mood": "restrained, editorial, data-honest — not flashy or gamified",
+    "color_strategy": "Restrained: one dark neutral ground, three small functional accent colors used only on the outcome badges, never as broad fills",
+    "background_hex": "#0f1524",
+    "corner_language": "The 1/X/2 badges keep sharp square corners — the one place the site's rounded-corner scale is deliberately refused. Do not round them."
+  },
+  "palette": {
+    "surface_dark": "#0f1524",
+    "ink_light": "#e7ecf5",
+    "ink_muted": "#9aa6bc",
+    "home_1": "#6ea8ff",
+    "draw_X": "#93a0b5",
+    "away_2": "#e8776a"
+  },
+  "typography": {
+    "display_font": "Montserrat",
+    "display_weight": 800,
+    "display_use": "Wordmark 'Strictlane'",
+    "body_font": "Roboto",
+    "body_weight": 400,
+    "body_use": "Tagline",
+    "data_font": "Roboto Mono",
+    "data_weight": 500,
+    "data_use": "Optional small RPS/market figure line — tabular numerals"
+  },
+  "copy": {
+    "headline": "Strictlane",
+    "tagline": "Forecasts, scored against the market.",
+    "optional_data_line": "RPS 0.2304 · MARKET 0.2308"
+  },
+  "layout": {
+    "anchor_graphic": "Three square outcome badges reading 1, X, 2 in their exact brand colors, placed beside or just below the wordmark as the single visual anchor of the image",
+    "composition": "Centered or left-aligned wordmark+badges as the focal group, tagline directly beneath in smaller type, optional data line smallest of all beneath that. Wide quiet margin on all sides — do not fill the frame.",
+    "alignment": "Left-aligned block, vertically centered in the 630px frame is preferred for legibility as a small feed thumbnail; a centered composition is an acceptable alternative."
+  },
+  "reference_files": [
+    "docs/rasti-tokens.css",
+    "docs/rasti-brand-system.html"
+  ]
+}

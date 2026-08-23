@@ -1,0 +1,166 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 1,
+  "matchweekDerived": false,
+  "source": "hand-entered from matchweek log; kickoff times approximate (matchday date, default 14:00 UTC)",
+  "importedAt": "2026-08-23T12:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-01-notts-county-leicester",
+      "home": "notts-county",
+      "away": "leicester",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-oxford-mk-dons",
+      "home": "oxford",
+      "away": "mk-dons",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-reading-luton",
+      "home": "reading",
+      "away": "luton",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 4
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-barnsley-bromley",
+      "home": "barnsley",
+      "away": "bromley",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-blackpool-wycombe",
+      "home": "blackpool",
+      "away": "wycombe",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-bradford-peterborough",
+      "home": "bradford",
+      "away": "peterborough",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-burton-stevenage",
+      "home": "burton",
+      "away": "stevenage",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-cambridge-wigan",
+      "home": "cambridge",
+      "away": "wigan",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-huddersfield-afc-wimbledon",
+      "home": "huddersfield",
+      "away": "afc-wimbledon",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-leyton-orient-sheffield-wednesday",
+      "home": "leyton-orient",
+      "away": "sheffield-wednesday",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-mansfield-doncaster",
+      "home": "mansfield",
+      "away": "doncaster",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-01-plymouth-stockport",
+      "home": "plymouth",
+      "away": "stockport",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "market": null,
+      "forecast": null
+    }
+  ]
+}

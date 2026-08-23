@@ -1,0 +1,219 @@
+{
+  "season": "2026-27",
+  "league": "premier-league",
+  "matchweek": 1,
+  "matchweekDerived": false,
+  "source": "hand-entered; forecasts and market probabilities from the logged 22 Aug 2026 Vakio round",
+  "importedAt": "2026-08-23T12:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e0-01-arsenal-coventry",
+      "home": "arsenal",
+      "away": "coventry",
+      "kickoff": "2026-08-21T19:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-01-hull-man-united",
+      "home": "hull",
+      "away": "man-united",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-01-everton-crystal-palace",
+      "home": "everton",
+      "away": "crystal-palace",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "market": {
+        "source": "oddschecker-best",
+        "method": "proportional",
+        "overround": 0.0242,
+        "probs": {
+          "1": 43.4,
+          "X": 27.9,
+          "2": 28.7
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 44,
+          "X": 28,
+          "2": 28
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-01-ipswich-sunderland",
+      "home": "ipswich",
+      "away": "sunderland",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": {
+        "source": "oddschecker-best",
+        "method": "proportional",
+        "overround": 0.0188,
+        "probs": {
+          "1": 35.1,
+          "X": 28.9,
+          "2": 36.1
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 35,
+          "X": 29,
+          "2": 36
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Flattest fixture on the coupon; market edge to Sunderland was inside the noise."
+      }
+    },
+    {
+      "id": "2026-27-e0-01-nottingham-forest-leeds",
+      "home": "nottingham-forest",
+      "away": "leeds",
+      "kickoff": "2026-08-22T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "market": {
+        "source": "oddschecker-best",
+        "method": "proportional",
+        "overround": 0.0277,
+        "probs": {
+          "1": 41.0,
+          "X": 28.6,
+          "2": 30.4
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 41,
+          "X": 30,
+          "2": 29
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Noted Leeds' opening-day record and didn't act on it."
+      }
+    },
+    {
+      "id": "2026-27-e0-01-brentford-tottenham",
+      "home": "brentford",
+      "away": "tottenham",
+      "kickoff": "2026-08-22T16:30:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "market": {
+        "source": "oddschecker-best",
+        "method": "proportional",
+        "overround": 0.0162,
+        "probs": {
+          "1": 40.2,
+          "X": 25.9,
+          "2": 33.9
+        },
+        "capturedAt": "2026-08-22T09:00:00.000Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-22",
+        "probs": {
+          "1": 42,
+          "X": 26,
+          "2": 32
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-22T09:30:00.000Z",
+        "note": "Nudged UP on the Van de Ven / Porro / Sarr absences. Paid."
+      }
+    },
+    {
+      "id": "2026-27-e0-01-brighton-aston-villa",
+      "home": "brighton",
+      "away": "aston-villa",
+      "kickoff": "2026-08-23T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-01-man-city-bournemouth",
+      "home": "man-city",
+      "away": "bournemouth",
+      "kickoff": "2026-08-23T15:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-01-newcastle-liverpool",
+      "home": "newcastle",
+      "away": "liverpool",
+      "kickoff": "2026-08-23T15:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-01-fulham-chelsea",
+      "home": "fulham",
+      "away": "chelsea",
+      "kickoff": "2026-08-24T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "forecast": null
+    }
+  ]
+}

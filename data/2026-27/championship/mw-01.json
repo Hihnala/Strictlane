@@ -1,0 +1,166 @@
+{
+  "season": "2026-27",
+  "league": "championship",
+  "matchweek": 1,
+  "matchweekDerived": false,
+  "source": "hand-entered from matchweek log; kickoff times approximate (matchday date, default 14:00 UTC)",
+  "importedAt": "2026-08-23T12:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e1-01-wolves-blackburn",
+      "home": "wolves",
+      "away": "blackburn",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-bolton-preston",
+      "home": "bolton",
+      "away": "preston",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-bristol-city-millwall",
+      "home": "bristol-city",
+      "away": "millwall",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-charlton-derby",
+      "home": "charlton",
+      "away": "derby",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-middlesbrough-lincoln",
+      "home": "middlesbrough",
+      "away": "lincoln",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-norwich-west-brom",
+      "home": "norwich",
+      "away": "west-brom",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-portsmouth-qpr",
+      "home": "portsmouth",
+      "away": "qpr",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-stoke-swansea",
+      "home": "stoke",
+      "away": "swansea",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-sheffield-united-birmingham",
+      "home": "sheffield-united",
+      "away": "birmingham",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-watford-southampton",
+      "home": "watford",
+      "away": "southampton",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-burnley-west-ham",
+      "home": "burnley",
+      "away": "west-ham",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-01-cardiff-wrexham",
+      "home": "cardiff",
+      "away": "wrexham",
+      "kickoff": "2026-08-15T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "forecast": null
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "_comment": "Exactly one season carries status \"current\". Archive seasons are import-only: the validator rejects any forecast found in them, because hindsight predictions would corrupt every calibration number on the site.",
+
+  "seasons": [
+    { "id": "2026-27", "label": "2026/27", "status": "current" },
+    { "id": "2025-26", "label": "2025/26", "status": "archive" },
+    { "id": "2024-25", "label": "2024/25", "status": "archive" }
+  ]
+}
