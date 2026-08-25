@@ -1,0 +1,170 @@
+{
+  "id": "2026-08-25",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100569",
+  "veikkaus": {
+    "drawId": "100569",
+    "listIndex": "1",
+    "closeTime": "2026-08-29T13:58:00.000Z",
+    "capturedAt": "2026-08-25T16:54:24.522Z"
+  },
+  "fixtures": [
+    {
+      "eventId": 0,
+      "homeRaw": "Tottenham",
+      "awayRaw": "Newcastle U",
+      "home": "tottenham",
+      "away": "newcastle",
+      "poolPopularity": {
+        "1": 46.13,
+        "2": 31.44,
+        "X": 22.43
+      }
+    },
+    {
+      "eventId": 1,
+      "homeRaw": "Bournemouth",
+      "awayRaw": "Everton",
+      "home": "bournemouth",
+      "away": "everton",
+      "poolPopularity": {
+        "1": 50.17,
+        "2": 26.07,
+        "X": 23.77
+      }
+    },
+    {
+      "eventId": 2,
+      "homeRaw": "Coventry C",
+      "awayRaw": "Hull",
+      "home": "coventry",
+      "away": "hull",
+      "poolPopularity": {
+        "1": 37.63,
+        "2": 35.18,
+        "X": 27.19
+      }
+    },
+    {
+      "eventId": 3,
+      "homeRaw": "Blackburn",
+      "awayRaw": "QPR",
+      "home": "blackburn",
+      "away": "qpr",
+      "poolPopularity": {
+        "1": 54.09,
+        "2": 23.1,
+        "X": 22.81
+      }
+    },
+    {
+      "eventId": 4,
+      "homeRaw": "Watford",
+      "awayRaw": "West Ham",
+      "home": "watford",
+      "away": "west-ham",
+      "poolPopularity": {
+        "1": 40.43,
+        "2": 33.82,
+        "X": 25.75
+      }
+    },
+    {
+      "eventId": 5,
+      "homeRaw": "Southampton",
+      "awayRaw": "Millwall",
+      "home": "southampton",
+      "away": "millwall",
+      "poolPopularity": {
+        "1": 49.71,
+        "2": 30.08,
+        "X": 20.22
+      }
+    },
+    {
+      "eventId": 6,
+      "homeRaw": "Norwich C",
+      "awayRaw": "Burnley",
+      "home": "norwich",
+      "away": "burnley",
+      "poolPopularity": {
+        "1": 32.65,
+        "2": 35.91,
+        "X": 31.44
+      }
+    },
+    {
+      "eventId": 7,
+      "homeRaw": "Cardiff C",
+      "awayRaw": "Sheffield U",
+      "home": "cardiff",
+      "away": "sheffield-united",
+      "poolPopularity": {
+        "1": 46.24,
+        "2": 26.1,
+        "X": 27.66
+      }
+    },
+    {
+      "eventId": 8,
+      "homeRaw": "Bristol C",
+      "awayRaw": "Portsmouth",
+      "home": "bristol-city",
+      "away": "portsmouth",
+      "poolPopularity": {
+        "1": 46.67,
+        "2": 30.39,
+        "X": 22.93
+      }
+    },
+    {
+      "eventId": 9,
+      "homeRaw": "Bolton",
+      "awayRaw": "Lincoln C",
+      "home": "bolton",
+      "away": "lincoln",
+      "poolPopularity": {
+        "1": 66.06,
+        "2": 15.63,
+        "X": 18.31
+      }
+    },
+    {
+      "eventId": 10,
+      "homeRaw": "Charlton",
+      "awayRaw": "Preston",
+      "home": "charlton",
+      "away": "preston",
+      "poolPopularity": {
+        "1": 54.63,
+        "2": 22.21,
+        "X": 23.15
+      }
+    },
+    {
+      "eventId": 11,
+      "homeRaw": "Cambridge U",
+      "awayRaw": "Huddersfield",
+      "home": "cambridge",
+      "away": "huddersfield",
+      "poolPopularity": {
+        "1": 32.52,
+        "2": 39.33,
+        "X": 28.15
+      }
+    },
+    {
+      "eventId": 12,
+      "homeRaw": "Stockport",
+      "awayRaw": "Wycombe",
+      "home": "stockport",
+      "away": "wycombe",
+      "poolPopularity": {
+        "1": 54.04,
+        "2": 19.64,
+        "X": 26.32
+      }
+    }
+  ],
+  "matchIds": []
+}
