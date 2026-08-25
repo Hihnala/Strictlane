@@ -105,3 +105,24 @@ a.more { font-family: var(--font-data); font-size: 11px; font-weight: 600; lette
 
 .empty { padding: var(--s6) var(--s4); text-align: center; color: var(--ink-muted);
   border: 1px dashed var(--line); border-radius: var(--r-card); font-size: 14px; }
+
+/* ------------------------------------------------------- round archive --- */
+.roundcard-strips { display: flex; flex-wrap: wrap; gap: 4px; margin: var(--s3) 0; }
+.roundcard-foot { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap;
+  font-size: 12.5px; padding-top: var(--s2); border-top: 1px solid var(--line); }
+.roundcard-foot b { font-size: 15px; }
+.roundcard:hover { border-color: var(--line-strong); }
+
+.roundnav { display: flex; justify-content: space-between; gap: var(--s3); margin-top: var(--s5);
+  padding-top: var(--s4); border-top: 1px solid var(--line); }
+.roundnav a { font-family: var(--font-data); font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--ink-muted);
+  border: 1px solid var(--line); border-radius: var(--r-chip); padding: 10px 14px;
+  min-height: var(--tap-min); display: flex; align-items: center; }
+.roundnav a:hover { color: var(--home); border-color: var(--home); }
+.roundnav .spacer { flex: 1; }
+
+.hero-split { border: 1px solid var(--line); border-radius: var(--r-card);
+  background: var(--surface-raised); padding: var(--s4); margin-bottom: var(--s3); }
+.hero-split .label { font-family: var(--font-data); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: var(--s2); }

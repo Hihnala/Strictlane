@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { listRounds, getRound, getRoundMatches, getTeams, getRoundCommentary, leagueMeta } from "@/lib/content";
+import { listRounds, getRound, getRoundMatches, getTeams, getRoundCommentary, leagueMeta, roundNeighbours } from "@/lib/content";
 import { summarise, coverage, couponOutlook, drawWatch, resultSign, verdict } from "@/lib/scoring";
 import { Coupon } from "@/components/Coupon";
 import { CalBar } from "@/components/CalBar";
@@ -27,6 +27,7 @@ export default async function RoundPage({ params }: { params: Promise<{ id: stri
   const matches = located.map((l) => l.match);
   const teams = await getTeams();
   const commentary = await getRoundCommentary(id);
+  const { newer, older } = await roundNeighbours(id);
   const s = summarise(matches);
   const draws = drawWatch(matches);
 
@@ -126,6 +127,15 @@ export default async function RoundPage({ params }: { params: Promise<{ id: stri
           <Prose html={commentary.html} />
         </section>
       )}
+
+      {/* Walk the archive without going back to the index each time. */}
+      <nav className="roundnav" aria-label="Other rounds">
+        {older ? <Link href={`/rounds/${older}`}>\u2190 {older}</Link> : <span />}
+        <span className="spacer" />
+        <Link href="/rounds" style={{ border: "none" }}>All rounds</Link>
+        <span className="spacer" />
+        {newer ? <Link href={`/rounds/${newer}`}>{newer} \u2192</Link> : <span />}
+      </nav>
     </div>
   );
 }

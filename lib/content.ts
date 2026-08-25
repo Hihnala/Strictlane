@@ -191,6 +191,64 @@ export async function getRoundCommentary(id: string): Promise<Commentary | null>
   };
 }
 
+/**
+ * Every round with its matches and status, newest first.
+ *
+ * "settled" means every match has a result. A round stays "open" until the last
+ * one kicks off, and "partial" in between — which matters because the home page
+ * must keep showing the last settled round even while a new coupon is live.
+ * Otherwise the moment a coupon is fetched, the reviewable one disappears.
+ */
+export interface RoundSummary {
+  id: string;
+  round: Round;
+  located: Array<{ match: Match; season: string; league: LeagueId; matchweek: number }>;
+  status: "open" | "partial" | "settled";
+  played: number;
+  total: number;
+}
+
+export async function getRoundSummaries(): Promise<RoundSummary[]> {
+  const ids = await listRounds();
+  const out: RoundSummary[] = [];
+  for (const id of ids) {
+    const round = await getRound(id);
+    if (!round) continue;
+    const located = await getRoundMatches(id);
+    const played = located.filter((l) => l.match.status === "played").length;
+    const total = located.length;
+    out.push({
+      id,
+      round,
+      located,
+      played,
+      total,
+      status: played === 0 ? "open" : played === total ? "settled" : "partial",
+    });
+  }
+  return out; // listRounds() already sorts newest first
+}
+
+/** The newest round with every match played — the one worth reviewing. */
+export async function latestSettledRound(): Promise<RoundSummary | null> {
+  const all = await getRoundSummaries();
+  return all.find((r) => r.status === "settled") ?? null;
+}
+
+/** The newest round still awaiting results, if one is live. */
+export async function openRound(): Promise<RoundSummary | null> {
+  const all = await getRoundSummaries();
+  return all.find((r) => r.status === "open" || r.status === "partial") ?? null;
+}
+
+/** Neighbours for prev/next links on a round page. */
+export async function roundNeighbours(id: string) {
+  const ids = await listRounds(); // newest first
+  const i = ids.indexOf(id);
+  if (i === -1) return { newer: null, older: null };
+  return { newer: ids[i - 1] ?? null, older: ids[i + 1] ?? null };
+}
+
 /* ----------------------------------------------------------- match index --- */
 
 type Located = { match: Match; season: string; league: LeagueId; matchweek: number };

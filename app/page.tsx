@@ -1,94 +1,95 @@
 import Link from "next/link";
-import { LEAGUES, currentSeason, getTeams, listRounds, getRound, getRoundMatches,
-  latestPlayedMatchweek, getMatchweek, listMatchweeks } from "@/lib/content";
-import { summarise, coverage, couponOutlook } from "@/lib/scoring";
+import {
+  LEAGUES, currentSeason, getTeams, latestSettledRound, openRound,
+  latestPlayedMatchweek, getMatchweek, listMatchweeks,
+} from "@/lib/content";
+import { summarise, coverage, couponOutlook, resultSign } from "@/lib/scoring";
 import { MatchList } from "@/components/MatchRow";
+import { Coupon } from "@/components/Coupon";
 import { StatCell } from "@/components/StatCell";
 import { Tag } from "@/components/Tag";
 
 export default async function Home() {
   const season = await currentSeason();
   const teams = await getTeams();
-  const roundIds = await listRounds();
-  const latestId = roundIds[0] ?? null;
-  const round = latestId ? await getRound(latestId) : null;
-  const located = latestId ? await getRoundMatches(latestId) : [];
-  const matches = located.map((l) => l.match);
-  const s = summarise(matches);
+  const open = await openRound();
+  const last = await latestSettledRound();
 
-  const cov = matches.filter((m) => m.forecast).map((m) => coverage(m.forecast!.probs, m.forecast!.marks));
-  const outlook = cov.length ? couponOutlook(cov) : null;
-
-  // League cards
   const cards = await Promise.all(
     LEAGUES.map(async (l) => {
       const mwNo = await latestPlayedMatchweek(season.id, l.id);
       const mw = mwNo ? await getMatchweek(season.id, l.id, mwNo) : null;
       const played = mw?.matches.filter((m) => m.status === "played").length ?? 0;
-      const total = mw?.matches.length ?? 0;
       const weeks = await listMatchweeks(season.id, l.id);
-      return { ...l, mwNo, played, total, has: weeks.length > 0 };
+      return { ...l, mwNo, played, total: mw?.matches.length ?? 0, has: weeks.length > 0 };
     })
   );
 
+  // The open coupon and the last settled one are shown side by side. Showing
+  // only the newest round would hide the reviewable one the moment a coupon
+  // lands — which is exactly what used to happen.
+  const openMatches = open?.located.map((l) => l.match) ?? [];
+  const openCov = openMatches.filter((m) => m.forecast).map((m) => coverage(m.forecast!.probs, m.forecast!.marks));
+  const outlook = openCov.length ? couponOutlook(openCov) : null;
+
+  const lastMatches = last?.located.map((l) => l.match) ?? [];
+  const lastS = summarise(lastMatches);
+
   return (
     <div className="wrap">
-      <div className="intro">
-        <p>
-          Strictlane is a personal ledger — football forecasts made before
-          kickoff for the Premier League, Championship and League One, scored
-          against the closing betting market. Hits and misses both stay on
-          the record.
-        </p>
-        <Link className="more" href="/method">How the scoring works &rarr;</Link>
-      </div>
+      {open && (
+        <section className="section">
+          <div className="sec-label">This week&rsquo;s coupon &middot; {open.id}</div>
+          <h1>{open.round.name}</h1>
+          <p className="lede">
+            {open.round.system
+              ? `${open.round.system.type} \u00b7 ${open.round.system.singles} singles, ${open.round.system.doubles} doubles \u00b7 ${open.round.system.rows} rows`
+              : "Single row"}
+            {outlook ? ` \u00b7 ${outlook.expectedCovered.toFixed(1)} of 13 expected` : ""}
+          </p>
+          <div style={{ marginTop: "var(--s4)" }}>
+            <MatchList matches={openMatches} teams={teams} />
+          </div>
+          <p style={{ marginTop: "var(--s3)" }}>
+            <Link className="more" href={`/rounds/${open.id}`}>Full coupon &rarr;</Link>
+          </p>
+        </section>
+      )}
 
-      <section className="section">
-        <div className="sec-label">
-          {round ? `Latest round · ${latestId}` : "Latest"}
-        </div>
-        <h1>{round?.name ?? "No rounds logged yet"}</h1>
+      {last && (
+        <section className="section">
+          <div className="sec-label">Last round &middot; {last.id}</div>
+          <h2>{last.round.name}</h2>
 
-        {round ? (
-          <>
-            <p className="lede">
-              {round.system
-                ? `${round.system.type} system · ${round.system.singles} singles, ${round.system.doubles} doubles · ${round.system.rows} rows`
-                : "Single row"}
-            </p>
+          {/* Coupon shape at a glance — marks filled, true results underlined. */}
+          <div className="roundcard-strips" style={{ marginBottom: "var(--s4)" }}>
+            {last.located.map(({ match: m }) => (
+              <Coupon key={m.id} size="sm" marks={m.forecast?.marks} result={resultSign(m)} />
+            ))}
+          </div>
 
-            <div style={{ marginTop: "var(--s4)" }}>
-              <MatchList matches={matches} teams={teams} />
-            </div>
+          <div className="stat-grid">
+            <StatCell value={`${lastS.hits}/${lastS.scored}`} label="Correct" />
+            <StatCell
+              value={lastS.meanRps !== null ? lastS.meanRps.toFixed(4) : "\u2014"}
+              label="Mean RPS"
+              sub={lastS.meanMarketRps !== null ? `market ${lastS.meanMarketRps.toFixed(4)}` : undefined}
+            />
+            <StatCell
+              value={lastS.rpsDelta !== null ? (lastS.rpsDelta <= 0 ? "" : "+") + lastS.rpsDelta.toFixed(4) : "\u2014"}
+              label="vs market"
+              sub={lastS.rpsDelta === null ? undefined : lastS.rpsDelta < 0 ? "ahead" : "behind"}
+            />
+          </div>
+          <p style={{ marginTop: "var(--s3)" }}>
+            <Link className="more" href={`/rounds/${last.id}`}>Review &rarr;</Link>
+            {"  "}
+            <Link className="more" href="/rounds" style={{ marginLeft: "var(--s4)" }}>All rounds &rarr;</Link>
+          </p>
+        </section>
+      )}
 
-            <div className="stat-grid" style={{ marginTop: "var(--s4)" }}>
-              <StatCell
-                value={`${s.hits}/${s.scored}`}
-                label="Correct"
-                sub={outlook ? `${outlook.expectedCovered.toFixed(1)} expected` : undefined}
-              />
-              <StatCell
-                value={s.meanRps ? s.meanRps.toFixed(4) : "—"}
-                label="Mean RPS"
-                sub={s.meanMarketRps ? `market ${s.meanMarketRps.toFixed(4)}` : undefined}
-              />
-              <StatCell
-                value={s.rpsDelta !== null ? (s.rpsDelta <= 0 ? "" : "+") + s.rpsDelta.toFixed(4) : "—"}
-                label="vs market"
-                sub={s.rpsDelta !== null && s.rpsDelta < 0 ? "ahead" : "behind"}
-              />
-            </div>
-
-            <p style={{ marginTop: "var(--s3)" }}>
-              <Link className="more" href={`/rounds/${latestId}`}>
-                Full round &rarr;
-              </Link>
-            </p>
-          </>
-        ) : (
-          <div className="empty">No coupon rounds logged yet.</div>
-        )}
-      </section>
+      {!open && !last && <div className="empty">No coupon rounds logged yet.</div>}
 
       <section className="section">
         <div className="sec-label">By league</div>
@@ -96,9 +97,7 @@ export default async function Home() {
           <Link key={c.id} className="leaguecard" href={`/${season.id}/${c.id}`}>
             <span className="name">{c.label}</span>
             {c.has ? (
-              <span className="meta data">
-                MW {c.mwNo} &middot; {c.played}/{c.total}
-              </span>
+              <span className="meta data">MW {c.mwNo} \u00b7 {c.played}/{c.total}</span>
             ) : (
               <Tag variant="pending">No data</Tag>
             )}
