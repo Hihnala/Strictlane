@@ -102,15 +102,20 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   exists to backtest one against the market, but building it is explicitly
   out of scope for now (confirmed: stay a small honest ledger, not a step
   toward shipping a model).
-- Coupon fixtures can be pulled automatically from Veikkaus's public
-  open-games API (`scripts/fetch-vakio.ts`, scheduled Tue–Fri via GitHub
-  Actions) — no login or registered key, the header value is the literal
-  string `ROBOT`. The draws endpoint returns only open, still-playable
-  draws with no archive, so every fetch commits a raw payload snapshot to
-  `data/rounds/raw/` as provenance: the commit timestamp is external
-  evidence a coupon was captured before kickoff, stronger than a
-  self-reported `capturedAt`. GitHub Actions was chosen over a Vercel cron
-  specifically to keep this provenance and keep the site fully static.
+- Coupon fixtures are pulled automatically from Veikkaus's public
+  open-games API via a 3-stage pipeline, not written straight to `main`:
+  (1) `scripts/fetch-vakio.ts`, scheduled Tue–Fri via GitHub Actions, opens
+  a PR with a draft at `data/rounds/drafts/{id}.json` plus a raw payload
+  snapshot for provenance — no login or registered key, the header value
+  is the literal string `ROBOT`; (2) fixtures/forecasts are added by hand
+  on that PR branch before kickoff; (3) `scripts/promote-round.ts` joins
+  the draft to real match records and derives the round's system block
+  (singles/doubles/rows) from the marks rather than trusting a typed
+  value, refusing if any fixture lacks a match or a forecast. Drafts live
+  outside the validated path so an incomplete draft can never fail the
+  production build. GitHub Actions was chosen over a Vercel cron
+  specifically to keep the PR's commit timestamp as external, independent
+  provenance and to keep the site fully static.
 - The API also exposes pool popularity (how the pari-mutuel pool split
   across 1/X/2 per match) — a different quantity from bookmaker
   probability, since Vakio payout depends on how many others picked the
