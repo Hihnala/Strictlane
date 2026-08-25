@@ -24,8 +24,8 @@ import {
   TeamsFile,
   type Match,
   type LeagueId,
-} from "../lib/schema.js";
-import { resultSign } from "../lib/scoring.js";
+} from "../lib/schema";
+import { resultSign } from "../lib/scoring";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DATA = path.join(ROOT, "data");
@@ -235,6 +235,21 @@ async function main() {
           err(where, `${id} is in this coupon but its forecast.roundId is "${found.m.forecast?.roundId ?? "null"}"`);
         }
         if (found && !found.m.forecast) err(where, `${id} is in this coupon but has no forecast`);
+      }
+
+      // Standing house rule: every coupon is played as 8+0 — five singles,
+      // eight doubles, no triples. Fixed deliberately so that round-to-round
+      // scoring compares like with like; a coupon whose shape moves with the
+      // fixtures makes the season log harder to read, not easier.
+      if (round.system) {
+        const { singles: sg, doubles: db, triples: tp } = round.system;
+        if (round.matchIds.length === 13 && (sg !== 5 || db !== 8 || tp !== 0)) {
+          err(
+            where,
+            `system is ${sg} singles / ${db} doubles / ${tp} triples — the standing ` +
+              `rule is 8+0 (5 singles, 8 doubles, 0 triples) on a 13-match coupon`
+          );
+        }
       }
 
       // system arithmetic must match the stated row count

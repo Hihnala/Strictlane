@@ -43,6 +43,23 @@ export const Market = z.object({
 });
 export type Market = z.infer<typeof Market>;
 
+/**
+ * Veikkaus pool distribution across 1/X/2.
+ *
+ * A third quantity, distinct from both our forecast and the bookmaker market.
+ * Vakio is pari-mutuel — the pot splits among winning rows — so what the crowd
+ * picked determines what a correct row *pays*, not how likely it is. Kept
+ * strictly separate from `market`: merging crowd behaviour into bookmaker
+ * probability would corrupt every RPS figure on the site.
+ */
+export const Pool = z.object({
+  source: z.string().min(1),
+  drawId: z.string().min(1),
+  probs: ProbTriple,
+  capturedAt: z.string().datetime(),
+});
+export type Pool = z.infer<typeof Pool>;
+
 export const Forecast = z.object({
   /** links this match to a coupon round, e.g. "2026-08-22" */
   roundId: z.string().nullable(),
@@ -64,6 +81,7 @@ export const Match = z
     status: z.enum(["played", "pending", "postponed"]),
     score: z.object({ home: z.number().int().min(0), away: z.number().int().min(0) }).nullable(),
     market: Market.nullable(),
+    pool: Pool.nullish(),
     forecast: Forecast.nullable(),
   })
   .refine((m) => (m.status === "played" ? m.score !== null : m.score === null), {

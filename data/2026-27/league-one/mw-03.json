@@ -1,0 +1,174 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 3,
+  "matchweekDerived": false,
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 10 of 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep",
+  "importedAt": "2026-08-25T17:30:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-03-cambridge-huddersfield",
+      "home": "cambridge",
+      "away": "huddersfield",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 30.6,
+          "X": 28.7,
+          "2": 40.8
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 32.52,
+          "X": 28.15,
+          "2": 39.33
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 31,
+          "X": 29,
+          "2": 40
+        },
+        "marks": [
+          "2",
+          "1"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "Market taken. 9% overround makes this the least reliable price on the coupon."
+      }
+    },
+    {
+      "id": "2026-27-e2-03-leyton-orient-barnsley",
+      "home": "leyton-orient",
+      "away": "barnsley",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-notts-county-burton",
+      "home": "notts-county",
+      "away": "burton",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-plymouth-bradford",
+      "home": "plymouth",
+      "away": "bradford",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-sheffield-wednesday-bromley",
+      "home": "sheffield-wednesday",
+      "away": "bromley",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-stevenage-doncaster",
+      "home": "stevenage",
+      "away": "doncaster",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-stockport-wycombe",
+      "home": "stockport",
+      "away": "wycombe",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 54.04,
+          "X": 26.32,
+          "2": 19.64
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 45,
+          "X": 28,
+          "2": 27
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "No market price found on 25 Aug. Own estimate from form and venue \u2014 replace with closing odds before kickoff."
+      }
+    },
+    {
+      "id": "2026-27-e2-03-afc-wimbledon-wigan",
+      "home": "afc-wimbledon",
+      "away": "wigan",
+      "kickoff": "2026-08-30T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-mansfield-luton",
+      "home": "mansfield",
+      "away": "luton",
+      "kickoff": "2026-08-30T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-oxford-reading",
+      "home": "oxford",
+      "away": "reading",
+      "kickoff": "2026-09-08T18:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}

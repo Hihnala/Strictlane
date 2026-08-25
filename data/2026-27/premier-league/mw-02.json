@@ -1,0 +1,202 @@
+{
+  "season": "2026-27",
+  "league": "premier-league",
+  "matchweek": 2,
+  "matchweekDerived": false,
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 9 of 10 fixtures confirmed; Man City v Crystal Palace not yet verified",
+  "importedAt": "2026-08-25T17:30:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e0-02-liverpool-nottingham-forest",
+      "home": "liverpool",
+      "away": "nottingham-forest",
+      "kickoff": "2026-08-29T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-02-coventry-hull",
+      "home": "coventry",
+      "away": "hull",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 51.0,
+          "X": 26.8,
+          "2": 22.2
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 37.63,
+          "X": 27.19,
+          "2": 35.18
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 49,
+          "X": 28,
+          "2": 23
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "Trimmed 2pp toward the draw \u2014 both sides newly promoted, so prior-season ratings transfer badly."
+      }
+    },
+    {
+      "id": "2026-27-e0-02-bournemouth-everton",
+      "home": "bournemouth",
+      "away": "everton",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 46.0,
+          "X": 26.8,
+          "2": 27.1
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 50.17,
+          "X": 23.77,
+          "2": 26.07
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 46,
+          "X": 27,
+          "2": 27
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-02-tottenham-newcastle",
+      "home": "tottenham",
+      "away": "newcastle",
+      "kickoff": "2026-08-29T16:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 43.0,
+          "X": 26.1,
+          "2": 30.9
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 46.13,
+          "X": 22.43,
+          "2": 31.44
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 42,
+          "X": 28,
+          "2": 30
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "Draw nudged up from the market's 26.1: two evenly matched sides, evening kickoff."
+      }
+    },
+    {
+      "id": "2026-27-e0-02-sunderland-fulham",
+      "home": "sunderland",
+      "away": "fulham",
+      "kickoff": "2026-08-30T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-02-chelsea-brighton",
+      "home": "chelsea",
+      "away": "brighton",
+      "kickoff": "2026-08-30T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-02-leeds-brentford",
+      "home": "leeds",
+      "away": "brentford",
+      "kickoff": "2026-08-30T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-02-man-united-ipswich",
+      "home": "man-united",
+      "away": "ipswich",
+      "kickoff": "2026-08-30T15:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-02-aston-villa-arsenal",
+      "home": "aston-villa",
+      "away": "arsenal",
+      "kickoff": "2026-08-31T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}

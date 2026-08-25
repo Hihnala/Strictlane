@@ -1,0 +1,27 @@
+{
+  "id": "2026-08-29",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100569",
+  "system": {
+    "type": "8+0",
+    "singles": 5,
+    "doubles": 8,
+    "triples": 0,
+    "rows": 256
+  },
+  "matchIds": [
+    "2026-27-e0-02-tottenham-newcastle",
+    "2026-27-e0-02-bournemouth-everton",
+    "2026-27-e0-02-coventry-hull",
+    "2026-27-e1-03-blackburn-qpr",
+    "2026-27-e1-03-watford-west-ham",
+    "2026-27-e1-03-southampton-millwall",
+    "2026-27-e1-03-norwich-burnley",
+    "2026-27-e1-03-cardiff-sheffield-united",
+    "2026-27-e1-03-bristol-city-portsmouth",
+    "2026-27-e1-03-bolton-lincoln",
+    "2026-27-e1-03-charlton-preston",
+    "2026-27-e2-03-cambridge-huddersfield",
+    "2026-27-e2-03-stockport-wycombe"
+  ]
+}

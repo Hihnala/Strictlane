@@ -1,0 +1,392 @@
+{
+  "season": "2026-27",
+  "league": "championship",
+  "matchweek": 3,
+  "matchweekDerived": false,
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 complete",
+  "importedAt": "2026-08-25T17:30:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e1-03-wrexham-birmingham",
+      "home": "wrexham",
+      "away": "birmingham",
+      "kickoff": "2026-08-28T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-03-derby-swansea",
+      "home": "derby",
+      "away": "swansea",
+      "kickoff": "2026-08-29T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-03-middlesbrough-west-brom",
+      "home": "middlesbrough",
+      "away": "west-brom",
+      "kickoff": "2026-08-29T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-03-wolves-stoke",
+      "home": "wolves",
+      "away": "stoke",
+      "kickoff": "2026-08-29T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-03-blackburn-qpr",
+      "home": "blackburn",
+      "away": "qpr",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 41.5,
+          "X": 28.3,
+          "2": 30.1
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 54.09,
+          "X": 22.81,
+          "2": 23.1
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 41,
+          "X": 29,
+          "2": 30
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e1-03-bolton-lincoln",
+      "home": "bolton",
+      "away": "lincoln",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 38.2,
+          "X": 28.6,
+          "2": 33.2
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 66.06,
+          "X": 18.31,
+          "2": 15.63
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 41,
+          "X": 28,
+          "2": 31
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "Bolton up 2.8pp \u2014 the same pre-registered adjustment as Watford, mirrored."
+      }
+    },
+    {
+      "id": "2026-27-e1-03-bristol-city-portsmouth",
+      "home": "bristol-city",
+      "away": "portsmouth",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 44.0,
+          "X": 27.9,
+          "2": 28.1
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 46.67,
+          "X": 22.93,
+          "2": 30.39
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 44,
+          "X": 28,
+          "2": 28
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e1-03-norwich-burnley",
+      "home": "norwich",
+      "away": "burnley",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 40.2,
+          "X": 26.8,
+          "2": 33.0
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 32.65,
+          "X": 31.44,
+          "2": 35.91
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 40,
+          "X": 27,
+          "2": 33
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e1-03-cardiff-sheffield-united",
+      "home": "cardiff",
+      "away": "sheffield-united",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 37.5,
+          "X": 27.0,
+          "2": 35.5
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 46.24,
+          "X": 27.66,
+          "2": 26.1
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 36,
+          "X": 29,
+          "2": 35
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "Draw up 2pp \u2014 four draws between these two in four matches this season. Sheffield United's winding-up petition deliberately NOT priced in."
+      }
+    },
+    {
+      "id": "2026-27-e1-03-charlton-preston",
+      "home": "charlton",
+      "away": "preston",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 42.9,
+          "X": 28.8,
+          "2": 28.3
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 54.63,
+          "X": 23.15,
+          "2": 22.21
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 46,
+          "X": 28,
+          "2": 26
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "Charlton up 3pp on six points from six, including the win at West Ham."
+      }
+    },
+    {
+      "id": "2026-27-e1-03-southampton-millwall",
+      "home": "southampton",
+      "away": "millwall",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 50.2,
+          "X": 26.2,
+          "2": 23.6
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 49.71,
+          "X": 20.22,
+          "2": 30.08
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 49,
+          "X": 27,
+          "2": 24
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "Market taken unchanged. Shading Southampton on off-field turmoil cost 0.0206 RPS last round."
+      }
+    },
+    {
+      "id": "2026-27-e1-03-watford-west-ham",
+      "home": "watford",
+      "away": "west-ham",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 24.6,
+          "X": 25.0,
+          "2": 50.5
+        },
+        "capturedAt": "2026-08-25T16:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100569",
+        "probs": {
+          "1": 40.43,
+          "X": 25.75,
+          "2": 33.82
+        },
+        "capturedAt": "2026-08-25T16:54:24.522Z"
+      },
+      "forecast": {
+        "roundId": "2026-08-29",
+        "probs": {
+          "1": 27,
+          "X": 26,
+          "2": 47
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-08-25T17:30:00.000Z",
+        "note": "West Ham trimmed 3.5pp. Pre-registered relegated-club adjustment logged after MW2, not a fresh narrative."
+      }
+    }
+  ]
+}
