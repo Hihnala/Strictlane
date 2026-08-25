@@ -69,8 +69,13 @@ updating three redirects in `next.config.mjs` and flipping `status` in
 
 ## Capabilities and Constraints
 
-- Scope: Premier League, EFL Championship, EFL League One. Current season plus
-  two archive seasons, ~2,300 matches at full load.
+- Scope: Premier League, EFL Championship, EFL League One, current season
+  only. 2026-27 is the site's first season — no archive seasons. Decided
+  after `scripts/import-archive.ts` hit a real limitation: its chronological
+  greedy matchweek-derivation algorithm can't reliably reconstruct rounds
+  for real historical seasons once enough fixtures have been rearranged for
+  TV (verified against real 2024-25 Premier League data). Not worth solving
+  for a personal ledger; the site starts its honest record from here.
 - RPS (Ranked Probability Score) is the primary metric, not accuracy; accuracy
   is shown but treated as near-meaningless since it rewards always backing the
   favourite.
@@ -86,10 +91,13 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   Pending fixtures never show a placeholder score.
 - No team crests, no per-league colours — colour on the site encodes outcome
   (1/X/2), never team success.
-- Not yet built: `sitemap.ts`, `robots.txt`, OG images (needed before pointing
-  the domain live), automated tests, per-team/head-to-head pages, a real
-  Dixon-Coles forecasting model, and the archive seasons themselves are not
-  yet imported.
+- Not yet built: automated tests, per-team/head-to-head pages, a real
+  Dixon-Coles forecasting model. `sitemap.ts`, `robots.txt`, and the OG
+  image are done; the site is live at strictlane.com.
+- Archive seasons: explicitly out of scope now, not a pending TODO (see
+  Capabilities scope note above). `scripts/import-archive.ts` and
+  `scripts/lib/matchweeks.ts` stay in the repo since the mechanism could be
+  revisited later, but nothing currently depends on it working.
 - Undecided: whether/when the site adds a Dixon-Coles model — the archive
   exists to backtest one against the market, but building it is explicitly
   out of scope for now (confirmed: stay a small honest ledger, not a step
