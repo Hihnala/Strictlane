@@ -245,12 +245,16 @@ async function main() {
     };
 
     if (dry) {
-      process.stdout.write(`\n[dry] would write data/rounds/${id}.json\n`);
+      process.stdout.write(`\n[dry] would write data/rounds/drafts/${id}.json\n`);
       continue;
     }
 
-    await mkdir(path.join(DATA, "rounds"), { recursive: true });
-    const file = path.join(DATA, "rounds", `${id}.json`);
+    // Drafts live in a subdirectory the validator ignores (it only reads
+    // *.json directly under data/rounds). A draft has no forecasts and no
+    // matchIds yet, so it cannot satisfy the Round schema — writing it to the
+    // validated path would break the production build.
+    await mkdir(path.join(DATA, "rounds", "drafts"), { recursive: true });
+    const file = path.join(DATA, "rounds", "drafts", `${id}.json`);
     if (existsSync(file)) {
       process.stdout.write(`  ${file} exists — not overwriting. Delete it to re-fetch.\n`);
       continue;
@@ -264,7 +268,10 @@ async function main() {
       path.join(DATA, "rounds", "raw", `${id}-draw-${draw.id}.json`),
       JSON.stringify({ capturedAt, draw }, null, 2) + "\n"
     );
-    process.stdout.write(`  wrote data/rounds/${id}.json\n`);
+    process.stdout.write(
+      `  wrote data/rounds/drafts/${id}.json\n` +
+        `  next: add forecasts, then npx tsx scripts/promote-round.ts ${id}\n`
+    );
   }
 }
 

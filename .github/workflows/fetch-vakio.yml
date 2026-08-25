@@ -1,15 +1,28 @@
 name: Fetch Vakio coupon
 
-# The open-games endpoint returns ONLY open draws. Once a coupon closes it is
-# gone from the API and cannot be retrieved again, so this runs often enough to
-# catch the publication window rather than once a week at a guessed hour.
+# Stage 1 of three. This job only captures the coupon — it never publishes a
+# round, because a round needs forecasts and those are written by hand before
+# kickoff. It opens a PR; you add the forecasts and merge.
+#
+# It must NOT push to main. A fetched draft has no matchIds and no forecasts, so
+# it cannot satisfy the Round schema, and pushing it to main would fail
+# `prebuild` on Vercel and take the site's build down.
+
 on:
   schedule:
-    - cron: "0 6,12,18 * * 2,3,4,5"   # Tue–Fri, 06/12/18 UTC — coupons publish midweek
-  workflow_dispatch:                   # manual run
+    # The open-games endpoint returns ONLY open draws. Once a coupon closes it
+    # is gone from the API for good, so poll across the publication window
+    # rather than guessing one weekly hour. Times are UTC.
+    - cron: "0 6,12,18 * * 2,3,4,5"
+  workflow_dispatch:
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: fetch-vakio
+  cancel-in-progress: false
 
 jobs:
   fetch:
@@ -27,19 +40,52 @@ jobs:
       - name: Fetch open Vakio draws
         run: npx tsx scripts/fetch-vakio.ts
 
-      - name: Validate
-        run: npm run validate -- --warn-only
-
-      - name: Commit if changed
+      - name: Stop if nothing new
+        id: check
         run: |
           if [ -z "$(git status --porcelain data/rounds)" ]; then
             echo "No new coupon."
-            exit 0
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # Drafts live under data/rounds/drafts/ which validate.ts ignores, so this
+      # is a belt-and-braces check that the fetch touched nothing else.
+      - name: Validate
+        if: steps.check.outputs.changed == 'true'
+        run: npm run validate
+
+      - name: Open PR with the draft
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="coupon/$DATE"
+
           git config user.name  "strictlane-bot"
           git config user.email "bot@users.noreply.github.com"
+          git checkout -b "$BRANCH"
           git add data/rounds
-          # The commit timestamp is the provenance: it proves the coupon was
-          # captured before kickoff far better than a self-reported field can.
-          git commit -m "Fetch Vakio coupon $(date -u +%Y-%m-%d)"
-          git push
+          # The commit timestamp is external evidence of when the coupon was
+          # captured — stronger than any self-reported field, which matters for a
+          # site whose premise is that forecasts are never backfilled.
+          git commit -m "Coupon draft $DATE"
+          git push -u origin "$BRANCH"
+
+          gh pr create --title "Coupon draft $DATE" --body-file - <<'BODY'
+          Fetched from the Veikkaus open-games endpoint. **Not publishable yet.**
+
+          To finish:
+
+          1. Add any missing fixtures to the relevant `data/{season}/{league}/mw-NN.json`
+          2. Write a forecast on each coupon match — `probs`, `marks`, and a
+             `capturedAt` **before kickoff**
+          3. `npx tsx scripts/promote-round.ts <round-id>` to build the round file
+          4. `npm run validate`, then merge
+
+          The raw API payload is committed alongside the draft. The open-games
+          endpoint drops closed coupons permanently, so that snapshot is the only
+          copy that will ever exist.
+          BODY
