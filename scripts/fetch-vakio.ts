@@ -46,7 +46,14 @@ async function get<T>(url: string): Promise<T> {
 
 /* --------------------------------------------------------------- mapping --- */
 
-/** Loose shape — tighten after inspecting a real payload with --raw. */
+/**
+ * Confirmed against a real payload (draw 100569, Aug 2026): SPORT rows carry
+ * `outcome.home` / `outcome.away` objects, each with `id` and `name`. The
+ * `competitors` array and single `"Home - Away"` string were the two shapes
+ * the reference repo's docs left ambiguous; neither is what the API actually
+ * sends, but both stay as fallbacks in case a different game type or a future
+ * payload uses them.
+ */
 interface RawDraw {
   id: number | string;
   listIndex?: number;
@@ -59,7 +66,10 @@ interface RawDraw {
     eventNumber?: number;
     name?: string;
     competitors?: Array<{ name?: string }>;
-    outcome?: Array<{ name?: string }>;
+    outcome?: {
+      home?: { id?: string; name?: string };
+      away?: { id?: string; name?: string };
+    };
   }>;
 }
 
@@ -69,17 +79,15 @@ interface Fixture {
   away: string;
 }
 
-/**
- * Pull home/away out of a draw row.
- *
- * Vakio rows describe the fixture via `competitors` (two entries) or, in some
- * payloads, a single "Home - Away" name string. Both are handled; if neither
- * yields two teams the row is reported rather than guessed at.
- */
+/** Pull home/away out of a draw row. */
 function mapDraw(draw: RawDraw): Fixture[] {
   const rows = draw.rows ?? [];
   return rows.map((row, i) => {
     const eventId = row.eventNumber ?? i;
+
+    const oHome = (row.outcome?.home?.name ?? row.outcome?.home?.id ?? "").trim();
+    const oAway = (row.outcome?.away?.name ?? row.outcome?.away?.id ?? "").trim();
+    if (oHome && oAway) return { eventId, home: oHome, away: oAway };
 
     if (row.competitors?.length === 2) {
       return {
@@ -158,7 +166,25 @@ async function main() {
   const raw = argv.includes("--raw");
   const dry = argv.includes("--dry") || raw;
 
-  const draws = await get<RawDraw[]>(`${BASE}/sport-open-games/v1/games/SPORT/draws`);
+  const allDraws = await get<RawDraw[]>(`${BASE}/sport-open-games/v1/games/SPORT/draws`);
+
+  // SPORT/draws returns every open Vakio-family game, not just the English
+  // 13-match coupon this site tracks. "Futisvakio" covers unrelated European/
+  // international fixtures (confirmed live: Real Madrid, River Plate, Club
+  // America — well outside Premier League/Championship/League One scope) and
+  // would otherwise abort the whole run on teams this site has no business
+  // knowing about. Keep only the real Vakio draw ("Lauantaivakio" and its
+  // weekday equivalents), never a "Futisvakio" one.
+  const draws = allDraws.filter((d) => {
+    const label = (d.brandName ?? d.name ?? "").toLowerCase();
+    return label.includes("vakio") && !label.includes("futis");
+  });
+  if (allDraws.length !== draws.length) {
+    process.stdout.write(
+      `Skipped ${allDraws.length - draws.length} non-English-football draw(s) ` +
+        `(${allDraws.map((d) => d.brandName ?? d.name).filter((n) => !draws.some((k) => (k.brandName ?? k.name) === n)).join(", ")}).\n`
+    );
+  }
 
   if (raw) {
     process.stdout.write(JSON.stringify(draws, null, 2));
