@@ -77,7 +77,7 @@ export default async function MatchweekPage({
     <div className="wrap">
       <section className="section">
         <div className="sec-label">
-          {meta.label} \u00b7 {season}
+          {meta.label} &middot; {season}
           {data.matchweekDerived && " \u00b7 matchweek inferred"}
         </div>
         <h1>Matchweek {n}</h1>

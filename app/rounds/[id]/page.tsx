@@ -1,10 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { listRounds, getRound, getRoundMatches, getTeams, getRoundCommentary, leagueMeta, roundNeighbours } from "@/lib/content";
-import { summarise, coverage, couponOutlook, drawWatch, resultSign, verdict } from "@/lib/scoring";
-import { Coupon } from "@/components/Coupon";
-import { CalBar } from "@/components/CalBar";
+import { listRounds, getRound, getRoundMatches, getTeams, getRoundCommentary, roundNeighbours } from "@/lib/content";
+import { summarise, coverage, couponOutlook, drawWatch } from "@/lib/scoring";
+import { CouponRows } from "@/components/MatchRow";
 import { StatCell } from "@/components/StatCell";
 import { Prose } from "@/components/Prose";
 
@@ -37,53 +36,19 @@ export default async function RoundPage({ params }: { params: Promise<{ id: stri
   return (
     <div className="wrap">
       <section className="section">
-        <div className="sec-label">Round \u00b7 {id}</div>
+        <div className="sec-label">Round &middot; {id}</div>
         <h1>{round.name}</h1>
         {round.system && (
           <p className="lede">
-            {round.system.type} \u00b7 {round.system.singles} singles, {round.system.doubles} doubles
-            {round.system.triples ? `, ${round.system.triples} triples` : ""} \u00b7{" "}
+            {round.system.type} &middot; {round.system.singles} singles, {round.system.doubles} doubles
+            {round.system.triples ? `, ${round.system.triples} triples` : ""} &middot;{" "}
             {round.system.rows} rows
           </p>
         )}
 
         {/* The coupon in coupon order — the order is data, not presentation. */}
-        <div className="matchlist" style={{ marginTop: "var(--s4)" }}>
-          {located.map(({ match: m, season, league, matchweek }, i) => {
-            const r = resultSign(m);
-            return (
-              <div key={m.id} className="matchrow">
-                <div className="matchrow-top">
-                  <span className="data" style={{ width: 20, color: "var(--ink-faint)", fontSize: 12 }}>
-                    {i + 1}
-                  </span>
-                  <div className="teams">
-                    <div className="team">{teams.get(m.home)?.name ?? m.home}</div>
-                    <div className="team">{teams.get(m.away)?.name ?? m.away}</div>
-                  </div>
-                  <Coupon marks={m.forecast?.marks} result={r} />
-                  <div className="score data">
-                    {m.score ? `${m.score.home}\u2013${m.score.away}` : "\u00b7 \u00b7"}
-                  </div>
-                </div>
-                <div className="matchrow-bottom">
-                  <div style={{ flex: 1 }}>
-                    {m.forecast && <CalBar probs={m.forecast.probs} />}
-                  </div>
-                  <Link
-                    className="more"
-                    href={`/${season}/${league}/mw-${String(matchweek).padStart(2, "0")}`}
-                    style={{ color: "var(--ink-faint)" }}
-                  >
-                    {leagueMeta(league).short}
-                  </Link>
-                  <div className={`verdict ${verdict(m)}`}>
-                    {verdict(m) === "hit" ? "Hit" : verdict(m) === "miss" ? "Miss" : "\u2014"}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div style={{ marginTop: "var(--s4)" }}>
+          <CouponRows located={located} teams={teams} />
         </div>
       </section>
 
@@ -130,11 +95,11 @@ export default async function RoundPage({ params }: { params: Promise<{ id: stri
 
       {/* Walk the archive without going back to the index each time. */}
       <nav className="roundnav" aria-label="Other rounds">
-        {older ? <Link href={`/rounds/${older}`}>\u2190 {older}</Link> : <span />}
+        {older ? <Link href={`/rounds/${older}`}>&larr; {older}</Link> : <span />}
         <span className="spacer" />
         <Link href="/rounds" style={{ border: "none" }}>All rounds</Link>
         <span className="spacer" />
-        {newer ? <Link href={`/rounds/${newer}`}>{newer} \u2192</Link> : <span />}
+        {newer ? <Link href={`/rounds/${newer}`}>{newer} &rarr;</Link> : <span />}
       </nav>
     </div>
   );

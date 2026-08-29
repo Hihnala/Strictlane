@@ -4,7 +4,7 @@ import {
   latestPlayedMatchweek, getMatchweek, listMatchweeks,
 } from "@/lib/content";
 import { summarise, coverage, couponOutlook, resultSign } from "@/lib/scoring";
-import { MatchList } from "@/components/MatchRow";
+import { CouponRows } from "@/components/MatchRow";
 import { Coupon } from "@/components/Coupon";
 import { StatCell } from "@/components/StatCell";
 import { Tag } from "@/components/Tag";
@@ -48,7 +48,7 @@ export default async function Home() {
             {outlook ? ` \u00b7 ${outlook.expectedCovered.toFixed(1)} of 13 expected` : ""}
           </p>
           <div style={{ marginTop: "var(--s4)" }}>
-            <MatchList matches={openMatches} teams={teams} />
+            <CouponRows located={open.located} teams={teams} />
           </div>
           <p style={{ marginTop: "var(--s3)" }}>
             <Link className="more" href={`/rounds/${open.id}`}>Full coupon &rarr;</Link>
@@ -97,7 +97,7 @@ export default async function Home() {
           <Link key={c.id} className="leaguecard" href={`/${season.id}/${c.id}`}>
             <span className="name">{c.label}</span>
             {c.has ? (
-              <span className="meta data">MW {c.mwNo} \u00b7 {c.played}/{c.total}</span>
+              <span className="meta data">MW {c.mwNo} &middot; {c.played}/{c.total}</span>
             ) : (
               <Tag variant="pending">No data</Tag>
             )}

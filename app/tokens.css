@@ -233,10 +233,25 @@ td.num, th.num {
 .nav-scroll::-webkit-scrollbar { display: none; }
 
 .league-switch {
-  display: flex; align-items: center; gap: var(--s2); flex-shrink: 0;
+  display: flex; align-items: center; gap: var(--s4); flex-shrink: 0;
   padding-left: var(--s4); border-left: 1px solid var(--line);
 }
-.tag.league.is-active { background: var(--home); color: var(--surface); }
+
+/* In the top bar the league quick-links read as plain links — no chip box,
+   no underline. The .tag component keeps its box everywhere else. */
+.league-switch .tag.league {
+  background: transparent; border: 0; border-radius: 0;
+  padding: var(--s1) 0; color: var(--ink-muted); text-decoration: none;
+}
+.league-switch .tag.league:hover { color: var(--ink); }
+.league-switch .tag.league.is-active { background: transparent; color: var(--home); }
+
+/* Abbreviated names on the phone: PL / Champ / L1 */
+.lg-short { display: none; }
+@media (max-width: 639px) {
+  .lg-full { display: none; }
+  .lg-short { display: inline; }
+}
 
 footer.foot {
   padding: var(--s6) 0 var(--s7);

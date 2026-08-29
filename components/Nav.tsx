@@ -16,9 +16,9 @@ import { usePathname } from "next/navigation";
  * `/2026-27/premier-league`, not `/premier-league`.
  */
 const LEAGUES = [
-  { slug: "premier-league", label: "Premier League" },
-  { slug: "championship", label: "Championship" },
-  { slug: "league-one", label: "League One" },
+  { slug: "premier-league", label: "Premier League", short: "PL" },
+  { slug: "championship", label: "Championship", short: "Champ" },
+  { slug: "league-one", label: "League One", short: "L1" },
 ];
 
 export function Nav() {
@@ -42,7 +42,8 @@ export function Nav() {
                   href={`/${l.slug}`}
                   aria-current={active ? "page" : undefined}
                 >
-                  {l.label}
+                  <span className="lg-full">{l.label}</span>
+                  <span className="lg-short" aria-hidden="true">{l.short}</span>
                 </Link>
               );
             })}

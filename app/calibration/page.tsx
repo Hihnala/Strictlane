@@ -20,7 +20,7 @@ export default async function CalibrationPage() {
   return (
     <div className="wrap">
       <section className="section">
-        <div className="sec-label">Season to date \u00b7 {season.label}</div>
+        <div className="sec-label">Season to date &middot; {season.label}</div>
         <h1>Calibration</h1>
         <p className="lede">
           Raw accuracy is close to meaningless: it depends on which fixtures happened to be on the
@@ -65,7 +65,7 @@ export default async function CalibrationPage() {
             <tbody>
               {bins.map((b) => (
                 <tr key={b.lo}>
-                  <td className="data">{b.lo}\u2013{b.hi}%</td>
+                  <td className="data">{b.lo}&ndash;{b.hi}%</td>
                   <td className="num data">{b.n}</td>
                   <td className="num data">{b.meanPredicted!.toFixed(1)}%</td>
                   <td className="num data">{b.observed!.toFixed(1)}%</td>
@@ -84,7 +84,7 @@ export default async function CalibrationPage() {
         <p className="muted" style={{ fontSize: 14.5 }}>
           Tracked separately because it is the failure this project has already walked into: a
           coupon that excluded X on four soft favourites in a round that produced five draws. A
-          z-score inside \u00b12 is noise, not a bias worth correcting.
+          z-score inside &plusmn;2 is noise, not a bias worth correcting.
         </p>
         <div className="stat-grid">
           <StatCell value={draws.expected.toFixed(1)} label="Expected" sub={`over ${draws.n} matches`} />
@@ -98,7 +98,7 @@ export default async function CalibrationPage() {
         <div className="sec-label">Base rates</div>
         <h2>The market baseline</h2>
         <p className="muted" style={{ fontSize: 14.5 }}>
-          Market RPS across every match with odds this season, forecast or not \u2014 the standing
+          Market RPS across every match with odds this season, forecast or not &mdash; the standing
           number any model has to beat.
         </p>
         <div className="stat-grid">
