@@ -6,36 +6,38 @@
    Load fonts:
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto+Mono:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-   Set <html data-theme="light"> or <html data-theme="dark">.
+   Dark-only. No data-theme attribute, no light variant — see globals.css /
+   layout.tsx for the <meta name="color-scheme" content="dark"> tag.
    ========================================================================== */
 
 :root {
-  /* --- surfaces & ink ------------------------------------------------ */
-  --surface:        #ffffff;
-  --surface-sunken: #f4f6fa;
-  --surface-raised: #ffffff;
-  --line:           #e2e7f0;
-  --line-strong:    #c9d2e2;
-  --ink:            #16203a;
-  --ink-muted:      #5b6677;
-  --ink-faint:      #8a94a6;
+  /* --- surfaces & ink — dark is the only theme, so these are the tokens,
+         not an override --------------------------------------------------- */
+  --surface:        #0f1524;
+  --surface-sunken: #0a0f1a;
+  --surface-raised: #161e31;
+  --line:           #24304a;
+  --line-strong:    #35446a;
+  --ink:            #e7ecf5;
+  --ink-muted:      #9aa6bc;
+  --ink-faint:      #6b7891;
 
   /* --- outcome axis (categorical — never evaluative) ------------------ */
-  --home:    #2563eb;   --home-bg: #e8effe;
-  --draw:    #5a6675;   --draw-bg: #edeff3;
-  --away:    #a6392e;   --away-bg: #faecea;
+  --home:    #6ea8ff;   --home-bg: #16294d;
+  --draw:    #93a0b5;   --draw-bg: #212936;
+  --away:    #e8776a;   --away-bg: #3a1f1c;
 
   /* --- brand --------------------------------------------------------- */
-  --brand-deep: #1e3a8a;
-  --focus:      #2563eb;
+  --brand-deep: #9ec1ff;
+  --focus:      #6ea8ff;
 
   /* --- type ---------------------------------------------------------- */
   --font-display: 'Montserrat', system-ui, sans-serif;
   --font-body:    'Roboto', system-ui, sans-serif;
   --font-data:    'Roboto Mono', ui-monospace, monospace;
 
-  --fs-display: 30px;  --lh-display: 1.1;   --ls-display: -0.025em;
-  --fs-h2:      21px;  --lh-h2:      1.25;  --ls-h2:      -0.015em;
+  --fs-display: 38px;  --lh-display: 1.1;   --ls-display: -0.025em;
+  --fs-h2:      24px;  --lh-h2:      1.25;  --ls-h2:      -0.015em;
   --fs-h3:      15px;
   --fs-body:    15px;  --lh-body:    1.62;
   --fs-small:   13px;
@@ -54,34 +56,17 @@
   --r-pill: 999px;
 
   /* --- elevation & layout -------------------------------------------- */
-  --shadow-card: 0 1px 2px rgba(22,32,58,0.05), 0 1px 12px rgba(22,32,58,0.04);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.4);
   --maxw: 720px;
   --gutter: 16px;
   --tap-min: 44px;
 }
 
-[data-theme="dark"] {
-  --surface:        #0f1524;
-  --surface-sunken: #0a0f1a;
-  --surface-raised: #161e31;
-  --line:           #24304a;
-  --line-strong:    #35446a;
-  --ink:            #e7ecf5;
-  --ink-muted:      #9aa6bc;
-  --ink-faint:      #6b7891;
-
-  --home:    #6ea8ff;   --home-bg: #16294d;
-  --draw:    #93a0b5;   --draw-bg: #212936;
-  --away:    #e8776a;   --away-bg: #3a1f1c;
-
-  --brand-deep: #9ec1ff;
-  --focus:      #6ea8ff;
-
-  --shadow-card: 0 1px 2px rgba(0,0,0,0.4);
-}
-
-@media (min-width: 640px) {
-  :root { --fs-display: 38px; --fs-h2: 24px; }
+/* Desktop is the default now (primary use is a desktop monitor); this query
+   scales the two size-sensitive tokens DOWN for the occasional phone visit —
+   the inverse of the old mobile-first min-width query. */
+@media (max-width: 639px) {
+  :root { --fs-display: 30px; --fs-h2: 21px; }
 }
 
 /* ==========================================================================
@@ -208,3 +193,69 @@ td.num, th.num {
 
 /* --- layout shell ----------------------------------------------------- */
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ==========================================================================
+   Page chrome — top bar & footer
+   New as of the nav/footer redesign. The bar carries the wordmark and the
+   three league quick-links only; every other destination lives in the
+   footer (Rule 11: no hamburger — a bar that overflows scrolls, it never
+   collapses behind an icon).
+   ========================================================================== */
+
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner {
+  max-width: var(--maxw); margin: 0 auto;
+  padding: var(--s3) var(--gutter);
+  display: flex; align-items: center; gap: var(--s5);
+}
+.wordmark {
+  font-family: var(--font-display); font-weight: 800; font-size: 17px;
+  letter-spacing: -0.01em; color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: var(--s2); flex-shrink: 0;
+}
+.wordmark .glyph {
+  font-family: var(--font-data); font-weight: 600; font-size: 12px;
+  width: 22px; height: 22px; border: 1.5px solid var(--home); color: var(--home);
+  border-radius: var(--r-mark);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* the wordmark stays put; the league tags scroll as one unit on the rare
+   occasion they don't fit — same no-hamburger idiom as the matchweek rail */
+.nav-scroll {
+  display: flex; align-items: center; gap: var(--s5);
+  overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;
+}
+.nav-scroll::-webkit-scrollbar { display: none; }
+
+.league-switch {
+  display: flex; align-items: center; gap: var(--s2); flex-shrink: 0;
+  padding-left: var(--s4); border-left: 1px solid var(--line);
+}
+.tag.league.is-active { background: var(--home); color: var(--surface); }
+
+footer.foot {
+  padding: var(--s6) 0 var(--s7);
+  text-align: center;
+}
+.footer-nav {
+  display: flex; justify-content: center; flex-wrap: wrap;
+  gap: var(--s4); margin-bottom: var(--s3);
+}
+.footer-nav a {
+  font-family: var(--font-body); font-size: 13px; color: var(--ink-muted); text-decoration: none;
+}
+.footer-nav a:hover { color: var(--ink); }
+
+.footer-statement {
+  font-size: 13px; line-height: 1.55; color: var(--ink-faint);
+  max-width: 50ch; margin: 0 auto var(--s3);
+}
+
+.footer-credit {
+  font-family: var(--font-data); font-size: 11px; color: var(--ink-faint);
+}

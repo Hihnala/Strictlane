@@ -1,29 +1,8 @@
 @import "./tokens.css";
 
-/* --------------------------------------------------------------- chrome --- */
-.topbar { position: sticky; top: 0; z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line); }
-.topbar-inner { max-width: var(--maxw); margin: 0 auto; padding: var(--s3) var(--gutter);
-  display: flex; align-items: center; justify-content: space-between; gap: var(--s3); }
-.wordmark { font-family: var(--font-display); font-weight: 800; font-size: 17px; letter-spacing: -0.01em;
-  color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: var(--s2); }
-.wordmark .glyph { font-weight: 600; font-size: 12px; width: 22px; height: 22px;
-  border: 1.5px solid var(--home); color: var(--home); border-radius: var(--r-mark);
-  display: inline-flex; align-items: center; justify-content: center; }
-
-.theme-toggle { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-  text-transform: uppercase; color: var(--ink-muted); background: var(--surface-sunken);
-  border: 1px solid var(--line); border-radius: var(--r-pill); padding: 7px 14px; cursor: pointer;
-  min-height: 34px; min-width: 64px; }
-.theme-toggle:hover { color: var(--ink); border-color: var(--line-strong); }
-
-.leaguenav { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter) var(--s2);
-  display: flex; gap: var(--s1); }
-.leaguenav-item { flex: 1; text-align: center; text-decoration: none; padding: 9px 4px;
-  font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--ink-muted); background: var(--surface-sunken);
-  border-radius: var(--r-chip); min-height: var(--tap-min); display: flex; align-items: center;
-  justify-content: center; }
-.leaguenav-item:hover { color: var(--home); }
+/* Page chrome (top bar + footer) lives in tokens.css as of the nav/footer
+   redesign — the bar carries only the wordmark and the three league tags,
+   everything else is in the footer. */
 
 /* ----------------------------------------------------------------- page --- */
 main { padding-bottom: var(--s8); }
@@ -96,12 +75,10 @@ a.more { font-family: var(--font-data); font-size: 11px; font-weight: 600; lette
 .prose th, .prose td { padding: var(--s2); border-bottom: 1px solid var(--line); text-align: left; }
 
 /* --------------------------------------------------------------- footer --- */
-.foot { border-top: 1px solid var(--line); margin-top: var(--s7); padding: var(--s5) 0 var(--s7);
-  background: var(--surface); }
-.foot .updated { font-family: var(--font-data); font-size: 12px; color: var(--ink); }
-.foot p, .foot li { font-size: 12.5px; color: var(--ink-muted); }
-.foot ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--s3); margin: var(--s3) 0; }
-.foot a { color: var(--ink-muted); }
+/* Base footer styles (three rows: links, statement, credit) are in tokens.css.
+   The site footer follows `main`, so it takes a hairline + breathing room the
+   style-guide's own footer doesn't need. */
+footer.foot { border-top: 1px solid var(--line); margin-top: var(--s7); background: var(--surface); }
 
 .empty { padding: var(--s6) var(--s4); text-align: center; color: var(--ink-muted);
   border: 1px dashed var(--line); border-radius: var(--r-card); font-size: 14px; }
