@@ -7,13 +7,23 @@ name: Fetch Vakio coupon
 # It must NOT push to main. A fetched draft has no matchIds and no forecasts, so
 # it cannot satisfy the Round schema, and pushing it to main would fail
 # `prebuild` on Vercel and take the site's build down.
+#
+# Schedule history: originally polled 3x/day, Tue–Fri (cron "0 6,12,18 * * 2,3,4,5"),
+# to catch the coupon's publication time without guessing it. Veikkaus reliably
+# publishes Lauantaivakio Monday or Tuesday, so that margin turned out to be
+# unnecessary — and the polling caused a real bug: `concurrency` below queues
+# overlapping runs rather than skipping them, and because a draft only ever
+# lives on an unmerged PR branch (never on `main`), a same-day second run's
+# fresh checkout has no way to see that an earlier run that day already
+# succeeded. It re-fetches, sees "new" files against `main`, and tries to push
+# a branch (`coupon/$DATE`) that the earlier run already created — a rejected
+# non-fast-forward push. Moved to a single Thursday run: safely past the
+# Mon/Tue publish window, still leaves two days of hand-authoring lead time
+# before Saturday's close. See PR #<fill in> for the incident.
 
 on:
   schedule:
-    # The open-games endpoint returns ONLY open draws. Once a coupon closes it
-    # is gone from the API for good, so poll across the publication window
-    # rather than guessing one weekly hour. Times are UTC.
-    - cron: "0 6,12,18 * * 2,3,4,5"
+    - cron: "0 7 * * 4"   # Thursday 07:00 UTC — adjust the hour to taste
   workflow_dispatch:
 
 permissions:
@@ -28,20 +38,47 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
+      # At once-a-week frequency the same-day race above can't recur under
+      # normal operation. This guard covers the remaining realistic case: a
+      # workflow_dispatch rerun — e.g. retrying after a failed Thursday run —
+      # firing while that week's draft PR is still open and unmerged. Placed
+      # before checkout so a doomed run doesn't call the fetch endpoint at
+      # all; the endpoint drops closed coupons permanently, so calls to it
+      # aren't free to waste.
+      - name: Skip if this week's draft PR is already open
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          EXISTING=$(gh pr list --repo "$GITHUB_REPOSITORY" \
+            --head "coupon/$DATE" --state open --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            echo "Draft PR #$EXISTING for $DATE already open — skipping run."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != 'true'
 
       - uses: actions/setup-node@v4
+        if: steps.guard.outputs.skip != 'true'
         with:
           node-version: 22
           cache: npm
 
       - run: npm ci
+        if: steps.guard.outputs.skip != 'true'
 
       - name: Fetch open Vakio draws
+        if: steps.guard.outputs.skip != 'true'
         run: npx tsx scripts/fetch-vakio.ts
 
       - name: Stop if nothing new
         id: check
+        if: steps.guard.outputs.skip != 'true'
         run: |
           if [ -z "$(git status --porcelain data/rounds)" ]; then
             echo "No new coupon."
@@ -53,11 +90,11 @@ jobs:
       # Drafts live under data/rounds/drafts/ which validate.ts ignores, so this
       # is a belt-and-braces check that the fetch touched nothing else.
       - name: Validate
-        if: steps.check.outputs.changed == 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.check.outputs.changed == 'true'
         run: npm run validate
 
       - name: Open PR with the draft
-        if: steps.check.outputs.changed == 'true'
+        if: steps.guard.outputs.skip != 'true' && steps.check.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
