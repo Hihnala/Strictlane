@@ -55,8 +55,11 @@
       "home": "blackburn",
       "away": "qpr",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -97,8 +100,11 @@
       "home": "bolton",
       "away": "lincoln",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -140,8 +146,11 @@
       "home": "bristol-city",
       "away": "portsmouth",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -182,8 +191,11 @@
       "home": "norwich",
       "away": "burnley",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -224,8 +236,11 @@
       "home": "cardiff",
       "away": "sheffield-united",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -267,8 +282,11 @@
       "home": "charlton",
       "away": "preston",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -309,8 +327,11 @@
       "home": "southampton",
       "away": "millwall",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 1
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -351,8 +372,11 @@
       "home": "watford",
       "away": "west-ham",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",

@@ -11,8 +11,11 @@
       "home": "cambridge",
       "away": "huddersfield",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -109,8 +112,11 @@
       "home": "stockport",
       "away": "wycombe",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
