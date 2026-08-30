@@ -3,16 +3,33 @@
   "league": "premier-league",
   "matchweek": 2,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 9 of 10 fixtures confirmed; Man City v Crystal Palace not yet verified",
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 10 fixtures confirmed; MW2 results from BBC Sport",
   "importedAt": "2026-08-25T17:30:00.000Z",
   "matches": [
+    {
+      "id": "2026-27-e0-02-crystal-palace-man-city",
+      "home": "crystal-palace",
+      "away": "man-city",
+      "kickoff": "2026-08-28T19:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
     {
       "id": "2026-27-e0-02-liverpool-nottingham-forest",
       "home": "liverpool",
       "away": "nottingham-forest",
       "kickoff": "2026-08-29T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null

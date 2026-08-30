@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 3,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 complete",
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 complete; MW3 results from BBC Sport",
   "importedAt": "2026-08-25T17:30:00.000Z",
   "matches": [
     {
@@ -11,8 +11,11 @@
       "home": "wrexham",
       "away": "birmingham",
       "kickoff": "2026-08-28T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -22,8 +25,11 @@
       "home": "derby",
       "away": "swansea",
       "kickoff": "2026-08-29T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 3
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -33,8 +39,11 @@
       "home": "middlesbrough",
       "away": "west-brom",
       "kickoff": "2026-08-29T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -44,8 +53,11 @@
       "home": "wolves",
       "away": "stoke",
       "kickoff": "2026-08-29T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null

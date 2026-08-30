@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 3,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 10 of 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep",
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep; MW3 results from BBC Sport",
   "importedAt": "2026-08-25T17:30:00.000Z",
   "matches": [
     {
@@ -57,8 +57,11 @@
       "home": "leyton-orient",
       "away": "barnsley",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -68,8 +71,11 @@
       "home": "notts-county",
       "away": "burton",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -79,8 +85,11 @@
       "home": "plymouth",
       "away": "bradford",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -90,8 +99,11 @@
       "home": "sheffield-wednesday",
       "away": "bromley",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 7,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -101,8 +113,11 @@
       "home": "stevenage",
       "away": "doncaster",
       "kickoff": "2026-08-29T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -172,6 +187,34 @@
       "kickoff": "2026-09-08T18:45:00.000Z",
       "status": "pending",
       "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-blackpool-peterborough",
+      "home": "blackpool",
+      "away": "peterborough",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-03-mk-dons-leicester",
+      "home": "mk-dons",
+      "away": "leicester",
+      "kickoff": "2026-08-29T14:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
