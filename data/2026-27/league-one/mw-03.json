@@ -163,8 +163,11 @@
       "home": "afc-wimbledon",
       "away": "wigan",
       "kickoff": "2026-08-30T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score":  {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -174,8 +177,11 @@
       "home": "mansfield",
       "away": "luton",
       "kickoff": "2026-08-30T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score":  {
+        "home": 5,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null

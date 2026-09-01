@@ -174,8 +174,11 @@
       "home": "sunderland",
       "away": "fulham",
       "kickoff": "2026-08-30T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score":  {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -185,8 +188,11 @@
       "home": "chelsea",
       "away": "brighton",
       "kickoff": "2026-08-30T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score":  {
+        "home": 4,
+        "away": 3
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -197,7 +203,10 @@
       "away": "brentford",
       "kickoff": "2026-08-30T13:00:00.000Z",
       "status": "pending",
-      "score": null,
+      "score":  {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -207,8 +216,11 @@
       "home": "man-united",
       "away": "ipswich",
       "kickoff": "2026-08-30T15:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score":  {
+        "home": 5,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -218,8 +230,11 @@
       "home": "aston-villa",
       "away": "arsenal",
       "kickoff": "2026-08-31T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score":  {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
