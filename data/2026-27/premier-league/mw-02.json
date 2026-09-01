@@ -175,7 +175,7 @@
       "away": "fulham",
       "kickoff": "2026-08-30T13:00:00.000Z",
       "status": "played",
-      "score":  {
+      "score": {
         "home": 1,
         "away": 0
       },
@@ -189,7 +189,7 @@
       "away": "brighton",
       "kickoff": "2026-08-30T13:00:00.000Z",
       "status": "played",
-      "score":  {
+      "score": {
         "home": 4,
         "away": 3
       },
@@ -202,8 +202,8 @@
       "home": "leeds",
       "away": "brentford",
       "kickoff": "2026-08-30T13:00:00.000Z",
-      "status": "pending",
-      "score":  {
+      "status": "played",
+      "score": {
         "home": 1,
         "away": 1
       },
@@ -217,7 +217,7 @@
       "away": "ipswich",
       "kickoff": "2026-08-30T15:30:00.000Z",
       "status": "played",
-      "score":  {
+      "score": {
         "home": 5,
         "away": 2
       },
@@ -231,7 +231,7 @@
       "away": "arsenal",
       "kickoff": "2026-08-31T19:00:00.000Z",
       "status": "played",
-      "score":  {
+      "score": {
         "home": 0,
         "away": 1
       },
