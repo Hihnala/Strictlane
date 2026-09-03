@@ -1,0 +1,178 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 4,
+  "matchweekDerived": false,
+  "source": "hand-entered 3 Sep 2026 — MW4 midweek round, all 12 fixtures; home/away from football-data.co.uk fixtures.csv, scores cross-checked against ESPN",
+  "importedAt": "2026-09-03T09:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-04-bradford-cambridge",
+      "home": "bradford",
+      "away": "cambridge",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-bromley-leyton-orient",
+      "home": "bromley",
+      "away": "leyton-orient",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 5
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-doncaster-notts-county",
+      "home": "doncaster",
+      "away": "notts-county",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-huddersfield-oxford",
+      "home": "huddersfield",
+      "away": "oxford",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-leicester-plymouth",
+      "home": "leicester",
+      "away": "plymouth",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-peterborough-stevenage",
+      "home": "peterborough",
+      "away": "stevenage",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-wycombe-sheffield-wednesday",
+      "home": "wycombe",
+      "away": "sheffield-wednesday",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-barnsley-blackpool",
+      "home": "barnsley",
+      "away": "blackpool",
+      "kickoff": "2026-09-02T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-burton-afc-wimbledon",
+      "home": "burton",
+      "away": "afc-wimbledon",
+      "kickoff": "2026-09-02T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-luton-stockport",
+      "home": "luton",
+      "away": "stockport",
+      "kickoff": "2026-09-02T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-wigan-mk-dons",
+      "home": "wigan",
+      "away": "mk-dons",
+      "kickoff": "2026-09-02T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-04-reading-mansfield",
+      "home": "reading",
+      "away": "mansfield",
+      "kickoff": "2026-09-02T19:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}

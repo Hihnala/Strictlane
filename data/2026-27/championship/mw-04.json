@@ -1,0 +1,178 @@
+{
+  "season": "2026-27",
+  "league": "championship",
+  "matchweek": 4,
+  "matchweekDerived": false,
+  "source": "hand-entered 3 Sep 2026 — MW4 midweek round, all 12 fixtures; home/away from football-data.co.uk fixtures.csv, scores cross-checked against ESPN and Sky Sports",
+  "importedAt": "2026-09-03T09:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e1-04-lincoln-blackburn",
+      "home": "lincoln",
+      "away": "blackburn",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-portsmouth-derby",
+      "home": "portsmouth",
+      "away": "derby",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-preston-bristol-city",
+      "home": "preston",
+      "away": "bristol-city",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-sheffield-united-bolton",
+      "home": "sheffield-united",
+      "away": "bolton",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-swansea-watford",
+      "home": "swansea",
+      "away": "watford",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-west-ham-wolves",
+      "home": "west-ham",
+      "away": "wolves",
+      "kickoff": "2026-09-01T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 2
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-birmingham-southampton",
+      "home": "birmingham",
+      "away": "southampton",
+      "kickoff": "2026-09-01T19:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-stoke-norwich",
+      "home": "stoke",
+      "away": "norwich",
+      "kickoff": "2026-09-01T19:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-millwall-wrexham",
+      "home": "millwall",
+      "away": "wrexham",
+      "kickoff": "2026-09-02T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-qpr-cardiff",
+      "home": "qpr",
+      "away": "cardiff",
+      "kickoff": "2026-09-02T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-west-brom-charlton",
+      "home": "west-brom",
+      "away": "charlton",
+      "kickoff": "2026-09-02T18:45:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-04-burnley-middlesbrough",
+      "home": "burnley",
+      "away": "middlesbrough",
+      "kickoff": "2026-09-02T19:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
