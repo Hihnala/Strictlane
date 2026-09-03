@@ -104,10 +104,15 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   toward shipping a model).
 - Coupon fixtures are pulled automatically from Veikkaus's public
   open-games API via a 3-stage pipeline, not written straight to `main`:
-  (1) `scripts/fetch-vakio.ts`, scheduled Tue–Fri via GitHub Actions, opens
-  a PR with a draft at `data/rounds/drafts/{id}.json` plus a raw payload
-  snapshot for provenance — no login or registered key, the header value
-  is the literal string `ROBOT`; (2) fixtures/forecasts are added by hand
+  (1) `scripts/fetch-vakio.ts`, run on a single Thursday cron via GitHub
+  Actions, opens a PR with a draft at `data/rounds/drafts/{id}.json` plus a
+  raw payload snapshot for provenance — no login or registered key, the
+  header value is the literal string `ROBOT`. Thursday is past the Monday/
+  Tuesday publication window and still two days clear of Saturday; the
+  earlier Tue–Fri polling was dropped because same-day runs raced each
+  other on the branch name. `{id}` is the coupon's **playing** date,
+  derived from the draw's close time — not the date the fetch ran, which
+  the Thursday schedule puts two days earlier; (2) fixtures/forecasts are added by hand
   on that PR branch before kickoff; (3) `scripts/promote-round.ts` joins
   the draft to real match records and derives the round's system block
   (singles/doubles/rows) from the marks rather than trusting a typed
@@ -116,6 +121,14 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   production build. GitHub Actions was chosen over a Vercel cron
   specifically to keep the PR's commit timestamp as external, independent
   provenance and to keep the site fully static.
+- Only **Lauantaivakio** is in scope. The open-games endpoint returns the
+  whole Vakio family — Futisvakio, Sunnuntaivakio and whatever Veikkaus
+  names next — and those coupons mix European and Finnish lower-division
+  fixtures the site has no record of and are not always 13 matches. The
+  fetcher whitelists the Saturday coupon by name rather than excluding
+  known-bad ones, so a new draw type is skipped by default instead of
+  breaking the run. Widening this later is a deliberate product decision,
+  not a config tweak: a non-13-match coupon has no 8+0 shape.
 - The API also exposes pool popularity (how the pari-mutuel pool split
   across 1/X/2 per match) — a different quantity from bookmaker
   probability, since Vakio payout depends on how many others picked the
@@ -159,19 +172,16 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   layout.tsx, Coupon.tsx, MatchRow.tsx, content.ts, globals.css,
   package.json) and `docs/` (schema.ts, scoring.ts, odds.ts, matchweeks.ts,
   validate.ts, import-archive.ts, teams.json, seasons.json) — these are
-  drafted reference material to build the real app from, not yet an actual
-  app in this repo.
+  drafted reference material to build the real app from, the actual
+  app in the repo.
 - One worked commentary example exists (`docs/2026-08-22.md`, a round review)
   demonstrating the voice in practice.
-- `docs/VEIKKAUS.md`, `docs/fetch-vakio.ts`, and `docs/fetch-vakio.yml` are a
-  drafted, reference-verified pipeline for automated Vakio coupon fetch (see
-  Capabilities and Constraints) — not yet wired into a running GitHub Actions
-  workflow in this repo.
-- State absence: no `app/`, `data/`, or `content/` directories exist yet at
-  the project root — the real Next.js app has not been scaffolded here, and
-  no real match data has been imported. The two archive seasons
-  (2024-25, 2025-26) are not yet imported. Future work must not assume a
-  running site exists yet.
+- The Vakio coupon fetch is **live**, not drafted: `scripts/fetch-vakio.ts`
+  and `.github/workflows/fetch-vakio.yml` run on the Thursday cron and have
+  captured a real coupon end to end (draw 100570, 3 Sep 2026). Field mapping
+  is confirmed against real payloads for `outcome.home` / `outcome.away`;
+  `competitors` and the `"Home - Away"` string remain as untested fallbacks.
+  `docs/VEIKKAUS.md` is the reference write-up behind it.
 
 ## Product Principles
 

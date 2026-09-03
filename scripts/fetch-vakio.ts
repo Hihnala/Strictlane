@@ -56,14 +56,20 @@ async function get<T>(url: string): Promise<T> {
  */
 interface RawDraw {
   id: number | string;
-  listIndex?: number;
+  // A string ("1") in every payload seen so far, despite reading like a number.
+  listIndex?: number | string;
   name?: string;
+  // Absent on the 3 Sep 2026 payload — the draw name arrived in `name`, time
+  // prefix and all ("16.00 Sunnuntaivakio"). Kept because the reference docs
+  // describe it and some game types may still send it.
   brandName?: string;
   status?: string;
   openTime?: number;
   closeTime?: number;
   rows?: Array<{
-    eventNumber?: number;
+    id?: string;           // position within the coupon, "0".."12"
+    eventId?: string;      // Veikkaus's global fixture key, e.g. "104918542"
+    eventNumber?: number;  // documented but never actually sent; fallback only
     name?: string;
     competitors?: Array<{ name?: string }>;
     outcome?: {
@@ -73,34 +79,79 @@ interface RawDraw {
   }>;
 }
 
+/**
+ * Veikkaus sends two different abbreviations per side, and neither is reliably
+ * the better one. On 3 Sep 2026 `outcome.name` gave "Manchester C" and "West
+ * Bromwich" — both of which had to be added to teams.json by hand — while
+ * `outcome.id` gave "Man City" and "West Brom", which were already aliases.
+ * But `outcome.id` also gives "Middlesbr", "Portsm." and "Sunderl.", which
+ * `outcome.name` spells out in full. So both are carried through to resolution
+ * and either may be the one that matches.
+ */
+interface Side {
+  name: string; // outcome.name — the display form, what gets logged
+  alt: string;  // outcome.id — a second abbreviation, often an existing alias
+}
+
 interface Fixture {
-  eventId: number;
-  home: string;
-  away: string;
+  position: number;         // index within the coupon, from row.id
+  eventRef: string | null;  // Veikkaus's own fixture key; provenance only
+  home: Side;
+  away: Side;
 }
 
 const drawLabel = (d: RawDraw) => d.brandName ?? d.name ?? "Vakio";
+
+const side = (name: string, alt: string): Side => ({ name: name.trim(), alt: alt.trim() });
 
 /** Pull home/away out of a draw row. */
 function mapDraw(draw: RawDraw): Fixture[] {
   const rows = draw.rows ?? [];
   return rows.map((row, i) => {
-    const eventId = row.eventNumber ?? i;
+    // `row.id` is the coupon position. The array index has agreed with it on
+    // every payload so far, which is the only reason the previous
+    // `eventNumber ?? i` worked at all — `eventNumber` is never actually sent.
+    // Prefer the explicit field and refuse if the two disagree: the popularity
+    // map is keyed on this number, so a silent drift would attach the wrong
+    // pool split to a match instead of failing.
+    const declared = row.id !== undefined ? Number(row.id) : row.eventNumber;
+    const hasDeclared = declared !== undefined && Number.isFinite(declared);
+    if (hasDeclared && declared !== i) {
+      throw new Error(
+        `row ${i} of draw ${draw.id}: declared position ${declared} does not match array index ${i}.` +
+          ` Rows are out of document order and pool popularity would be misaligned.` +
+          ` Inspect with --raw before trusting anything in this draw.`
+      );
+    }
+    const position = hasDeclared ? (declared as number) : i;
+    const eventRef = row.eventId ?? null;
 
-    const oHome = (row.outcome?.home?.name ?? row.outcome?.home?.id ?? "").trim();
-    const oAway = (row.outcome?.away?.name ?? row.outcome?.away?.id ?? "").trim();
-    if (oHome && oAway) return { eventId, home: oHome, away: oAway };
+    const hName = row.outcome?.home?.name ?? "";
+    const aName = row.outcome?.away?.name ?? "";
+    const hAlt = row.outcome?.home?.id ?? "";
+    const aAlt = row.outcome?.away?.id ?? "";
+    if ((hName || hAlt) && (aName || aAlt)) {
+      return {
+        position,
+        eventRef,
+        home: side(hName || hAlt, hAlt),
+        away: side(aName || aAlt, aAlt),
+      };
+    }
 
     if (row.competitors?.length === 2) {
       return {
-        eventId,
-        home: (row.competitors[0].name ?? "").trim(),
-        away: (row.competitors[1].name ?? "").trim(),
+        position,
+        eventRef,
+        home: side(row.competitors[0].name ?? "", ""),
+        away: side(row.competitors[1].name ?? "", ""),
       };
     }
     const label = (row.name ?? "").trim();
     const split = label.split(/\s+[-–]\s+/);
-    if (split.length === 2) return { eventId, home: split[0].trim(), away: split[1].trim() };
+    if (split.length === 2) {
+      return { position, eventRef, home: side(split[0], ""), away: side(split[1], "") };
+    }
 
     throw new Error(
       `row ${i} of draw ${draw.id}: cannot read home/away from ${JSON.stringify(row).slice(0, 200)}` +
@@ -201,6 +252,28 @@ function suggest(raw: string, teams: Team[]): string {
   );
 }
 
+/**
+ * Resolve one side against teams.json, trying both abbreviations Veikkaus
+ * sends. Either may be the one that matches; only one needs to.
+ *
+ * If both match but disagree, that is not a naming quirk — it means one of the
+ * two strings is on the wrong club's alias list, and every coupon that ever
+ * used that alias is suspect. Surfaced as a hard failure, never resolved by
+ * preferring one field.
+ */
+function resolveSide(s: Side, teams: TeamIndex): { team: Team | null; conflict: string | null } {
+  const byName = s.name ? teams.byKey.get(s.name.toLowerCase()) : undefined;
+  const byAlt = s.alt ? teams.byKey.get(s.alt.toLowerCase()) : undefined;
+
+  if (byName && byAlt && byName.id !== byAlt.id) {
+    return {
+      team: null,
+      conflict: `"${s.name}" → ${byName.id}, but "${s.alt}" → ${byAlt.id}`,
+    };
+  }
+  return { team: byName ?? byAlt ?? null, conflict: null };
+}
+
 /* ---------------------------------------------------------------- draws --- */
 
 /**
@@ -260,19 +333,25 @@ async function processDraw(draw: RawDraw, teams: TeamIndex, dry: boolean) {
   // cleared, so one bad draw poisoned every draw processed after it — including
   // clean ones that would otherwise have written fine.
   const unknown = new Set<string>();
+  const conflicts: string[] = [];
 
   const resolved = fixtures.map((f) => {
-    const h = teams.byKey.get(f.home.toLowerCase());
-    const a = teams.byKey.get(f.away.toLowerCase());
-    if (!h) unknown.add(f.home);
-    if (!a) unknown.add(f.away);
+    const h = resolveSide(f.home, teams);
+    const a = resolveSide(f.away, teams);
+
+    if (h.conflict) conflicts.push(h.conflict);
+    else if (!h.team) unknown.add(f.home.name || f.home.alt);
+    if (a.conflict) conflicts.push(a.conflict);
+    else if (!a.team) unknown.add(f.away.name || f.away.alt);
+
     return {
-      eventId: f.eventId,
-      homeRaw: f.home,
-      awayRaw: f.away,
-      home: h?.id ?? null,
-      away: a?.id ?? null,
-      poolPopularity: popularity?.get(f.eventId) ?? null,
+      eventId: f.position,
+      eventRef: f.eventRef,
+      homeRaw: f.home.name,
+      awayRaw: f.away.name,
+      home: h.team?.id ?? null,
+      away: a.team?.id ?? null,
+      poolPopularity: popularity?.get(f.position) ?? null,
     };
   });
 
@@ -286,10 +365,20 @@ async function processDraw(draw: RawDraw, teams: TeamIndex, dry: boolean) {
     );
   }
 
+  if (conflicts.length) {
+    throw new Error(
+      `${conflicts.length} side(s) where Veikkaus's two name forms resolve to different clubs:\n\n` +
+        conflicts.map((c) => `    ${c}`).join("\n") +
+        `\n\n  One of those aliases is on the wrong club in teams.json. Fix it before\n` +
+        `  trusting this coupon — and check any past round that used it.\n`
+    );
+  }
+
   if (unknown.size) {
     throw new Error(
       `${unknown.size} unmapped team name(s) — nothing written for this draw.\n` +
-        `  Veikkaus truncates names; prefer an alias on the existing club:\n\n` +
+        `  Both of Veikkaus's forms were tried and neither matched. Truncation is\n` +
+        `  the usual cause; prefer an alias on the existing club:\n\n` +
         [...unknown].sort().map((n) => suggest(n, teams.all)).join("\n") +
         "\n"
     );
