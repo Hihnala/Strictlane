@@ -1,0 +1,1016 @@
+{
+  "capturedAt": "2026-09-03T08:36:45.100Z",
+  "draw": {
+    "closeTime": 1788616680000,
+    "drawTime": 1788641999000,
+    "gameName": "SPORT",
+    "gameRuleSet": {
+      "additionalPrizeTierAvailable": true,
+      "additionalPrizeTierPrice": 25,
+      "basePrice": 25,
+      "durations": [
+        1,
+        2,
+        3,
+        5,
+        10
+      ],
+      "fractions": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "maxPrice": 1000000,
+      "oddsType": "VARIABLE",
+      "quickPickAvailable": true,
+      "revision": -1371153505,
+      "salesChannels": [
+        "INTERACTIVE",
+        "RETAILER"
+      ]
+    },
+    "id": 100570,
+    "jackpots": [
+      {
+        "amount": 40000000,
+        "description": "Bonuskierros, 400 000 e jaetaan täysosumien kesken.",
+        "id": "EXTRA_MONEY"
+      }
+    ],
+    "listIndex": "1",
+    "name": "Lauantaivakio",
+    "openTime": 1788145200000,
+    "reducedSystems": [
+      {
+        "groupId": "1",
+        "id": "R00040009_12",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 9,
+        "numberOfSingleSelections": 9,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "1",
+        "id": "R07000016_12",
+        "numberOfDoubleSelections": 7,
+        "numberOfRows": 16,
+        "numberOfSingleSelections": 6,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "1",
+        "id": "R00050027_12",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 27,
+        "numberOfSingleSelections": 8,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "1",
+        "id": "R08000032_12",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 32,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "1",
+        "id": "R09000062_12",
+        "numberOfDoubleSelections": 9,
+        "numberOfRows": 62,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "1",
+        "id": "R00060073_12",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 73,
+        "numberOfSingleSelections": 7,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "1",
+        "id": "R05030092_12",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 92,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "1",
+        "id": "R04040128_12",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 128,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "1",
+        "id": "R09010160_12",
+        "numberOfDoubleSelections": 9,
+        "numberOfRows": 160,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 1
+      },
+      {
+        "groupId": "1",
+        "id": "R00070186_12",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 186,
+        "numberOfSingleSelections": 6,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "1",
+        "id": "R05040240_12",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 240,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "1",
+        "id": "R04050324_12",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 324,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "1",
+        "id": "R06040432_12",
+        "numberOfDoubleSelections": 6,
+        "numberOfRows": 432,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "1",
+        "id": "R03060468_12",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 468,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "1",
+        "id": "R00080492_12",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 492,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 8
+      },
+      {
+        "groupId": "1",
+        "id": "R05050639_12",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 639,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "1",
+        "id": "R04060864_12",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 864,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "1",
+        "id": "R08041296_12",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 1296,
+        "numberOfSingleSelections": 1,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "1",
+        "id": "R00091341_12",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 1341,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 9
+      },
+      {
+        "groupId": "2",
+        "id": "R08000012_11",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 12,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "2",
+        "id": "R09000016_11",
+        "numberOfDoubleSelections": 9,
+        "numberOfRows": 16,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "2",
+        "id": "R00060017_11",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 17,
+        "numberOfSingleSelections": 7,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "2",
+        "id": "R03040018_11",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 18,
+        "numberOfSingleSelections": 6,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "2",
+        "id": "R08010021_11",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 21,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 1
+      },
+      {
+        "groupId": "2",
+        "id": "R05030023_11",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 23,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "2",
+        "id": "R04040024_11",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 24,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "2",
+        "id": "R10000030_11",
+        "numberOfDoubleSelections": 10,
+        "numberOfRows": 30,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "2",
+        "id": "R00070034_11",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 34,
+        "numberOfSingleSelections": 6,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "2",
+        "id": "R09010035_11",
+        "numberOfDoubleSelections": 9,
+        "numberOfRows": 35,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 1
+      },
+      {
+        "groupId": "2",
+        "id": "R06030036_11",
+        "numberOfDoubleSelections": 6,
+        "numberOfRows": 36,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "2",
+        "id": "R03050036_11",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 36,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "2",
+        "id": "R05040048_11",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 48,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "2",
+        "id": "R02060048_11",
+        "numberOfDoubleSelections": 2,
+        "numberOfRows": 48,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "2",
+        "id": "R01070054_11",
+        "numberOfDoubleSelections": 1,
+        "numberOfRows": 54,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "2",
+        "id": "R10010060_11",
+        "numberOfDoubleSelections": 10,
+        "numberOfRows": 60,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 1
+      },
+      {
+        "groupId": "2",
+        "id": "R07030060_11",
+        "numberOfDoubleSelections": 7,
+        "numberOfRows": 60,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "2",
+        "id": "R04050064_11",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 64,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "2",
+        "id": "R06040072_11",
+        "numberOfDoubleSelections": 6,
+        "numberOfRows": 72,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "2",
+        "id": "R03060072_11",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 72,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "2",
+        "id": "R00080081_11",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 81,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 8
+      },
+      {
+        "groupId": "2",
+        "id": "R11010096_11",
+        "numberOfDoubleSelections": 11,
+        "numberOfRows": 96,
+        "numberOfSingleSelections": 1,
+        "numberOfTripleSelections": 1
+      },
+      {
+        "groupId": "2",
+        "id": "R08030096_11",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 96,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "2",
+        "id": "R05050108_11",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 108,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "2",
+        "id": "R02070108_11",
+        "numberOfDoubleSelections": 2,
+        "numberOfRows": 108,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "2",
+        "id": "R10020144_11",
+        "numberOfDoubleSelections": 10,
+        "numberOfRows": 144,
+        "numberOfSingleSelections": 1,
+        "numberOfTripleSelections": 2
+      },
+      {
+        "groupId": "2",
+        "id": "R04060144_11",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 144,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "2",
+        "id": "R06050192_11",
+        "numberOfDoubleSelections": 6,
+        "numberOfRows": 192,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "2",
+        "id": "R03070216_11",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 216,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "2",
+        "id": "R00090222_11",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 222,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 9
+      },
+      {
+        "groupId": "2",
+        "id": "R05060276_11",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 276,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "2",
+        "id": "R04070384_11",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 384,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "2",
+        "id": "R08030432_11",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 432,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "2",
+        "id": "R09040480_11",
+        "numberOfDoubleSelections": 9,
+        "numberOfRows": 480,
+        "numberOfSingleSelections": 0,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "2",
+        "id": "R00110729_11",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 729,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 11
+      },
+      {
+        "groupId": "2",
+        "id": "R00100729_11",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 729,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 10
+      },
+      {
+        "groupId": "3",
+        "id": "R04040010_10",
+        "numberOfDoubleSelections": 4,
+        "numberOfRows": 10,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "3",
+        "id": "R09010012_10",
+        "numberOfDoubleSelections": 9,
+        "numberOfRows": 12,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 1
+      },
+      {
+        "groupId": "3",
+        "id": "R06030012_10",
+        "numberOfDoubleSelections": 6,
+        "numberOfRows": 12,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "3",
+        "id": "R03050012_10",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 12,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "3",
+        "id": "R00070012_10",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 12,
+        "numberOfSingleSelections": 6,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "3",
+        "id": "R11000016_10",
+        "numberOfDoubleSelections": 11,
+        "numberOfRows": 16,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "3",
+        "id": "R08020016_10",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 16,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 2
+      },
+      {
+        "groupId": "3",
+        "id": "R05040016_10",
+        "numberOfDoubleSelections": 5,
+        "numberOfRows": 16,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "3",
+        "id": "R07030022_10",
+        "numberOfDoubleSelections": 7,
+        "numberOfRows": 22,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "3",
+        "id": "R06040024_10",
+        "numberOfDoubleSelections": 6,
+        "numberOfRows": 24,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 4
+      },
+      {
+        "groupId": "3",
+        "id": "R03060024_10",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 24,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 6
+      },
+      {
+        "groupId": "3",
+        "id": "R00080027_10",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 27,
+        "numberOfSingleSelections": 5,
+        "numberOfTripleSelections": 8
+      },
+      {
+        "groupId": "3",
+        "id": "R12000028_10",
+        "numberOfDoubleSelections": 12,
+        "numberOfRows": 28,
+        "numberOfSingleSelections": 1,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "3",
+        "id": "R11010032_10",
+        "numberOfDoubleSelections": 11,
+        "numberOfRows": 32,
+        "numberOfSingleSelections": 1,
+        "numberOfTripleSelections": 1
+      },
+      {
+        "groupId": "3",
+        "id": "R08030032_10",
+        "numberOfDoubleSelections": 8,
+        "numberOfRows": 32,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 3
+      },
+      {
+        "groupId": "3",
+        "id": "R13000042_10",
+        "numberOfDoubleSelections": 13,
+        "numberOfRows": 42,
+        "numberOfSingleSelections": 0,
+        "numberOfTripleSelections": 0
+      },
+      {
+        "groupId": "3",
+        "id": "R06050054_10",
+        "numberOfDoubleSelections": 6,
+        "numberOfRows": 54,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 5
+      },
+      {
+        "groupId": "3",
+        "id": "R03070054_10",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 54,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 7
+      },
+      {
+        "groupId": "3",
+        "id": "R00090054_10",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 54,
+        "numberOfSingleSelections": 4,
+        "numberOfTripleSelections": 9
+      },
+      {
+        "groupId": "3",
+        "id": "R02080072_10",
+        "numberOfDoubleSelections": 2,
+        "numberOfRows": 72,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 8
+      },
+      {
+        "groupId": "3",
+        "id": "R03080108_10",
+        "numberOfDoubleSelections": 3,
+        "numberOfRows": 108,
+        "numberOfSingleSelections": 2,
+        "numberOfTripleSelections": 8
+      },
+      {
+        "groupId": "3",
+        "id": "R00100108_10",
+        "numberOfDoubleSelections": 0,
+        "numberOfRows": 108,
+        "numberOfSingleSelections": 3,
+        "numberOfTripleSelections": 10
+      }
+    ],
+    "resultsAvailableTime": 1788641999000,
+    "rows": [
+      {
+        "additionalPrizeTier": true,
+        "eventId": "104918542",
+        "externalId": "0",
+        "id": "0",
+        "outcome": {
+          "away": {
+            "description": "Coventry C",
+            "externalId": "0",
+            "id": "Coventry",
+            "name": "Coventry C"
+          },
+          "home": {
+            "description": "Manchester C",
+            "externalId": "0",
+            "id": "Man City",
+            "name": "Manchester C"
+          }
+        },
+        "sportId": "1",
+        "tvChannel": "V sport2"
+      },
+      {
+        "additionalPrizeTier": true,
+        "eventId": "104918543",
+        "externalId": "0",
+        "id": "1",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Tottenham",
+            "name": "Tottenham"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Nottingha",
+            "name": "Nottingham"
+          }
+        },
+        "sportId": "1",
+        "tvChannel": "V sport3"
+      },
+      {
+        "additionalPrizeTier": true,
+        "eventId": "104918537",
+        "externalId": "0",
+        "id": "2",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Crystal P",
+            "name": "Crystal P"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Fulham",
+            "name": "Fulham"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": true,
+        "eventId": "104918552",
+        "externalId": "0",
+        "id": "3",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Sunderl.",
+            "name": "Sunderland"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Brentford",
+            "name": "Brentford"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": true,
+        "eventId": "104918548",
+        "externalId": "0",
+        "id": "4",
+        "outcome": {
+          "away": {
+            "description": "Leeds U",
+            "externalId": "0",
+            "id": "Leeds U",
+            "name": "Leeds U"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Brighton",
+            "name": "Brighton"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": true,
+        "eventId": "104918551",
+        "externalId": "0",
+        "id": "5",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Aston V",
+            "name": "Aston Villa"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Hull",
+            "name": "Hull"
+          }
+        },
+        "sportId": "1",
+        "tvChannel": "V sport2"
+      },
+      {
+        "additionalPrizeTier": true,
+        "eventId": "104942522",
+        "externalId": "0",
+        "id": "6",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Middlesbr",
+            "name": "Middlesbrough"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "QPR",
+            "name": "QPR"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": false,
+        "eventId": "104942525",
+        "externalId": "0",
+        "id": "7",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Derby",
+            "name": "Derby"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "West Ham",
+            "name": "West Ham"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": false,
+        "eventId": "104942510",
+        "externalId": "0",
+        "id": "8",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Bristol C",
+            "name": "Bristol C"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Burnley",
+            "name": "Burnley"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": false,
+        "eventId": "104942519",
+        "externalId": "0",
+        "id": "9",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Bolton",
+            "name": "Bolton"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Millwall",
+            "name": "Millwall"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": false,
+        "eventId": "104942514",
+        "externalId": "0",
+        "id": "10",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Cardiff",
+            "name": "Cardiff C"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Portsm.",
+            "name": "Portsmouth"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": false,
+        "eventId": "104942518",
+        "externalId": "0",
+        "id": "11",
+        "outcome": {
+          "away": {
+            "description": "Norwich C",
+            "externalId": "0",
+            "id": "Norwich C",
+            "name": "Norwich C"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "Sheff Utd",
+            "name": "Sheffield U"
+          }
+        },
+        "sportId": "1"
+      },
+      {
+        "additionalPrizeTier": false,
+        "eventId": "104942530",
+        "externalId": "0",
+        "id": "12",
+        "outcome": {
+          "away": {
+            "externalId": "0",
+            "id": "Watford",
+            "name": "Watford"
+          },
+          "home": {
+            "externalId": "0",
+            "id": "West Brom",
+            "name": "West Bromwich"
+          }
+        },
+        "sportId": "1"
+      }
+    ],
+    "status": "OPEN"
+  }
+}
