@@ -132,7 +132,17 @@
         "home": 5,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "oddsportal-avg(close)",
+        "method": "proportional",
+        "overround": 0.05,
+        "probs": {
+          "1": 59,
+          "X": 26,
+          "2": 15
+        },
+        "capturedAt": "2026-08-29T13:30:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100569",
@@ -155,7 +165,7 @@
           "X"
         ],
         "capturedAt": "2026-08-25T17:30:00.000Z",
-        "note": "No market price found on 25 Aug. Own estimate from form and venue \u2014 replace with closing odds before kickoff."
+        "note": "Own estimate from form and venue; no market price on 25 Aug. Closing line added 29 Aug."
       }
     },
     {
