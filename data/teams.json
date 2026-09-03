@@ -60,7 +60,7 @@
       "id": "crystal-palace",
       "name": "Crystal Palace",
       "short": "Palace",
-      "aliases": []
+      "aliases": ["Crystal P"]
     },
     {
       "id": "everton",
@@ -118,9 +118,7 @@
       "id": "man-city",
       "name": "Manchester City",
       "short": "Man City",
-      "aliases": [
-        "Man City"
-      ]
+      "aliases": ["Man City", "Manchester C"]
     },
     {
       "id": "man-united",
@@ -346,9 +344,7 @@
       "id": "west-brom",
       "name": "West Bromwich Albion",
       "short": "West Brom",
-      "aliases": [
-        "West Brom"
-      ]
+      "aliases": ["West Brom", "West Bromwich"]
     },
     {
       "id": "wrexham",
