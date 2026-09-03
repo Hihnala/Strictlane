@@ -124,9 +124,7 @@
       "id": "man-united",
       "name": "Manchester United",
       "short": "Man Utd",
-      "aliases": [
-        "Man United"
-      ]
+      "aliases": ["Man United", "Manchester U"]
     },
     {
       "id": "newcastle",
