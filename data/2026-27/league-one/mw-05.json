@@ -1,8 +1,10 @@
 {
-  "_comment": "League One matchweek 5, 2026-27. Fixtures only \u2014 no scores, no market odds yet. Check the wrapper keys against mw-04.json before dropping this in; only the `matches` array is verified against the site's match shape. No Vakio coupon fixtures fall in this matchweek, so every forecast is null.",
   "season": "2026-27",
   "league": "league-one",
   "matchweek": 5,
+  "matchweekDerived": false,
+  "source": "hand-entered 4 Sep 2026 \u2014 MW5 fixtures only, all 12; home/away and kickoff times from LiveScore and Sky Sports listings, cross-checked for a complete 24-club round",
+  "importedAt": "2026-09-04T09:00:00.000Z",
   "matches": [
     {
       "id": "2026-27-e2-05-peterborough-sheffield-wednesday",
@@ -10,6 +12,9 @@
       "away": "sheffield-wednesday",
       "kickoff": "2026-09-05T11:30:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -18,6 +23,9 @@
       "away": "stockport",
       "kickoff": "2026-09-05T11:30:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -26,6 +34,9 @@
       "away": "stevenage",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -34,6 +45,9 @@
       "away": "mansfield",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -42,6 +56,9 @@
       "away": "cambridge",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -50,6 +67,9 @@
       "away": "plymouth",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -58,6 +78,9 @@
       "away": "notts-county",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -66,6 +89,9 @@
       "away": "oxford",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -74,6 +100,9 @@
       "away": "leyton-orient",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -82,6 +111,9 @@
       "away": "blackpool",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -90,6 +122,9 @@
       "away": "mk-dons",
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     },
     {
@@ -98,6 +133,9 @@
       "away": "afc-wimbledon",
       "kickoff": "2026-09-07T19:00:00.000Z",
       "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
       "forecast": null
     }
   ]
