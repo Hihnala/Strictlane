@@ -1,0 +1,104 @@
+{
+  "_comment": "League One matchweek 5, 2026-27. Fixtures only \u2014 no scores, no market odds yet. Check the wrapper keys against mw-04.json before dropping this in; only the `matches` array is verified against the site's match shape. No Vakio coupon fixtures fall in this matchweek, so every forecast is null.",
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 5,
+  "matches": [
+    {
+      "id": "2026-27-e2-05-peterborough-sheffield-wednesday",
+      "home": "peterborough",
+      "away": "sheffield-wednesday",
+      "kickoff": "2026-09-05T11:30:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-wigan-stockport",
+      "home": "wigan",
+      "away": "stockport",
+      "kickoff": "2026-09-05T11:30:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-barnsley-stevenage",
+      "home": "barnsley",
+      "away": "stevenage",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-bradford-mansfield",
+      "home": "bradford",
+      "away": "mansfield",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-burton-cambridge",
+      "home": "burton",
+      "away": "cambridge",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-doncaster-plymouth",
+      "home": "doncaster",
+      "away": "plymouth",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-huddersfield-notts-county",
+      "home": "huddersfield",
+      "away": "notts-county",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-leicester-oxford",
+      "home": "leicester",
+      "away": "oxford",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-luton-leyton-orient",
+      "home": "luton",
+      "away": "leyton-orient",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-reading-blackpool",
+      "home": "reading",
+      "away": "blackpool",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-wycombe-mk-dons",
+      "home": "wycombe",
+      "away": "mk-dons",
+      "kickoff": "2026-09-05T14:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-05-bromley-afc-wimbledon",
+      "home": "bromley",
+      "away": "afc-wimbledon",
+      "kickoff": "2026-09-07T19:00:00.000Z",
+      "status": "pending",
+      "forecast": null
+    }
+  ]
+}
