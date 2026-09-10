@@ -1,0 +1,183 @@
+{
+  "id": "2026-09-12",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100571",
+  "veikkaus": {
+    "drawId": "100571",
+    "listIndex": "1",
+    "closeTime": "2026-09-12T13:58:00.000Z",
+    "capturedAt": "2026-09-10T12:08:30.284Z"
+  },
+  "fixtures": [
+    {
+      "eventId": 0,
+      "eventRef": "104918565",
+      "homeRaw": "Sunderland",
+      "awayRaw": "Arsenal",
+      "home": "sunderland",
+      "away": "arsenal",
+      "poolPopularity": {
+        "1": 15.08,
+        "2": 69.26,
+        "X": 15.66
+      }
+    },
+    {
+      "eventId": 1,
+      "eventRef": "104918563",
+      "homeRaw": "Tottenham",
+      "awayRaw": "Everton",
+      "home": "tottenham",
+      "away": "everton",
+      "poolPopularity": {
+        "1": 39.63,
+        "2": 29.02,
+        "X": 31.35
+      }
+    },
+    {
+      "eventId": 2,
+      "eventRef": "104918553",
+      "homeRaw": "Liverpool",
+      "awayRaw": "Fulham",
+      "home": "liverpool",
+      "away": "fulham",
+      "poolPopularity": {
+        "1": 78.02,
+        "2": 8.84,
+        "X": 13.13
+      }
+    },
+    {
+      "eventId": 3,
+      "eventRef": "104918559",
+      "homeRaw": "Chelsea",
+      "awayRaw": "Hull",
+      "home": "chelsea",
+      "away": "hull",
+      "poolPopularity": {
+        "1": 71.6,
+        "2": 11.64,
+        "X": 16.76
+      }
+    },
+    {
+      "eventId": 4,
+      "eventRef": "104918555",
+      "homeRaw": "Bournemouth",
+      "awayRaw": "Brentford",
+      "home": "bournemouth",
+      "away": "brentford",
+      "poolPopularity": {
+        "1": 32.74,
+        "2": 34.52,
+        "X": 32.73
+      }
+    },
+    {
+      "eventId": 5,
+      "eventRef": "104918562",
+      "homeRaw": "Aston Villa",
+      "awayRaw": "Nottingham",
+      "home": "aston-villa",
+      "away": "nottingham-forest",
+      "poolPopularity": {
+        "1": 49,
+        "2": 23.15,
+        "X": 27.85
+      }
+    },
+    {
+      "eventId": 6,
+      "eventRef": "104918564",
+      "homeRaw": "Crystal P",
+      "awayRaw": "Ipswich T",
+      "home": "crystal-palace",
+      "away": "ipswich",
+      "poolPopularity": {
+        "1": 57.58,
+        "2": 17.93,
+        "X": 24.48
+      }
+    },
+    {
+      "eventId": 7,
+      "eventRef": "104942537",
+      "homeRaw": "Southampton",
+      "awayRaw": "Bristol C",
+      "home": "southampton",
+      "away": "bristol-city",
+      "poolPopularity": {
+        "1": 50.44,
+        "2": 25.16,
+        "X": 24.41
+      }
+    },
+    {
+      "eventId": 8,
+      "eventRef": "104942555",
+      "homeRaw": "Swansea",
+      "awayRaw": "Burnley",
+      "home": "swansea",
+      "away": "burnley",
+      "poolPopularity": {
+        "1": 62.03,
+        "2": 19.67,
+        "X": 18.3
+      }
+    },
+    {
+      "eventId": 9,
+      "eventRef": "104942547",
+      "homeRaw": "Charlton",
+      "awayRaw": "Portsmouth",
+      "home": "charlton",
+      "away": "portsmouth",
+      "poolPopularity": {
+        "1": 53.33,
+        "2": 22.7,
+        "X": 23.96
+      }
+    },
+    {
+      "eventId": 10,
+      "eventRef": "104942548",
+      "homeRaw": "Middlesbrough",
+      "awayRaw": "Norwich C",
+      "home": "middlesbrough",
+      "away": "norwich",
+      "poolPopularity": {
+        "1": 60,
+        "2": 18.33,
+        "X": 21.67
+      }
+    },
+    {
+      "eventId": 11,
+      "eventRef": "104942556",
+      "homeRaw": "Blackburn",
+      "awayRaw": "Millwall",
+      "home": "blackburn",
+      "away": "millwall",
+      "poolPopularity": {
+        "1": 34.1,
+        "2": 38.17,
+        "X": 27.73
+      }
+    },
+    {
+      "eventId": 12,
+      "eventRef": "104942550",
+      "homeRaw": "Watford",
+      "awayRaw": "Stoke",
+      "home": "watford",
+      "away": "stoke",
+      "poolPopularity": {
+        "1": 45.94,
+        "2": 25.37,
+        "X": 28.69
+      }
+    }
+  ],
+  "matchIds": []
+}
