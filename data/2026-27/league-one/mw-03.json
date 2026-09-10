@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 3,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep, then postponed again (Reading in the Carabao Cup), no new date as of 10 Sep 2026; MW3 results from BBC Sport",
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep, then postponed again (Reading in the Carabao Cup), no new date as of 10 Sep 2026; MW3 results from BBC Sport; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
   "importedAt": "2026-08-25T17:30:00.000Z",
   "matches": [
     {
@@ -17,15 +17,15 @@
         "away": 2
       },
       "market": {
-        "source": "oddsportal-avg(pre-close)",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.075,
+        "overround": 0.0718,
         "probs": {
-          "1": 30.6,
-          "X": 28.7,
-          "2": 40.8
+          "1": 34.4,
+          "X": 28.1,
+          "2": 37.5
         },
-        "capturedAt": "2026-08-25T16:00:00.000Z"
+        "capturedAt": "2026-08-29T14:00:00.000Z"
       },
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -62,7 +62,17 @@
         "home": 1,
         "away": 3
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0726,
+        "probs": {
+          "1": 45.5,
+          "X": 25.5,
+          "2": 29
+        },
+        "capturedAt": "2026-08-29T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -76,7 +86,17 @@
         "home": 2,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0703,
+        "probs": {
+          "1": 43.4,
+          "X": 28.1,
+          "2": 28.5
+        },
+        "capturedAt": "2026-08-29T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -90,7 +110,17 @@
         "home": 2,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0753,
+        "probs": {
+          "1": 39.3,
+          "X": 27.4,
+          "2": 33.3
+        },
+        "capturedAt": "2026-08-29T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -104,7 +134,17 @@
         "home": 7,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0713,
+        "probs": {
+          "1": 53.6,
+          "X": 25.1,
+          "2": 21.3
+        },
+        "capturedAt": "2026-08-29T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -118,7 +158,17 @@
         "home": 2,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0726,
+        "probs": {
+          "1": 39.7,
+          "X": 29,
+          "2": 31.3
+        },
+        "capturedAt": "2026-08-29T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -133,15 +183,15 @@
         "away": 1
       },
       "market": {
-        "source": "oddsportal-avg(close)",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.05,
+        "overround": 0.0762,
         "probs": {
-          "1": 59,
-          "X": 26,
-          "2": 15
+          "1": 51.9,
+          "X": 25,
+          "2": 23.1
         },
-        "capturedAt": "2026-08-29T13:30:00.000Z"
+        "capturedAt": "2026-08-29T14:00:00.000Z"
       },
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -178,7 +228,17 @@
         "home": 1,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0721,
+        "probs": {
+          "1": 32.6,
+          "X": 28.5,
+          "2": 38.9
+        },
+        "capturedAt": "2026-08-30T13:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -192,7 +252,17 @@
         "home": 5,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.072,
+        "probs": {
+          "1": 30.7,
+          "X": 26.1,
+          "2": 43.2
+        },
+        "capturedAt": "2026-08-30T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -211,13 +281,23 @@
       "id": "2026-27-e2-03-blackpool-peterborough",
       "home": "blackpool",
       "away": "peterborough",
-      "kickoff": "2026-08-29T14:00:00.000Z",
+      "kickoff": "2026-08-29T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 4,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0771,
+        "probs": {
+          "1": 43.2,
+          "X": 26.1,
+          "2": 30.7
+        },
+        "capturedAt": "2026-08-29T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -225,13 +305,23 @@
       "id": "2026-27-e2-03-mk-dons-leicester",
       "home": "mk-dons",
       "away": "leicester",
-      "kickoff": "2026-08-29T14:00:00.000Z",
+      "kickoff": "2026-08-29T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 0,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0746,
+        "probs": {
+          "1": 39.3,
+          "X": 26.1,
+          "2": 34.6
+        },
+        "capturedAt": "2026-08-29T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     }

@@ -3,46 +3,76 @@
   "league": "league-one",
   "matchweek": 1,
   "matchweekDerived": false,
-  "source": "hand-entered from matchweek log; kickoff times approximate (matchday date, default 14:00 UTC)",
+  "source": "hand-entered from matchweek log; kickoff times approximate (matchday date, default 14:00 UTC); results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
   "importedAt": "2026-08-23T12:00:00.000Z",
   "matches": [
     {
       "id": "2026-27-e2-01-notts-county-leicester",
       "home": "notts-county",
       "away": "leicester",
-      "kickoff": "2026-08-15T14:00:00.000Z",
+      "kickoff": "2026-08-15T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 1,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0693,
+        "probs": {
+          "1": 26,
+          "X": 27,
+          "2": 47
+        },
+        "capturedAt": "2026-08-15T11:30:00.000Z"
+      },
       "forecast": null
     },
     {
       "id": "2026-27-e2-01-oxford-mk-dons",
       "home": "oxford",
       "away": "mk-dons",
-      "kickoff": "2026-08-15T14:00:00.000Z",
+      "kickoff": "2026-08-15T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 2,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0702,
+        "probs": {
+          "1": 42.5,
+          "X": 28.1,
+          "2": 29.4
+        },
+        "capturedAt": "2026-08-15T11:30:00.000Z"
+      },
       "forecast": null
     },
     {
       "id": "2026-27-e2-01-reading-luton",
       "home": "reading",
       "away": "luton",
-      "kickoff": "2026-08-15T14:00:00.000Z",
+      "kickoff": "2026-08-15T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 3,
         "away": 4
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0706,
+        "probs": {
+          "1": 31.9,
+          "X": 27.1,
+          "2": 41
+        },
+        "capturedAt": "2026-08-15T11:30:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -55,7 +85,17 @@
         "home": 0,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0714,
+        "probs": {
+          "1": 42,
+          "X": 27.1,
+          "2": 30.9
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -68,7 +108,17 @@
         "home": 1,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0714,
+        "probs": {
+          "1": 34.9,
+          "X": 27.9,
+          "2": 37.2
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -81,7 +131,17 @@
         "home": 2,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.074,
+        "probs": {
+          "1": 57.5,
+          "X": 23,
+          "2": 19.5
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -94,7 +154,17 @@
         "home": 1,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0691,
+        "probs": {
+          "1": 33.3,
+          "X": 30.2,
+          "2": 36.5
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -107,7 +177,17 @@
         "home": 3,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.07,
+        "probs": {
+          "1": 43.3,
+          "X": 28.7,
+          "2": 28
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -120,7 +200,17 @@
         "home": 3,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.072,
+        "probs": {
+          "1": 58.7,
+          "X": 23.1,
+          "2": 18.2
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -133,7 +223,17 @@
         "home": 1,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0724,
+        "probs": {
+          "1": 39.5,
+          "X": 27.2,
+          "2": 33.3
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -146,7 +246,17 @@
         "home": 2,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0697,
+        "probs": {
+          "1": 42.7,
+          "X": 26.9,
+          "2": 30.4
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     },
     {
@@ -159,7 +269,17 @@
         "home": 1,
         "away": 3
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.071,
+        "probs": {
+          "1": 41.3,
+          "X": 26.6,
+          "2": 32.1
+        },
+        "capturedAt": "2026-08-15T14:00:00.000Z"
+      },
       "forecast": null
     }
   ]

@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 3,
   "matchweekDerived": false,
-  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570) plus non-coupon MW3 fixtures, hand-entered 3 Sep 2026; Ipswich v Liverpool (MW3) played Fri 4 Sep, added 10 Sep 2026 from football-data.co.uk E0 (earlier note had it postponed); kickoff times approximate; closing odds to be added before kickoff",
+  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570) plus non-coupon MW3 fixtures, hand-entered 3 Sep 2026; Ipswich v Liverpool (MW3) played Fri 4 Sep, added 10 Sep 2026 from football-data.co.uk E0 (earlier note had it postponed); kickoff times approximate; closing odds to be added before kickoff; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
   "importedAt": "2026-09-03T09:00:00.000Z",
   "matches": [
     {
@@ -11,9 +11,22 @@
       "home": "man-city",
       "away": "coventry",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0568,
+        "probs": {
+          "1": 79.5,
+          "2": 7.3,
+          "X": 13.2
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -42,9 +55,22 @@
       "home": "nottingham-forest",
       "away": "tottenham",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0578,
+        "probs": {
+          "1": 35.8,
+          "2": 36.2,
+          "X": 28
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -74,9 +100,22 @@
       "home": "fulham",
       "away": "crystal-palace",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0565,
+        "probs": {
+          "1": 43.8,
+          "2": 28.3,
+          "X": 27.9
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -106,9 +145,22 @@
       "home": "brentford",
       "away": "sunderland",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0588,
+        "probs": {
+          "1": 56.2,
+          "2": 19.3,
+          "X": 24.5
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -137,9 +189,22 @@
       "home": "brighton",
       "away": "leeds",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.059,
+        "probs": {
+          "1": 48.7,
+          "2": 25.3,
+          "X": 26
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -169,9 +234,22 @@
       "home": "hull",
       "away": "aston-villa",
       "kickoff": "2026-09-05T16:30:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0628,
+        "probs": {
+          "1": 24,
+          "2": 49.8,
+          "X": 26.2
+        },
+        "capturedAt": "2026-09-05T16:30:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -225,9 +303,22 @@
       "home": "newcastle",
       "away": "bournemouth",
       "kickoff": "2026-09-05T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.057,
+        "probs": {
+          "1": 44.6,
+          "2": 29.4,
+          "X": 26
+        },
+        "capturedAt": "2026-09-05T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -236,9 +327,22 @@
       "home": "everton",
       "away": "man-united",
       "kickoff": "2026-09-06T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0593,
+        "probs": {
+          "1": 25.9,
+          "2": 49.4,
+          "X": 24.7
+        },
+        "capturedAt": "2026-09-06T13:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -247,9 +351,22 @@
       "home": "arsenal",
       "away": "chelsea",
       "kickoff": "2026-09-06T15:30:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0589,
+        "probs": {
+          "1": 55.6,
+          "2": 19.9,
+          "X": 24.5
+        },
+        "capturedAt": "2026-09-06T15:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     }

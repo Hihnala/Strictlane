@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 2,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 10 fixtures confirmed; MW2 results from BBC Sport",
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 10 fixtures confirmed; MW2 results from BBC Sport; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
   "importedAt": "2026-08-25T17:30:00.000Z",
   "matches": [
     {
@@ -16,7 +16,17 @@
         "home": 1,
         "away": 4
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.061,
+        "probs": {
+          "1": 19,
+          "X": 22.8,
+          "2": 58.2
+        },
+        "capturedAt": "2026-08-28T19:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -30,7 +40,17 @@
         "home": 2,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0619,
+        "probs": {
+          "1": 64.5,
+          "X": 20,
+          "2": 15.5
+        },
+        "capturedAt": "2026-08-29T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -45,15 +65,15 @@
         "away": 1
       },
       "market": {
-        "source": "oddsportal-avg(pre-close)",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.075,
+        "overround": 0.055,
         "probs": {
-          "1": 51.0,
-          "X": 26.8,
-          "2": 22.2
+          "1": 55.1,
+          "X": 24.8,
+          "2": 20.1
         },
-        "capturedAt": "2026-08-25T16:00:00.000Z"
+        "capturedAt": "2026-08-29T14:00:00.000Z"
       },
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -90,15 +110,15 @@
         "away": 1
       },
       "market": {
-        "source": "oddsportal-avg(pre-close)",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.075,
+        "overround": 0.0564,
         "probs": {
-          "1": 46.0,
-          "X": 26.8,
-          "2": 27.1
+          "1": 43.4,
+          "X": 27.4,
+          "2": 29.2
         },
-        "capturedAt": "2026-08-25T16:00:00.000Z"
+        "capturedAt": "2026-08-29T14:00:00.000Z"
       },
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -134,15 +154,15 @@
         "away": 2
       },
       "market": {
-        "source": "oddsportal-avg(pre-close)",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.075,
+        "overround": 0.0644,
         "probs": {
-          "1": 43.0,
-          "X": 26.1,
-          "2": 30.9
+          "1": 43.7,
+          "X": 25.6,
+          "2": 30.7
         },
-        "capturedAt": "2026-08-25T16:00:00.000Z"
+        "capturedAt": "2026-08-29T16:30:00.000Z"
       },
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -179,7 +199,17 @@
         "home": 1,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0593,
+        "probs": {
+          "1": 42.5,
+          "X": 28.7,
+          "2": 28.8
+        },
+        "capturedAt": "2026-08-30T13:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -193,7 +223,17 @@
         "home": 4,
         "away": 3
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0646,
+        "probs": {
+          "1": 51.3,
+          "X": 24.5,
+          "2": 24.2
+        },
+        "capturedAt": "2026-08-30T13:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -207,7 +247,17 @@
         "home": 1,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0623,
+        "probs": {
+          "1": 34.3,
+          "X": 27.7,
+          "2": 38
+        },
+        "capturedAt": "2026-08-30T13:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -221,7 +271,17 @@
         "home": 5,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.062,
+        "probs": {
+          "1": 70.3,
+          "X": 17.5,
+          "2": 12.2
+        },
+        "capturedAt": "2026-08-30T15:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -235,7 +295,17 @@
         "home": 0,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0599,
+        "probs": {
+          "1": 14.4,
+          "X": 21.4,
+          "2": 64.2
+        },
+        "capturedAt": "2026-08-31T19:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     }

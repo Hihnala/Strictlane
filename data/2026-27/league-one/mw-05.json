@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 5,
   "matchweekDerived": false,
-  "source": "hand-entered 4 Sep 2026 \u2014 MW5 fixtures only, all 12; home/away and kickoff times from LiveScore and Sky Sports listings, cross-checked for a complete 24-club round",
+  "source": "hand-entered 4 Sep 2026 \u2014 MW5 fixtures only, all 12; home/away and kickoff times from LiveScore and Sky Sports listings, cross-checked for a complete 24-club round; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
   "importedAt": "2026-09-04T09:00:00.000Z",
   "matches": [
     {
@@ -11,9 +11,22 @@
       "home": "peterborough",
       "away": "sheffield-wednesday",
       "kickoff": "2026-09-05T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0701,
+        "probs": {
+          "1": 35.5,
+          "X": 25.5,
+          "2": 39
+        },
+        "capturedAt": "2026-09-05T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -22,9 +35,22 @@
       "home": "wigan",
       "away": "stockport",
       "kickoff": "2026-09-05T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0741,
+        "probs": {
+          "1": 23.9,
+          "X": 24.6,
+          "2": 51.5
+        },
+        "capturedAt": "2026-09-05T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -33,9 +59,22 @@
       "home": "barnsley",
       "away": "stevenage",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 5
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0768,
+        "probs": {
+          "1": 42.2,
+          "X": 27.6,
+          "2": 30.2
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -44,9 +83,22 @@
       "home": "bradford",
       "away": "mansfield",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0719,
+        "probs": {
+          "1": 53.3,
+          "X": 25.6,
+          "2": 21.1
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -55,9 +107,22 @@
       "home": "burton",
       "away": "cambridge",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0749,
+        "probs": {
+          "1": 33.8,
+          "X": 29.3,
+          "2": 36.9
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -66,9 +131,22 @@
       "home": "doncaster",
       "away": "plymouth",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0712,
+        "probs": {
+          "1": 38,
+          "X": 26.8,
+          "2": 35.2
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -77,9 +155,22 @@
       "home": "huddersfield",
       "away": "notts-county",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0718,
+        "probs": {
+          "1": 56.2,
+          "X": 24.4,
+          "2": 19.4
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -88,9 +179,22 @@
       "home": "leicester",
       "away": "oxford",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0732,
+        "probs": {
+          "1": 59.3,
+          "X": 22,
+          "2": 18.7
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -99,9 +203,22 @@
       "home": "luton",
       "away": "leyton-orient",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.074,
+        "probs": {
+          "1": 58.2,
+          "X": 22.9,
+          "2": 18.9
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -110,9 +227,22 @@
       "home": "reading",
       "away": "blackpool",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0753,
+        "probs": {
+          "1": 53.5,
+          "X": 24.4,
+          "2": 22.1
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -121,9 +251,22 @@
       "home": "wycombe",
       "away": "mk-dons",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 3
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0744,
+        "probs": {
+          "1": 42.3,
+          "X": 25.7,
+          "2": 32
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -132,9 +275,22 @@
       "home": "bromley",
       "away": "afc-wimbledon",
       "kickoff": "2026-09-07T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0723,
+        "probs": {
+          "1": 41.6,
+          "X": 27.6,
+          "2": 30.8
+        },
+        "capturedAt": "2026-09-07T19:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     }

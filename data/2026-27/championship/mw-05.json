@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 5,
   "matchweekDerived": false,
-  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570), hand-entered 3 Sep 2026 — the 7 MW5 matches on the coupon; the other 5 MW5 fixtures added pending; closing odds to be added before kickoff",
+  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570), hand-entered 3 Sep 2026 — the 7 MW5 matches on the coupon; the other 5 MW5 fixtures added pending; closing odds to be added before kickoff; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
   "importedAt": "2026-09-03T09:00:00.000Z",
   "matches": [
     {
@@ -11,9 +11,22 @@
       "home": "qpr",
       "away": "middlesbrough",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0655,
+        "probs": {
+          "1": 32.5,
+          "2": 41.2,
+          "X": 26.3
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -43,9 +56,22 @@
       "home": "west-ham",
       "away": "derby",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0633,
+        "probs": {
+          "1": 70.2,
+          "2": 11.8,
+          "X": 18
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -74,9 +100,22 @@
       "home": "burnley",
       "away": "bristol-city",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0654,
+        "probs": {
+          "1": 48.1,
+          "2": 25.6,
+          "X": 26.3
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -105,9 +144,22 @@
       "home": "millwall",
       "away": "bolton",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0638,
+        "probs": {
+          "1": 47.9,
+          "2": 24.9,
+          "X": 27.2
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -136,9 +188,22 @@
       "home": "portsmouth",
       "away": "cardiff",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0619,
+        "probs": {
+          "1": 39.1,
+          "2": 34.2,
+          "X": 26.7
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -168,9 +233,22 @@
       "home": "sheffield-united",
       "away": "norwich",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0648,
+        "probs": {
+          "1": 36.7,
+          "2": 36.4,
+          "X": 26.9
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -200,9 +278,22 @@
       "home": "west-brom",
       "away": "watford",
       "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0656,
+        "probs": {
+          "1": 54.9,
+          "2": 20.1,
+          "X": 25
+        },
+        "capturedAt": "2026-09-05T14:00:00.000Z"
+      },
       "pool": {
         "source": "veikkaus:sport-popularity",
         "drawId": "100570",
@@ -231,10 +322,23 @@
       "id": "2026-27-e1-05-lincoln-southampton",
       "home": "lincoln",
       "away": "southampton",
-      "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "kickoff": "2026-09-05T11:30:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0627,
+        "probs": {
+          "1": 22.9,
+          "2": 53.2,
+          "X": 23.9
+        },
+        "capturedAt": "2026-09-05T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -242,10 +346,23 @@
       "id": "2026-27-e1-05-preston-blackburn",
       "home": "preston",
       "away": "blackburn",
-      "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "kickoff": "2026-09-05T11:30:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0647,
+        "probs": {
+          "1": 40.7,
+          "2": 31.3,
+          "X": 28
+        },
+        "capturedAt": "2026-09-05T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -253,10 +370,23 @@
       "id": "2026-27-e1-05-stoke-charlton",
       "home": "stoke",
       "away": "charlton",
-      "kickoff": "2026-09-05T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "kickoff": "2026-09-05T11:30:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0649,
+        "probs": {
+          "1": 47,
+          "2": 24.3,
+          "X": 28.7
+        },
+        "capturedAt": "2026-09-05T11:30:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -265,9 +395,22 @@
       "home": "swansea",
       "away": "wrexham",
       "kickoff": "2026-09-05T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0639,
+        "probs": {
+          "1": 42,
+          "2": 29.5,
+          "X": 28.5
+        },
+        "capturedAt": "2026-09-05T19:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     },
@@ -275,10 +418,23 @@
       "id": "2026-27-e1-05-birmingham-wolves",
       "home": "birmingham",
       "away": "wolves",
-      "kickoff": "2026-09-06T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
+      "kickoff": "2026-09-06T11:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.066,
+        "probs": {
+          "1": 32.9,
+          "2": 39.3,
+          "X": 27.8
+        },
+        "capturedAt": "2026-09-06T11:00:00.000Z"
+      },
       "pool": null,
       "forecast": null
     }

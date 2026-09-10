@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 2,
   "matchweekDerived": false,
-  "source": "hand-entered; forecasts and market probabilities from the logged 22 Aug 2026 Vakio round",
+  "source": "hand-entered; forecasts and market probabilities from the logged 22 Aug 2026 Vakio round; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
   "importedAt": "2026-08-23T12:00:00.000Z",
   "matches": [
     {
@@ -17,15 +17,15 @@
         "away": 2
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0676,
+        "overround": 0.0688,
         "probs": {
-          "1": 68.9,
-          "2": 12.1,
-          "X": 19
+          "1": 66.4,
+          "2": 13.9,
+          "X": 19.7
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -52,15 +52,15 @@
         "away": 1
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0533,
+        "overround": 0.0639,
         "probs": {
-          "1": 58.2,
-          "2": 18.9,
-          "X": 22.9
+          "1": 58,
+          "2": 19.2,
+          "X": 22.8
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -87,15 +87,15 @@
         "away": 3
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0663,
+        "overround": 0.0635,
         "probs": {
-          "1": 22.7,
-          "2": 51.2,
-          "X": 26.1
+          "1": 26.1,
+          "2": 46.6,
+          "X": 27.3
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -121,15 +121,15 @@
         "away": 1
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0613,
+        "overround": 0.0647,
         "probs": {
-          "1": 26.8,
-          "2": 45.5,
-          "X": 27.7
+          "1": 25.4,
+          "2": 48.2,
+          "X": 26.4
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -157,15 +157,15 @@
         "away": 0
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0615,
+        "overround": 0.0637,
         "probs": {
-          "1": 39.6,
-          "2": 32.7,
-          "X": 27.7
+          "1": 35.2,
+          "2": 36.3,
+          "X": 28.5
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -193,15 +193,15 @@
         "away": 1
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0605,
+        "overround": 0.0639,
         "probs": {
-          "1": 49.6,
-          "2": 24.2,
-          "X": 26.2
+          "1": 52.5,
+          "2": 22,
+          "X": 25.5
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -228,15 +228,15 @@
         "away": 2
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0621,
+        "overround": 0.0644,
         "probs": {
-          "1": 47.8,
-          "2": 25.3,
-          "X": 26.9
+          "1": 43.7,
+          "2": 28.9,
+          "X": 27.4
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -263,15 +263,15 @@
         "away": 0
       },
       "market": {
-        "source": "oddsportal-avg",
+        "source": "football-data:AvgC",
         "method": "proportional",
-        "overround": 0.0643,
+        "overround": 0.0638,
         "probs": {
-          "1": 49.7,
-          "2": 24.4,
+          "1": 50,
+          "2": 24.1,
           "X": 25.9
         },
-        "capturedAt": "2026-08-22T09:00:00.000Z"
+        "capturedAt": "2026-08-22T14:00:00.000Z"
       },
       "forecast": {
         "roundId": "2026-08-22",
@@ -291,52 +291,92 @@
       "id": "2026-27-e1-02-birmingham-bristol-city",
       "home": "birmingham",
       "away": "bristol-city",
-      "kickoff": "2026-08-22T14:00:00.000Z",
+      "kickoff": "2026-08-22T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 2,
         "away": 2
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0674,
+        "probs": {
+          "1": 54.8,
+          "2": 19.7,
+          "X": 25.5
+        },
+        "capturedAt": "2026-08-22T11:30:00.000Z"
+      },
       "forecast": null
     },
     {
       "id": "2026-27-e1-02-lincoln-portsmouth",
       "home": "lincoln",
       "away": "portsmouth",
-      "kickoff": "2026-08-22T14:00:00.000Z",
+      "kickoff": "2026-08-22T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 1,
         "away": 3
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0621,
+        "probs": {
+          "1": 40.6,
+          "2": 31,
+          "X": 28.4
+        },
+        "capturedAt": "2026-08-22T11:30:00.000Z"
+      },
       "forecast": null
     },
     {
       "id": "2026-27-e1-02-millwall-norwich",
       "home": "millwall",
       "away": "norwich",
-      "kickoff": "2026-08-22T14:00:00.000Z",
+      "kickoff": "2026-08-22T11:30:00.000Z",
       "status": "played",
       "score": {
         "home": 3,
         "away": 0
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0628,
+        "probs": {
+          "1": 33.9,
+          "2": 39,
+          "X": 27.1
+        },
+        "capturedAt": "2026-08-22T11:30:00.000Z"
+      },
       "forecast": null
     },
     {
       "id": "2026-27-e1-02-west-brom-burnley",
       "home": "west-brom",
       "away": "burnley",
-      "kickoff": "2026-08-23T13:00:00.000Z",
+      "kickoff": "2026-08-23T11:00:00.000Z",
       "status": "played",
       "score": {
         "home": 3,
         "away": 1
       },
-      "market": null,
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0645,
+        "probs": {
+          "1": 38.2,
+          "2": 33.4,
+          "X": 28.4
+        },
+        "capturedAt": "2026-08-23T11:00:00.000Z"
+      },
       "forecast": null
     }
   ]
