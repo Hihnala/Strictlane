@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 3,
   "matchweekDerived": false,
-  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570) plus non-coupon MW3 fixtures, hand-entered 3 Sep 2026; Liverpool v Ipswich (MW3) postponed — not yet rescheduled; kickoff times approximate; closing odds to be added before kickoff",
+  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570) plus non-coupon MW3 fixtures, hand-entered 3 Sep 2026; Ipswich v Liverpool (MW3) played Fri 4 Sep, added 10 Sep 2026 from football-data.co.uk E0 (earlier note had it postponed); kickoff times approximate; closing odds to be added before kickoff",
   "importedAt": "2026-09-03T09:00:00.000Z",
   "matches": [
     {
@@ -195,6 +195,30 @@
         ],
         "capturedAt": "2026-09-03T09:00:00.000Z"
       }
+    },
+    {
+      "id": "2026-27-e0-03-ipswich-liverpool",
+      "home": "ipswich",
+      "away": "liverpool",
+      "kickoff": "2026-09-04T19:00:00.000Z",
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "market": {
+        "source": "football-data:AvgC",
+        "method": "proportional",
+        "overround": 0.0535,
+        "probs": {
+          "1": 19.5,
+          "2": 58.6,
+          "X": 21.9
+        },
+        "capturedAt": "2026-09-04T19:00:00.000Z"
+      },
+      "pool": null,
+      "forecast": null
     },
     {
       "id": "2026-27-e0-03-newcastle-bournemouth",

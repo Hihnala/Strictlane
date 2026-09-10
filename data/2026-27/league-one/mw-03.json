@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 3,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep; MW3 results from BBC Sport",
+  "source": "hand-entered from fixture listings, 25 Aug 2026 \u2014 all 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep, then postponed again (Reading in the Carabao Cup), no new date as of 10 Sep 2026; MW3 results from BBC Sport",
   "importedAt": "2026-08-25T17:30:00.000Z",
   "matches": [
     {
@@ -201,7 +201,7 @@
       "home": "oxford",
       "away": "reading",
       "kickoff": "2026-09-08T18:45:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
