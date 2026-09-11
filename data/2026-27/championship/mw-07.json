@@ -3,11 +3,11 @@
   "league": "championship",
   "matchweek": 7,
   "matchweekDerived": false,
-  "source": "hand-entered; forecasts for the 12 Sep Vakio coupon. Only the 6 coupon fixtures are included \u2014 the Championship played a midweek round (8-9 Sep) not reflected here; remaining MW6 fixtures to be added separately.",
-  "importedAt": "2026-09-10T12:30:00.000Z",
+  "source": "hand-entered. 6 fixtures carry forecasts from the 12 Sep Vakio coupon; the remaining 6 (West Ham-Wrexham Fri, West Brom-QPR/Bolton-Cardiff/Derby-Birmingham/Preston-Lincoln Sat, Sheffield Utd-Wolves Sun) complete the round with no forecast.",
+  "importedAt": "2026-09-11T09:00:00.000Z",
   "matches": [
     {
-      "id": "2026-27-e1-06-southampton-bristol-city",
+      "id": "2026-27-e1-07-southampton-bristol-city",
       "home": "southampton",
       "away": "bristol-city",
       "kickoff": "2026-09-12T14:00:00.000Z",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "2026-27-e1-06-swansea-burnley",
+      "id": "2026-27-e1-07-swansea-burnley",
       "home": "swansea",
       "away": "burnley",
       "kickoff": "2026-09-12T14:00:00.000Z",
@@ -90,7 +90,7 @@
       }
     },
     {
-      "id": "2026-27-e1-06-charlton-portsmouth",
+      "id": "2026-27-e1-07-charlton-portsmouth",
       "home": "charlton",
       "away": "portsmouth",
       "kickoff": "2026-09-12T14:00:00.000Z",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "id": "2026-27-e1-06-middlesbrough-norwich",
+      "id": "2026-27-e1-07-middlesbrough-norwich",
       "home": "middlesbrough",
       "away": "norwich",
       "kickoff": "2026-09-12T14:00:00.000Z",
@@ -174,7 +174,7 @@
       }
     },
     {
-      "id": "2026-27-e1-06-blackburn-millwall",
+      "id": "2026-27-e1-07-blackburn-millwall",
       "home": "blackburn",
       "away": "millwall",
       "kickoff": "2026-09-12T14:00:00.000Z",
@@ -216,7 +216,7 @@
       }
     },
     {
-      "id": "2026-27-e1-06-watford-stoke",
+      "id": "2026-27-e1-07-watford-stoke",
       "home": "watford",
       "away": "stoke",
       "kickoff": "2026-09-12T14:00:00.000Z",
@@ -257,6 +257,72 @@
         "capturedAt": "2026-09-10T12:30:00.000Z",
         "note": "Balanced (2.8pp): X raised 2.4pp."
       }
+    },
+    {
+      "id": "2026-27-e1-07-west-ham-wrexham",
+      "home": "west-ham",
+      "away": "wrexham",
+      "kickoff": "2026-09-11T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-west-brom-qpr",
+      "home": "west-brom",
+      "away": "qpr",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-bolton-cardiff",
+      "home": "bolton",
+      "away": "cardiff",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-derby-birmingham",
+      "home": "derby",
+      "away": "birmingham",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-preston-lincoln",
+      "home": "preston",
+      "away": "lincoln",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-sheffield-united-wolves",
+      "home": "sheffield-united",
+      "away": "wolves",
+      "kickoff": "2026-09-13T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
     }
   ]
 }
