@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 7,
   "matchweekDerived": false,
-  "source": "hand-entered 11 Sep 2026 \u2014 MW7, all 12 fixtures. 6 on the Lauantaivakio 2026-09-12 coupon (draw 100571); Bolton v Cardiff, Derby v Birmingham, West Brom v QPR, Preston v Lincoln also Sat 12 Sep; Sheffield United v Wolves Sun 13 Sep; Wrexham v West Ham delayed to Sat 19 Sep. Kickoff for the non-coupon fixtures converted from times given in EET (UTC+3); Wrexham v West Ham kickoff time not given, estimated at standard Sat 3pm",
+  "source": "hand-entered 11 Sep 2026 \u2014 MW7, 11 of 12 fixtures confirmed. 6 on the Lauantaivakio 2026-09-12 coupon (draw 100571); Bolton v Cardiff, Derby v Birmingham, West Brom v QPR, Preston v Lincoln also Sat 12 Sep; Sheffield United v Wolves Sun 13 Sep. Wrexham and West Ham's MW7 fixture is not yet known \u2014 each has played 6 matches (through MW6) with nothing confirmed for MW7 as of 11 Sep; not assumed to be against each other. Kickoff for the non-coupon fixtures converted from times given in EET (UTC+3)",
   "importedAt": "2026-09-11T00:00:00.000Z",
   "matches": [
     {
@@ -121,17 +121,6 @@
       "home": "sheffield-united",
       "away": "wolves",
       "kickoff": "2026-09-13T11:00:00.000Z",
-      "status": "pending",
-      "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
-    },
-    {
-      "id": "2026-27-e1-07-wrexham-west-ham",
-      "home": "wrexham",
-      "away": "west-ham",
-      "kickoff": "2026-09-19T14:00:00.000Z",
       "status": "pending",
       "score": null,
       "market": null,
