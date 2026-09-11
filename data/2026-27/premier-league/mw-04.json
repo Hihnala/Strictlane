@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 4,
   "matchweekDerived": false,
-  "source": "hand-entered 11 Sep 2026 \u2014 MW4, all 10 fixtures pending. 7 are on the Lauantaivakio 2026-09-12 coupon (draw 100571); the other 3 (Coventry v Brighton, Man United v Man City, Leeds v Newcastle) are non-coupon. Kickoff times as supplied by Markku (UK local, BST), converted to UTC. market and forecast to follow before kickoff",
+  "source": "hand-entered 11 Sep 2026 \u2014 MW4, all 10 fixtures pending. 7 are on the Lauantaivakio 2026-09-12 coupon (draw 100571); the other 3 (Coventry v Brighton, Man United v Man City, Leeds v Newcastle) are non-coupon. Kickoff times as supplied by Markku (UK local, BST), converted to UTC. market and forecast to follow before kickoff; forecasts for the 12 Sep Vakio coupon added",
   "importedAt": "2026-09-11T00:00:00.000Z",
   "matches": [
     {
@@ -13,9 +13,41 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "pending",
       "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.075,
+        "probs": {
+          "1": 43.1,
+          "X": 27.9,
+          "2": 29.0
+        },
+        "capturedAt": "2026-09-10T12:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100571",
+        "probs": {
+          "1": 49,
+          "X": 27.85,
+          "2": 23.15
+        },
+        "capturedAt": "2026-09-10T12:08:30.284Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-12",
+        "probs": {
+          "1": 43,
+          "X": 28,
+          "2": 29
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-09-10T12:30:00.000Z",
+        "note": "Balanced (14.1pp gap but 2nd/3rd within 1.5pp): tiebreak rule pairs the favourite with X."
+      }
     },
     {
       "id": "2026-27-e0-04-bournemouth-brentford",
@@ -24,9 +56,41 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "pending",
       "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.074,
+        "probs": {
+          "1": 38.2,
+          "X": 26.7,
+          "2": 35.1
+        },
+        "capturedAt": "2026-09-10T12:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100571",
+        "probs": {
+          "1": 32.74,
+          "X": 32.73,
+          "2": 34.52
+        },
+        "capturedAt": "2026-09-10T12:08:30.284Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-12",
+        "probs": {
+          "1": 37,
+          "X": 29,
+          "2": 34
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-09-10T12:30:00.000Z",
+        "note": "Balanced (3.1pp): X raised 2.3pp, cost split both ways."
+      }
     },
     {
       "id": "2026-27-e0-04-chelsea-hull",
@@ -35,9 +99,40 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "pending",
       "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.079,
+        "probs": {
+          "1": 76.6,
+          "X": 15.0,
+          "2": 8.5
+        },
+        "capturedAt": "2026-09-10T12:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100571",
+        "probs": {
+          "1": 71.6,
+          "X": 16.76,
+          "2": 11.64
+        },
+        "capturedAt": "2026-09-10T12:08:30.284Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-12",
+        "probs": {
+          "1": 76,
+          "X": 15,
+          "2": 9
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-09-10T12:30:00.000Z",
+        "note": "Hull +0.5pp: seven points from three, still priced at 8.5% away. Kept deliberately tiny."
+      }
     },
     {
       "id": "2026-27-e0-04-crystal-palace-ipswich",
@@ -46,9 +141,40 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "pending",
       "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.078,
+        "probs": {
+          "1": 50.4,
+          "X": 25.3,
+          "2": 24.3
+        },
+        "capturedAt": "2026-09-10T12:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100571",
+        "probs": {
+          "1": 57.58,
+          "X": 24.48,
+          "2": 17.93
+        },
+        "capturedAt": "2026-09-10T12:08:30.284Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-12",
+        "probs": {
+          "1": 50,
+          "X": 25,
+          "2": 25
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-09-10T12:30:00.000Z"
+      }
     },
     {
       "id": "2026-27-e0-04-liverpool-fulham",
@@ -57,9 +183,39 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "pending",
       "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.079,
+        "probs": {
+          "1": 65.7,
+          "X": 19.2,
+          "2": 15.1
+        },
+        "capturedAt": "2026-09-10T12:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100571",
+        "probs": {
+          "1": 78.02,
+          "X": 13.13,
+          "2": 8.84
+        },
+        "capturedAt": "2026-09-10T12:08:30.284Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-12",
+        "probs": {
+          "1": 66,
+          "X": 19,
+          "2": 15
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-09-10T12:30:00.000Z"
+      }
     },
     {
       "id": "2026-27-e0-04-tottenham-everton",
@@ -68,9 +224,40 @@
       "kickoff": "2026-09-12T16:30:00.000Z",
       "status": "pending",
       "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.077,
+        "probs": {
+          "1": 46.6,
+          "X": 26.5,
+          "2": 26.8
+        },
+        "capturedAt": "2026-09-10T12:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100571",
+        "probs": {
+          "1": 39.63,
+          "X": 31.35,
+          "2": 29.02
+        },
+        "capturedAt": "2026-09-10T12:08:30.284Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-12",
+        "probs": {
+          "1": 47,
+          "X": 26,
+          "2": 27
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-09-10T12:30:00.000Z"
+      }
     },
     {
       "id": "2026-27-e0-04-sunderland-arsenal",
@@ -79,9 +266,39 @@
       "kickoff": "2026-09-12T19:00:00.000Z",
       "status": "pending",
       "score": null,
-      "market": null,
-      "pool": null,
-      "forecast": null
+      "market": {
+        "source": "oddsportal-avg(pre-close)",
+        "method": "proportional",
+        "overround": 0.067,
+        "probs": {
+          "1": 13.1,
+          "X": 22.7,
+          "2": 64.2
+        },
+        "capturedAt": "2026-09-10T12:00:00.000Z"
+      },
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100571",
+        "probs": {
+          "1": 15.08,
+          "X": 15.66,
+          "2": 69.26
+        },
+        "capturedAt": "2026-09-10T12:08:30.284Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-12",
+        "probs": {
+          "1": 13,
+          "X": 23,
+          "2": 64
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-09-10T12:30:00.000Z"
+      }
     },
     {
       "id": "2026-27-e0-04-coventry-brighton",

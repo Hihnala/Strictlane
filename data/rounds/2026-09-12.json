@@ -1,0 +1,27 @@
+{
+  "id": "2026-09-12",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100571",
+  "system": {
+    "type": "8+0",
+    "singles": 5,
+    "doubles": 8,
+    "triples": 0,
+    "rows": 256
+  },
+  "matchIds": [
+    "2026-27-e0-04-sunderland-arsenal",
+    "2026-27-e0-04-tottenham-everton",
+    "2026-27-e0-04-liverpool-fulham",
+    "2026-27-e0-04-chelsea-hull",
+    "2026-27-e0-04-bournemouth-brentford",
+    "2026-27-e0-04-aston-villa-nottingham-forest",
+    "2026-27-e0-04-crystal-palace-ipswich",
+    "2026-27-e1-06-southampton-bristol-city",
+    "2026-27-e1-06-swansea-burnley",
+    "2026-27-e1-06-charlton-portsmouth",
+    "2026-27-e1-06-middlesbrough-norwich",
+    "2026-27-e1-06-blackburn-millwall",
+    "2026-27-e1-06-watford-stoke"
+  ]
+}
