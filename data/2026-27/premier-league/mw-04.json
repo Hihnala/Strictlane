@@ -1,0 +1,120 @@
+{
+  "season": "2026-27",
+  "league": "premier-league",
+  "matchweek": 4,
+  "matchweekDerived": false,
+  "source": "hand-entered 11 Sep 2026 \u2014 MW4, all 10 fixtures pending. 7 are on the Lauantaivakio 2026-09-12 coupon (draw 100571); the other 3 (Coventry v Brighton, Man United v Man City, Leeds v Newcastle) are non-coupon. Kickoff times as supplied by Markku (UK local, BST), converted to UTC. market and forecast to follow before kickoff",
+  "importedAt": "2026-09-11T00:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e0-04-aston-villa-nottingham-forest",
+      "home": "aston-villa",
+      "away": "nottingham-forest",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-bournemouth-brentford",
+      "home": "bournemouth",
+      "away": "brentford",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-chelsea-hull",
+      "home": "chelsea",
+      "away": "hull",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-crystal-palace-ipswich",
+      "home": "crystal-palace",
+      "away": "ipswich",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-liverpool-fulham",
+      "home": "liverpool",
+      "away": "fulham",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-tottenham-everton",
+      "home": "tottenham",
+      "away": "everton",
+      "kickoff": "2026-09-12T16:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-sunderland-arsenal",
+      "home": "sunderland",
+      "away": "arsenal",
+      "kickoff": "2026-09-12T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-coventry-brighton",
+      "home": "coventry",
+      "away": "brighton",
+      "kickoff": "2026-09-13T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-man-united-man-city",
+      "home": "man-united",
+      "away": "man-city",
+      "kickoff": "2026-09-13T15:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-04-leeds-newcastle",
+      "home": "leeds",
+      "away": "newcastle",
+      "kickoff": "2026-09-14T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
