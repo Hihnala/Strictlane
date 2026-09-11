@@ -1,0 +1,142 @@
+{
+  "season": "2026-27",
+  "league": "championship",
+  "matchweek": 7,
+  "matchweekDerived": false,
+  "source": "hand-entered 11 Sep 2026 \u2014 MW7, all 12 fixtures. 6 on the Lauantaivakio 2026-09-12 coupon (draw 100571); Bolton v Cardiff, Derby v Birmingham, West Brom v QPR, Preston v Lincoln also Sat 12 Sep; Sheffield United v Wolves Sun 13 Sep; Wrexham v West Ham delayed to Sat 19 Sep. Kickoff for the non-coupon fixtures converted from times given in EET (UTC+3); Wrexham v West Ham kickoff time not given, estimated at standard Sat 3pm",
+  "importedAt": "2026-09-11T00:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e1-07-southampton-bristol-city",
+      "home": "southampton",
+      "away": "bristol-city",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-swansea-burnley",
+      "home": "swansea",
+      "away": "burnley",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-charlton-portsmouth",
+      "home": "charlton",
+      "away": "portsmouth",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-middlesbrough-norwich",
+      "home": "middlesbrough",
+      "away": "norwich",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-blackburn-millwall",
+      "home": "blackburn",
+      "away": "millwall",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-watford-stoke",
+      "home": "watford",
+      "away": "stoke",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-bolton-cardiff",
+      "home": "bolton",
+      "away": "cardiff",
+      "kickoff": "2026-09-12T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-derby-birmingham",
+      "home": "derby",
+      "away": "birmingham",
+      "kickoff": "2026-09-12T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-west-brom-qpr",
+      "home": "west-brom",
+      "away": "qpr",
+      "kickoff": "2026-09-12T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-preston-lincoln",
+      "home": "preston",
+      "away": "lincoln",
+      "kickoff": "2026-09-12T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-sheffield-united-wolves",
+      "home": "sheffield-united",
+      "away": "wolves",
+      "kickoff": "2026-09-13T11:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-07-wrexham-west-ham",
+      "home": "wrexham",
+      "away": "west-ham",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
