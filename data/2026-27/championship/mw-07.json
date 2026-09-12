@@ -37,14 +37,15 @@
       "forecast": {
         "roundId": "2026-09-12",
         "probs": {
-          "1": 59,
-          "X": 22,
-          "2": 19
+          "1": 55,
+          "X": 24,
+          "2": 21
         },
         "marks": [
           "1"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "MOVED. Bristol City confirmed a clean bill of health and arrive on a genuine 3-match winning streak, 5th in the table with 10 points \u2014 this is a form signal, not off-field noise, so it's treated differently from the Southampton lesson. Southampton have no fresh issues either; both full-strength, so the shift is pure form."
       }
     },
     {
@@ -86,7 +87,8 @@
           "1",
           "2"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "No material team news beyond squad lists. Unchanged."
       }
     },
     {
@@ -128,8 +130,8 @@
           "1",
           "2"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z",
-        "note": "Balanced (3.0pp): X raised 1.7pp \u2014 closest match on the coupon."
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "Charlton's 4-0 defeat at Stoke (5 Sep) is already reflected in Thursday's market price \u2014 nothing new since. Unchanged."
       }
     },
     {
@@ -170,7 +172,8 @@
         "marks": [
           "1"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "No material team news found. Unchanged."
       }
     },
     {
@@ -212,7 +215,8 @@
           "2",
           "1"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "No material team news found. Unchanged."
       }
     },
     {
@@ -254,8 +258,8 @@
           "1",
           "2"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z",
-        "note": "Balanced (2.8pp): X raised 2.4pp."
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "No material team news found. Unchanged."
       }
     },
     {

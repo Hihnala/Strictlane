@@ -37,16 +37,16 @@
       "forecast": {
         "roundId": "2026-09-12",
         "probs": {
-          "1": 43,
-          "X": 28,
-          "2": 29
+          "1": 39,
+          "X": 29,
+          "2": 32
         },
         "marks": [
           "1",
-          "X"
+          "2"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z",
-        "note": "Balanced (14.1pp gap but 2nd/3rd within 1.5pp): tiebreak rule pairs the favourite with X."
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "Villa missing Onana, Goretzka, Madjo (all injured), plus Joao Gomes serves the last match of a 3-game ban \u2014 four absences from the first-choice XI. Shaded off Villa toward Forest and the draw."
       }
     },
     {
@@ -88,8 +88,8 @@
           "1",
           "2"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z",
-        "note": "Balanced (3.1pp): X raised 2.3pp, cost split both ways."
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "No material team news found for either side. Unchanged."
       }
     },
     {
@@ -123,15 +123,15 @@
       "forecast": {
         "roundId": "2026-09-12",
         "probs": {
-          "1": 76,
-          "X": 15,
-          "2": 9
+          "1": 71,
+          "X": 17,
+          "2": 12
         },
         "marks": [
           "1"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z",
-        "note": "Hull +0.5pp: seven points from three, still priced at 8.5% away. Kept deliberately tiny."
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "MOVED. Caicedo unavailable again after a 14-minute abort, plus Henderson/Palestra/Emegha still out. Chelsea have conceded 10 in 5 under Alonso and sit BEHIND Hull in the table. Hull's form (7 pts from 3) keeps looking real rather than a fluke."
       }
     },
     {
@@ -165,15 +165,16 @@
       "forecast": {
         "roundId": "2026-09-12",
         "probs": {
-          "1": 50,
+          "1": 49,
           "X": 25,
-          "2": 25
+          "2": 26
         },
         "marks": [
           "1",
           "X"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "Ipswich 'basically fully fit' (Philogene, Matusiwa both back); Palace still missing Sarr and Mateta up front despite scoring freely without them. Tiny nudge off Palace."
       }
     },
     {
@@ -207,14 +208,15 @@
       "forecast": {
         "roundId": "2026-09-12",
         "probs": {
-          "1": 66,
+          "1": 67,
           "X": 19,
-          "2": 15
+          "2": 14
         },
         "marks": [
           "1"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "Liverpool close to full strength (Gakpo a fitness check only); Fulham's only absentee is Cairney and they remain winless. Reinforces the price."
       }
     },
     {
@@ -248,15 +250,16 @@
       "forecast": {
         "roundId": "2026-09-12",
         "probs": {
-          "1": 47,
+          "1": 48,
           "X": 26,
-          "2": 27
+          "2": 26
         },
         "marks": [
           "1",
           "X"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "Maddison back for Spurs (shoulder). Everton's forward options thin (Barry sole senior striker). Small nudge to Tottenham."
       }
     },
     {
@@ -290,14 +293,15 @@
       "forecast": {
         "roundId": "2026-09-12",
         "probs": {
-          "1": 13,
-          "X": 23,
-          "2": 64
+          "1": 12,
+          "X": 22,
+          "2": 66
         },
         "marks": [
           "2"
         ],
-        "capturedAt": "2026-09-10T12:30:00.000Z"
+        "capturedAt": "2026-09-12T09:30:00.000Z",
+        "note": "Arsenal: no fresh concerns, White fine, 3/3 league record, 1 conceded. Nudged 1pp toward Arsenal \u2014 team news reinforces rather than contradicts the price."
       }
     },
     {
