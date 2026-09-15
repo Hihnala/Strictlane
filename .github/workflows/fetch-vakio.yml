@@ -17,15 +17,15 @@ name: Fetch Vakio coupon
 # fresh checkout has no way to see that an earlier run that day already
 # succeeded. It re-fetches, sees "new" files against `main`, and tries to push
 # a branch (`coupon/$DATE`) that the earlier run already created — a rejected
-# non-fast-forward push. Moved to a single Thursday run: safely past the
-# Mon/Tue publish window, still leaves two days of hand-authoring lead time
-# before Saturday's close. See PR #<fill in> for the incident.
+# non-fast-forward push. Moved to a single Thursday cron, then dropped the
+# schedule entirely: GitHub's scheduler queues on-the-hour crons behind every
+# other hourly job on the platform and can run them hours late (or drop them),
+# which made "did it run yet" its own weekly question. Manual only now — run
+# it yourself via "Run workflow" whenever that week's coupon is out, same
+# Thursday-ish cadence as before. The guard step below still matters: it's
+# what makes a retry after a failed run safe.
 
 on:
-  schedule:
-    - cron: "41 6 * * 4"   # Thursday 06:41 UTC. Keep the minute off :00 —
-                           # on-the-hour crons queue behind every other hourly
-                           # job on GitHub and routinely run 1–3 h late.
   workflow_dispatch:
 
 permissions:
@@ -40,10 +40,11 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
-      # At once-a-week frequency the same-day race above can't recur under
-      # normal operation. This guard covers the remaining realistic case: a
-      # workflow_dispatch rerun — e.g. retrying after a failed Thursday run —
-      # firing while that week's draft PR is still open and unmerged. Placed
+      # At once-a-week, hand-triggered frequency the same-day race above can't
+      # recur under normal operation. This guard covers the remaining
+      # realistic case: a second "Run workflow" click — e.g. retrying after a
+      # failed run — firing while that week's draft PR is still open and
+      # unmerged. Placed
       # before checkout so a doomed run doesn't call the fetch endpoint at
       # all; the endpoint drops closed coupons permanently, so calls to it
       # aren't free to waste.
