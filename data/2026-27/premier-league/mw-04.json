@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 4,
   "matchweekDerived": false,
-  "source": "hand-entered 11 Sep 2026 \u2014 MW4, all 10 fixtures pending. 7 are on the Lauantaivakio 2026-09-12 coupon (draw 100571); the other 3 (Coventry v Brighton, Man United v Man City, Leeds v Newcastle) are non-coupon. Kickoff times as supplied by Markku (UK local, BST), converted to UTC. market and forecast to follow before kickoff; forecasts for the 12 Sep Vakio coupon added",
+  "source": "hand-entered 11 Sep 2026 — MW4, all 10 fixtures pending. 7 are on the Lauantaivakio 2026-09-12 coupon (draw 100571); the other 3 (Coventry v Brighton, Man United v Man City, Leeds v Newcastle) are non-coupon. Kickoff times as supplied by Markku (UK local, BST), converted to UTC. market and forecast to follow before kickoff; forecasts for the 12 Sep Vakio coupon added",
   "importedAt": "2026-09-11T00:00:00.000Z",
   "matches": [
     {
@@ -11,16 +11,19 @@
       "home": "aston-villa",
       "away": "nottingham-forest",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
         "overround": 0.075,
         "probs": {
           "1": 43.1,
-          "X": 27.9,
-          "2": 29.0
+          "2": 29,
+          "X": 27.9
         },
         "capturedAt": "2026-09-10T12:00:00.000Z"
       },
@@ -29,8 +32,8 @@
         "drawId": "100571",
         "probs": {
           "1": 49,
-          "X": 27.85,
-          "2": 23.15
+          "2": 23.15,
+          "X": 27.85
         },
         "capturedAt": "2026-09-10T12:08:30.284Z"
       },
@@ -38,15 +41,15 @@
         "roundId": "2026-09-12",
         "probs": {
           "1": 39,
-          "X": 29,
-          "2": 32
+          "2": 32,
+          "X": 29
         },
         "marks": [
           "1",
           "2"
         ],
         "capturedAt": "2026-09-12T09:30:00.000Z",
-        "note": "Villa missing Onana, Goretzka, Madjo (all injured), plus Joao Gomes serves the last match of a 3-game ban \u2014 four absences from the first-choice XI. Shaded off Villa toward Forest and the draw."
+        "note": "Villa missing Onana, Goretzka, Madjo (all injured), plus Joao Gomes serves the last match of a 3-game ban — four absences from the first-choice XI. Shaded off Villa toward Forest and the draw."
       }
     },
     {
@@ -54,16 +57,19 @@
       "home": "bournemouth",
       "away": "brentford",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
         "overround": 0.074,
         "probs": {
           "1": 38.2,
-          "X": 26.7,
-          "2": 35.1
+          "2": 35.1,
+          "X": 26.7
         },
         "capturedAt": "2026-09-10T12:00:00.000Z"
       },
@@ -72,8 +78,8 @@
         "drawId": "100571",
         "probs": {
           "1": 32.74,
-          "X": 32.73,
-          "2": 34.52
+          "2": 34.52,
+          "X": 32.73
         },
         "capturedAt": "2026-09-10T12:08:30.284Z"
       },
@@ -81,8 +87,8 @@
         "roundId": "2026-09-12",
         "probs": {
           "1": 37,
-          "X": 29,
-          "2": 34
+          "2": 34,
+          "X": 29
         },
         "marks": [
           "1",
@@ -97,16 +103,19 @@
       "home": "chelsea",
       "away": "hull",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
         "overround": 0.079,
         "probs": {
           "1": 76.6,
-          "X": 15.0,
-          "2": 8.5
+          "2": 8.5,
+          "X": 15
         },
         "capturedAt": "2026-09-10T12:00:00.000Z"
       },
@@ -115,8 +124,8 @@
         "drawId": "100571",
         "probs": {
           "1": 71.6,
-          "X": 16.76,
-          "2": 11.64
+          "2": 11.64,
+          "X": 16.76
         },
         "capturedAt": "2026-09-10T12:08:30.284Z"
       },
@@ -124,8 +133,8 @@
         "roundId": "2026-09-12",
         "probs": {
           "1": 71,
-          "X": 17,
-          "2": 12
+          "2": 12,
+          "X": 17
         },
         "marks": [
           "1"
@@ -139,16 +148,19 @@
       "home": "crystal-palace",
       "away": "ipswich",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
         "overround": 0.078,
         "probs": {
           "1": 50.4,
-          "X": 25.3,
-          "2": 24.3
+          "2": 24.3,
+          "X": 25.3
         },
         "capturedAt": "2026-09-10T12:00:00.000Z"
       },
@@ -157,8 +169,8 @@
         "drawId": "100571",
         "probs": {
           "1": 57.58,
-          "X": 24.48,
-          "2": 17.93
+          "2": 17.93,
+          "X": 24.48
         },
         "capturedAt": "2026-09-10T12:08:30.284Z"
       },
@@ -166,8 +178,8 @@
         "roundId": "2026-09-12",
         "probs": {
           "1": 49,
-          "X": 25,
-          "2": 26
+          "2": 26,
+          "X": 25
         },
         "marks": [
           "1",
@@ -182,16 +194,19 @@
       "home": "liverpool",
       "away": "fulham",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
         "overround": 0.079,
         "probs": {
           "1": 65.7,
-          "X": 19.2,
-          "2": 15.1
+          "2": 15.1,
+          "X": 19.2
         },
         "capturedAt": "2026-09-10T12:00:00.000Z"
       },
@@ -200,8 +215,8 @@
         "drawId": "100571",
         "probs": {
           "1": 78.02,
-          "X": 13.13,
-          "2": 8.84
+          "2": 8.84,
+          "X": 13.13
         },
         "capturedAt": "2026-09-10T12:08:30.284Z"
       },
@@ -209,8 +224,8 @@
         "roundId": "2026-09-12",
         "probs": {
           "1": 67,
-          "X": 19,
-          "2": 14
+          "2": 14,
+          "X": 19
         },
         "marks": [
           "1"
@@ -224,16 +239,19 @@
       "home": "tottenham",
       "away": "everton",
       "kickoff": "2026-09-12T16:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
         "overround": 0.077,
         "probs": {
           "1": 46.6,
-          "X": 26.5,
-          "2": 26.8
+          "2": 26.8,
+          "X": 26.5
         },
         "capturedAt": "2026-09-10T12:00:00.000Z"
       },
@@ -242,8 +260,8 @@
         "drawId": "100571",
         "probs": {
           "1": 39.63,
-          "X": 31.35,
-          "2": 29.02
+          "2": 29.02,
+          "X": 31.35
         },
         "capturedAt": "2026-09-10T12:08:30.284Z"
       },
@@ -251,8 +269,8 @@
         "roundId": "2026-09-12",
         "probs": {
           "1": 48,
-          "X": 26,
-          "2": 26
+          "2": 26,
+          "X": 26
         },
         "marks": [
           "1",
@@ -267,16 +285,19 @@
       "home": "sunderland",
       "away": "arsenal",
       "kickoff": "2026-09-12T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
         "overround": 0.067,
         "probs": {
           "1": 13.1,
-          "X": 22.7,
-          "2": 64.2
+          "2": 64.2,
+          "X": 22.7
         },
         "capturedAt": "2026-09-10T12:00:00.000Z"
       },
@@ -285,8 +306,8 @@
         "drawId": "100571",
         "probs": {
           "1": 15.08,
-          "X": 15.66,
-          "2": 69.26
+          "2": 69.26,
+          "X": 15.66
         },
         "capturedAt": "2026-09-10T12:08:30.284Z"
       },
@@ -294,14 +315,14 @@
         "roundId": "2026-09-12",
         "probs": {
           "1": 12,
-          "X": 22,
-          "2": 66
+          "2": 66,
+          "X": 22
         },
         "marks": [
           "2"
         ],
         "capturedAt": "2026-09-12T09:30:00.000Z",
-        "note": "Arsenal: no fresh concerns, White fine, 3/3 league record, 1 conceded. Nudged 1pp toward Arsenal \u2014 team news reinforces rather than contradicts the price."
+        "note": "Arsenal: no fresh concerns, White fine, 3/3 league record, 1 conceded. Nudged 1pp toward Arsenal — team news reinforces rather than contradicts the price."
       }
     },
     {
@@ -309,8 +330,11 @@
       "home": "coventry",
       "away": "brighton",
       "kickoff": "2026-09-13T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 5
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -320,8 +344,11 @@
       "home": "man-united",
       "away": "man-city",
       "kickoff": "2026-09-13T15:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -331,8 +358,11 @@
       "home": "leeds",
       "away": "newcastle",
       "kickoff": "2026-09-14T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null

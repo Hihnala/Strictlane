@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 6,
   "matchweekDerived": false,
-  "source": "hand-entered 11 Sep 2026 \u2014 MW6, all 12 fixtures; Stevenage v Luton played Thu 10 Sep as an out-of-sequence fixture (Carabao Cup disruption elsewhere in the round), the other 11 kick off Sat 12 Sep per times supplied by Markku (CEST, converted to UTC); results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, proportional) for the played match, 2026-09-11",
+  "source": "hand-entered 11 Sep 2026 — MW6, all 12 fixtures; Stevenage v Luton played Thu 10 Sep as an out-of-sequence fixture (Carabao Cup disruption elsewhere in the round), the other 11 kick off Sat 12 Sep per times supplied by Markku (CEST, converted to UTC); results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, proportional) for the played match, 2026-09-11",
   "importedAt": "2026-09-11T00:00:00.000Z",
   "matches": [
     {
@@ -35,8 +35,11 @@
       "home": "leyton-orient",
       "away": "wycombe",
       "kickoff": "2026-09-12T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -46,8 +49,11 @@
       "home": "notts-county",
       "away": "bradford",
       "kickoff": "2026-09-12T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -57,8 +63,11 @@
       "home": "blackpool",
       "away": "bromley",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -68,8 +77,11 @@
       "home": "cambridge",
       "away": "reading",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -79,8 +91,11 @@
       "home": "mk-dons",
       "away": "peterborough",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -90,8 +105,11 @@
       "home": "mansfield",
       "away": "huddersfield",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -101,8 +119,11 @@
       "home": "oxford",
       "away": "burton",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -112,8 +133,11 @@
       "home": "plymouth",
       "away": "barnsley",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -123,8 +147,11 @@
       "home": "sheffield-wednesday",
       "away": "wigan",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -134,8 +161,11 @@
       "home": "stockport",
       "away": "leicester",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 4
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -145,8 +175,11 @@
       "home": "afc-wimbledon",
       "away": "doncaster",
       "kickoff": "2026-09-12T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
