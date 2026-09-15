@@ -129,12 +129,8 @@ export interface Commentary {
   summary?: string;
 }
 
-export async function getCommentary(
-  season: string,
-  league: LeagueId,
-  mw: number
-): Promise<Commentary | null> {
-  const file = path.join(CONTENT, season, league, `mw-${String(mw).padStart(2, "0")}.md`);
+/** Shared by every hand-written Markdown source below — frontmatter + body, nothing else. */
+async function readMarkdown(file: string): Promise<Commentary | null> {
   if (!existsSync(file)) return null;
   const { data, content } = matter(await readFile(file, "utf8"));
   return {
@@ -142,6 +138,19 @@ export async function getCommentary(
     title: typeof data.title === "string" ? data.title : undefined,
     summary: typeof data.summary === "string" ? data.summary : undefined,
   };
+}
+
+export async function getCommentary(
+  season: string,
+  league: LeagueId,
+  mw: number
+): Promise<Commentary | null> {
+  return readMarkdown(path.join(CONTENT, season, league, `mw-${String(mw).padStart(2, "0")}.md`));
+}
+
+/** A standalone page under `content/`, e.g. `content/statistics.md` for `getPage("statistics")`. */
+export async function getPage(slug: string): Promise<Commentary | null> {
+  return readMarkdown(path.join(CONTENT, `${slug}.md`));
 }
 
 /* ---------------------------------------------------------------- rounds --- */
@@ -181,14 +190,7 @@ export async function getRoundMatches(
 }
 
 export async function getRoundCommentary(id: string): Promise<Commentary | null> {
-  const file = path.join(CONTENT, "rounds", `${id}.md`);
-  if (!existsSync(file)) return null;
-  const { data, content } = matter(await readFile(file, "utf8"));
-  return {
-    html: await marked.parse(content),
-    title: typeof data.title === "string" ? data.title : undefined,
-    summary: typeof data.summary === "string" ? data.summary : undefined,
-  };
+  return readMarkdown(path.join(CONTENT, "rounds", `${id}.md`));
 }
 
 /**

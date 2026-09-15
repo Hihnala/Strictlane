@@ -13,6 +13,7 @@ import Link from "next/link";
  */
 const LINKS = [
   { href: "/", label: "Latest" },
+  { href: "/stats", label: "Stats" },
   { href: "/rounds", label: "Rounds" },
   { href: "/calibration", label: "Calibration" },
   { href: "/method", label: "Method" },
