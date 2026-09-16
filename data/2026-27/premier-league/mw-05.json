@@ -1,0 +1,136 @@
+{
+  "season": "2026-27",
+  "league": "premier-league",
+  "matchweek": 5,
+  "matchweekDerived": false,
+  "source": "coupon fixtures for Lauantaivakio 2026-09-19 (draw 100572), hand-entered 16 Sep 2026 — the 4 MW5 matches on the coupon only; remaining fixtures and closing odds to be added before kickoff",
+  "importedAt": "2026-09-16T09:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e0-05-brighton-arsenal",
+      "home": "brighton",
+      "away": "arsenal",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100572",
+        "probs": {
+          "1": 22.93,
+          "2": 55.68,
+          "X": 21.39
+        },
+        "capturedAt": "2026-09-16T07:50:44.910Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-19",
+        "probs": {
+          "1": 32,
+          "2": 32,
+          "X": 36
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-09-16T09:00:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-05-newcastle-hull",
+      "home": "newcastle",
+      "away": "hull",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100572",
+        "probs": {
+          "1": 50.66,
+          "2": 23.11,
+          "X": 26.23
+        },
+        "capturedAt": "2026-09-16T07:50:44.910Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-19",
+        "probs": {
+          "1": 28,
+          "2": 54,
+          "X": 18
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-09-16T09:00:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-05-everton-ipswich",
+      "home": "everton",
+      "away": "ipswich",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100572",
+        "probs": {
+          "1": 58.43,
+          "2": 16.86,
+          "X": 24.71
+        },
+        "capturedAt": "2026-09-16T07:50:44.910Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-19",
+        "probs": {
+          "1": 52,
+          "2": 29,
+          "X": 19
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-09-16T09:00:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-05-nottingham-forest-coventry",
+      "home": "nottingham-forest",
+      "away": "coventry",
+      "kickoff": "2026-09-19T16:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100572",
+        "probs": {
+          "1": 68,
+          "2": 14.1,
+          "X": 17.9
+        },
+        "capturedAt": "2026-09-16T07:50:44.910Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-19",
+        "probs": {
+          "1": 68,
+          "2": 17,
+          "X": 15
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-09-16T09:00:00.000Z"
+      }
+    }
+  ]
+}

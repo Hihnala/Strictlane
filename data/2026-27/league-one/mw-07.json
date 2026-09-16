@@ -1,0 +1,106 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 7,
+  "matchweekDerived": false,
+  "source": "coupon fixtures for Lauantaivakio 2026-09-19 (draw 100572), hand-entered 16 Sep 2026 — the 3 MW7 matches on the coupon only; remaining fixtures and closing odds to be added before kickoff",
+  "importedAt": "2026-09-16T09:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-07-oxford-cambridge",
+      "home": "oxford",
+      "away": "cambridge",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100572",
+        "probs": {
+          "1": 51.75,
+          "2": 21.23,
+          "X": 27.01
+        },
+        "capturedAt": "2026-09-16T07:50:44.910Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-19",
+        "probs": {
+          "1": 37,
+          "2": 31,
+          "X": 32
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-09-16T09:00:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e2-07-luton-bradford",
+      "home": "luton",
+      "away": "bradford",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100572",
+        "probs": {
+          "1": 38.69,
+          "2": 35.61,
+          "X": 25.7
+        },
+        "capturedAt": "2026-09-16T07:50:44.910Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-19",
+        "probs": {
+          "1": 31,
+          "2": 49,
+          "X": 20
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-09-16T09:00:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e2-07-sheffield-wednesday-stockport",
+      "home": "sheffield-wednesday",
+      "away": "stockport",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100572",
+        "probs": {
+          "1": 62.65,
+          "2": 17.7,
+          "X": 19.65
+        },
+        "capturedAt": "2026-09-16T07:50:44.910Z"
+      },
+      "forecast": {
+        "roundId": "2026-09-19",
+        "probs": {
+          "1": 31,
+          "2": 35,
+          "X": 34
+        },
+        "marks": [
+          "X",
+          "2"
+        ],
+        "capturedAt": "2026-09-16T09:00:00.000Z"
+      }
+    }
+  ]
+}
