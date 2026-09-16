@@ -10,7 +10,8 @@ import type { Match, ProbTriple, Sign } from "./schema.js";
  * The organising principle, carried over from the research briefings: raw
  * accuracy is close to meaningless because it is dataset-dependent and rewards
  * always backing the favourite. What matters is Ranked Probability Score
- * against the margin-stripped closing market on the *same* fixtures.
+ * tracked over time — a self-measure of forecast quality, not a comparison
+ * against any external benchmark.
  * ------------------------------------------------------------------------- */
 
 export const SIGNS: Sign[] = ["1", "X", "2"];
@@ -40,7 +41,8 @@ function asFractions(p: ProbTriple): [number, number, number] {
  * is why RPS rather than Brier is the primary metric here.
  *
  * Reference point: the best model in the 2017 Soccer Prediction Challenge
- * managed RPS ≈ 0.2054 across 206 fixtures. Anything near that is good.
+ * managed RPS ≈ 0.2054 across 206 fixtures — a rough sense of scale, not a
+ * target this site is trying to hit.
  */
 export function rps(probs: ProbTriple, result: Sign): number {
   const p = asFractions(probs);
@@ -93,24 +95,17 @@ export interface ScoreSummary {
   misses: number;
   hitRate: number | null;
   meanRps: number | null;
-  meanMarketRps: number | null;
-  /** negative = we beat the market */
-  rpsDelta: number | null;
-  /** matches where both our forecast and a market price exist */
-  comparable: number;
 }
 
 /**
- * Aggregate a set of matches. Our RPS and the market's are computed over the
- * *same* subset — comparing means taken over different fixture sets is the
- * single easiest way to fool yourself here.
+ * Aggregate a set of matches into hit rate and mean RPS — the two headline
+ * self-measures. There's no external benchmark folded in here: this is
+ * purely how good these forecasts were, on their own terms.
  */
 export function summarise(matches: Match[]): ScoreSummary {
   let hits = 0;
   let misses = 0;
   let ours = 0;
-  let theirs = 0;
-  let comparable = 0;
   let scored = 0;
 
   for (const m of matches) {
@@ -119,11 +114,7 @@ export function summarise(matches: Match[]): ScoreSummary {
     scored++;
     if (m.forecast.marks.includes(r)) hits++;
     else misses++;
-    if (m.market) {
-      comparable++;
-      ours += rps(m.forecast.probs, r);
-      theirs += rps(m.market.probs, r);
-    }
+    ours += rps(m.forecast.probs, r);
   }
 
   return {
@@ -131,10 +122,7 @@ export function summarise(matches: Match[]): ScoreSummary {
     hits,
     misses,
     hitRate: scored ? hits / scored : null,
-    meanRps: comparable ? ours / comparable : null,
-    meanMarketRps: comparable ? theirs / comparable : null,
-    rpsDelta: comparable ? ours / comparable - theirs / comparable : null,
-    comparable,
+    meanRps: scored ? ours / scored : null,
   };
 }
 
@@ -256,21 +244,6 @@ export function drawWatch(matches: Match[]) {
     /** how many standard deviations off we were; |z| < 2 is noise */
     z: sd > 0 ? (actual - expected) / sd : null,
   };
-}
-
-/* ---------------------------------------------------- market-only baseline --- */
-
-/** Season-wide market RPS over played matches — the number to beat. */
-export function marketBaseline(matches: Match[]) {
-  let sum = 0;
-  let n = 0;
-  for (const m of matches) {
-    const r = resultSign(m);
-    if (!r || !m.market) continue;
-    sum += rps(m.market.probs, r);
-    n++;
-  }
-  return { n, meanRps: n ? sum / n : null };
 }
 
 /** Outcome mix — useful as a base rate, and for the season grid. */

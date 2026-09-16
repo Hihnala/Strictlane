@@ -3,8 +3,8 @@ import Link from "next/link";
 /**
  * Three rows (TECH-SHEET.md §4):
  *   1. the section links the top bar no longer carries
- *   2. the site's own description — a personal ledger, forecasts scored
- *      against the market, hits and misses both on the record
+ *   2. the site's own description — a personal ledger, forecasts tracked
+ *      over time, hits and misses both on the record
  *   3. build credit + copyright
  *
  * No betting-advice disclaimer and no gambling-helpline link: Peluuri is run
@@ -32,7 +32,7 @@ export function Footer() {
         </nav>
         <p className="footer-statement">
           Strictlane is a personal ledger &mdash; football forecasts made before kickoff for the
-          Premier League, Championship, and League One, scored against the closing betting market.
+          Premier League, Championship, and League One, scored over time on their own terms.
           Hits and misses both stay on the record.
         </p>
         <div className="footer-credit">

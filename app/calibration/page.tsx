@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { currentSeason, getForecastMatches, LEAGUES, getSeasonMatches } from "@/lib/content";
-import { summarise, calibration, drawWatch, marketBaseline, signMix } from "@/lib/scoring";
+import { currentSeason, getForecastMatches } from "@/lib/content";
+import { summarise, calibration, drawWatch, signMix } from "@/lib/scoring";
 import { StatCell } from "@/components/StatCell";
 
 export const metadata: Metadata = { title: "Calibration" };
@@ -14,9 +14,6 @@ export default async function CalibrationPage() {
   const draws = drawWatch(forecast);
   const mix = signMix(forecast);
 
-  const all = (await Promise.all(LEAGUES.map((l) => getSeasonMatches(season.id, l.id)))).flat();
-  const base = marketBaseline(all);
-
   return (
     <div className="wrap">
       <section className="section">
@@ -25,27 +22,20 @@ export default async function CalibrationPage() {
         <p className="lede">
           Raw accuracy is close to meaningless: it depends on which fixtures happened to be on the
           coupon, and it rewards always backing the favourite. The number that matters is Ranked
-          Probability Score against the margin-stripped closing market on the same matches.
+          Probability Score, tracked over time as a self-measure of forecast quality.
         </p>
 
         <div className="stat-grid" style={{ marginTop: "var(--s4)" }}>
           <StatCell value={`${s.hits}/${s.scored}`} label="Correct"
             sub={s.hitRate !== null ? `${(s.hitRate * 100).toFixed(0)}%` : undefined} />
-          <StatCell value={s.meanRps ? s.meanRps.toFixed(4) : "\u2014"} label="Our RPS"
-            sub={`${s.comparable} comparable`} />
-          <StatCell value={s.meanMarketRps ? s.meanMarketRps.toFixed(4) : "\u2014"} label="Market RPS"
-            sub="same matches" />
-          <StatCell
-            value={s.rpsDelta !== null ? (s.rpsDelta <= 0 ? "" : "+") + s.rpsDelta.toFixed(4) : "\u2014"}
-            label="Delta"
-            sub={s.rpsDelta === null ? undefined : s.rpsDelta < 0 ? "ahead of market" : "behind market"}
-          />
+          <StatCell value={s.meanRps ? s.meanRps.toFixed(4) : "\u2014"} label="Mean RPS"
+            sub={`${s.scored} scored`} />
         </div>
 
-        {s.comparable > 0 && s.comparable < 50 && (
+        {s.scored > 0 && s.scored < 50 && (
           <p className="muted" style={{ marginTop: "var(--s3)", fontSize: 13.5 }}>
-            {s.comparable} matches is far too small a sample to read anything into the delta. A
-            season-long log is what settles whether the adjustments are worth making.
+            {s.scored} matches is far too small a sample to read much into the mean. A season-long
+            log is what settles whether the forecasting is any good.
           </p>
         )}
       </section>
@@ -96,14 +86,12 @@ export default async function CalibrationPage() {
 
       <section className="section">
         <div className="sec-label">Base rates</div>
-        <h2>The market baseline</h2>
+        <h2>Outcome mix</h2>
         <p className="muted" style={{ fontSize: 14.5 }}>
-          Market RPS across every match with odds this season, forecast or not &mdash; the standing
-          number any model has to beat.
+          How the forecast matches actually resolved this season &mdash; the base rate any single
+          call is competing against.
         </p>
         <div className="stat-grid">
-          <StatCell value={base.meanRps ? base.meanRps.toFixed(4) : "\u2014"} label="Market RPS"
-            sub={`${base.n} matches`} />
           <StatCell value={mix.share ? `${(mix.share["1"] * 100).toFixed(0)}%` : "\u2014"} label="Home wins" />
           <StatCell value={mix.share ? `${(mix.share.X * 100).toFixed(0)}%` : "\u2014"} label="Draws" />
           <StatCell value={mix.share ? `${(mix.share["2"] * 100).toFixed(0)}%` : "\u2014"} label="Away wins" />

@@ -78,7 +78,6 @@ export default async function MatchweekPage({
       <section className="section">
         <div className="sec-label">
           {meta.label} &middot; {season}
-          {data.matchweekDerived && " \u00b7 matchweek inferred"}
         </div>
         <h1>Matchweek {n}</h1>
         <MatchweekRail season={season} league={league} weeks={weeks} current={n} />
@@ -96,11 +95,7 @@ export default async function MatchweekPage({
           <div className="sec-label">Scoring</div>
           <div className="stat-grid">
             <StatCell value={`${s.hits}/${s.scored}`} label="Correct" />
-            <StatCell
-              value={s.meanRps ? s.meanRps.toFixed(4) : "\u2014"}
-              label="Mean RPS"
-              sub={s.meanMarketRps ? `market ${s.meanMarketRps.toFixed(4)}` : "no market data"}
-            />
+            <StatCell value={s.meanRps ? s.meanRps.toFixed(4) : "\u2014"} label="Mean RPS" />
             <StatCell
               value={`${draws.actual}/${draws.expected.toFixed(1)}`}
               label="Draws act/exp"

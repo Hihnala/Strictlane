@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 6,
   "matchweekDerived": false,
-  "source": "hand-entered 11 Sep 2026 \u2014 MW6, all 12 fixtures. 9 played Tue 8 / Wed 9 Sep. Bristol City v Lincoln and Middlesbrough v Millwall delayed to Tue 15 Sep (Carabao Cup disruption); Portsmouth v Wolves delayed all the way to Tue 20 Oct, per Markku. Kickoff for the delayed fixtures converted from times given in EET (UTC+3); results and closing markets for the 9 played matches merged from football-data.co.uk 2026-27 (closing AvgC, proportional), 2026-09-11",
+  "source": "hand-entered 11 Sep 2026 — MW6, all 12 fixtures. 9 played Tue 8 / Wed 9 Sep. Bristol City v Lincoln and Middlesbrough v Millwall delayed to Tue 15 Sep (Carabao Cup disruption); Portsmouth v Wolves delayed all the way to Tue 20 Oct, per Markku. Kickoff for the delayed fixtures converted from times given in EET (UTC+3); results and closing markets for the 9 played matches merged from football-data.co.uk 2026-27 (closing AvgC, proportional), 2026-09-11",
   "importedAt": "2026-09-11T00:00:00.000Z",
   "matches": [
     {
@@ -46,7 +46,7 @@
         "overround": 0.0678,
         "probs": {
           "1": 46.6,
-          "2": 28.0,
+          "2": 28,
           "X": 25.4
         },
         "capturedAt": "2026-09-08T18:45:00.000Z"
@@ -141,7 +141,7 @@
         "method": "proportional",
         "overround": 0.0658,
         "probs": {
-          "1": 59.0,
+          "1": 59,
           "2": 22.3,
           "X": 18.7
         },
@@ -165,7 +165,7 @@
         "method": "proportional",
         "overround": 0.0654,
         "probs": {
-          "1": 32.0,
+          "1": 32,
           "2": 40.1,
           "X": 27.9
         },
@@ -215,7 +215,7 @@
         "probs": {
           "1": 30.4,
           "2": 41.6,
-          "X": 28.0
+          "X": 28
         },
         "capturedAt": "2026-09-09T19:00:00.000Z"
       },
@@ -227,8 +227,11 @@
       "home": "bristol-city",
       "away": "lincoln",
       "kickoff": "2026-09-15T18:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -238,8 +241,11 @@
       "home": "middlesbrough",
       "away": "millwall",
       "kickoff": "2026-09-15T18:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null

@@ -25,18 +25,6 @@ export default function MethodPage() {
           one ever is.
         </p>
 
-        <h2>The market</h2>
-        <p>
-          For comparison, the closing betting market&apos;s own probabilities
-          are recorded too, with the bookmaker&apos;s margin removed. Margin
-          removal is a modelling choice: proportional normalisation divides
-          every implied probability by the book&apos;s overround; the power
-          method instead solves for an exponent that shrinks small
-          probabilities more than large ones, which better matches
-          favourite-longshot bias. Whichever method a given match uses is
-          recorded alongside it — the two are never mixed within a season.
-        </p>
-
         <h2>Ranked Probability Score</h2>
         <p>
           RPS is the headline metric, not raw accuracy. Accuracy rewards
@@ -49,9 +37,10 @@ export default function MethodPage() {
           finished a draw. That is the right behaviour for football.
         </p>
         <p>
-          Our RPS and the market&apos;s are always computed over the
-          identical subset of matches — comparing means taken over different
-          fixture sets is the easiest way to fool yourself here.
+          There is no external benchmark folded into this figure. RPS is
+          tracked as a self-measure of forecast quality over time — this
+          season against last month, not this site against the betting
+          market.
         </p>
 
         <h2>Draw watch</h2>

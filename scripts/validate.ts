@@ -178,16 +178,6 @@ async function main() {
             err(at, `archive season has a forecast — hindsight predictions corrupt calibration`);
           }
 
-          // -- market sanity
-          if (m.market) {
-            if (m.market.overround > 0.2) {
-              warn(at, `overround ${(m.market.overround * 100).toFixed(1)}% looks implausible`);
-            }
-            if (m.market.source.includes("pre-close")) {
-              warn(at, `market built from pre-closing odds — do not compare against closing lines`);
-            }
-          }
-
           // -- results
           const r = resultSign(m);
           if (m.status === "played" && !r) err(at, `status "played" but no derivable result`);

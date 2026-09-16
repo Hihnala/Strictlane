@@ -176,9 +176,9 @@ interface PopularityReply {
  *
  * This is the genuinely interesting half of the API. Vakio is pari-mutuel: the
  * payout depends on how many other people share your row, so pool popularity is
- * a different quantity from bookmaker probability, and the gap between them is
- * where pool value actually lives. Stored alongside — never mixed into — the
- * market probabilities.
+ * a different quantity from our own forecast probability, and the gap between
+ * them is where pool value actually lives. Stored alongside — never mixed
+ * into — the forecast.
  */
 async function fetchPopularity(drawId: string | number) {
   const reply = await get<PopularityReply>(

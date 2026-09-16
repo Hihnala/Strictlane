@@ -3,14 +3,17 @@ import { z } from "zod";
 /* ---------------------------------------------------------------------------
  * strictlane — data contract
  *
- * Two things are kept deliberately separate:
+ * `forecast` is our claim — probabilities, marks, and a timestamp that must
+ * precede kickoff. It exists only where we actually made one; unforecast
+ * matches carry `forecast: null` and are shown, not hidden.
  *
- *   market   observed data. Bookmaker closing odds, margin-stripped. Exists for
- *            every match we have odds for, including archive seasons.
- *   forecast our claim. Exists only where we actually made one, before kickoff.
+ * There is no external benchmark stored alongside it. Strictlane isn't scored
+ * against the betting market — it's scored against itself, over time, via
+ * Ranked Probability Score computed at build time from these files.
  *
- * Nothing derived is ever stored — RPS, hit/miss, coverage and season totals are
- * computed at build time from these files, so the numbers can't drift apart.
+ * Nothing derived is ever stored — RPS, hit/miss, coverage and season totals
+ * are computed at build time from these files, so the numbers can't drift
+ * apart.
  * ------------------------------------------------------------------------- */
 
 export const LeagueId = z.enum(["premier-league", "championship", "league-one"]);
@@ -30,27 +33,14 @@ export const ProbTriple = z
   });
 export type ProbTriple = z.infer<typeof ProbTriple>;
 
-export const Market = z.object({
-  /** e.g. "football-data:AvgC", "oddsportal-avg", "oddschecker-best" */
-  source: z.string().min(1),
-  /** how the bookmaker margin was removed */
-  method: z.enum(["proportional", "power"]),
-  /** bookmaker overround before stripping, e.g. 0.0676 for 6.76% */
-  overround: z.number().min(0).max(1),
-  probs: ProbTriple,
-  /** when the odds were observed. Archive rows use the source's own snapshot. */
-  capturedAt: z.string().datetime(),
-});
-export type Market = z.infer<typeof Market>;
-
 /**
  * Veikkaus pool distribution across 1/X/2.
  *
- * A third quantity, distinct from both our forecast and the bookmaker market.
- * Vakio is pari-mutuel — the pot splits among winning rows — so what the crowd
- * picked determines what a correct row *pays*, not how likely it is. Kept
- * strictly separate from `market`: merging crowd behaviour into bookmaker
- * probability would corrupt every RPS figure on the site.
+ * A second quantity, distinct from our forecast. Vakio is pari-mutuel — the
+ * pot splits among winning rows — so what the crowd picked determines what a
+ * correct row *pays*, not how likely it is. Kept strictly separate from
+ * `forecast`: merging crowd behaviour into our own probability would corrupt
+ * every RPS figure on the site.
  */
 export const Pool = z.object({
   source: z.string().min(1),
@@ -80,7 +70,6 @@ export const Match = z
     kickoff: z.string().datetime(),
     status: z.enum(["played", "pending", "postponed"]),
     score: z.object({ home: z.number().int().min(0), away: z.number().int().min(0) }).nullable(),
-    market: Market.nullable(),
     pool: Pool.nullish(),
     forecast: Forecast.nullable(),
   })
@@ -94,11 +83,8 @@ export const Matchweek = z.object({
   season: SeasonId,
   league: LeagueId,
   matchweek: z.number().int().min(1).max(46),
-  /** true when the number was inferred rather than published — see matchweeks.ts */
-  matchweekDerived: z.boolean(),
-  /** provenance for the whole file */
+  /** provenance for the whole file, e.g. "hand-entered" */
   source: z.string().min(1),
-  importedAt: z.string().datetime().optional(),
   matches: z.array(Match).min(1),
 });
 export type Matchweek = z.infer<typeof Matchweek>;

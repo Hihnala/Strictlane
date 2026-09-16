@@ -8,7 +8,6 @@
     "start": "next start",
     "validate": "tsx scripts/validate.ts",
     "prebuild": "npm run validate",
-    "import:archive": "tsx scripts/import-archive.ts",
     "fetch:vakio": "tsx scripts/fetch-vakio.ts",
     "promote:round": "tsx scripts/promote-round.ts"
   },

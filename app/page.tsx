@@ -69,17 +69,9 @@ export default async function Home() {
           </div>
 
           <div className="stat-grid">
-            <StatCell value={`${lastS.hits}/${lastS.scored}`} label="Correct" />
-            <StatCell
-              value={lastS.meanRps !== null ? lastS.meanRps.toFixed(4) : "\u2014"}
-              label="Mean RPS"
-              sub={lastS.meanMarketRps !== null ? `market ${lastS.meanMarketRps.toFixed(4)}` : undefined}
-            />
-            <StatCell
-              value={lastS.rpsDelta !== null ? (lastS.rpsDelta <= 0 ? "" : "+") + lastS.rpsDelta.toFixed(4) : "\u2014"}
-              label="vs market"
-              sub={lastS.rpsDelta === null ? undefined : lastS.rpsDelta < 0 ? "ahead" : "behind"}
-            />
+            <StatCell value={`${lastS.hits}/${lastS.scored}`} label="Correct"
+              sub={lastS.hitRate !== null ? `${(lastS.hitRate * 100).toFixed(0)}%` : undefined} />
+            <StatCell value={lastS.meanRps !== null ? lastS.meanRps.toFixed(4) : "\u2014"} label="Mean RPS" />
           </div>
           <p style={{ marginTop: "var(--s3)" }}>
             <Link className="more" href={`/rounds/${last.id}`}>Review &rarr;</Link>

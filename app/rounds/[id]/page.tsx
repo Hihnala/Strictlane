@@ -57,8 +57,7 @@ export default async function RoundPage({ params }: { params: Promise<{ id: stri
         <div className="stat-grid">
           <StatCell value={`${s.hits}/${s.scored}`} label="Correct"
             sub={outlook ? `${outlook.expectedCovered.toFixed(2)} expected` : undefined} />
-          <StatCell value={s.meanRps ? s.meanRps.toFixed(4) : "\u2014"} label="Mean RPS"
-            sub={s.meanMarketRps ? `market ${s.meanMarketRps.toFixed(4)}` : undefined} />
+          <StatCell value={s.meanRps ? s.meanRps.toFixed(4) : "\u2014"} label="Mean RPS" />
           <StatCell value={`${draws.actual}/${draws.expected.toFixed(1)}`} label="Draws act/exp"
             sub={draws.z !== null ? `z ${draws.z.toFixed(2)}` : undefined} />
         </div>

@@ -11,8 +11,7 @@ export default async function RoundsIndex() {
   const rounds = await getRoundSummaries();
   const settled = rounds.filter((r) => r.status === "settled");
 
-  // Season totals computed across every settled round, over the same subset for
-  // us and the market so the comparison stays honest.
+  // Season totals computed across every settled round.
   const allMatches = settled.flatMap((r) => r.located.map((l) => l.match));
   const s = summarise(allMatches);
 
@@ -24,7 +23,7 @@ export default async function RoundsIndex() {
         <p className="lede">
           Every Lauantaivakio, kept permanently. A round cuts across leagues, so it is tracked
           separately from the matchweek record — each one holds the marks played, what they
-          returned, and how the forecasts scored against the market.
+          returned, and how the forecasts scored.
         </p>
 
         {settled.length > 0 && (
@@ -34,17 +33,9 @@ export default async function RoundsIndex() {
               label="Rounds settled"
               sub={rounds.length > settled.length ? `${rounds.length - settled.length} open` : undefined}
             />
-            <StatCell value={`${s.hits}/${s.scored}`} label="Correct" />
-            <StatCell
-              value={s.meanRps !== null ? s.meanRps.toFixed(4) : "\u2014"}
-              label="Mean RPS"
-              sub={s.meanMarketRps !== null ? `market ${s.meanMarketRps.toFixed(4)}` : undefined}
-            />
-            <StatCell
-              value={s.rpsDelta !== null ? (s.rpsDelta <= 0 ? "" : "+") + s.rpsDelta.toFixed(4) : "\u2014"}
-              label="vs market"
-              sub={s.rpsDelta === null ? undefined : s.rpsDelta < 0 ? "ahead" : "behind"}
-            />
+            <StatCell value={`${s.hits}/${s.scored}`} label="Correct"
+              sub={s.hitRate !== null ? `${(s.hitRate * 100).toFixed(0)}%` : undefined} />
+            <StatCell value={s.meanRps !== null ? s.meanRps.toFixed(4) : "\u2014"} label="Mean RPS" />
           </div>
         )}
       </section>

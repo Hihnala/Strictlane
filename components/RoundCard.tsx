@@ -36,7 +36,6 @@ export function RoundCard({ r }: { r: RoundSummary }) {
             {s.meanRps !== null && (
               <span className="data" style={{ color: "var(--ink-muted)" }}>
                 RPS {s.meanRps.toFixed(4)}
-                {s.meanMarketRps !== null && ` vs ${s.meanMarketRps.toFixed(4)}`}
               </span>
             )}
           </>
