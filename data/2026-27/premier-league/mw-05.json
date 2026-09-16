@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 5,
   "matchweekDerived": false,
-  "source": "coupon fixtures for Lauantaivakio 2026-09-19 (draw 100572), hand-entered 16 Sep 2026 — the 4 MW5 matches on the coupon only; remaining fixtures and closing odds to be added before kickoff",
+  "source": "hand-entered from fixture listings, 16-19 Sep 2026 — all 10 MW5 fixtures confirmed; kickoff times approximate for Brentford v Chelsea; closing odds to be added before kickoff",
   "importedAt": "2026-09-16T09:00:00.000Z",
   "matches": [
     {
@@ -131,6 +131,72 @@
         ],
         "capturedAt": "2026-09-16T09:00:00.000Z"
       }
+    },
+    {
+      "id": "2026-27-e0-05-brentford-chelsea",
+      "home": "brentford",
+      "away": "chelsea",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-05-tottenham-aston-villa",
+      "home": "tottenham",
+      "away": "aston-villa",
+      "kickoff": "2026-09-19T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-05-bournemouth-liverpool",
+      "home": "bournemouth",
+      "away": "liverpool",
+      "kickoff": "2026-09-20T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-05-man-city-sunderland",
+      "home": "man-city",
+      "away": "sunderland",
+      "kickoff": "2026-09-20T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-05-leeds-crystal-palace",
+      "home": "leeds",
+      "away": "crystal-palace",
+      "kickoff": "2026-09-20T13:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-05-fulham-man-united",
+      "home": "fulham",
+      "away": "man-united",
+      "kickoff": "2026-09-20T15:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
     }
   ]
 }

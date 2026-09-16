@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 8,
   "matchweekDerived": false,
-  "source": "coupon fixtures for Lauantaivakio 2026-09-19 (draw 100572), hand-entered 16 Sep 2026 — the 6 MW8 matches on the coupon only; remaining fixtures and closing odds to be added before kickoff",
+  "source": "hand-entered from fixture listings, 16-20 Sep 2026 — all 12 MW8 fixtures confirmed; closing odds to be added before kickoff",
   "importedAt": "2026-09-16T09:00:00.000Z",
   "matches": [
     {
@@ -194,6 +194,72 @@
         ],
         "capturedAt": "2026-09-16T09:00:00.000Z"
       }
+    },
+    {
+      "id": "2026-27-e1-08-bristol-city-watford",
+      "home": "bristol-city",
+      "away": "watford",
+      "kickoff": "2026-09-18T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-08-cardiff-charlton",
+      "home": "cardiff",
+      "away": "charlton",
+      "kickoff": "2026-09-19T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-08-millwall-west-ham",
+      "home": "millwall",
+      "away": "west-ham",
+      "kickoff": "2026-09-19T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-08-stoke-sheffield-united",
+      "home": "stoke",
+      "away": "sheffield-united",
+      "kickoff": "2026-09-19T11:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-08-wolves-west-brom",
+      "home": "wolves",
+      "away": "west-brom",
+      "kickoff": "2026-09-20T11:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-08-norwich-bolton",
+      "home": "norwich",
+      "away": "bolton",
+      "kickoff": "2026-09-20T12:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
     }
   ]
 }

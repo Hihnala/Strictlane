@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 7,
   "matchweekDerived": false,
-  "source": "coupon fixtures for Lauantaivakio 2026-09-19 (draw 100572), hand-entered 16 Sep 2026 — the 3 MW7 matches on the coupon only; remaining fixtures and closing odds to be added before kickoff",
+  "source": "hand-entered from fixture listings, 16-19 Sep 2026 — all 12 MW7 fixtures confirmed; kickoff times approximate except AFC Wimbledon v MK Dons; closing odds to be added before kickoff",
   "importedAt": "2026-09-16T09:00:00.000Z",
   "matches": [
     {
@@ -101,6 +101,105 @@
         ],
         "capturedAt": "2026-09-16T09:00:00.000Z"
       }
+    },
+    {
+      "id": "2026-27-e2-07-afc-wimbledon-mk-dons",
+      "home": "afc-wimbledon",
+      "away": "mk-dons",
+      "kickoff": "2026-09-17T19:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-barnsley-leicester",
+      "home": "barnsley",
+      "away": "leicester",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-burton-mansfield",
+      "home": "burton",
+      "away": "mansfield",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-reading-notts-county",
+      "home": "reading",
+      "away": "notts-county",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-wigan-wycombe",
+      "home": "wigan",
+      "away": "wycombe",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-peterborough-doncaster",
+      "home": "peterborough",
+      "away": "doncaster",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-blackpool-plymouth",
+      "home": "blackpool",
+      "away": "plymouth",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-leyton-orient-stevenage",
+      "home": "leyton-orient",
+      "away": "stevenage",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-07-bromley-huddersfield",
+      "home": "bromley",
+      "away": "huddersfield",
+      "kickoff": "2026-09-19T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
     }
   ]
 }
