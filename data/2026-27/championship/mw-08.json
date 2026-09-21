@@ -11,8 +11,11 @@
       "home": "burnley",
       "away": "derby",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -43,8 +46,11 @@
       "home": "wrexham",
       "away": "southampton",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -74,8 +80,11 @@
       "home": "lincoln",
       "away": "swansea",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -106,8 +115,11 @@
       "home": "birmingham",
       "away": "middlesbrough",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -138,8 +150,11 @@
       "home": "portsmouth",
       "away": "blackburn",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -170,8 +185,11 @@
       "home": "qpr",
       "away": "preston",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -201,8 +219,11 @@
       "home": "bristol-city",
       "away": "watford",
       "kickoff": "2026-09-18T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -212,8 +233,11 @@
       "home": "cardiff",
       "away": "charlton",
       "kickoff": "2026-09-19T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -223,8 +247,11 @@
       "home": "millwall",
       "away": "west-ham",
       "kickoff": "2026-09-19T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -234,8 +261,11 @@
       "home": "stoke",
       "away": "sheffield-united",
       "kickoff": "2026-09-19T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -245,8 +275,11 @@
       "home": "wolves",
       "away": "west-brom",
       "kickoff": "2026-09-20T11:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -256,8 +289,11 @@
       "home": "norwich",
       "away": "bolton",
       "kickoff": "2026-09-20T12:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 4
+      },
       "market": null,
       "pool": null,
       "forecast": null

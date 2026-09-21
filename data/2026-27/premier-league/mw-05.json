@@ -11,8 +11,11 @@
       "home": "brighton",
       "away": "arsenal",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -43,8 +46,11 @@
       "home": "newcastle",
       "away": "hull",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -74,8 +80,11 @@
       "home": "everton",
       "away": "ipswich",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -105,8 +114,11 @@
       "home": "nottingham-forest",
       "away": "coventry",
       "kickoff": "2026-09-19T16:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -136,8 +148,11 @@
       "home": "brentford",
       "away": "chelsea",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -147,8 +162,11 @@
       "home": "tottenham",
       "away": "aston-villa",
       "kickoff": "2026-09-19T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 3
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -158,8 +176,11 @@
       "home": "bournemouth",
       "away": "liverpool",
       "kickoff": "2026-09-20T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -169,8 +190,11 @@
       "home": "man-city",
       "away": "sunderland",
       "kickoff": "2026-09-20T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 3
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -180,8 +204,11 @@
       "home": "leeds",
       "away": "crystal-palace",
       "kickoff": "2026-09-20T13:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -191,8 +218,11 @@
       "home": "fulham",
       "away": "man-united",
       "kickoff": "2026-09-20T15:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null

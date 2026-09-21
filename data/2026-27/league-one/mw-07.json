@@ -11,8 +11,11 @@
       "home": "oxford",
       "away": "cambridge",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -43,8 +46,11 @@
       "home": "luton",
       "away": "bradford",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -75,8 +81,11 @@
       "home": "sheffield-wednesday",
       "away": "stockport",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -107,8 +116,11 @@
       "home": "afc-wimbledon",
       "away": "mk-dons",
       "kickoff": "2026-09-17T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -118,8 +130,11 @@
       "home": "barnsley",
       "away": "leicester",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -129,8 +144,11 @@
       "home": "burton",
       "away": "mansfield",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -140,8 +158,11 @@
       "home": "reading",
       "away": "notts-county",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -151,8 +172,11 @@
       "home": "wigan",
       "away": "wycombe",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -162,8 +186,11 @@
       "home": "peterborough",
       "away": "doncaster",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -173,8 +200,11 @@
       "home": "blackpool",
       "away": "plymouth",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 4
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -184,8 +214,11 @@
       "home": "leyton-orient",
       "away": "stevenage",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -195,8 +228,11 @@
       "home": "bromley",
       "away": "huddersfield",
       "kickoff": "2026-09-19T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
