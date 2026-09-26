@@ -11,6 +11,7 @@ import {
   type LeagueId,
   type Team,
 } from "./schema";
+import type { Locale } from "./i18n";
 
 /* ---------------------------------------------------------------------------
  * Reading the data layer.
@@ -127,30 +128,52 @@ export interface Commentary {
   html: string;
   title?: string;
   summary?: string;
+  /** false when this is the English original shown as a fallback under a Finnish
+   *  route because no `.fi.md` sibling exists yet — drives the "coming soon" note. */
+  translated: boolean;
 }
 
 /** Shared by every hand-written Markdown source below — frontmatter + body, nothing else. */
-async function readMarkdown(file: string): Promise<Commentary | null> {
+async function readMarkdown(file: string, translated: boolean): Promise<Commentary | null> {
   if (!existsSync(file)) return null;
   const { data, content } = matter(await readFile(file, "utf8"));
   return {
     html: await marked.parse(content),
     title: typeof data.title === "string" ? data.title : undefined,
     summary: typeof data.summary === "string" ? data.summary : undefined,
+    translated,
   };
+}
+
+/**
+ * Locale-aware Markdown resolution: `<base>.fi.md` for Finnish, falling back to
+ * the English `<base>.md` (flagged `translated: false`) while a Finnish version
+ * doesn't exist yet — commentary is translated newest-first, trickled in
+ * alongside normal weekly work, so most of the archive hits this fallback for a
+ * long time by design (I18N-PLAN.md §10).
+ */
+async function readLocalizedMarkdown(base: string, locale: Locale): Promise<Commentary | null> {
+  if (locale === "fi") {
+    const fi = await readMarkdown(`${base}.fi.md`, true);
+    if (fi) return fi;
+    return readMarkdown(`${base}.md`, false);
+  }
+  return readMarkdown(`${base}.md`, true);
 }
 
 export async function getCommentary(
   season: string,
   league: LeagueId,
-  mw: number
+  mw: number,
+  locale: Locale = "en"
 ): Promise<Commentary | null> {
-  return readMarkdown(path.join(CONTENT, season, league, `mw-${String(mw).padStart(2, "0")}.md`));
+  const base = path.join(CONTENT, season, league, `mw-${String(mw).padStart(2, "0")}`);
+  return readLocalizedMarkdown(base, locale);
 }
 
 /** A standalone page under `content/`, e.g. `content/statistics.md` for `getPage("statistics")`. */
-export async function getPage(slug: string): Promise<Commentary | null> {
-  return readMarkdown(path.join(CONTENT, `${slug}.md`));
+export async function getPage(slug: string, locale: Locale = "en"): Promise<Commentary | null> {
+  return readLocalizedMarkdown(path.join(CONTENT, slug), locale);
 }
 
 /* ---------------------------------------------------------------- rounds --- */
@@ -189,8 +212,8 @@ export async function getRoundMatches(
   return out;
 }
 
-export async function getRoundCommentary(id: string): Promise<Commentary | null> {
-  return readMarkdown(path.join(CONTENT, "rounds", `${id}.md`));
+export async function getRoundCommentary(id: string, locale: Locale = "en"): Promise<Commentary | null> {
+  return readLocalizedMarkdown(path.join(CONTENT, "rounds", id), locale);
 }
 
 /**

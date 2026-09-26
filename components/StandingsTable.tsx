@@ -1,26 +1,31 @@
 import type { Team } from "@/lib/schema";
 import type { StandingRow } from "@/lib/standings";
+import type { Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/i18n";
 
 export function StandingsTable({
   rows,
   teams,
+  locale = "en",
 }: {
   rows: StandingRow[];
   teams: Map<string, Team>;
+  locale?: Locale;
 }) {
+  const dict = getDictionary(locale).standings;
   return (
     <div className="table-wrap">
       <table className="table">
         <thead>
           <tr>
             <th className="num">#</th>
-            <th>Team</th>
-            <th className="num">P</th>
-            <th className="num">W</th>
-            <th className="num">D</th>
-            <th className="num">L</th>
-            <th className="num">GD</th>
-            <th className="num">Pts</th>
+            <th>{dict.team}</th>
+            <th className="num">{dict.p}</th>
+            <th className="num">{dict.w}</th>
+            <th className="num">{dict.d}</th>
+            <th className="num">{dict.l}</th>
+            <th className="num">{dict.gd}</th>
+            <th className="num">{dict.pts}</th>
           </tr>
         </thead>
         <tbody>

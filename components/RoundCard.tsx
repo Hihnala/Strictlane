@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { RoundSummary } from "@/lib/content";
 import { summarise, resultSign, verdict } from "@/lib/scoring";
+import type { Locale } from "@/lib/i18n";
+import { getDictionary, localePrefix } from "@/lib/i18n";
 import { Coupon } from "./Coupon";
 import { Tag } from "./Tag";
 
@@ -11,13 +13,15 @@ import { Tag } from "./Tag";
  * is recognisable at a glance from its shape — where the singles fell, which
  * marks hit — without opening it.
  */
-export function RoundCard({ r }: { r: RoundSummary }) {
+export function RoundCard({ r, locale = "en" }: { r: RoundSummary; locale?: Locale }) {
+  const dict = getDictionary(locale);
+  const prefix = localePrefix(locale);
   const matches = r.located.map((l) => l.match);
   const s = summarise(matches);
   const sys = r.round.system;
 
   return (
-    <Link className="roundcard" href={`/rounds/${r.id}`}>
+    <Link className="roundcard" href={`${prefix}/rounds/${r.id}`}>
       <div className="top">
         <strong>{r.round.name}</strong>
         <span className="data" style={{ fontSize: 12, color: "var(--ink-muted)" }}>{r.id}</span>
@@ -25,14 +29,14 @@ export function RoundCard({ r }: { r: RoundSummary }) {
 
       <div className="roundcard-strips">
         {r.located.map(({ match: m }) => (
-          <Coupon key={m.id} size="sm" marks={m.forecast?.marks} result={resultSign(m)} />
+          <Coupon key={m.id} size="sm" marks={m.forecast?.marks} result={resultSign(m)} locale={locale} />
         ))}
       </div>
 
       <div className="roundcard-foot">
         {r.status === "settled" ? (
           <>
-            <span className="data"><b>{s.hits}/{s.scored}</b> correct</span>
+            <span className="data"><b>{s.hits}/{s.scored}</b> {dict.roundCard.correct}</span>
             {s.meanRps !== null && (
               <span className="data" style={{ color: "var(--ink-muted)" }}>
                 RPS {s.meanRps.toFixed(4)}
@@ -41,15 +45,17 @@ export function RoundCard({ r }: { r: RoundSummary }) {
           </>
         ) : (
           <>
-            <Tag variant="pending">{r.status === "open" ? "Awaiting results" : `${r.played}/${r.total} played`}</Tag>
+            <Tag variant="pending">
+              {r.status === "open" ? dict.roundCard.awaitingResults : dict.roundCard.playedOf(r.played, r.total)}
+            </Tag>
             <span className="data" style={{ color: "var(--ink-faint)" }}>
-              {sys ? `${sys.type} · ${sys.rows} rows` : ""}
+              {sys ? `${sys.type} · ${dict.common.rowsCount(sys.rows)}` : ""}
             </span>
           </>
         )}
         {r.status === "settled" && sys && (
           <span className="data" style={{ color: "var(--ink-faint)", marginLeft: "auto" }}>
-            {sys.type} · {sys.rows} rows
+            {sys.type} · {dict.common.rowsCount(sys.rows)}
           </span>
         )}
       </div>

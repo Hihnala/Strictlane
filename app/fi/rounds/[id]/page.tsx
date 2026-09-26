@@ -5,10 +5,10 @@ export const generateStaticParams = roundStaticParams;
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
-  return renderRoundMetadata("en", id);
+  return renderRoundMetadata("fi", id);
 }
 
-export default async function RoundPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function RoundPageFi({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  return renderRoundPage("en", id);
+  return renderRoundPage("fi", id);
 }

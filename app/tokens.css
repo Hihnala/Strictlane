@@ -253,6 +253,16 @@ td.num, th.num {
   .lg-short { display: inline; }
 }
 
+/* Language switch (I18N-PLAN.md §6) — pushed to the far right of the bar,
+   styled as a plain muted link like the league quick-links, not a chip. */
+.lang-switch {
+  margin-left: auto; flex-shrink: 0;
+  background: transparent; border: 0; border-radius: 0;
+  padding: var(--s1) 0; color: var(--ink-muted); text-decoration: none;
+  font-family: var(--font-body); font-size: 13px;
+}
+.lang-switch:hover { color: var(--ink); }
+
 footer.foot {
   padding: var(--s6) 0 var(--s7);
   text-align: center;
