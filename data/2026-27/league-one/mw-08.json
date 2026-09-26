@@ -1,0 +1,109 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 8,
+  "matchweekDerived": false,
+  "source": "hand-entered from fixture listing provided 2026-09-26 — 9/12 MW8 fixtures known (5 postponed); Oxford, Luton, Leicester, Wigan, Doncaster, and Huddersfield's fixtures not yet known, to be added once confirmed",
+  "importedAt": "2026-09-26T00:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-08-bradford-barnsley",
+      "home": "bradford",
+      "away": "barnsley",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "postponed",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-mk-dons-bromley",
+      "home": "mk-dons",
+      "away": "bromley",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "postponed",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-stevenage-sheffield-wednesday",
+      "home": "stevenage",
+      "away": "sheffield-wednesday",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "postponed",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-mansfield-leyton-orient",
+      "home": "mansfield",
+      "away": "leyton-orient",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "postponed",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-notts-county-blackpool",
+      "home": "notts-county",
+      "away": "blackpool",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "postponed",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-plymouth-burton",
+      "home": "plymouth",
+      "away": "burton",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-wycombe-reading",
+      "home": "wycombe",
+      "away": "reading",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-cambridge-afc-wimbledon",
+      "home": "cambridge",
+      "away": "afc-wimbledon",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-08-stockport-peterborough",
+      "home": "stockport",
+      "away": "peterborough",
+      "kickoff": "2026-09-26T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
