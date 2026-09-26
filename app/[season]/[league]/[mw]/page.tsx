@@ -6,9 +6,11 @@ import {
 } from "@/lib/content";
 import type { LeagueId } from "@/lib/schema";
 import { summarise, drawWatch } from "@/lib/scoring";
+import { computeStandings } from "@/lib/standings";
 import { MatchList } from "@/components/MatchRow";
 import { MatchweekRail } from "@/components/MatchweekRail";
 import { SeasonGrid, type GridCell } from "@/components/SeasonGrid";
+import { StandingsTable } from "@/components/StandingsTable";
 import { StatCell } from "@/components/StatCell";
 import { Prose } from "@/components/Prose";
 
@@ -61,14 +63,18 @@ export default async function MatchweekPage({
   const draws = drawWatch(data.matches);
   const latestPlayed = (await latestPlayedMatchweek(season, lid)) ?? 0;
 
-  // Season grid state per week, without re-reading every file twice.
+  // Season grid state per week, and the table through this matchweek, without
+  // re-reading every file twice.
   const cells: GridCell[] = [];
+  const throughMatches = [];
   for (const w of weeks) {
     const week = await getMatchweek(season, lid, w);
     const played = week?.matches.some((m) => m.status === "played") ?? false;
     const forecast = week?.matches.some((m) => m.forecast) ?? false;
     cells.push({ matchweek: w, state: forecast ? "forecast" : played ? "logged" : "upcoming" });
+    if (week && w <= n) throughMatches.push(...week.matches);
   }
+  const standings = computeStandings(throughMatches);
 
   const played = data.matches.filter((m) => m.status === "played").length;
   const meta = leagueMeta(lid);
@@ -116,6 +122,13 @@ export default async function MatchweekPage({
         <div className="sec-label">Season</div>
         <SeasonGrid season={season} league={league} cells={cells} current={n} />
       </section>
+
+      {standings.length > 0 && (
+        <section className="section">
+          <div className="sec-label">Table &middot; through MW{n}</div>
+          <StandingsTable rows={standings} teams={teams} />
+        </section>
+      )}
     </div>
   );
 }
