@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 8,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listing provided 2026-09-26 — 9/12 MW8 fixtures known (5 postponed); Oxford, Luton, Leicester, Wigan, Doncaster, and Huddersfield's fixtures not yet known, to be added once confirmed",
+  "source": "hand-entered from fixture listing provided 2026-09-26 — 9/12 MW8 fixtures known (5 postponed); Oxford, Luton, Leicester, Wigan, Doncaster, and Huddersfield's fixtures not yet known, to be added once confirmed; results for the 4 played fixtures (Plymouth–Burton, Wycombe–Reading, Cambridge–AFC Wimbledon, Stockport–Peterborough) supplied by Markku 2026-09-27",
   "importedAt": "2026-09-26T00:00:00.000Z",
   "matches": [
     {
@@ -66,8 +66,11 @@
       "home": "plymouth",
       "away": "burton",
       "kickoff": "2026-09-26T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -77,8 +80,11 @@
       "home": "wycombe",
       "away": "reading",
       "kickoff": "2026-09-26T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -88,8 +94,11 @@
       "home": "cambridge",
       "away": "afc-wimbledon",
       "kickoff": "2026-09-26T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -99,8 +108,11 @@
       "home": "stockport",
       "away": "peterborough",
       "kickoff": "2026-09-26T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
