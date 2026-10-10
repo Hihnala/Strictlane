@@ -1,0 +1,163 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 10,
+  "matchweekDerived": false,
+  "source": "hand-entered from fixture listing provided 2026-10-10 — all 12 MW10 fixtures confirmed; kickoff times are placeholders pending confirmation; pool popularity and forecast for Huddersfield-Sheffield Wednesday from Veikkaus Lauantaivakio draw 100575, captured 2026-10-10",
+  "importedAt": "2026-10-10T09:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-10-plymouth-afc-wimbledon",
+      "home": "plymouth",
+      "away": "afc-wimbledon",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-notts-county-oxford",
+      "home": "notts-county",
+      "away": "oxford",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-huddersfield-sheffield-wednesday",
+      "home": "huddersfield",
+      "away": "sheffield-wednesday",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100575",
+        "probs": {
+          "1": 61.43,
+          "2": 16.9,
+          "X": 21.67
+        },
+        "capturedAt": "2026-10-10T08:57:48.017Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-10",
+        "probs": {
+          "1": 32,
+          "2": 47,
+          "X": 21
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-10-10T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e2-10-leicester-peterborough",
+      "home": "leicester",
+      "away": "peterborough",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-bradford-leyton-orient",
+      "home": "bradford",
+      "away": "leyton-orient",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-mk-dons-reading",
+      "home": "mk-dons",
+      "away": "reading",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-doncaster-burton",
+      "home": "doncaster",
+      "away": "burton",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-wycombe-luton",
+      "home": "wycombe",
+      "away": "luton",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-stevenage-wigan",
+      "home": "stevenage",
+      "away": "wigan",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-cambridge-blackpool",
+      "home": "cambridge",
+      "away": "blackpool",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-mansfield-bromley",
+      "home": "mansfield",
+      "away": "bromley",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-10-stockport-barnsley",
+      "home": "stockport",
+      "away": "barnsley",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "season": "2026-27",
+  "league": "premier-league",
+  "matchweek": 6,
+  "matchweekDerived": false,
+  "source": "hand-entered from fixture listing provided 2026-10-10 — all 10 MW6 fixtures confirmed (after the international break); kickoff times are placeholders pending confirmation; pool popularity and forecast for 5 fixtures (Chelsea-Bournemouth, Ipswich-Fulham, Aston Villa-Brentford, Sunderland-Brighton, Manchester United-Tottenham) from Veikkaus Lauantaivakio draw 100575, captured 2026-10-10",
+  "importedAt": "2026-10-10T09:00:00.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e0-06-arsenal-leeds",
+      "home": "arsenal",
+      "away": "leeds",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-06-chelsea-bournemouth",
+      "home": "chelsea",
+      "away": "bournemouth",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100575",
+        "probs": {
+          "1": 64.14,
+          "2": 15.14,
+          "X": 20.73
+        },
+        "capturedAt": "2026-10-10T08:57:48.017Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-10",
+        "probs": {
+          "1": 38,
+          "2": 30,
+          "X": 32
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-10T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-06-ipswich-fulham",
+      "home": "ipswich",
+      "away": "fulham",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100575",
+        "probs": {
+          "1": 36.48,
+          "2": 36.68,
+          "X": 26.85
+        },
+        "capturedAt": "2026-10-10T08:57:48.017Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-10",
+        "probs": {
+          "1": 33,
+          "2": 32,
+          "X": 35
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-10-10T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-06-aston-villa-brentford",
+      "home": "aston-villa",
+      "away": "brentford",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100575",
+        "probs": {
+          "1": 33.86,
+          "2": 38.93,
+          "X": 27.22
+        },
+        "capturedAt": "2026-10-10T08:57:48.017Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-10",
+        "probs": {
+          "1": 18,
+          "2": 67,
+          "X": 15
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-10-10T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-06-sunderland-brighton",
+      "home": "sunderland",
+      "away": "brighton",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100575",
+        "probs": {
+          "1": 24.63,
+          "2": 51.03,
+          "X": 24.34
+        },
+        "capturedAt": "2026-10-10T08:57:48.017Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-10",
+        "probs": {
+          "1": 19,
+          "2": 66,
+          "X": 15
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-10-10T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-06-man-united-tottenham",
+      "home": "man-united",
+      "away": "tottenham",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100575",
+        "probs": {
+          "1": 63.41,
+          "2": 16.44,
+          "X": 20.16
+        },
+        "capturedAt": "2026-10-10T08:57:48.017Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-10",
+        "probs": {
+          "1": 50,
+          "2": 30,
+          "X": 20
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-10T09:30:00.000Z"
+      }
+    },
+    {
+      "id": "2026-27-e0-06-crystal-palace-nottingham-forest",
+      "home": "crystal-palace",
+      "away": "nottingham-forest",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-06-hull-everton",
+      "home": "hull",
+      "away": "everton",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-06-liverpool-man-city",
+      "home": "liverpool",
+      "away": "man-city",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-06-coventry-newcastle",
+      "home": "coventry",
+      "away": "newcastle",
+      "kickoff": "2026-10-10T14:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
