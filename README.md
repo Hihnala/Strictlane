@@ -41,7 +41,6 @@ npm install
 npm run dev              # local dev server
 npm run validate         # data integrity gate — read TECH-SHEET §6 first
 npm run build             # runs validate first via prebuild, then next build
-npm run import:archive   # pulls past seasons from football-data.co.uk
 npm run fetch:results -- --dry   # preview the ballprediction.com results/fixtures sync
 ```
 
@@ -54,7 +53,7 @@ rules below are enforced mechanically, not by discipline.
 app/                                  Next.js App Router
 components/                           presentational, no data fetching
 lib/                                  schema.ts, scoring.ts, content.ts
-scripts/                              import-archive.ts, validate.ts, fetch-vakio.ts, fetch-results.ts, promote-round.ts
+scripts/                              validate.ts, fetch-vakio.ts, fetch-results.ts, promote-round.ts
 data/                                 source of truth (JSON)
 content/                              commentary (Markdown)
 docs/                                 TECH-SHEET.md, PRODUCT.md, VOICE.md, rasti-brand-system.html
