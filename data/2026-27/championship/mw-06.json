@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 6,
   "matchweekDerived": false,
-  "source": "hand-entered 11 Sep 2026 — MW6, all 12 fixtures. 9 played Tue 8 / Wed 9 Sep. Bristol City v Lincoln and Middlesbrough v Millwall delayed to Tue 15 Sep (Carabao Cup disruption); Portsmouth v Wolves delayed all the way to Tue 20 Oct, per Markku. Kickoff for the delayed fixtures converted from times given in EET (UTC+3); results and closing markets for the 9 played matches merged from football-data.co.uk 2026-27 (closing AvgC, proportional), 2026-09-11",
+  "source": "hand-entered 11 Sep 2026 — MW6, all 12 fixtures. 9 played Tue 8 / Wed 9 Sep. Bristol City v Lincoln and Middlesbrough v Millwall delayed to Tue 15 Sep (Carabao Cup disruption); Wolves v Portsmouth delayed all the way to Tue 20 Oct, per Markku (home/away corrected 11 Oct 2026 against ballprediction.com, which lists Portsmouth v Wolves as round 41). Kickoff for the delayed fixtures converted from times given in EET (UTC+3); results and closing markets for the 9 played matches merged from football-data.co.uk 2026-27 (closing AvgC, proportional), 2026-09-11",
   "importedAt": "2026-09-11T00:00:00.000Z",
   "matches": [
     {
@@ -251,9 +251,9 @@
       "forecast": null
     },
     {
-      "id": "2026-27-e1-06-portsmouth-wolves",
-      "home": "portsmouth",
-      "away": "wolves",
+      "id": "2026-27-e1-06-wolves-portsmouth",
+      "home": "wolves",
+      "away": "portsmouth",
       "kickoff": "2026-10-20T18:45:00.000Z",
       "status": "pending",
       "score": null,

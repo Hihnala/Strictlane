@@ -48,3 +48,6 @@ next-env.d.ts
 
 # local reference/planning material — not part of the shipped app
 /docs
+
+# fetch-results.ts --summary output (PR body)
+results-summary.md

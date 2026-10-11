@@ -62,6 +62,9 @@ export const Forecast = z.object({
 });
 export type Forecast = z.infer<typeof Forecast>;
 
+export const Score = z.object({ home: z.number().int().min(0), away: z.number().int().min(0) });
+export type Score = z.infer<typeof Score>;
+
 export const Match = z
   .object({
     id: z.string().min(1),
@@ -69,12 +72,17 @@ export const Match = z
     away: z.string().min(1), // team id
     kickoff: z.string().datetime(),
     status: z.enum(["played", "pending", "postponed"]),
-    score: z.object({ home: z.number().int().min(0), away: z.number().int().min(0) }).nullable(),
+    score: Score.nullable(),
+    /** half-time score — optional; feeds the per-half goal averages on the stats page */
+    halfTime: Score.nullish(),
     pool: Pool.nullish(),
     forecast: Forecast.nullable(),
   })
   .refine((m) => (m.status === "played" ? m.score !== null : m.score === null), {
     message: "played matches need a score; pending/postponed must not have one",
+  })
+  .refine((m) => !m.halfTime || (m.score !== null && m.halfTime.home <= m.score.home && m.halfTime.away <= m.score.away), {
+    message: "halfTime needs a full-time score at least as large on both sides",
   })
   .refine((m) => m.home !== m.away, { message: "a team cannot play itself" });
 export type Match = z.infer<typeof Match>;
