@@ -1,0 +1,97 @@
+name: Fetch results
+
+# Syncs results, half-time scores, kickoff times and fixtures from
+# ballprediction.com into data/{season}/{league}/mw-NN.json, then opens a PR.
+# Manual only, like fetch-vakio.yml. It never pushes to main: review the PR,
+# write commentary on its branch if you like, and merge.
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "Add fixtures for rounds starting within this many days"
+        type: number
+        default: 8
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: fetch-results
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      # An unmerged results PR already holds changes this run would make again
+      # against main. Merge or close it first.
+      - name: Skip if a results PR is still open
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          EXISTING=$(gh pr list --repo "$GITHUB_REPOSITORY" --state open \
+            --json number,headRefName \
+            --jq '[.[] | select(.headRefName | startswith("results/"))][0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "Results PR #$EXISTING is still open — merge or close it, then run again."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.guard.outputs.skip != 'true'
+
+      - uses: actions/setup-node@v4
+        if: steps.guard.outputs.skip != 'true'
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+        if: steps.guard.outputs.skip != 'true'
+
+      # Exit code 1 = aborted with nothing written (unknown team name, page
+      # markup changed, site rolled to a new season). The reason is in the log.
+      - name: Sync from ballprediction.com
+        if: steps.guard.outputs.skip != 'true'
+        env:
+          DAYS: ${{ inputs.days }}
+        run: |
+          npx tsx scripts/fetch-results.ts --days "$DAYS" --summary results-summary.md
+          cat results-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Stop if nothing changed
+        id: check
+        if: steps.guard.outputs.skip != 'true'
+        run: |
+          if [ -z "$(git status --porcelain data)" ]; then
+            echo "No changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate
+        if: steps.guard.outputs.skip != 'true' && steps.check.outputs.changed == 'true'
+        run: npm run validate
+
+      - name: Open PR
+        if: steps.guard.outputs.skip != 'true' && steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="results/$(date -u +%Y-%m-%d-%H%M)"
+
+          git config user.name  "strictlane-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data
+          git commit -m "Results sync $DATE"
+          git push -u origin "$BRANCH"
+
+          gh pr create --title "Results sync $DATE" --body-file results-summary.md
