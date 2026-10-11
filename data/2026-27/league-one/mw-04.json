@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 4,
   "matchweekDerived": false,
-  "source": "hand-entered 3 Sep 2026 — MW4 midweek round, all 12 fixtures; home/away from football-data.co.uk fixtures.csv, scores cross-checked against ESPN; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
+  "source": "hand-entered 3 Sep 2026 — MW4 midweek round, all 12 fixtures; home/away from football-data.co.uk fixtures.csv, scores cross-checked against ESPN; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-09-03T09:00:00.000Z",
   "matches": [
     {
@@ -16,14 +16,18 @@
         "home": 1,
         "away": 2
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0724,
         "probs": {
           "1": 48.6,
-          "X": 28,
-          "2": 23.4
+          "2": 23.4,
+          "X": 28
         },
         "capturedAt": "2026-09-01T18:45:00.000Z"
       },
@@ -40,14 +44,18 @@
         "home": 0,
         "away": 5
       },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0719,
         "probs": {
           "1": 40,
-          "X": 27.7,
-          "2": 32.3
+          "2": 32.3,
+          "X": 27.7
         },
         "capturedAt": "2026-09-01T18:45:00.000Z"
       },
@@ -64,14 +72,18 @@
         "home": 1,
         "away": 1
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0725,
         "probs": {
           "1": 44.8,
-          "X": 27.4,
-          "2": 27.8
+          "2": 27.8,
+          "X": 27.4
         },
         "capturedAt": "2026-09-01T18:45:00.000Z"
       },
@@ -88,14 +100,18 @@
         "home": 3,
         "away": 1
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0744,
         "probs": {
           "1": 55.1,
-          "X": 24.2,
-          "2": 20.7
+          "2": 20.7,
+          "X": 24.2
         },
         "capturedAt": "2026-09-01T18:45:00.000Z"
       },
@@ -112,14 +128,18 @@
         "home": 2,
         "away": 0
       },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0702,
         "probs": {
           "1": 47.2,
-          "X": 25.3,
-          "2": 27.5
+          "2": 27.5,
+          "X": 25.3
         },
         "capturedAt": "2026-09-01T18:45:00.000Z"
       },
@@ -136,14 +156,18 @@
         "home": 0,
         "away": 0
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0741,
         "probs": {
           "1": 45.6,
-          "X": 27.1,
-          "2": 27.3
+          "2": 27.3,
+          "X": 27.1
         },
         "capturedAt": "2026-09-01T18:45:00.000Z"
       },
@@ -160,14 +184,18 @@
         "home": 1,
         "away": 2
       },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0715,
         "probs": {
           "1": 41.3,
-          "X": 26.1,
-          "2": 32.6
+          "2": 32.6,
+          "X": 26.1
         },
         "capturedAt": "2026-09-01T18:45:00.000Z"
       },
@@ -184,14 +212,18 @@
         "home": 2,
         "away": 1
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0721,
         "probs": {
           "1": 41.5,
-          "X": 25.3,
-          "2": 33.2
+          "2": 33.2,
+          "X": 25.3
         },
         "capturedAt": "2026-09-02T18:45:00.000Z"
       },
@@ -208,14 +240,18 @@
         "home": 4,
         "away": 1
       },
+      "halfTime": {
+        "home": 2,
+        "away": 1
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.073,
         "probs": {
           "1": 39.2,
-          "X": 29,
-          "2": 31.8
+          "2": 31.8,
+          "X": 29
         },
         "capturedAt": "2026-09-02T18:45:00.000Z"
       },
@@ -232,14 +268,18 @@
         "home": 2,
         "away": 0
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0697,
         "probs": {
           "1": 36.7,
-          "X": 25.3,
-          "2": 38
+          "2": 38,
+          "X": 25.3
         },
         "capturedAt": "2026-09-02T18:45:00.000Z"
       },
@@ -256,14 +296,18 @@
         "home": 3,
         "away": 1
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0715,
         "probs": {
           "1": 38.9,
-          "X": 27,
-          "2": 34.1
+          "2": 34.1,
+          "X": 27
         },
         "capturedAt": "2026-09-02T18:45:00.000Z"
       },
@@ -280,14 +324,18 @@
         "home": 5,
         "away": 0
       },
+      "halfTime": {
+        "home": 3,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
         "overround": 0.0711,
         "probs": {
           "1": 46.2,
-          "X": 26.1,
-          "2": 27.7
+          "2": 27.7,
+          "X": 26.1
         },
         "capturedAt": "2026-09-02T19:00:00.000Z"
       },

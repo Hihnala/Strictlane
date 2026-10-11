@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 6,
   "matchweekDerived": false,
-  "source": "hand-entered 11 Sep 2026 — MW6, all 12 fixtures; Stevenage v Luton played Thu 10 Sep as an out-of-sequence fixture (Carabao Cup disruption elsewhere in the round), the other 11 kick off Sat 12 Sep per times supplied by Markku (CEST, converted to UTC); results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, proportional) for the played match, 2026-09-11",
+  "source": "hand-entered 11 Sep 2026 — MW6, all 12 fixtures; Stevenage v Luton played Thu 10 Sep as an out-of-sequence fixture (Carabao Cup disruption elsewhere in the round), the other 11 kick off Sat 12 Sep per times supplied by Markku (CEST, converted to UTC); results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, proportional) for the played match, 2026-09-11; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-09-11T00:00:00.000Z",
   "matches": [
     {
@@ -15,6 +15,10 @@
       "score": {
         "home": 2,
         "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
       },
       "market": {
         "source": "football-data:AvgC",
@@ -40,6 +44,10 @@
         "home": 2,
         "away": 3
       },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -53,6 +61,10 @@
       "score": {
         "home": 0,
         "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
       },
       "market": null,
       "pool": null,
@@ -68,6 +80,10 @@
         "home": 2,
         "away": 2
       },
+      "halfTime": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -80,6 +96,10 @@
       "status": "played",
       "score": {
         "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
         "away": 1
       },
       "market": null,
@@ -96,6 +116,10 @@
         "home": 1,
         "away": 1
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -107,6 +131,10 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 0,
+        "away": 0
+      },
+      "halfTime": {
         "home": 0,
         "away": 0
       },
@@ -124,6 +152,10 @@
         "home": 3,
         "away": 0
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -138,6 +170,10 @@
         "home": 3,
         "away": 0
       },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -149,6 +185,10 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 0,
+        "away": 0
+      },
+      "halfTime": {
         "home": 0,
         "away": 0
       },
@@ -166,6 +206,10 @@
         "home": 3,
         "away": 4
       },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -177,6 +221,10 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
         "home": 1,
         "away": 0
       },
