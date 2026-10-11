@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { LeagueId } from "./schema";
 
 /* ---------------------------------------------------------------------------
  * i18n — Phase 1 (see docs/I18N-PLAN.md in the project notes).
@@ -146,6 +147,18 @@ export interface Dictionary {
     title: string;
     lede: string;
     noStatsYet: string;
+    leagueHeading: Record<LeagueId, string>;
+    homeWins: string;
+    draws: string;
+    nilNilDraws: string;
+    goalsPerGame: string;
+    firstHalf: string;
+    secondHalf: string;
+    over25: string;
+    btts: string;
+    halfTimeBasis: (withHt: number, played: number) => string;
+    num: (n: number) => string;
+    pct: (n: number) => string;
   };
   standings: {
     team: string;
@@ -345,6 +358,22 @@ const en: Dictionary = {
       "League-wide scoring patterns across the Premier League, Championship, and League One " +
       "— not tied to any single coupon, and updated as the season goes on.",
     noStatsYet: "No statistics logged yet.",
+    leagueHeading: {
+      "premier-league": "Premier League Statistics So Far",
+      championship: "Championship Statistics So Far",
+      "league-one": "League One Statistics So Far",
+    },
+    homeWins: "Home Wins",
+    draws: "Draws",
+    nilNilDraws: "0-0 Draws",
+    goalsPerGame: "Average goals per game",
+    firstHalf: "1st half",
+    secondHalf: "2nd half",
+    over25: "Matches with Over 2.5 goals (3 or more goals per game)",
+    btts: "Both teams scoring (BTTS)",
+    halfTimeBasis: (withHt, played) => `halves from ${withHt} of ${played} matches`,
+    num: (n) => n.toFixed(1),
+    pct: (n) => `${n.toFixed(1)}%`,
   },
   standings: {
     team: "Team",
@@ -545,6 +574,22 @@ const fi: Dictionary = {
       "Sarjatason tulostrendit Valioliigassa, Championshipissa ja League Onessa " +
       "— ei sidottuna yksittäiseen kuponkiin, ja päivittyy kauden edetessä.",
     noStatsYet: "Tilastoja ei ole vielä kirjattu.",
+    leagueHeading: {
+      "premier-league": "Valioliigan tilastot tähän mennessä",
+      championship: "Championshipin tilastot tähän mennessä",
+      "league-one": "League Onen tilastot tähän mennessä",
+    },
+    homeWins: "Kotivoitot",
+    draws: "Tasapelit",
+    nilNilDraws: "0–0-tasapelit",
+    goalsPerGame: "Maaleja keskimäärin per ottelu",
+    firstHalf: "1. puoliaika",
+    secondHalf: "2. puoliaika",
+    over25: "Otteluita, joissa yli 2,5 maalia (3 tai enemmän)",
+    btts: "Molemmat joukkueet maalilla (BTTS)",
+    halfTimeBasis: (withHt, played) => `puoliajat ${withHt}/${played} ottelusta`,
+    num: (n) => n.toFixed(1).replace(".", ","),
+    pct: (n) => `${n.toFixed(1).replace(".", ",")} %`,
   },
   standings: {
     team: "Joukkue",

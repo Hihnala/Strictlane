@@ -42,6 +42,7 @@ npm run dev              # local dev server
 npm run validate         # data integrity gate — read TECH-SHEET §6 first
 npm run build             # runs validate first via prebuild, then next build
 npm run import:archive   # pulls past seasons from football-data.co.uk
+npm run fetch:results -- --dry   # preview the ballprediction.com results/fixtures sync
 ```
 
 `npm run build` fails if `validate` fails. That's intentional — the data
@@ -53,7 +54,7 @@ rules below are enforced mechanically, not by discipline.
 app/                                  Next.js App Router
 components/                           presentational, no data fetching
 lib/                                  schema.ts, scoring.ts, content.ts
-scripts/                              import-archive.ts, validate.ts, fetch-vakio.ts, promote-round.ts
+scripts/                              import-archive.ts, validate.ts, fetch-vakio.ts, fetch-results.ts, promote-round.ts
 data/                                 source of truth (JSON)
 content/                              commentary (Markdown)
 docs/                                 TECH-SHEET.md, PRODUCT.md, VOICE.md, rasti-brand-system.html
@@ -65,6 +66,7 @@ data/seasons.json                     season registry; exactly one is "current"
 data/teams.json                       canonical team ids + external-source aliases
 data/{season}/{league}/mw-NN.json     matches — the source of truth
 data/rounds/{id}.json                 coupon: system + ordered match ids
+data/results/{date}.json              log of each results sync: what changed, from which page, when
 content/{season}/{league}/mw-NN.md    commentary, joined by path convention
 content/rounds/{id}.md                round review
 ```
@@ -80,11 +82,12 @@ JSON and Markdown are joined **by path**, never by an id inside the prose.
 | Match ids globally unique | Rounds resolve matches by id across leagues. |
 | A team appears at most once per matchweek | Catches import errors and duplicate fixtures. |
 | A round's system arithmetic must match its marks | `8+0` means 8 doubles → 2⁸ = 256 rows; a mismatch means one of the two is wrong. |
+| `halfTime` only on played matches, never above the full-time score | It feeds the per-half goal averages on the stats page. |
 
 Nothing derived is ever stored — RPS, hit/miss, hit rate, coverage
-probabilities, season totals are all computed at build time from the source
-match files, so a displayed figure can never drift out of sync with the data
-that produced it.
+probabilities, season totals, and the league statistics page are all computed
+at build time from the source match files, so a displayed figure can never
+drift out of sync with the data that produced it.
 
 ## Weekly workflow
 
@@ -98,6 +101,29 @@ that produced it.
 3. `npx tsx scripts/promote-round.ts <round-id>` joins the draft to the real
    match records and derives the round's system block from the marks.
 4. `npm run validate`, then merge.
+
+After the weekend (and after midweek rounds), sync results and fixtures:
+
+1. `scripts/fetch-results.ts` reads the `/results` and `/fixtures` pages for
+   the three leagues on ballprediction.com (`epl`, `efl`, `elo`) and updates
+   the current season's matchweek files: scores and half-time scores for
+   finished matches, corrected kickoff times, postponements and new dates, and
+   any missing fixtures — including every round whose matches mostly fall in
+   the next 8 days (`--days N`), so next week's fixtures exist before the
+   coupon is fetched. It never touches a forecast, never overwrites a score,
+   and lists anything the site and the data disagree on under "Needs a human"
+   instead of guessing. An unknown team name aborts the run with nothing
+   written — add the site's spelling to that club's `aliases`.
+2. It is meant to run from a manually triggered GitHub Action that opens a PR:
+   `npx tsx scripts/fetch-results.ts --summary results-summary.md`, then
+   `npm run validate`, then a PR with `results-summary.md` as its body if
+   `git status --porcelain data` shows changes. Exit code 1 means the run
+   aborted and wrote nothing.
+3. Review the PR, write the commentary on that branch, merge.
+
+`--dry` prints the report without writing; `--raw` prints what was parsed
+from the site. The site's robots.txt asks for a 10-second crawl delay, so a
+run takes about a minute.
 
 The Veikkaus open-games API returns only currently-open draws and drops
 closed coupons permanently, so the raw payload committed alongside each
