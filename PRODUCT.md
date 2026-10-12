@@ -142,9 +142,9 @@ updating three redirects in `next.config.mjs` and flipping `status` in
 
 ## Brand Commitments
 
-- Name: **Strictlane**, at strictlane.com. Design system name: **Rasti**
-  (documented separately in `docs/rasti-brand-system.html`; visual details
-  belong in DESIGN.md, not here).
+- Name: **Strictlane**, at strictlane.com. Design system name: **Sealed**
+  (replaced Rasti in October 2026; documented in `docs/DESIGN.md` — visual
+  details belong there, not here).
 - Two voices, walled apart: interface copy (nav, labels, stat cells, tags,
   empty states, method page) stays flat and neutral. Commentary in
   `content/**/*.md` is opinionated, sharp, and funny where a match earns it.
@@ -164,8 +164,9 @@ updating three redirects in `next.config.mjs` and flipping `status` in
 
 - `docs/TECH-SHEET.md` and `docs/VOICE.md` are an existing, detailed product
   and editorial spec — treated as strong evidence throughout this document.
-- `docs/rasti-brand-system.html` is a living style guide for the Rasti design
-  system (visual world — for DESIGN.md/new-work, not consumed here).
+- `docs/DESIGN.md` is the spec for the Sealed design system (visual world —
+  not consumed here). The previous Rasti style guide is archived in
+  `docs/archive/`.
 - Reference source snippets already drafted under `docs/files/` (page.tsx,
   layout.tsx, Coupon.tsx, MatchRow.tsx, content.ts, globals.css,
   package.json) and `docs/` (schema.ts, scoring.ts, validate.ts, teams.json,

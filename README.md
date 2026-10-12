@@ -58,7 +58,7 @@ lib/                                  schema.ts, scoring.ts, content.ts
 scripts/                              validate.ts, fetch-vakio.ts, fetch-results.ts, promote-round.ts
 data/                                 source of truth (JSON)
 content/                              commentary (Markdown)
-docs/                                 TECH-SHEET.md, PRODUCT.md, VOICE.md, rasti-brand-system.html
+docs/                                 TECH-SHEET.md, DESIGN.md, VOICE.md, archive/ (old Rasti style guide)
 .github/workflows/fetch-vakio.yml     weekly Vakio coupon fetch
 ```
 
@@ -141,10 +141,12 @@ guide: [`docs/VOICE.md`](docs/VOICE.md).
 
 ## Design system
 
-Rasti — dark-only, desktop-first, one 720px column. Colour encodes *outcome*
-(1/X/2), never team success; whether a forecast hit is shown through form
-(underline, ✓/✕), not colour. Living style guide:
-[`docs/rasti-brand-system.html`](docs/rasti-brand-system.html).
+Sealed — dark-only, desktop-first, a 1160px column for heroes and cards and a
+720px column for prose, with a floating glass header. Instrument Sans for text,
+JetBrains Mono for every numeral. Colour encodes *outcome* (1/X/2), never team
+success; whether a forecast hit is shown through form (underline, ✓/✕), not
+colour — and hit and miss animate identically. Full spec:
+[`docs/DESIGN.md`](docs/DESIGN.md).
 
 ## Not betting advice
 

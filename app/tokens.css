@@ -101,7 +101,7 @@ body {
 a { color: var(--link); text-decoration: none; }
 a:hover { color: var(--link-hover); }
 
-/* RULE 02 — every numeral is monospace and tabular, including inside prose.
+/* Every numeral is monospace and tabular, including inside prose (DESIGN.md §2).
    Apply .data to any element containing figures. */
 .data,
 .mark, .score, .stat-val, .prob-num,
