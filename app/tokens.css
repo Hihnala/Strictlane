@@ -1,40 +1,47 @@
 /* ==========================================================================
-   RASTI — design tokens
+   STRICTLANE "Sealed" — design tokens
    Match database: Premier League / Championship / League One
-   Extends the Storm briefing identity (Montserrat · Roboto Mono · blue).
 
-   Load fonts:
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto+Mono:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+   Fonts are loaded in app/layout.tsx via next/font/google, which exposes
+   --font-instrument and --font-jetbrains on <html>.
 
-   Dark-only. No data-theme attribute, no light variant — see globals.css /
-   layout.tsx for the <meta name="color-scheme" content="dark"> tag.
+   Dark-only. No data-theme attribute, no light variant — see layout.tsx for
+   the <meta name="color-scheme" content="dark"> tag.
    ========================================================================== */
 
 :root {
-  /* --- surfaces & ink — dark is the only theme, so these are the tokens,
-         not an override --------------------------------------------------- */
-  --surface:        #0f1524;
-  --surface-sunken: #0a0f1a;
-  --surface-raised: #161e31;
-  --line:           #24304a;
-  --line-strong:    #35446a;
-  --ink:            #e7ecf5;
-  --ink-muted:      #9aa6bc;
-  --ink-faint:      #6b7891;
+  /* --- surfaces & ink ------------------------------------------------- */
+  --page:           #060a12;
+  --surface-sunken: var(--page);
+  --surface:        rgba(14,20,34,0.6);     /* glass header */
+  --surface-raised: rgba(20,28,46,0.7);     /* raised card */
+  --hero-top:       rgba(26,36,58,0.85);    /* hero card gradient */
+  --hero-bottom:    rgba(14,20,34,0.85);
+  --line:           rgba(255,255,255,0.08); /* hairline */
+  --line-row:       rgba(255,255,255,0.06); /* row divider */
+  --line-strong:    rgba(255,255,255,0.12);
+  --ink:            #eef2f8;
+  --ink-muted:      #a7b2c6;
+  --ink-faint:      #8390a6;
+  --ink-faintest:   #6f7c93;                /* labels only */
+  --ink-off:        #56627a;                /* unmarked coupon cell */
+  --link:           #8db8ff;
+  --link-hover:     #c2d8ff;
 
-  /* --- outcome axis (categorical — never evaluative) ------------------ */
-  --home:    #6ea8ff;   --home-bg: #16294d;
-  --draw:    #93a0b5;   --draw-bg: #212936;
-  --away:    #e8776a;   --away-bg: #3a1f1c;
+  /* --- outcome axis (categorical — never evaluative) ------------------
+     Filled mark = hue at ~18% alpha + hue border. */
+  --home:    #6ea8ff;   --home-bg: rgba(110,168,255,0.18);
+  --draw:    #93a0b5;   --draw-bg: rgba(147,160,181,0.18);
+  --away:    #e8776a;   --away-bg: rgba(232,119,106,0.18);
 
   /* --- brand --------------------------------------------------------- */
   --brand-deep: #9ec1ff;
   --focus:      #6ea8ff;
 
   /* --- type ---------------------------------------------------------- */
-  --font-display: 'Montserrat', system-ui, sans-serif;
-  --font-body:    'Roboto', system-ui, sans-serif;
-  --font-data:    'Roboto Mono', ui-monospace, monospace;
+  --font-display: var(--font-instrument), system-ui, sans-serif;
+  --font-body:    var(--font-instrument), system-ui, sans-serif;
+  --font-data:    var(--font-jetbrains), ui-monospace, monospace;
 
   --fs-display: 38px;  --lh-display: 1.1;   --ls-display: -0.025em;
   --fs-h2:      24px;  --lh-h2:      1.25;  --ls-h2:      -0.015em;
@@ -49,17 +56,24 @@
   --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px;
   --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px;
 
-  /* --- radius (coupon marks stay square) ----------------------------- */
-  --r-mark: 2px;
-  --r-chip: 4px;
-  --r-card: 10px;
+  /* --- radius -------------------------------------------------------- */
+  --r-mark: 3px;
+  --r-chip: 10px;
+  --r-card: 24px;
+  --r-card-sm: 20px;
+  --r-hero: 28px;
   --r-pill: 999px;
+
+  /* --- motion -------------------------------------------------------- */
+  --ease-out: cubic-bezier(.2,.8,.2,1);
 
   /* --- elevation & layout -------------------------------------------- */
   --shadow-card: 0 1px 2px rgba(0,0,0,0.4);
-  --maxw: 720px;
+  --maxw: 720px;          /* prose column (round review, notes) */
+  --maxw-wide: 1160px;    /* heroes and cards */
   --gutter: 16px;
   --tap-min: 44px;
+  --header-clear: 88px;   /* floating header: 16px top + 56px bar + 16px */
 }
 
 /* Desktop is the default now (primary use is a desktop monitor); this query
@@ -83,6 +97,9 @@ body {
   background: var(--surface-sunken);
   -webkit-font-smoothing: antialiased;
 }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); }
 
 /* RULE 02 — every numeral is monospace and tabular, including inside prose.
    Apply .data to any element containing figures. */
@@ -111,65 +128,50 @@ td.num, th.num {
    Signature components
    ========================================================================== */
 
-/* --- coupon mark strip (1 X 2) -------------------------------------- */
-.coupon { display: inline-grid; grid-template-columns: repeat(3, 26px); gap: 3px; vertical-align: middle; }
+/* --- coupon mark strip (1 X 2) --------------------------------------
+   Filled mark = hue at ~18% alpha + hue border. The true result is an
+   underline (form, not colour). Hit/miss never uses colour. */
+.coupon { display: inline-grid; grid-template-columns: repeat(3, 24px); gap: 3px; vertical-align: middle; }
 .coupon .cell {
-  height: 26px;
+  height: 24px;
   border: 1px solid var(--line-strong);
-  border-radius: var(--r-mark);            /* RULE 07 — stays square */
+  border-radius: var(--r-mark);
   font-family: var(--font-data);
-  font-size: 12px; font-weight: 600;
-  color: var(--ink-faint); background: transparent;
+  font-size: 11px; font-weight: 600;
+  color: var(--ink-off); background: transparent;
   display: flex; align-items: center; justify-content: center;
 }
 .coupon .cell.on[data-sign="1"] { background: var(--home-bg); border-color: var(--home); color: var(--home); }
 .coupon .cell.on[data-sign="X"] { background: var(--draw-bg); border-color: var(--draw); color: var(--draw); }
 .coupon .cell.on[data-sign="2"] { background: var(--away-bg); border-color: var(--away); color: var(--away); }
-/* .hit marks the TRUE result — form, not colour (RULE 01) */
 .coupon .cell.hit { box-shadow: inset 0 -3px 0 currentColor; }
+
+.coupon.glow .cell.on[data-sign="1"] { box-shadow: 0 0 18px -4px rgba(110,168,255,0.53); }
+.coupon.glow .cell.on[data-sign="X"] { box-shadow: 0 0 18px -4px rgba(147,160,181,0.53); }
+.coupon.glow .cell.on[data-sign="2"] { box-shadow: 0 0 18px -4px rgba(232,119,106,0.53); }
+.coupon.glow .cell.on.hit[data-sign="1"] { box-shadow: inset 0 -3px 0 currentColor, 0 0 18px -4px rgba(110,168,255,0.53); }
+.coupon.glow .cell.on.hit[data-sign="X"] { box-shadow: inset 0 -3px 0 currentColor, 0 0 18px -4px rgba(147,160,181,0.53); }
+.coupon.glow .cell.on.hit[data-sign="2"] { box-shadow: inset 0 -3px 0 currentColor, 0 0 18px -4px rgba(232,119,106,0.53); }
 
 .coupon.sm { grid-template-columns: repeat(3, 20px); gap: 2px; }
 .coupon.sm .cell { height: 20px; font-size: 10px; }
+.coupon.xs { grid-template-columns: repeat(3, 18px); gap: 2px; }
+.coupon.xs .cell { height: 18px; font-size: 9px; }
 
 /* --- calibration bar (probability triple, always 1/X/2) -------------- */
-.calbar {
-  display: flex; width: 100%; height: 8px;
-  border-radius: var(--r-mark); overflow: hidden;
-  background: var(--surface-sunken);
-}
-.calbar span { display: block; height: 100%; }
+.calbar { display: flex; width: 100%; height: 5px; gap: 2px; border-radius: 5px; overflow: hidden; }
+.calbar span { display: block; height: 100%; border-radius: 5px; }
 .calbar .p1 { background: var(--home); }
 .calbar .px { background: var(--draw); }
 .calbar .p2 { background: var(--away); }
 
 .calbar-legend {
   display: flex; justify-content: space-between; margin-top: var(--s1);
-  font-family: var(--font-data); font-size: 11px; font-variant-numeric: tabular-nums;
+  font-family: var(--font-data); font-size: 10.5px; line-height: 1.2; font-variant-numeric: tabular-nums;
 }
 .calbar-legend .l1 { color: var(--home); }
 .calbar-legend .lx { color: var(--draw); }
 .calbar-legend .l2 { color: var(--away); }
-
-/* --- match row ------------------------------------------------------- */
-.matchlist {
-  border: 1px solid var(--line); border-radius: var(--r-card);
-  background: var(--surface-raised); overflow: hidden;
-}
-.matchrow { padding: var(--s3) var(--s4); border-bottom: 1px solid var(--line); min-height: var(--tap-min); }
-.matchrow:last-child { border-bottom: none; }
-.matchrow-top { display: flex; align-items: center; gap: var(--s3); }
-.matchrow .teams { flex: 1; min-width: 0; }
-.matchrow .team { font-size: 14.5px; font-weight: 500; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.matchrow .score { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; flex-shrink: 0; }
-.matchrow-bottom { display: flex; align-items: center; gap: var(--s3); margin-top: var(--s2); }
-
-/* --- verdict (form only, no colour) ---------------------------------- */
-.verdict { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; flex-shrink: 0; }
-.verdict.hit  { color: var(--ink); }
-.verdict.miss { color: var(--ink-faint); }
-.verdict.none { color: var(--ink-faint); }
-.verdict.hit::before  { content: "\2713"; margin-right: 4px; }
-.verdict.miss::before { content: "\2715"; margin-right: 4px; }
 
 /* --- tags ------------------------------------------------------------ */
 .tag {
@@ -184,103 +186,117 @@ td.num, th.num {
 .tag.pending    { background: transparent; color: var(--ink-faint); border-style: dashed; }
 .tag.noforecast { background: transparent; color: var(--ink-faint); }
 
-/* --- stat cell -------------------------------------------------------- */
-.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--s3); }
-.stat { border: 1px solid var(--line); border-radius: var(--r-card); padding: var(--s3) var(--s4); background: var(--surface-raised); }
-.stat-val { display: block; font-size: var(--fs-figure); font-weight: 600; line-height: 1.1; }
-.stat-label { display: block; margin-top: var(--s1); font-family: var(--font-data); font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
-.stat-sub { margin-top: var(--s1); font-size: 12px; color: var(--ink-muted); }
-
-/* --- layout shell ----------------------------------------------------- */
-.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
-
 /* ==========================================================================
-   Page chrome — top bar & footer
-   New as of the nav/footer redesign. The bar carries the wordmark and the
-   three league quick-links only; every other destination lives in the
-   footer (Rule 11: no hamburger — a bar that overflows scrolls, it never
-   collapses behind an icon).
+   Page chrome — floating glass header & footer
+   The bar carries the wordmark, the three league quick-links and the
+   language switch only; every other destination lives in the footer. No
+   hamburger: on narrow screens the league links scroll horizontally.
    ========================================================================== */
 
 .topbar {
-  position: sticky; top: 0; z-index: 20;
+  position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 50;
+  width: min(var(--maxw-wide), calc(100% - 32px)); height: 56px;
+  padding: 0 12px 0 20px;
+  display: flex; align-items: center; gap: 24px;
+  border-radius: 16px;
   background: var(--surface);
-  border-bottom: 1px solid var(--line);
-}
-.topbar-inner {
-  max-width: var(--maxw); margin: 0 auto;
-  padding: var(--s3) var(--gutter);
-  display: flex; align-items: center; gap: var(--s5);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid var(--line);
 }
 .wordmark {
-  font-family: var(--font-display); font-weight: 800; font-size: 17px;
-  letter-spacing: -0.01em; color: var(--ink); text-decoration: none;
-  display: flex; align-items: center; gap: var(--s2); flex-shrink: 0;
+  font-family: var(--font-display); font-weight: 700; font-size: 17px;
+  letter-spacing: -0.02em; color: var(--ink); text-decoration: none;
+  display: flex; align-items: center; gap: 10px; flex-shrink: 0;
 }
+.wordmark:hover { color: var(--ink); }
 .wordmark .glyph {
-  font-family: var(--font-data); font-weight: 600; font-size: 12px;
+  font-family: var(--font-data); font-weight: 600; font-size: 11px;
   width: 22px; height: 22px; border: 1.5px solid var(--home); color: var(--home);
   border-radius: var(--r-mark);
   display: inline-flex; align-items: center; justify-content: center;
 }
 
-/* the wordmark stays put; the league tags scroll as one unit on the rare
-   occasion they don't fit — same no-hamburger idiom as the matchweek rail */
-.nav-scroll {
-  display: flex; align-items: center; gap: var(--s5);
+.league-switch {
+  display: flex; gap: 4px; min-width: 0;
   overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;
 }
-.nav-scroll::-webkit-scrollbar { display: none; }
-
-.league-switch {
-  display: flex; align-items: center; gap: var(--s4); flex-shrink: 0;
-  padding-left: var(--s4); border-left: 1px solid var(--line);
+.league-switch::-webkit-scrollbar { display: none; }
+.league-switch a {
+  font-size: 14px; padding: 8px 14px; border-radius: var(--r-chip);
+  color: var(--ink-muted); text-decoration: none; white-space: nowrap;
 }
-
-/* In the top bar the league quick-links read as plain links — no chip box,
-   no underline. The .tag component keeps its box everywhere else. */
-.league-switch .tag.league {
-  background: transparent; border: 0; border-radius: 0;
-  padding: var(--s1) 0; color: var(--ink-muted); text-decoration: none;
-}
-.league-switch .tag.league:hover { color: var(--ink); }
-.league-switch .tag.league.is-active { background: transparent; color: var(--home); }
+.league-switch a:hover { color: var(--ink); background: rgba(255,255,255,0.06); }
+.league-switch a.is-active { color: var(--ink); background: rgba(110,168,255,0.14); }
 
 /* Abbreviated names on the phone: PL / Champ / L1 */
 .lg-short { display: none; }
 @media (max-width: 639px) {
+  .topbar { gap: 8px; padding: 0 8px 0 14px; }
+  .league-switch { gap: 0; }
+  .league-switch a { padding: 8px 8px; }
+  .lang-switch { padding: 8px 10px; }
   .lg-full { display: none; }
   .lg-short { display: inline; }
 }
 
-/* Language switch (I18N-PLAN.md §6) — pushed to the far right of the bar,
-   styled as a plain muted link like the league quick-links, not a chip. */
+/* Language switch (I18N-PLAN.md §6) — pushed to the far right of the bar. */
 .lang-switch {
   margin-left: auto; flex-shrink: 0;
-  background: transparent; border: 0; border-radius: 0;
-  padding: var(--s1) 0; color: var(--ink-muted); text-decoration: none;
-  font-family: var(--font-body); font-size: 13px;
+  background: rgba(255,255,255,0.06); border: 1px solid var(--line);
+  border-radius: var(--r-chip); padding: 8px 14px;
+  font-family: var(--font-body); font-size: 14px; color: var(--ink); text-decoration: none;
 }
-.lang-switch:hover { color: var(--ink); }
+.lang-switch:hover { color: var(--ink); background: rgba(255,255,255,0.1); }
 
 footer.foot {
-  padding: var(--s6) 0 var(--s7);
+  border-top: 1px solid var(--line);
+  margin-top: 120px;
+  padding: 48px 24px 64px;
+}
+.foot-inner {
+  max-width: var(--maxw-wide); margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
   text-align: center;
 }
-.footer-nav {
-  display: flex; justify-content: center; flex-wrap: wrap;
-  gap: var(--s4); margin-bottom: var(--s3);
-}
-.footer-nav a {
-  font-family: var(--font-body); font-size: 13px; color: var(--ink-muted); text-decoration: none;
-}
+.footer-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 28px; }
+.footer-nav a { font-size: 14px; color: var(--ink-muted); text-decoration: none; }
 .footer-nav a:hover { color: var(--ink); }
+.footer-statement { font-size: 13px; line-height: 1.6; color: var(--ink-faint); max-width: 60ch; margin: 0; }
+.footer-credit { font-family: var(--font-data); font-size: 11px; color: var(--ink-faint); }
 
-.footer-statement {
-  font-size: 13px; line-height: 1.55; color: var(--ink-faint);
-  max-width: 50ch; margin: 0 auto var(--s3);
+/* ==========================================================================
+   Ambient light — blurred radial glows behind the page top. Home has two
+   (blue + brick); subpages have one blue glow, left or right per page.
+   Rendered by <Ambient> inside <main>; z-index -1 keeps it under content.
+   No other gradients on the page background.
+   ========================================================================== */
+.ambient { position: absolute; inset: 0 0 auto 0; height: 1200px; overflow: hidden; pointer-events: none; z-index: -1; }
+.ambient::before, .ambient::after { content: ""; position: absolute; border-radius: 50%; }
+.ambient.home::before {
+  left: -10%; top: -200px; width: 900px; height: 900px;
+  background: radial-gradient(closest-side, rgba(110,168,255,0.16), transparent);
+}
+.ambient.home::after {
+  right: -12%; top: 200px; width: 800px; height: 800px;
+  background: radial-gradient(closest-side, rgba(232,119,106,0.09), transparent);
+}
+.ambient.left::before {
+  left: -10%; top: -240px; width: 900px; height: 900px;
+  background: radial-gradient(closest-side, rgba(110,168,255,0.13), transparent);
+}
+.ambient.right::before {
+  right: -12%; top: -240px; width: 900px; height: 900px;
+  background: radial-gradient(closest-side, rgba(110,168,255,0.12), transparent);
 }
 
-.footer-credit {
-  font-family: var(--font-data); font-size: 11px; color: var(--ink-faint);
+/* ==========================================================================
+   Motion pre-paint. html.sl-js is set by an inline script before first
+   paint (layout.tsx); intro elements stay hidden until a <Rise> island adds
+   html.sl-ready, and the failsafe shows them after 1.5s regardless.
+   ========================================================================== */
+html.sl-js:not(.sl-ready) [data-rise] {
+  opacity: 0;
+  animation: sl-failsafe 0s linear 1.5s forwards;
 }
+@keyframes sl-failsafe { to { opacity: 1; } }

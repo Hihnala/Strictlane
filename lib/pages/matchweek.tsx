@@ -11,10 +11,13 @@ import { MatchList } from "@/components/MatchRow";
 import { MatchweekRail } from "@/components/MatchweekRail";
 import { SeasonGrid, type GridCell } from "@/components/SeasonGrid";
 import { StandingsTable } from "@/components/StandingsTable";
-import { StatCell } from "@/components/StatCell";
 import { Prose } from "@/components/Prose";
+import { Ambient } from "@/components/Ambient";
+import { Rise } from "@/components/motion/Rise";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary, baseMetadata } from "@/lib/i18n";
+import { fmtDec } from "@/lib/format";
 
 export async function matchweekStaticParams() {
   const seasons = await getSeasons();
@@ -78,61 +81,79 @@ export async function renderMatchweekPage(locale: Locale, season: string, league
   const played = data.matches.filter((m) => m.status === "played").length;
   const meta = leagueMeta(lid);
 
-  return (
-    <div className="wrap">
-      <section className="section">
-        <div className="sec-label">
-          {meta.label} &middot; {season}
-        </div>
-        <h1>{dict.common.matchweekHeading(n)}</h1>
-        <MatchweekRail season={season} league={league} weeks={weeks} current={n} locale={locale} />
+  const stats = [
+    { k: dict.common.correct, v: `${s.hits}/${s.scored}`, s: "" },
+    { k: dict.common.meanRps, v: s.meanRps !== null ? fmtDec(s.meanRps, 4, locale) : dict.common.dash, s: "" },
+    {
+      k: dict.common.drawsActExp,
+      v: `${draws.actual}/${fmtDec(draws.expected, 1, locale)}`,
+      s: draws.z !== null ? `${dict.common.z} ${fmtDec(draws.z, 2, locale)}` : "",
+    },
+  ];
 
-        <p className="muted data" style={{ fontSize: 13 }}>
+  return (
+    <>
+      <Ambient variant="left" />
+      <section className="wide page-head mw-head">
+        <Rise i={0} className="label-mono">{meta.label} · {season}</Rise>
+        <div className="head-row">
+          <Rise i={1} as="h1" className="h1-sealed">{dict.common.matchweekHeading(n)}</Rise>
+          <Rise i={2} style={{ maxWidth: "100%" }}>
+            <MatchweekRail season={season} league={league} weeks={weeks} current={n} locale={locale} />
+          </Rise>
+        </div>
+        <Rise i={2} as="p" className="mw-played">
           {dict.common.playedOf(played, data.matches.length)}
           {n === latestPlayed ? dict.common.latestSuffix : ""}
-        </p>
-
-        <MatchList matches={data.matches} teams={teams} locale={locale} />
+        </Rise>
+        <Rise i={3}>
+          <MatchList matches={data.matches} teams={teams} locale={locale} />
+        </Rise>
       </section>
 
-      {s.scored > 0 && (
-        <section className="section">
-          <div className="sec-label">{dict.matchweekPage.scoring}</div>
-          <div className="stat-grid">
-            <StatCell value={`${s.hits}/${s.scored}`} label={dict.common.correct} />
-            <StatCell value={s.meanRps ? s.meanRps.toFixed(4) : dict.common.dash} label={dict.common.meanRps} />
-            <StatCell
-              value={`${draws.actual}/${draws.expected.toFixed(1)}`}
-              label={dict.common.drawsActExp}
-              sub={draws.z !== null ? `${dict.common.z} ${draws.z.toFixed(2)}` : undefined}
-            />
+      <section className="wide sec mw-split">
+        {s.scored > 0 && (
+          <Reveal>
+            <div className="label-mono">{dict.matchweekPage.scoring}</div>
+            <div className="mini-stats">
+              {stats.map((x) => (
+                <div key={x.k} className="mini">
+                  <div className="k">{x.k}</div>
+                  <div>
+                    <div className="v">{x.v}</div>
+                    <div className="s">{x.s}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        )}
+        <Reveal>
+          <div className="label-mono">{dict.matchweekPage.season}</div>
+          <div className="sgrid-card">
+            <SeasonGrid season={season} league={league} cells={cells} current={n} locale={locale} />
           </div>
-        </section>
-      )}
+        </Reveal>
+      </section>
 
       {commentary && (
-        <section className="section">
-          <div className="sec-label">{dict.matchweekPage.notes}</div>
-          {!commentary.translated && (
-            <p className="muted" style={{ fontSize: 13, marginBottom: "var(--s3)" }}>
-              {dict.matchweekPage.translationPending}
-            </p>
-          )}
-          <Prose html={commentary.html} />
+        <section className="prose-col">
+          <Reveal className="label-mono">{dict.matchweekPage.notes}</Reveal>
+          {!commentary.translated && <p className="translation-note">{dict.matchweekPage.translationPending}</p>}
+          <Reveal>
+            <Prose html={commentary.html} className="sealed-prose notes" />
+          </Reveal>
         </section>
       )}
-
-      <section className="section">
-        <div className="sec-label">{dict.matchweekPage.season}</div>
-        <SeasonGrid season={season} league={league} cells={cells} current={n} locale={locale} />
-      </section>
 
       {standings.length > 0 && (
-        <section className="section">
-          <div className="sec-label">{dict.matchweekPage.tableThrough(n)}</div>
-          <StandingsTable rows={standings} teams={teams} locale={locale} />
+        <section className="wide sec-lg">
+          <Reveal className="label-mono">{dict.matchweekPage.tableThrough(n)}</Reveal>
+          <Reveal>
+            <StandingsTable rows={standings} teams={teams} locale={locale} />
+          </Reveal>
         </section>
       )}
-    </div>
+    </>
   );
 }

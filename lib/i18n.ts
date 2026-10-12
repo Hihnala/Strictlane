@@ -70,6 +70,36 @@ export interface Dictionary {
     noData: string;
     mwProgress: (n: number, played: number, total: number) => string;
   };
+  /** Home hero + sections introduced by the "Sealed" redesign. */
+  homeHero: {
+    eyebrowOpen: (date: string) => string;
+    h1Open: string;
+    subOpen: string;
+    sealed: string;
+    kickoff: string;
+    tz: string;
+    sealedLine: (lead: string) => string;
+    replay: string;
+    eyebrowBetween: (date: string) => string;
+    h1Between: string;
+    subBetween: (date: string, hits: number, total: number, expected: string) => string;
+    toKickoff: (time: string) => string;
+    now: string;
+    stepSettled: string;
+    stepPublished: string;
+    stepSealed: string;
+    settledLine: (hits: number, total: number, expected: string) => string;
+    unitD: string;
+    unitH: string;
+    unitM: string;
+    passed: string;
+    stripNote: string;
+    seasonLabel: string;
+    seasonTitle: string;
+    seasonTotals: string;
+    seasonNote: string;
+    roundsSettled: string;
+  };
   matchweekPage: {
     scoring: string;
     notes: string;
@@ -231,6 +261,39 @@ const en: Dictionary = {
     byLeague: "By league",
     noData: "No data",
     mwProgress: (n, played, total) => `MW ${n} · ${played}/${total}`,
+  },
+  homeHero: {
+    eyebrowOpen: (date) => `This week's coupon · ${date}`,
+    h1Open: "The coupon is sealed.",
+    subOpen:
+      "Every mark below was saved before the first match kicked off. The timestamp is part of " +
+      "the record and the build checks it.",
+    sealed: "Sealed",
+    kickoff: "Kickoff",
+    tz: "UK",
+    sealedLine: (lead) => `Sealed · ${lead} before kickoff`,
+    replay: "Replay",
+    eyebrowBetween: (date) => `Between coupons · next ${date}`,
+    h1Between: "The coupon is settled.",
+    subBetween: (date, hits, total, expected) =>
+      `The ${date} coupon is scored: ${hits} of ${total} correct, ${expected} expected. ` +
+      "The next Lauantaivakio is fetched Thursday and sealed before Saturday's kickoff.",
+    toKickoff: (time) => `to the next kickoff · ${time} UK`,
+    now: "Now",
+    stepSettled: "Settled",
+    stepPublished: "Coupon published",
+    stepSealed: "Sealed before kickoff",
+    settledLine: (hits, total, expected) => `Settled · ${hits}/${total} correct · ${expected} expected`,
+    unitD: "d",
+    unitH: "h",
+    unitM: "min",
+    passed: "Kickoff has passed",
+    stripNote: "Filled square: what was marked. Underline: what happened.",
+    seasonLabel: "This season",
+    seasonTitle: "The last six coupons.",
+    seasonTotals: "Season to date",
+    seasonNote: "Filled: correct. Outline: missed. Number under each date: mean RPS, lower is better.",
+    roundsSettled: "Rounds settled",
   },
   matchweekPage: {
     scoring: "Scoring",
@@ -446,6 +509,39 @@ const fi: Dictionary = {
     byLeague: "Sarjoittain",
     noData: "Ei dataa",
     mwProgress: (n, played, total) => `Kierros ${n} · ${played}/${total}`,
+  },
+  homeHero: {
+    eyebrowOpen: (date) => `Tämän viikon kuponki · ${date}`,
+    h1Open: "Kuponki on lukittu.",
+    subOpen:
+      "Jokainen merkintä tallennettiin ennen kuin ensimmäinen ottelu alkoi. Aikaleima kuuluu " +
+      "kirjanpitoon, ja julkaisu tarkistaa sen.",
+    sealed: "Lukittu",
+    kickoff: "Avaus",
+    tz: "Suomen aikaa",
+    sealedLine: (lead) => `Lukittu · ${lead} ennen avausta`,
+    replay: "Toista",
+    eyebrowBetween: (date) => `Kuponkien välissä · seuraava ${date}`,
+    h1Between: "Kuponki on ratkennut.",
+    subBetween: (date, hits, total, expected) =>
+      `${date} kuponki on arvioitu: ${hits}/${total} osumaa, ${expected} odotettu. ` +
+      "Seuraava Lauantaivakio haetaan torstaina ja lukitaan ennen lauantain avausta.",
+    toKickoff: (time) => `seuraavaan avaukseen · klo ${time}`,
+    now: "Nyt",
+    stepSettled: "Ratkennut",
+    stepPublished: "Kuponki julkaistaan",
+    stepSealed: "Lukitaan ennen avausta",
+    settledLine: (hits, total, expected) => `Ratkennut · ${hits}/${total} osumaa · ${expected} odotettu`,
+    unitD: "pv",
+    unitH: "h",
+    unitM: "min",
+    passed: "Avaus on jo alkanut",
+    stripNote: "Täytetty ruutu: merkintä. Alleviivaus: toteutunut tulos.",
+    seasonLabel: "Tämä kausi",
+    seasonTitle: "Kuusi viimeisintä kuponkia.",
+    seasonTotals: "Kausi tähän mennessä",
+    seasonNote: "Täytetty: osuma. Ääriviiva: huti. Päivämäärän alla: RPS keskiarvo, pienempi on parempi.",
+    roundsSettled: "Ratkenneet kierrokset",
   },
   matchweekPage: {
     scoring: "Arviointi",

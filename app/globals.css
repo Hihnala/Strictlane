@@ -1,106 +1,19 @@
 @import "./tokens.css";
+@import "./sealed.css";
 
-/* Page chrome (top bar + footer) lives in tokens.css as of the nav/footer
-   redesign — the bar carries only the wordmark and the three league tags,
-   everything else is in the footer. */
+/* Page chrome (floating header, footer, ambient glows) lives in tokens.css. */
 
 /* ----------------------------------------------------------------- page --- */
-main { padding-bottom: var(--s8); }
-.section { padding: var(--s6) 0 0; }
-.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--s3);
-  margin-bottom: var(--s3); }
-.sec-label { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--ink-faint); }
-h1 { font-family: var(--font-display); font-weight: 800; font-size: var(--fs-display);
-  line-height: var(--lh-display); letter-spacing: var(--ls-display); margin: var(--s2) 0 var(--s3); }
-h2 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h2);
-  letter-spacing: var(--ls-h2); line-height: var(--lh-h2); margin-bottom: var(--s3); }
-h3 { font-family: var(--font-display); font-weight: 700; font-size: var(--fs-h3); margin: var(--s4) 0 var(--s2); }
+.page { position: relative; min-height: 100vh; overflow-x: clip; }
+main { position: relative; z-index: 1; padding-top: var(--header-clear); }
+footer.foot { position: relative; z-index: 1; }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-display);
+  line-height: var(--lh-display); letter-spacing: var(--ls-display); }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h2);
+  letter-spacing: var(--ls-h2); line-height: var(--lh-h2); }
+h3 { font-family: var(--font-display); font-weight: 600; font-size: var(--fs-h3); }
 p { margin-bottom: var(--s3); }
 .muted { color: var(--ink-muted); }
-.lede { color: var(--ink-muted); font-size: 16px; max-width: 52ch; }
-a.more { font-family: var(--font-data); font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
-  text-transform: uppercase; text-decoration: none; }
-
-/* ----------------------------------------------------------------- rail --- */
-.rail { display: flex; gap: var(--s1); overflow-x: auto; scroll-snap-type: x proximity;
-  padding: var(--s2) 0; margin: 0 calc(var(--gutter) * -1); padding-left: var(--gutter);
-  padding-right: var(--gutter); -webkit-overflow-scrolling: touch; }
-.rail::-webkit-scrollbar { display: none; }
-.rail { scrollbar-width: none; }
-.rail-item { flex: 0 0 auto; scroll-snap-align: center; min-width: var(--tap-min);
-  min-height: var(--tap-min); display: flex; align-items: center; justify-content: center;
-  border: 1px solid var(--line); border-radius: var(--r-chip); text-decoration: none;
-  color: var(--ink-muted); font-size: 13px; font-weight: 600; background: var(--surface); }
-.rail-item.on { background: var(--home-bg); border-color: var(--home); color: var(--home); }
-
-/* ----------------------------------------------------------- season grid --- */
-.seasongrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
-  gap: var(--s1); margin-top: var(--s3); }
-.gridcell { aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
-  border-radius: var(--r-mark); text-decoration: none; font-size: 11px; font-weight: 600; }
-.gridcell.forecast { background: var(--home-bg); border: 1px solid var(--home); color: var(--home); }
-.gridcell.logged   { background: transparent; border: 1px solid var(--line-strong); color: var(--ink-muted); }
-.gridcell.upcoming { background: transparent; border: 1px dashed var(--line); color: var(--ink-faint); }
-.gridcell.on { box-shadow: inset 0 -3px 0 currentColor; }
-
-/* ---------------------------------------------------------------- cards --- */
-.leaguecard { display: flex; align-items: center; gap: var(--s3); padding: var(--s4);
-  border: 1px solid var(--line); border-radius: var(--r-card); background: var(--surface-raised);
-  text-decoration: none; color: var(--ink); margin-bottom: var(--s2); min-height: var(--tap-min); }
-.leaguecard .name { flex: 1; font-family: var(--font-display); font-weight: 700; font-size: 15px; }
-.leaguecard .meta { font-family: var(--font-data); font-size: 12px; color: var(--ink-muted); }
-
-.roundcard { display: block; padding: var(--s4); border: 1px solid var(--line);
-  border-radius: var(--r-card); background: var(--surface-raised); text-decoration: none;
-  color: var(--ink); margin-bottom: var(--s2); }
-.roundcard .top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s3); }
-
-/* ---------------------------------------------------------------- table --- */
-.table-wrap { overflow-x: auto; }
-.table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
-.table th { font-family: var(--font-data); font-size: 10.5px; font-weight: 600; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--ink-faint); text-align: left; padding: var(--s2) var(--s2);
-  border-bottom: 1px solid var(--line-strong); white-space: nowrap; }
-.table td { padding: var(--s2); border-bottom: 1px solid var(--line); white-space: nowrap; }
-.table td.num, .table th.num { text-align: right; }
-
-/* ---------------------------------------------------------------- prose --- */
-.prose h2 { font-size: 17px; margin-top: var(--s5); }
-.prose h3 { font-size: 14px; }
-.prose p { font-size: 14.5px; color: var(--ink-muted); }
-.prose strong { color: var(--ink); font-weight: 600; }
-.prose ul { margin: 0 0 var(--s3) var(--s5); font-size: 14.5px; color: var(--ink-muted); }
-.prose li { margin-bottom: var(--s2); }
-.prose table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: var(--s3); }
-.prose th, .prose td { padding: var(--s2); border-bottom: 1px solid var(--line); text-align: left; }
-
-/* --------------------------------------------------------------- footer --- */
-/* Base footer styles (three rows: links, statement, credit) are in tokens.css.
-   The site footer follows `main`, so it takes a hairline + breathing room the
-   style-guide's own footer doesn't need. */
-footer.foot { border-top: 1px solid var(--line); margin-top: var(--s7); background: var(--surface); }
 
 .empty { padding: var(--s6) var(--s4); text-align: center; color: var(--ink-muted);
   border: 1px dashed var(--line); border-radius: var(--r-card); font-size: 14px; }
-
-/* ------------------------------------------------------- round archive --- */
-.roundcard-strips { display: flex; flex-wrap: wrap; gap: 4px; margin: var(--s3) 0; }
-.roundcard-foot { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap;
-  font-size: 12.5px; padding-top: var(--s2); border-top: 1px solid var(--line); }
-.roundcard-foot b { font-size: 15px; }
-.roundcard:hover { border-color: var(--line-strong); }
-
-.roundnav { display: flex; justify-content: space-between; gap: var(--s3); margin-top: var(--s5);
-  padding-top: var(--s4); border-top: 1px solid var(--line); }
-.roundnav a { font-family: var(--font-data); font-size: 11px; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--ink-muted);
-  border: 1px solid var(--line); border-radius: var(--r-chip); padding: 10px 14px;
-  min-height: var(--tap-min); display: flex; align-items: center; }
-.roundnav a:hover { color: var(--home); border-color: var(--home); }
-.roundnav .spacer { flex: 1; }
-
-.hero-split { border: 1px solid var(--line); border-radius: var(--r-card);
-  background: var(--surface-raised); padding: var(--s4); margin-bottom: var(--s3); }
-.hero-split .label { font-family: var(--font-data); font-size: 10.5px; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: var(--s2); }

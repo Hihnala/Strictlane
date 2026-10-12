@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary, localePrefix } from "@/lib/i18n";
 
+/** Segmented pill of matchweeks; scrolls horizontally when it doesn't fit. */
 export function MatchweekRail({
   season,
   league,
@@ -19,17 +20,17 @@ export function MatchweekRail({
   const dict = getDictionary(locale);
   const prefix = localePrefix(locale);
   return (
-    <div className="rail" role="navigation" aria-label={dict.common.matchweeksAria}>
+    <nav className="mw-rail" aria-label={dict.common.matchweeksAria}>
       {weeks.map((w) => (
         <Link
           key={w}
-          className={`rail-item${w === current ? " on" : ""}`}
+          className={w === current ? "on" : undefined}
           href={`${prefix}/${season}/${league}/mw-${String(w).padStart(2, "0")}`}
           aria-current={w === current ? "page" : undefined}
         >
           {w}
         </Link>
       ))}
-    </div>
+    </nav>
   );
 }

@@ -20,11 +20,15 @@ export function Coupon({
   marks,
   result,
   size = "md",
+  glow = false,
   locale = "en",
 }: {
   marks?: Sign[] | null;
   result?: Sign | null;
-  size?: "md" | "sm";
+  /** md 24px (lists, hero slip) · sm 20px (round strips) · xs 18px (archive) */
+  size?: "md" | "sm" | "xs";
+  /** soft halo on marked cells — home page only */
+  glow?: boolean;
   locale?: Locale;
 }) {
   const dict = getDictionary(locale);
@@ -37,7 +41,7 @@ export function Coupon({
       : dict.common.noForecast;
 
   return (
-    <div className={`coupon${size === "sm" ? " sm" : ""}`} role="img" aria-label={label}>
+    <div className={["coupon", size !== "md" ? size : "", glow ? "glow" : ""].filter(Boolean).join(" ")} role="img" aria-label={label}>
       {SIGNS.map((s) => {
         const on = marks?.includes(s) ?? false;
         const hit = result === s;

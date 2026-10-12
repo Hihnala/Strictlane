@@ -3,11 +3,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { listRounds, getRound, getRoundMatches, getTeams, getRoundCommentary, roundNeighbours } from "@/lib/content";
 import { summarise, coverage, couponOutlook, drawWatch } from "@/lib/scoring";
-import { CouponRows } from "@/components/MatchRow";
-import { StatCell } from "@/components/StatCell";
+import { CouponList } from "@/components/CouponList";
+import { StatCard } from "@/components/StatCard";
 import { Prose } from "@/components/Prose";
+import { Ambient } from "@/components/Ambient";
+import { Rise } from "@/components/motion/Rise";
+import { Reveal } from "@/components/motion/Reveal";
+import { CountUp } from "@/components/motion/CountUp";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary, baseMetadata, localePrefix } from "@/lib/i18n";
+import { fmtDec } from "@/lib/format";
 
 export async function roundStaticParams() {
   return (await listRounds()).map((id) => ({ id }));
@@ -21,6 +26,7 @@ export async function renderRoundMetadata(locale: Locale, id: string): Promise<M
 export async function renderRoundPage(locale: Locale, id: string) {
   const dict = getDictionary(locale);
   const prefix = localePrefix(locale);
+  const fi = locale === "fi";
   const round = await getRound(id);
   if (!round) notFound();
 
@@ -35,76 +41,103 @@ export async function renderRoundPage(locale: Locale, id: string) {
   const cov = matches.filter((m) => m.forecast).map((m) => coverage(m.forecast!.probs, m.forecast!.marks));
   const outlook = cov.length ? couponOutlook(cov) : null;
 
-  return (
-    <div className="wrap">
-      <section className="section">
-        <div className="sec-label">{dict.roundPage.label(id)}</div>
-        <h1>{round.name}</h1>
-        {round.system && (
-          <p className="lede">
-            {dict.roundPage.system(round.system.type, round.system.singles, round.system.doubles, round.system.triples ?? 0, round.system.rows)}
-          </p>
-        )}
+  const outlookRows = outlook
+    ? [matches.length, matches.length - 1, matches.length - 2, matches.length - 3]
+        .filter((k) => k > 0)
+        .map((k) => ({ k, p: k === matches.length ? outlook.pAll : outlook.distribution[k] }))
+    : [];
+  const maxP = Math.max(...outlookRows.map((o) => o.p), 0);
 
-        {/* The coupon in coupon order — the order is data, not presentation. */}
-        <div style={{ marginTop: "var(--s4)" }}>
-          <CouponRows located={located} teams={teams} locale={locale} />
+  return (
+    <>
+      <Ambient variant="left" />
+      <section className="wide page-head round-head">
+        <Rise i={0} className="label-mono">{dict.roundPage.label(id)}</Rise>
+        <div className="head-row">
+          <Rise i={1} as="h1" className="h1-sealed">{round.name}</Rise>
+          {round.system && (
+            <Rise i={2} as="p" className="head-system">
+              {dict.roundPage.system(round.system.type, round.system.singles, round.system.doubles, round.system.triples ?? 0, round.system.rows)}
+            </Rise>
+          )}
         </div>
+        {/* The coupon in coupon order — the order is data, not presentation. */}
+        <Rise i={3}>
+          <CouponList located={located} teams={teams} locale={locale} />
+        </Rise>
       </section>
 
-      <section className="section">
-        <div className="sec-label">{dict.matchweekPage.scoring}</div>
-        <div className="stat-grid">
-          <StatCell value={`${s.hits}/${s.scored}`} label={dict.common.correct}
-            sub={outlook ? dict.roundPage.expectedSub(outlook.expectedCovered.toFixed(2)) : undefined} />
-          <StatCell value={s.meanRps ? s.meanRps.toFixed(4) : dict.common.dash} label={dict.common.meanRps} />
-          <StatCell value={`${draws.actual}/${draws.expected.toFixed(1)}`} label={dict.common.drawsActExp}
-            sub={draws.z !== null ? `${dict.common.z} ${draws.z.toFixed(2)}` : undefined} />
+      <section className="wide sec">
+        <Reveal className="label-mono">{dict.matchweekPage.scoring}</Reveal>
+        <div className="stat-row">
+          <Reveal delay={0}>
+            <StatCard
+              label={dict.common.correct}
+              figure={<><CountUp value={s.hits} /><span className="of">/{s.scored}</span></>}
+              sub={outlook ? dict.roundPage.expectedSub(fmtDec(outlook.expectedCovered, 2, locale)) : undefined}
+            />
+          </Reveal>
+          <Reveal delay={0.08}>
+            <StatCard
+              label={dict.common.meanRps}
+              figure={s.meanRps !== null ? <CountUp value={s.meanRps} decimals={4} comma={fi} /> : dict.common.dash}
+            />
+          </Reveal>
+          <Reveal delay={0.16}>
+            <StatCard
+              label={dict.common.drawsActExp}
+              figure={<>{draws.actual}<span className="of">/{fmtDec(draws.expected, 1, locale)}</span></>}
+              sub={draws.z !== null ? `${dict.common.z} ${fmtDec(draws.z, 2, locale)}` : undefined}
+            />
+          </Reveal>
         </div>
 
         {outlook && (
-          <table className="table" style={{ marginTop: "var(--s4)" }}>
-            <thead>
-              <tr><th>{dict.roundPage.outcome}</th><th className="num">{dict.roundPage.probability}</th><th className="num">{dict.roundPage.odds}</th></tr>
-            </thead>
-            <tbody>
-              {[matches.length, matches.length - 1, matches.length - 2, matches.length - 3]
-                .filter((k) => k > 0)
-                .map((k) => {
-                  const p = k === matches.length ? outlook.pAll : outlook.distribution[k];
-                  return (
-                    <tr key={k}>
-                      <td>{k === matches.length ? dict.roundPage.allCovered(k) : dict.roundPage.exactly(k)}</td>
-                      <td className="num data">{(p * 100).toFixed(2)}%</td>
-                      <td className="num data">{p > 0 ? dict.roundPage.oneIn(Math.round(1 / p)) : dict.common.dash}</td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </table>
+          <Reveal className="card outlook">
+            <div className="outlook-row gt-head">
+              <span>{dict.roundPage.outcome}</span>
+              <span />
+              <span className="r">{dict.roundPage.probability}</span>
+              <span className="r">{dict.roundPage.odds}</span>
+            </div>
+            {outlookRows.map(({ k, p }) => (
+              <div key={k} className="outlook-row" data-row="">
+                <span className="lbl">{k === matches.length ? dict.roundPage.allCovered(k) : dict.roundPage.exactly(k)}</span>
+                <div className="bar-track">
+                  <div className="bar-fill" data-grow="" style={{ width: `${maxP ? (p / maxP) * 100 : 0}%` }} />
+                </div>
+                <span className="num">{fmtDec(p * 100, 2, locale)}%</span>
+                <span className="num dim">{p > 0 ? dict.roundPage.oneIn(Math.round(1 / p)) : dict.common.dash}</span>
+              </div>
+            ))}
+          </Reveal>
         )}
       </section>
 
       {commentary && (
-        <section className="section">
-          <div className="sec-label">{dict.roundPage.review}</div>
-          {!commentary.translated && (
-            <p className="muted" style={{ fontSize: 13, marginBottom: "var(--s3)" }}>
-              {dict.roundPage.translationPending}
-            </p>
-          )}
-          <Prose html={commentary.html} />
+        <section className="prose-col">
+          <Reveal className="label-mono">{dict.roundPage.review}</Reveal>
+          {!commentary.translated && <p className="translation-note">{dict.roundPage.translationPending}</p>}
+          <Reveal>
+            <Prose html={commentary.html} className="sealed-prose review" />
+          </Reveal>
         </section>
       )}
 
       {/* Walk the archive without going back to the index each time. */}
-      <nav className="roundnav" aria-label={dict.roundPage.otherRoundsAria}>
-        {older ? <Link href={`${prefix}/rounds/${older}`}>&larr; {older}</Link> : <span />}
-        <span className="spacer" />
-        <Link href={`${prefix}/rounds`} style={{ border: "none" }}>{dict.roundPage.allRounds}</Link>
-        <span className="spacer" />
-        {newer ? <Link href={`${prefix}/rounds/${newer}`}>{newer} &rarr;</Link> : <span />}
+      <nav className="round-nav" aria-label={dict.roundPage.otherRoundsAria}>
+        {older ? (
+          <Link className="nb older" href={`${prefix}/rounds/${older}`}>
+            <span className="arr">←</span><span className="id">{older}</span>
+          </Link>
+        ) : <span />}
+        <Link className="all" href={`${prefix}/rounds`}>{dict.roundPage.allRounds}</Link>
+        {newer ? (
+          <Link className="nb newer" href={`${prefix}/rounds/${newer}`}>
+            <span className="arr">→</span><span className="id">{newer}</span>
+          </Link>
+        ) : <span />}
       </nav>
-    </div>
+    </>
   );
 }

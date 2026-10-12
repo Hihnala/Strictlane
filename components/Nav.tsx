@@ -6,11 +6,11 @@ import { useEffect } from "react";
 import { getDictionary } from "@/lib/i18n";
 
 /**
- * Top bar: the wordmark plus the three league quick-links, nothing else
- * (TECH-SHEET.md §9/§10). Every other destination — Latest, Rounds,
- * Calibration, Method — lives in the footer. No hamburger: if the tags ever
- * overflow they scroll horizontally, same idiom as the matchweek rail
- * (Rasti rule 11).
+ * Floating glass header: the wordmark plus the three league quick-links,
+ * nothing else (TECH-SHEET.md §9/§10). Every other destination — Latest,
+ * Rounds, Calibration, Method — lives in the footer. No hamburger: if the
+ * links ever overflow they scroll horizontally, same idiom as the matchweek
+ * rail.
  *
  * Short hrefs rely on the redirects in next.config.mjs, so the canonical URL
  * still carries the season. The active check therefore matches the league id
@@ -46,34 +46,31 @@ export function Nav() {
   const switchHref = isFi ? `/${rest.join("/")}` : `/fi${pathname === "/" ? "" : pathname}`;
 
   return (
-    <div className="topbar">
-      <div className="topbar-inner">
-        <Link className="wordmark" href={isFi ? "/fi" : "/"}>
-          <span className="glyph">S</span>Strictlane
-        </Link>
-        <div className="nav-scroll">
-          <div className="league-switch" role="group" aria-label={dict.nav.leagueGroup}>
-            {LEAGUES.map((l) => {
-              const active = segments.includes(l.slug);
-              const href = isFi ? `/fi/${l.slug}` : `/${l.slug}`;
-              return (
-                <Link
-                  key={l.slug}
-                  className={`tag league${active ? " is-active" : ""}`}
-                  href={href}
-                  aria-current={active ? "page" : undefined}
-                >
-                  <span className="lg-full">{l.label}</span>
-                  <span className="lg-short" aria-hidden="true">{l.short}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-        <Link className="tag lang-switch" href={switchHref}>
-          {dict.nav.switchTo}
-        </Link>
-      </div>
-    </div>
+    <header className="topbar">
+      <Link className="wordmark" href={isFi ? "/fi" : "/"}>
+        <span className="glyph">S</span>Strictlane
+      </Link>
+      <nav className="league-switch" aria-label={dict.nav.leagueGroup}>
+        {LEAGUES.map((l) => {
+          const active = segments.includes(l.slug);
+          const href = isFi ? `/fi/${l.slug}` : `/${l.slug}`;
+          return (
+            <Link
+              key={l.slug}
+              className={active ? "is-active" : undefined}
+              href={href}
+              aria-current={active ? "page" : undefined}
+              aria-label={l.label}
+            >
+              <span className="lg-full">{l.label}</span>
+              <span className="lg-short" aria-hidden="true">{l.short}</span>
+            </Link>
+          );
+        })}
+      </nav>
+      <Link className="lang-switch" href={switchHref}>
+        {dict.nav.switchTo}
+      </Link>
+    </header>
   );
 }

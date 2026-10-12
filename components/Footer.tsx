@@ -37,7 +37,7 @@ export function Footer() {
 
   return (
     <footer className="foot">
-      <div className="wrap">
+      <div className="foot-inner">
         <nav className="footer-nav" aria-label="Footer">
           {links.map((l) => (
             <Link key={l.href} href={l.href}>

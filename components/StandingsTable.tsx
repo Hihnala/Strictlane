@@ -3,6 +3,7 @@ import type { StandingRow } from "@/lib/standings";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/i18n";
 
+/** League table as grid rows; scrolls horizontally on phones. */
 export function StandingsTable({
   rows,
   teams,
@@ -14,35 +15,29 @@ export function StandingsTable({
 }) {
   const dict = getDictionary(locale).standings;
   return (
-    <div className="table-wrap">
-      <table className="table">
-        <thead>
-          <tr>
-            <th className="num">#</th>
-            <th>{dict.team}</th>
-            <th className="num">{dict.p}</th>
-            <th className="num">{dict.w}</th>
-            <th className="num">{dict.d}</th>
-            <th className="num">{dict.l}</th>
-            <th className="num">{dict.gd}</th>
-            <th className="num">{dict.pts}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((r, i) => (
-            <tr key={r.team}>
-              <td className="num data">{i + 1}</td>
-              <td>{teams.get(r.team)?.name ?? r.team}</td>
-              <td className="num data">{r.played}</td>
-              <td className="num data">{r.won}</td>
-              <td className="num data">{r.drawn}</td>
-              <td className="num data">{r.lost}</td>
-              <td className="num data">{r.gd > 0 ? `+${r.gd}` : r.gd}</td>
-              <td className="num data" style={{ fontWeight: 600, color: "var(--ink)" }}>{r.points}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="card standings" role="table">
+      <div className="st-row gt-head" role="row">
+        <span role="columnheader">#</span>
+        <span role="columnheader">{dict.team}</span>
+        <span role="columnheader">{dict.p}</span>
+        <span role="columnheader">{dict.w}</span>
+        <span role="columnheader">{dict.d}</span>
+        <span role="columnheader">{dict.l}</span>
+        <span role="columnheader">{dict.gd}</span>
+        <span role="columnheader">{dict.pts}</span>
+      </div>
+      {rows.map((r, i) => (
+        <div key={r.team} className="st-row" role="row" data-row="">
+          <span className="pos" role="cell">{i + 1}</span>
+          <span className="team" role="cell">{teams.get(r.team)?.name ?? r.team}</span>
+          <span role="cell">{r.played}</span>
+          <span role="cell">{r.won}</span>
+          <span role="cell">{r.drawn}</span>
+          <span role="cell">{r.lost}</span>
+          <span role="cell">{r.gd > 0 ? `+${r.gd}` : r.gd}</span>
+          <span className="pts" role="cell">{r.points}</span>
+        </div>
+      ))}
     </div>
   );
 }

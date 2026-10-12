@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { LEAGUES, currentSeason, getPage, getSeasonMatches } from "@/lib/content";
 import { computeLeagueStats } from "@/lib/leagueStats";
 import { Prose } from "@/components/Prose";
+import { Ambient } from "@/components/Ambient";
+import { Rise } from "@/components/motion/Rise";
+import { Reveal } from "@/components/motion/Reveal";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary, baseMetadata } from "@/lib/i18n";
 
@@ -24,60 +27,70 @@ export async function renderStatsPage(locale: Locale) {
   }
 
   return (
-    <div className="wrap">
-      <section className="section">
-        <div className="sec-label">{t.seasonToDate(season.label)}</div>
-        <h1>{t.title}</h1>
-        <p className="lede">{t.lede}</p>
+    <>
+      <Ambient variant="right" />
+      <section className="wide page-head">
+        <Rise i={0} className="label-mono">{t.seasonToDate(season.label)}</Rise>
+        <Rise i={1} as="h1" className="h1-sealed">{t.title}</Rise>
+        <Rise i={2} as="p" className="page-lede">{t.lede}</Rise>
       </section>
 
-      {blocks.length ? (
-        <section className="section prose">
-          {blocks.map(({ league, stats: s }) => (
-            <div key={league.id}>
-              <h3>{t.leagueHeading[league.id]}</h3>
-              <ul>
-                <li>
-                  {t.homeWins}: <strong>{t.pct(s.homeWinPct)}</strong>
-                </li>
-                <li>
-                  {t.draws}: <strong>{t.pct(s.drawPct)}</strong>, {t.nilNilDraws}: <strong>{t.pct(s.nilNilPct)}</strong>
-                </li>
-                <li>
-                  {t.goalsPerGame}: <strong>{t.num(s.goalsPerGame)}</strong>
-                  {s.firstHalf !== null && s.secondHalf !== null && (
+      <section className="wide league-stats">
+        {blocks.length === 0 && <div className="empty">{t.noStatsYet}</div>}
+        {blocks.map(({ league, stats: s }) => {
+          const halves = s.firstHalf !== null && s.secondHalf !== null && s.firstHalf + s.secondHalf > 0;
+          return (
+            <Reveal key={league.id} className="card ls-card">
+              <h2>{t.leagueHeading[league.id]}</h2>
+              <div className="ls-figs">
+                <div className="ls-fig">
+                  <div className="v">{t.pct(s.homeWinPct)}</div>
+                  <div className="k">{t.homeWins}</div>
+                </div>
+                <div className="ls-fig">
+                  <div className="v">{t.pct(s.drawPct)}</div>
+                  <div className="k">{t.draws} <span className="data">· {t.nilNilDraws} {t.pct(s.nilNilPct)}</span></div>
+                </div>
+                <div className="ls-fig">
+                  <div className="v">{t.num(s.goalsPerGame)}</div>
+                  <div className="k">{t.goalsPerGame}</div>
+                  {halves && (
                     <>
-                      {" "}
-                      ({t.firstHalf}: <strong>{t.num(s.firstHalf)}</strong>, {t.secondHalf}:{" "}
-                      <strong>{t.num(s.secondHalf)}</strong>
-                      {s.halfTimeBasis < s.played && <>; {t.halfTimeBasis(s.halfTimeBasis, s.played)}</>})
+                      <div className="half-bar">
+                        <span data-grow="" style={{ width: `${(s.firstHalf! / (s.firstHalf! + s.secondHalf!)) * 100}%`, background: "var(--ink-muted)" }} />
+                        <span data-grow="" style={{ width: `${(s.secondHalf! / (s.firstHalf! + s.secondHalf!)) * 100}%`, background: "var(--ink)" }} />
+                      </div>
+                      <div className="half-legend">
+                        <span>{t.firstHalf} {t.num(s.firstHalf!)}</span>
+                        <span>{t.secondHalf} {t.num(s.secondHalf!)}</span>
+                      </div>
+                      {s.halfTimeBasis < s.played && <div className="half-basis">{t.halfTimeBasis(s.halfTimeBasis, s.played)}</div>}
                     </>
                   )}
-                </li>
-                <li>
-                  {t.over25}: <strong>{t.pct(s.over25Pct)}</strong>
-                </li>
-                <li>
-                  {t.btts}: <strong>{t.pct(s.bttsPct)}</strong>
-                </li>
-              </ul>
-            </div>
-          ))}
-        </section>
-      ) : (
-        <div className="empty">{t.noStatsYet}</div>
-      )}
+                </div>
+              </div>
+              <div className="ls-bars">
+                {[{ k: t.over25, v: s.over25Pct }, { k: t.btts, v: s.bttsPct }].map((b) => (
+                  <div key={b.k} className="ls-bar" data-row="">
+                    <span className="k">{b.k}</span>
+                    <div className="bar-track"><div className="bar-fill" data-grow="" style={{ width: `${b.v}%` }} /></div>
+                    <span className="v">{t.pct(b.v)}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          );
+        })}
+      </section>
 
       {page && page.html.trim() && (
-        <section className="section prose">
-          {!page.translated && (
-            <p className="muted" style={{ fontSize: 13, marginBottom: "var(--s3)" }}>
-              {dict.matchweekPage.translationPending}
-            </p>
-          )}
-          <Prose html={page.html} />
+        <section className="prose-col">
+          {!page.translated && <p className="translation-note">{dict.matchweekPage.translationPending}</p>}
+          <Reveal>
+            <Prose html={page.html} className="sealed-prose" />
+          </Reveal>
         </section>
       )}
-    </div>
+    </>
   );
 }
