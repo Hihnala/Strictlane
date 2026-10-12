@@ -2,7 +2,7 @@
 
 A personal ledger at [strictlane.com](https://strictlane.com): football
 forecasts made before kickoff for the Premier League, EFL Championship, and
-EFL League One, scored honestly against the closing betting market.
+EFL League One, scored honestly over the season.
 
 It is a **ledger, not a fan site or a tipping service.** The point is honest
 scorekeeping — showing whether the forecasts are any good, including when
@@ -10,13 +10,15 @@ they are not. No betting advice, no tipster ambitions, no audience targets.
 
 ## What makes this different
 
-Forecasts are scored with **Ranked Probability Score (RPS)** against the
-closing betting market's own margin-stripped probabilities, always computed
-over the identical fixture subset so the comparison can't be gamed by
-cherry-picking matches. Two archive seasons carry real closing odds and are
-mechanically barred — by the build validator, not just convention — from
-ever carrying a hindsight forecast, so the historical benchmark can't be
-quietly polluted after the fact.
+Every forecast is locked in before it can be revised: `capturedAt` must
+precede kickoff or the build fails — enforced by the validator, not just
+convention — so a prediction can never be quietly backfilled with hindsight.
+Forecasts are scored with **Ranked Probability Score (RPS)** and hit rate,
+tracked over the season as a record of one person's judgement rather than
+against the betting market or any other external benchmark. Unforecast
+matches are shown rather than hidden, and a missed call is displayed exactly
+as calmly as a correct one, so there's no scoreboard to game by
+cherry-picking which weeks to publish.
 
 A "round" is a Finnish Veikkaus *Vakio* coupon: 13 matches picked by the
 pools operator, cutting across all three leagues. Rounds and the ordinary
@@ -41,7 +43,6 @@ npm install
 npm run dev              # local dev server
 npm run validate         # data integrity gate — read TECH-SHEET §6 first
 npm run build             # runs validate first via prebuild, then next build
-npm run import:archive   # pulls past seasons from football-data.co.uk
 npm run fetch:results -- --dry   # preview the ballprediction.com results/fixtures sync
 ```
 
@@ -54,7 +55,7 @@ rules below are enforced mechanically, not by discipline.
 app/                                  Next.js App Router
 components/                           presentational, no data fetching
 lib/                                  schema.ts, scoring.ts, content.ts
-scripts/                              import-archive.ts, validate.ts, fetch-vakio.ts, fetch-results.ts, promote-round.ts
+scripts/                              validate.ts, fetch-vakio.ts, fetch-results.ts, promote-round.ts
 data/                                 source of truth (JSON)
 content/                              commentary (Markdown)
 docs/                                 TECH-SHEET.md, PRODUCT.md, VOICE.md, rasti-brand-system.html
