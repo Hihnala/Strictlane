@@ -34,6 +34,15 @@
   --draw:    #93a0b5;   --draw-bg: rgba(147,160,181,0.18);
   --away:    #e8776a;   --away-bg: rgba(232,119,106,0.18);
 
+  /* --- table zones (standings only) ------------------------------------
+     Kept apart from the outcome hues above: sky and indigo sit either side
+     of the home blue, red is cooler than the away brick. */
+  --zone-ucl:        #7cc8f2;   /* Champions League — light sky blue */
+  --zone-uel:        #f2a03d;   /* Europa League — orange */
+  --zone-promotion:  #4fc98a;   /* promotion — green */
+  --zone-playoff:    #7b8cff;   /* promotion play-off — indigo blue */
+  --zone-relegation: #ef5a6f;   /* relegation — red */
+
   /* --- brand --------------------------------------------------------- */
   --brand-deep: #9ec1ff;
   --focus:      #6ea8ff;

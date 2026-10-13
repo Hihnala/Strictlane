@@ -198,6 +198,9 @@ export interface Dictionary {
     l: string;
     gd: string;
     pts: string;
+    /** Table zones (promotion, relegation, European places) and the key under the table. */
+    zones: { ucl: string; uel: string; promotion: string; playoff: string; relegation: string };
+    zoneKey: string;
   };
   roundCard: {
     correct: string;
@@ -446,6 +449,14 @@ const en: Dictionary = {
     l: "L",
     gd: "GD",
     pts: "Pts",
+    zones: {
+      ucl: "UEFA Champions League",
+      uel: "UEFA Europa League",
+      promotion: "Promotion",
+      playoff: "Promotion play-off",
+      relegation: "Relegation",
+    },
+    zoneKey: "Table key",
   },
   roundCard: {
     correct: "correct",
@@ -695,6 +706,14 @@ const fi: Dictionary = {
     l: "H",
     gd: "MaalE",
     pts: "P",
+    zones: {
+      ucl: "Mestarien liiga",
+      uel: "Eurooppa-liiga",
+      promotion: "Nousu",
+      playoff: "Nousukarsinta",
+      relegation: "Putoaminen",
+    },
+    zoneKey: "Taulukon selitteet",
   },
   roundCard: {
     correct: "osumaa",

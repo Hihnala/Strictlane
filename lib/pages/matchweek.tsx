@@ -150,7 +150,7 @@ export async function renderMatchweekPage(locale: Locale, season: string, league
         <section className="wide sec-lg">
           <Reveal className="label-mono">{dict.matchweekPage.tableThrough(n)}</Reveal>
           <Reveal>
-            <StandingsTable rows={standings} teams={teams} locale={locale} />
+            <StandingsTable rows={standings} teams={teams} league={lid} locale={locale} />
           </Reveal>
         </section>
       )}
