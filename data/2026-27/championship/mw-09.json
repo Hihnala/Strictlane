@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 9,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listing provided 2026-10-10 — 11/12 MW9 fixtures known (QPR v West Ham not yet confirmed, to be added once known); kickoff times are placeholders pending confirmation; pool popularity and forecast for 7 fixtures (Watford-Burnley, Preston-Millwall, Sheffield Utd-Lincoln, Blackburn-Cardiff, Bolton-Stoke, Derby-Wrexham, Middlesbrough-Wolves) from Veikkaus Lauantaivakio draw 100575, captured 2026-10-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
+  "source": "hand-entered from fixture listing provided 2026-10-10 — 11/12 MW9 fixtures known (QPR v West Ham not yet confirmed, to be added once known); kickoff times are placeholders pending confirmation; pool popularity and forecast for 7 fixtures (Watford-Burnley, Preston-Millwall, Sheffield Utd-Lincoln, Blackburn-Cardiff, Bolton-Stoke, Derby-Wrexham, Middlesbrough-Wolves) from Veikkaus Lauantaivakio draw 100575, captured 2026-10-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-13)",
   "importedAt": "2026-10-10T09:00:00.000Z",
   "matches": [
     {
@@ -337,8 +337,15 @@
       "home": "southampton",
       "away": "portsmouth",
       "kickoff": "2026-10-11T11:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
