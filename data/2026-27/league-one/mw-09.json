@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 9,
   "matchweekDerived": false,
-  "source": "hand-entered from results listing provided 2026-10-10 — 9/12 MW9 fixtures known (3 played, 6 postponed); Blackpool, Cambridge, Leicester, Oxford, Sheffield Wednesday, and Stockport's fixtures not yet known, to be added once confirmed; kickoff times are placeholders (originally scheduled matchday) as exact dates were not yet available; results for the 3 played fixtures (Reading-Bradford, Burton Albion-Huddersfield, Leyton Orient-Plymouth) supplied by Markku 2026-10-10",
+  "source": "hand-entered from results listing provided 2026-10-10 — 9/12 MW9 fixtures known (3 played, 6 postponed); Blackpool, Cambridge, Leicester, Oxford, Sheffield Wednesday, and Stockport's fixtures not yet known, to be added once confirmed; kickoff times are placeholders (originally scheduled matchday) as exact dates were not yet available; results for the 3 played fixtures (Reading-Bradford, Burton Albion-Huddersfield, Leyton Orient-Plymouth) supplied by Markku 2026-10-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-10-10T00:00:00.000Z",
   "matches": [
     {
@@ -14,6 +14,10 @@
       "status": "played",
       "score": {
         "home": 1,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
         "away": 1
       },
       "market": null,
@@ -30,6 +34,10 @@
         "home": 1,
         "away": 3
       },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -43,6 +51,10 @@
       "score": {
         "home": 0,
         "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
       },
       "market": null,
       "pool": null,
@@ -108,6 +120,39 @@
       "home": "bromley",
       "away": "wycombe",
       "kickoff": "2026-10-03T14:00:00.000Z",
+      "status": "postponed",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-09-oxford-stockport",
+      "home": "oxford",
+      "away": "stockport",
+      "kickoff": "2026-10-27T14:00:00.000Z",
+      "status": "postponed",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-09-sheffield-wednesday-cambridge",
+      "home": "sheffield-wednesday",
+      "away": "cambridge",
+      "kickoff": "2026-10-27T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-09-blackpool-leicester",
+      "home": "blackpool",
+      "away": "leicester",
+      "kickoff": "2026-11-24T14:00:00.000Z",
       "status": "postponed",
       "score": null,
       "market": null,

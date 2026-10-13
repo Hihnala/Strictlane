@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 5,
   "matchweekDerived": false,
-  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570), hand-entered 3 Sep 2026 — the 7 MW5 matches on the coupon; the other 5 MW5 fixtures added pending; closing odds to be added before kickoff; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
+  "source": "coupon fixtures for Lauantaivakio 2026-09-05 (draw 100570), hand-entered 3 Sep 2026 — the 7 MW5 matches on the coupon; the other 5 MW5 fixtures added pending; closing odds to be added before kickoff; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-09-03T09:00:00.000Z",
   "matches": [
     {
@@ -13,6 +13,10 @@
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 0,
+        "away": 1
+      },
+      "halfTime": {
         "home": 0,
         "away": 1
       },
@@ -61,6 +65,10 @@
         "home": 3,
         "away": 0
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -104,6 +112,10 @@
       "score": {
         "home": 1,
         "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
       },
       "market": {
         "source": "football-data:AvgC",
@@ -149,6 +161,10 @@
         "home": 4,
         "away": 0
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -191,6 +207,10 @@
       "status": "played",
       "score": {
         "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
         "away": 0
       },
       "market": {
@@ -238,6 +258,10 @@
         "home": 1,
         "away": 3
       },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -280,6 +304,10 @@
       "kickoff": "2026-09-05T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
         "home": 1,
         "away": 0
       },
@@ -328,6 +356,10 @@
         "home": 1,
         "away": 1
       },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -352,6 +384,10 @@
         "home": 2,
         "away": 1
       },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -373,6 +409,10 @@
       "kickoff": "2026-09-05T11:30:00.000Z",
       "status": "played",
       "score": {
+        "home": 4,
+        "away": 0
+      },
+      "halfTime": {
         "home": 4,
         "away": 0
       },
@@ -400,6 +440,10 @@
         "home": 0,
         "away": 0
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -421,6 +465,10 @@
       "kickoff": "2026-09-06T11:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 2,
+        "away": 2
+      },
+      "halfTime": {
         "home": 2,
         "away": 2
       },

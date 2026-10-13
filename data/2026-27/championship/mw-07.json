@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 7,
   "matchweekDerived": false,
-  "source": "hand-entered. 6 fixtures carry forecasts from the 12 Sep Vakio coupon; the remaining 6 (West Ham-Wrexham Fri, West Brom-QPR/Bolton-Cardiff/Derby-Birmingham/Preston-Lincoln Sat, Sheffield Utd-Wolves Sun) complete the round with no forecast.",
+  "source": "hand-entered. 6 fixtures carry forecasts from the 12 Sep Vakio coupon; the remaining 6 (West Ham-Wrexham Fri, West Brom-QPR/Bolton-Cardiff/Derby-Birmingham/Preston-Lincoln Sat, Sheffield Utd-Wolves Sun) complete the round with no forecast.; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-09-11T09:00:00.000Z",
   "matches": [
     {
@@ -15,6 +15,10 @@
       "score": {
         "home": 4,
         "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
       },
       "market": {
         "source": "oddsportal-avg(pre-close)",
@@ -61,6 +65,10 @@
         "home": 3,
         "away": 1
       },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -104,6 +112,10 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 0,
+        "away": 0
+      },
+      "halfTime": {
         "home": 0,
         "away": 0
       },
@@ -153,6 +165,10 @@
         "home": 4,
         "away": 3
       },
+      "halfTime": {
+        "home": 3,
+        "away": 1
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -197,6 +213,10 @@
       "score": {
         "home": 3,
         "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
       },
       "market": {
         "source": "oddsportal-avg(pre-close)",
@@ -244,6 +264,10 @@
         "home": 1,
         "away": 2
       },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": {
         "source": "oddsportal-avg(pre-close)",
         "method": "proportional",
@@ -290,6 +314,10 @@
         "home": 6,
         "away": 0
       },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -301,6 +329,10 @@
       "kickoff": "2026-09-12T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 1,
+        "away": 1
+      },
+      "halfTime": {
         "home": 1,
         "away": 1
       },
@@ -318,6 +350,10 @@
         "home": 1,
         "away": 0
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -331,6 +367,10 @@
       "score": {
         "home": 1,
         "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
       },
       "market": null,
       "pool": null,
@@ -346,6 +386,10 @@
         "home": 0,
         "away": 1
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -359,6 +403,10 @@
       "score": {
         "home": 0,
         "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
       },
       "market": null,
       "pool": null,

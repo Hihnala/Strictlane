@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 8,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 16-20 Sep 2026 — all 12 MW8 fixtures confirmed; closing odds to be added before kickoff",
+  "source": "hand-entered from fixture listings, 16-20 Sep 2026 — all 12 MW8 fixtures confirmed; closing odds to be added before kickoff; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-09-16T09:00:00.000Z",
   "matches": [
     {
@@ -15,6 +15,10 @@
       "score": {
         "home": 1,
         "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
       },
       "market": null,
       "pool": {
@@ -51,6 +55,10 @@
         "home": 2,
         "away": 1
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -84,6 +92,10 @@
       "score": {
         "home": 1,
         "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
       },
       "market": null,
       "pool": {
@@ -120,6 +132,10 @@
         "home": 2,
         "away": 2
       },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -154,6 +170,10 @@
       "score": {
         "home": 2,
         "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
       },
       "market": null,
       "pool": {
@@ -190,6 +210,10 @@
         "home": 2,
         "away": 2
       },
+      "halfTime": {
+        "home": 0,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -224,6 +248,10 @@
         "home": 1,
         "away": 0
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -236,6 +264,10 @@
       "status": "played",
       "score": {
         "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 2,
         "away": 1
       },
       "market": null,
@@ -252,6 +284,10 @@
         "home": 2,
         "away": 2
       },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -265,6 +301,10 @@
       "score": {
         "home": 2,
         "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
       },
       "market": null,
       "pool": null,
@@ -280,6 +320,10 @@
         "home": 1,
         "away": 0
       },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -293,6 +337,10 @@
       "score": {
         "home": 3,
         "away": 4
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 2
       },
       "market": null,
       "pool": null,

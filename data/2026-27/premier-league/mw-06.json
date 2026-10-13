@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 6,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listing provided 2026-10-10 — all 10 MW6 fixtures confirmed (after the international break); kickoff times are placeholders pending confirmation; pool popularity and forecast for 5 fixtures (Chelsea-Bournemouth, Ipswich-Fulham, Aston Villa-Brentford, Sunderland-Brighton, Manchester United-Tottenham) from Veikkaus Lauantaivakio draw 100575, captured 2026-10-10",
+  "source": "hand-entered from fixture listing provided 2026-10-10 — all 10 MW6 fixtures confirmed (after the international break); kickoff times are placeholders pending confirmation; pool popularity and forecast for 5 fixtures (Chelsea-Bournemouth, Ipswich-Fulham, Aston Villa-Brentford, Sunderland-Brighton, Manchester United-Tottenham) from Veikkaus Lauantaivakio draw 100575, captured 2026-10-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-10-10T09:00:00.000Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "arsenal",
       "away": "leeds",
       "kickoff": "2026-10-10T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -22,8 +29,15 @@
       "home": "chelsea",
       "away": "bournemouth",
       "kickoff": "2026-10-10T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -53,8 +67,15 @@
       "home": "ipswich",
       "away": "fulham",
       "kickoff": "2026-10-10T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -85,8 +106,15 @@
       "home": "aston-villa",
       "away": "brentford",
       "kickoff": "2026-10-10T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -116,8 +144,15 @@
       "home": "sunderland",
       "away": "brighton",
       "kickoff": "2026-10-10T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -147,8 +182,15 @@
       "home": "man-united",
       "away": "tottenham",
       "kickoff": "2026-10-10T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -177,7 +219,7 @@
       "id": "2026-27-e0-06-crystal-palace-nottingham-forest",
       "home": "crystal-palace",
       "away": "nottingham-forest",
-      "kickoff": "2026-10-10T14:00:00.000Z",
+      "kickoff": "2026-10-11T13:00:00.000Z",
       "status": "pending",
       "score": null,
       "market": null,
@@ -188,7 +230,7 @@
       "id": "2026-27-e0-06-hull-everton",
       "home": "hull",
       "away": "everton",
-      "kickoff": "2026-10-10T14:00:00.000Z",
+      "kickoff": "2026-10-11T13:00:00.000Z",
       "status": "pending",
       "score": null,
       "market": null,
@@ -199,7 +241,7 @@
       "id": "2026-27-e0-06-liverpool-man-city",
       "home": "liverpool",
       "away": "man-city",
-      "kickoff": "2026-10-10T14:00:00.000Z",
+      "kickoff": "2026-10-11T15:30:00.000Z",
       "status": "pending",
       "score": null,
       "market": null,
@@ -210,7 +252,7 @@
       "id": "2026-27-e0-06-coventry-newcastle",
       "home": "coventry",
       "away": "newcastle",
-      "kickoff": "2026-10-10T14:00:00.000Z",
+      "kickoff": "2026-10-12T19:00:00.000Z",
       "status": "pending",
       "score": null,
       "market": null,

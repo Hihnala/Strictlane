@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 2,
   "matchweekDerived": false,
-  "source": "hand-entered; forecasts and market probabilities from the logged 22 Aug 2026 Vakio round; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10",
+  "source": "hand-entered; forecasts and market probabilities from the logged 22 Aug 2026 Vakio round; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
   "importedAt": "2026-08-23T12:00:00.000Z",
   "matches": [
     {
@@ -15,6 +15,10 @@
       "score": {
         "home": 1,
         "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
       },
       "market": {
         "source": "football-data:AvgC",
@@ -49,6 +53,10 @@
       "status": "played",
       "score": {
         "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
         "away": 1
       },
       "market": {
@@ -86,6 +94,10 @@
         "home": 1,
         "away": 3
       },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -118,6 +130,10 @@
       "status": "played",
       "score": {
         "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
         "away": 1
       },
       "market": {
@@ -153,6 +169,10 @@
       "kickoff": "2026-08-22T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 0,
+        "away": 0
+      },
+      "halfTime": {
         "home": 0,
         "away": 0
       },
@@ -192,6 +212,10 @@
         "home": 1,
         "away": 1
       },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -227,6 +251,10 @@
         "home": 2,
         "away": 2
       },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -259,6 +287,10 @@
       "kickoff": "2026-08-22T14:00:00.000Z",
       "status": "played",
       "score": {
+        "home": 0,
+        "away": 0
+      },
+      "halfTime": {
         "home": 0,
         "away": 0
       },
@@ -297,6 +329,10 @@
         "home": 2,
         "away": 2
       },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -319,6 +355,10 @@
       "score": {
         "home": 1,
         "away": 3
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 2
       },
       "market": {
         "source": "football-data:AvgC",
@@ -343,6 +383,10 @@
         "home": 3,
         "away": 0
       },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": {
         "source": "football-data:AvgC",
         "method": "proportional",
@@ -364,6 +408,10 @@
       "status": "played",
       "score": {
         "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
         "away": 1
       },
       "market": {
