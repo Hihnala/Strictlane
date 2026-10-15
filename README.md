@@ -44,6 +44,7 @@ npm run dev              # local dev server
 npm run validate         # data integrity gate — read TECH-SHEET §6 first
 npm run build             # runs validate first via prebuild, then next build
 npm run fetch:results -- --dry   # preview the ballprediction.com results/fixtures sync
+npm run fetch:odds -- 2026-10-17 --dry   # preview a coupon's odds pre-fill
 ```
 
 `npm run build` fails if `validate` fails. That's intentional — the data
@@ -55,11 +56,12 @@ rules below are enforced mechanically, not by discipline.
 app/                                  Next.js App Router
 components/                           presentational, no data fetching
 lib/                                  schema.ts, scoring.ts, content.ts
-scripts/                              validate.ts, fetch-vakio.ts, fetch-results.ts, promote-round.ts
+scripts/                              validate.ts, fetch-vakio.ts, fetch-odds.ts, fetch-results.ts, promote-round.ts
 data/                                 source of truth (JSON)
 content/                              commentary (Markdown)
 docs/                                 TECH-SHEET.md, DESIGN.md, VOICE.md, archive/ (old Rasti style guide)
 .github/workflows/fetch-vakio.yml     weekly Vakio coupon fetch
+.github/workflows/fetch-odds.yml      Saturday odds pre-fill of the coupon's forecasts
 ```
 
 ```
@@ -92,15 +94,26 @@ drift out of sync with the data that produced it.
 
 ## Weekly workflow
 
-1. `scripts/fetch-vakio.ts` runs Thursdays via `.github/workflows/fetch-vakio.yml`,
-   opens a PR with a draft coupon at `data/rounds/drafts/{id}.json` plus a raw
-   API payload for provenance. It never pushes to `main` — a draft has no
-   `matchIds` and no forecasts, so it can't satisfy the Round schema.
-2. On that PR branch, add any missing fixtures to
-   `data/{season}/{league}/mw-NN.json` and write a forecast — `probs`,
-   `marks`, and a `capturedAt` **before kickoff** — for each coupon match.
-3. `npx tsx scripts/promote-round.ts <round-id>` joins the draft to the real
-   match records and derives the round's system block from the marks.
+1. Run **Fetch Vakio coupon** (`.github/workflows/fetch-vakio.yml`, manual)
+   once the coupon is out. `scripts/fetch-vakio.ts` opens a PR with a draft
+   coupon at `data/rounds/drafts/{id}.json` plus a raw API payload for
+   provenance. It never pushes to `main` — a draft has no `matchIds` and no
+   forecasts, so it can't satisfy the Round schema.
+2. On Saturday morning, run **Fetch odds** (`.github/workflows/fetch-odds.yml`,
+   manual; it fetches the coupon itself if step 1 was skipped).
+   `scripts/fetch-odds.ts` pre-fills a forecast for each coupon match on that
+   PR branch: `probs` from football-data.co.uk's Friday odds (Betfair
+   Exchange, Bet365, Paddy Power, Sky Bet and bwin, each margin-stripped by the
+   power method, then averaged), `marks` by the 8+0 rule steered by Veikkaus
+   pool popularity, and that popularity as `pool`. It then runs
+   `promote-round.ts`, which joins the draft to the real match records and
+   derives the round's system block from the marks, and comments a review
+   table on the PR.
+3. Review the suggestions on the PR branch and change anything you disagree
+   with, keeping 5 singles and 8 doubles. A changed forecast gets a new
+   `capturedAt`, still **before kickoff**. Anything listed under "Needs a
+   human" (a missing fixture, odds not in the file yet) is yours to fill in,
+   then `npx tsx scripts/promote-round.ts <round-id>`.
 4. `npm run validate`, then merge.
 
 After the weekend (and after midweek rounds), sync results and fixtures:

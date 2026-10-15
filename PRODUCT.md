@@ -132,9 +132,15 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   probability, since Vakio payout depends on how many others picked the
   same row. Stored as `poolPopularity`, deliberately alongside and never
   merged into `forecast.probs`.
-- Automation only removes fixture transcription — forecast probabilities
-  and marks are still authored by hand before kickoff. That judgement is
-  the part the site exists to score, so it is deliberately not automated.
+- Forecasts are pre-filled, then reviewed by hand. On Saturday morning
+  `scripts/fetch-odds.ts` (via `.github/workflows/fetch-odds.yml`, manual)
+  writes a suggested forecast onto the coupon PR: probabilities from
+  margin-stripped bookmaker odds (football-data.co.uk's Friday prices from
+  Betfair Exchange, Bet365, Paddy Power, Sky Bet and bwin; power method,
+  averaged) and marks from the 8+0 rule, steered by pool popularity. Pool
+  popularity steers only the marks, never the probabilities. The final
+  probabilities and marks are reviewed, adjusted where needed, and merged
+  by hand before kickoff.
 - Veikkaus's licence terms need a read before strictlane.com goes live —
   republishing coupon data publicly is a different use than playing the
   game, and Finnish gambling-marketing rules may bind it. Flagged, not yet
