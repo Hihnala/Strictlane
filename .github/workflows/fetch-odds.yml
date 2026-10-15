@@ -1,0 +1,178 @@
+name: Fetch odds
+
+# Stage 2 of three, automated: pre-fills the coupon's forecasts from bookmaker
+# odds, so what's left by hand is review rather than transcription. Run it on
+# Saturday morning — football-data.co.uk uploads the weekend's odds on Friday
+# afternoon, and the coupon closes just before the first kickoff.
+#
+#   1. Finds the open coupon PR whose draft is this round. If there is none, it
+#      fetches the coupon itself and opens that PR, as fetch-vakio.yml would.
+#   2. scripts/fetch-odds.ts writes a forecast and pool popularity onto every
+#      coupon match that has no forecast yet.
+#   3. scripts/promote-round.ts builds data/rounds/{id}.json once all 13 have one.
+#   4. Validates, commits to the PR branch, and comments the review table.
+#
+# It never merges: the forecasts are suggestions until you have reviewed them.
+# Manual only, like fetch-vakio.yml — GitHub's scheduler can run a cron hours
+# late, and this job has a deadline.
+
+on:
+  workflow_dispatch:
+    inputs:
+      round:
+        description: "Round id: the coupon's playing date, YYYY-MM-DD. Empty means today (UTC)."
+        type: string
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Shares the coupon/* branches with fetch-vakio.yml, so the two queue, not race.
+concurrency:
+  group: fetch-vakio
+  cancel-in-progress: false
+
+jobs:
+  odds:
+    runs-on: ubuntu-latest
+    steps:
+      # A draft only ever lives on its PR branch, never on main, so look for it
+      # there before fetching the coupon again.
+      - name: Find this round's coupon PR
+        id: target
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROUND_INPUT: ${{ inputs.round }}
+        run: |
+          ROUND="${ROUND_INPUT:-$(date -u +%Y-%m-%d)}"
+          if ! [[ "$ROUND" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "::error::round must be YYYY-MM-DD, got '$ROUND'"
+            exit 1
+          fi
+          echo "round=$ROUND" >> "$GITHUB_OUTPUT"
+
+          for b in $(gh pr list --repo "$GITHUB_REPOSITORY" --state open --limit 100 \
+              --json headRefName --jq '.[].headRefName | select(startswith("coupon/"))'); do
+            if gh api "repos/$GITHUB_REPOSITORY/contents/data/rounds/drafts/$ROUND.json?ref=$b" --silent 2>/dev/null; then
+              echo "Round $ROUND: coupon PR branch $b"
+              echo "branch=$b" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done
+
+          if gh api "repos/$GITHUB_REPOSITORY/contents/data/rounds/$ROUND.json" --silent 2>/dev/null; then
+            echo "::notice::Round $ROUND is already published on main — nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Round $ROUND: no open coupon PR — fetching the coupon first."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.target.outputs.skip != 'true'
+        with:
+          ref: ${{ steps.target.outputs.branch }}
+
+      - uses: actions/setup-node@v4
+        if: steps.target.outputs.skip != 'true'
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+        if: steps.target.outputs.skip != 'true'
+
+      # The same capture fetch-vakio.yml does, for a week nobody ran it.
+      - name: Fetch the coupon and open its PR
+        id: coupon
+        if: steps.target.outputs.skip != 'true' && steps.target.outputs.branch == ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROUND: ${{ steps.target.outputs.round }}
+        run: |
+          npx tsx scripts/fetch-vakio.ts
+          if [ ! -f "data/rounds/drafts/$ROUND.json" ]; then
+            echo "::error::No open Lauantaivakio coupon plays on $ROUND — check the round date."
+            exit 1
+          fi
+          npm run validate
+
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="coupon/$DATE"
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            BRANCH="$BRANCH-$(date -u +%H%M)"
+          fi
+
+          git config user.name  "strictlane-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add data/rounds
+          # The commit timestamp is external evidence of when the coupon was
+          # captured — stronger than any self-reported field.
+          git commit -m "Coupon draft $DATE"
+          git push -u origin "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
+          gh pr create --title "Coupon draft $DATE" --body-file - <<'BODY'
+          Fetched from the Veikkaus open-games endpoint by the Fetch odds workflow,
+          which then pre-filled the forecasts from bookmaker odds — the review
+          table is in the comment below. **Not publishable until you've reviewed it.**
+
+          To finish:
+
+          1. Change any `probs` or `marks` you disagree with in the matchweek files,
+             keeping 5 singles and 8 doubles. If you change a match, set its
+             `capturedAt` to the time of your edit — before kickoff.
+          2. Fill in anything the comment lists under "Needs a human", then
+             `npx tsx scripts/promote-round.ts <round-id>`
+          3. `npm run validate`, then merge
+
+          The raw API payload is committed alongside the draft. The open-games
+          endpoint drops closed coupons permanently, so that snapshot is the only
+          copy that will ever exist.
+          BODY
+
+      # Exit code 1 = nothing written: the coupon has closed, or football-data
+      # hasn't uploaded the weekend's odds yet. The reason is in the log.
+      - name: Pre-fill forecasts from odds
+        if: steps.target.outputs.skip != 'true'
+        env:
+          ROUND: ${{ steps.target.outputs.round }}
+        run: npx tsx scripts/fetch-odds.ts "$ROUND" --summary odds-summary.md
+
+      # Refuses, writing nothing, while any coupon match still lacks a forecast;
+      # the PR comment lists those.
+      - name: Promote the round
+        if: steps.target.outputs.skip != 'true'
+        env:
+          ROUND: ${{ steps.target.outputs.round }}
+        run: |
+          if ! npx tsx scripts/promote-round.ts "$ROUND"; then
+            echo "::warning::Round $ROUND not promoted yet — see Needs a human in the PR comment."
+          fi
+
+      - name: Validate
+        if: steps.target.outputs.skip != 'true'
+        run: npm run validate
+
+      - name: Commit to the PR branch
+        if: steps.target.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROUND: ${{ steps.target.outputs.round }}
+          BRANCH: ${{ steps.coupon.outputs.branch || steps.target.outputs.branch }}
+        run: |
+          cat odds-summary.md >> "$GITHUB_STEP_SUMMARY"
+          if [ -z "$(git status --porcelain data)" ]; then
+            echo "Nothing new to commit."
+          else
+            git config user.name  "strictlane-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git add data
+            # Like the coupon draft's, this commit's timestamp is independent
+            # evidence that the forecasts predate kickoff.
+            git commit -m "Odds pre-fill $ROUND"
+            git push origin "HEAD:refs/heads/$BRANCH"
+          fi
+          gh pr comment "$BRANCH" --body-file odds-summary.md

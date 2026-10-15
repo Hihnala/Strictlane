@@ -10,6 +10,7 @@
     "prebuild": "npm run validate",
     "fetch:vakio": "tsx scripts/fetch-vakio.ts",
     "fetch:results": "tsx scripts/fetch-results.ts",
+    "fetch:odds": "tsx scripts/fetch-odds.ts",
     "promote:round": "tsx scripts/promote-round.ts"
   },
   "dependencies": {
