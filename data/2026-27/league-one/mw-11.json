@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 11,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-16)",
   "importedAt": "2026-10-11T11:10:38.251Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "mansfield",
       "away": "oxford",
       "kickoff": "2026-10-15T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
