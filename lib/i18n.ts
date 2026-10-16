@@ -280,7 +280,7 @@ const en: Dictionary = {
     h1Between: "The coupon is settled.",
     subBetween: (date, hits, total, expected) =>
       `The ${date} coupon is scored: ${hits} of ${total} correct, ${expected} expected. ` +
-      "The next Lauantaivakio is fetched Thursday and sealed before Saturday's kickoff.",
+      "The next Lauantaivakio is published Friday and sealed before Saturday's kickoff.",
     toKickoff: (time) => `to the next kickoff · ${time} UK`,
     now: "Now",
     stepSettled: "Settled",
@@ -536,7 +536,7 @@ const fi: Dictionary = {
     h1Between: "Kuponki on ratkennut.",
     subBetween: (date, hits, total, expected) =>
       `${date} kuponki on arvioitu: ${hits}/${total} osumaa, ${expected} odotettu. ` +
-      "Seuraava Lauantaivakio haetaan torstaina ja lukitaan ennen lauantain avausta.",
+      "Seuraava Lauantaivakio julkaistaan perjantaina ja lukitaan ennen lauantain avausta.",
     toKickoff: (time) => `seuraavaan avaukseen · klo ${time}`,
     now: "Nyt",
     stepSettled: "Ratkennut",
