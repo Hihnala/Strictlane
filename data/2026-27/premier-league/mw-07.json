@@ -25,8 +25,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100576",
+        "probs": {
+          "1": 32.99,
+          "2": 37.19,
+          "X": 29.82
+        },
+        "capturedAt": "2026-10-16T12:26:15.937Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-17",
+        "probs": {
+          "1": 41,
+          "2": 33,
+          "X": 26
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-16T12:26:14.116Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e0-07-fulham-hull",
@@ -36,8 +57,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100576",
+        "probs": {
+          "1": 41.66,
+          "2": 31.1,
+          "X": 27.23
+        },
+        "capturedAt": "2026-10-16T12:26:15.937Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-17",
+        "probs": {
+          "1": 56,
+          "2": 20,
+          "X": 24
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-16T12:26:14.116Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e0-07-man-city-ipswich",
@@ -47,8 +89,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100576",
+        "probs": {
+          "1": 86.47,
+          "2": 5.48,
+          "X": 8.05
+        },
+        "capturedAt": "2026-10-16T12:26:15.937Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-17",
+        "probs": {
+          "1": 80,
+          "2": 8,
+          "X": 12
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-10-16T12:26:14.116Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e0-07-newcastle-aston-villa",
@@ -58,8 +122,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100576",
+        "probs": {
+          "1": 44.15,
+          "2": 30.13,
+          "X": 25.72
+        },
+        "capturedAt": "2026-10-16T12:26:15.937Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-17",
+        "probs": {
+          "1": 42,
+          "2": 32,
+          "X": 26
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-10-16T12:26:14.116Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e0-07-bournemouth-sunderland",
