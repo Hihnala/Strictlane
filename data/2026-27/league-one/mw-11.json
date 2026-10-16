@@ -109,8 +109,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100576",
+        "probs": {
+          "1": 68.85,
+          "2": 10.7,
+          "X": 20.45
+        },
+        "capturedAt": "2026-10-16T12:26:15.937Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-17",
+        "probs": {
+          "1": 58,
+          "2": 19,
+          "X": 23
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-10-16T12:26:14.116Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-11-stockport-bromley",
