@@ -133,11 +133,11 @@ export async function renderHome(locale: Locale) {
   let seasonSection: React.ReactNode = null;
   if (!open && last) {
     const exp = fmtDec(expectedCovered(last), 2, locale);
-    const thu = nextWeekday(last.id, 4);
-    const sat = nextWeekday(thu, 6);
+    const fri = nextWeekday(last.id, 5);
+    const sat = nextWeekday(fri, 6);
     const lastKickoff = lastMatches.map((m) => m.kickoff).sort().at(-1)!;
     const settledAt = Date.parse(lastKickoff) + 2 * 36e5;
-    const fetchAt = zonedInstant(thu, 19, 0, "Europe/Helsinki").getTime();
+    const fetchAt = zonedInstant(fri, 19, 0, "Europe/Helsinki").getTime();
     const kickoffAt = zonedInstant(sat, 15, 0, "Europe/London").getTime();
 
     betweenHero = (
@@ -158,7 +158,7 @@ export async function renderHome(locale: Locale) {
               kickoffAt={kickoffAt}
               steps={[
                 { label: t.stepSettled, date: fmtDay(last.id, locale), at: settledAt },
-                { label: t.stepPublished, date: fmtDay(thu, locale), at: fetchAt },
+                { label: t.stepPublished, date: fmtDay(fri, locale), at: fetchAt },
                 { label: t.stepSealed, date: fmtDay(sat, locale), at: kickoffAt },
               ]}
               labels={{
