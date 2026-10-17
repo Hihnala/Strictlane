@@ -34,6 +34,8 @@ export interface Dictionary {
     leagueGroup: string;
     switchTo: string;
   };
+  /** League names for display; the ids and URL slugs stay English. */
+  leagues: Record<LeagueId, { label: string; short: string }>;
   common: {
     correct: string;
     meanRps: string;
@@ -198,6 +200,7 @@ export interface Dictionary {
     l: string;
     gd: string;
     pts: string;
+    form: string;
     /** Table zones (promotion, relegation, European places) and the key under the table. */
     zones: { ucl: string; uel: string; promotion: string; playoff: string; relegation: string };
     zoneKey: string;
@@ -222,11 +225,16 @@ const en: Dictionary = {
       "Strictlane is a personal ledger — football forecasts made before kickoff for the " +
       "Premier League, Championship, and League One, scored over time on their own terms. " +
       "Hits and misses both stay on the record.",
-    credit: "Built by Markku Hihnala · © 2026 Strictlane/Markku Hihnala. All Rights Reserved.",
+    credit: "© 2026 Strictlane/Markku Hihnala. All Rights Reserved.",
   },
   nav: {
     leagueGroup: "League",
     switchTo: "Suomeksi",
+  },
+  leagues: {
+    "premier-league": { label: "Premier League", short: "PL" },
+    championship: { label: "Championship", short: "Champ" },
+    "league-one": { label: "League One", short: "L1" },
   },
   common: {
     correct: "Correct",
@@ -449,6 +457,7 @@ const en: Dictionary = {
     l: "L",
     gd: "GD",
     pts: "Pts",
+    form: "Form",
     zones: {
       ucl: "UEFA Champions League",
       uel: "UEFA Europa League",
@@ -478,11 +487,16 @@ const fi: Dictionary = {
       "Strictlane on henkilökohtainen kirjanpito — jalkapallon ennusteita tehtynä ennen ottelua " +
       "Valioliigassa, Championshipissa ja League Onessa, arvioituna ajan mittaan omilla ehdoillaan. " +
       "Osumat ja huti molemmat jäävät kirjoihin.",
-    credit: "Tekijä Markku Hihnala · © 2026 Strictlane/Markku Hihnala. Kaikki oikeudet pidätetään.",
+    credit: "© 2026 Strictlane/Markku Hihnala. Kaikki oikeudet pidätetään.",
   },
   nav: {
     leagueGroup: "Sarja",
     switchTo: "In English",
+  },
+  leagues: {
+    "premier-league": { label: "Valioliiga", short: "VL" },
+    championship: { label: "Championship", short: "Champ" },
+    "league-one": { label: "League One", short: "L1" },
   },
   common: {
     correct: "Osumat",
@@ -706,6 +720,7 @@ const fi: Dictionary = {
     l: "H",
     gd: "MaalE",
     pts: "P",
+    form: "Muoto",
     zones: {
       ucl: "Mestarien liiga",
       uel: "Eurooppa-liiga",

@@ -317,7 +317,7 @@ export async function renderHome(locale: Locale) {
           {cards.map((c, i) => (
             <Reveal key={c.id} delay={i * 0.08}>
               <Link className="league-card" href={`${prefix}/${season.id}/${c.id}`}>
-                <span className="name">{c.label}</span>
+                <span className="name">{dict.leagues[c.id].label}</span>
                 <span className="meta">
                   {c.has ? (
                     <span className="data">{dict.home.mwProgress(c.mwNo ?? 0, c.played, c.total)}</span>

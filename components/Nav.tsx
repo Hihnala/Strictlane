@@ -26,11 +26,7 @@ import { getDictionary } from "@/lib/i18n";
  * every page into dynamic rendering (see I18N-PLAN.md §1). Search engines get
  * the correct signal from `alternates.languages` regardless.
  */
-const LEAGUES = [
-  { slug: "premier-league", label: "Premier League", short: "PL" },
-  { slug: "championship", label: "Championship", short: "Champ" },
-  { slug: "league-one", label: "League One", short: "L1" },
-];
+const LEAGUES = ["premier-league", "championship", "league-one"] as const;
 
 export function Nav() {
   const pathname = usePathname();
@@ -51,7 +47,8 @@ export function Nav() {
         <span className="glyph">S</span>Strictlane
       </Link>
       <nav className="league-switch" aria-label={dict.nav.leagueGroup}>
-        {LEAGUES.map((l) => {
+        {LEAGUES.map((slug) => {
+          const l = { slug, ...dict.leagues[slug] };
           const active = segments.includes(l.slug);
           const href = isFi ? `/fi/${l.slug}` : `/${l.slug}`;
           return (

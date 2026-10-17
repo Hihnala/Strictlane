@@ -43,6 +43,11 @@
   --zone-playoff:    #7b8cff;   /* promotion play-off — indigo blue */
   --zone-relegation: #ef5a6f;   /* relegation — red */
 
+  /* --- team form (standings only): win / draw / loss squares ---------- */
+  --form-w: #4fc98a;
+  --form-d: #f2c94c;
+  --form-l: #ef5a6f;
+
   /* --- brand --------------------------------------------------------- */
   --brand-deep: #9ec1ff;
   --focus:      #6ea8ff;

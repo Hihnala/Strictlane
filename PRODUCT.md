@@ -102,7 +102,7 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   `robots.txt`, and the OG image are done; the site is live at strictlane.com.
 - Coupon fixtures are pulled automatically from Veikkaus's public
   open-games API via a 3-stage pipeline, not written straight to `main`:
-  (1) `scripts/fetch-vakio.ts`, run on a single Thursday cron via GitHub
+  (1) `scripts/fetch-vakio.ts`, run on a single Friday cron via GitHub
   Actions, opens a PR with a draft at `data/rounds/drafts/{id}.json` plus a
   raw payload snapshot for provenance — no login or registered key, the
   header value is the literal string `ROBOT`. Thursday is past the Monday/

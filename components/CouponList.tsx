@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Match, Team, LeagueId } from "@/lib/schema";
-import { leagueMeta } from "@/lib/content";
 import { resultSign, verdict } from "@/lib/scoring";
 import type { Locale } from "@/lib/i18n";
 import { getDictionary, localePrefix } from "@/lib/i18n";
@@ -64,7 +63,7 @@ export function CouponList({
                 className="crow-lg"
                 href={`${prefix}/${season}/${league}/mw-${String(matchweek).padStart(2, "0")}`}
               >
-                {leagueMeta(league).short}
+                {dict.leagues[league].short}
               </Link>
               <span className={`crow-score${m.status === "played" ? "" : " pending"}`}>{scoreText(m)}</span>
               <span className={`crow-verdict ${v}${anyResult ? "" : " compact"}`}>

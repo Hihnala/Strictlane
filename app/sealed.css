@@ -393,8 +393,8 @@
 
 .standings { margin-top: 16px; padding: 8px 24px; overflow-x: auto; }
 .st-row {
-  display: grid; grid-template-columns: 36px minmax(0, 1fr) repeat(5, 48px) 56px; gap: 8px; align-items: center;
-  min-width: 520px; height: 42px; border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: grid; grid-template-columns: 36px minmax(0, 1fr) repeat(5, 48px) 56px 132px; gap: 8px; align-items: center;
+  min-width: 660px; height: 42px; border-bottom: 1px solid rgba(255,255,255,0.05);
   font-family: var(--font-data); font-size: 13px; color: var(--ink-muted);
 }
 .st-row:last-child { border-bottom: 0; }
@@ -403,6 +403,17 @@
 .st-row .pos { color: var(--ink-faintest); }
 .st-row .team { font-family: var(--font-body); font-size: 14.5px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .st-row .pts { font-weight: 600; color: var(--ink); }
+
+/* Form: five W/D/L squares, newest on the right. Letter inside, so colour is never the only cue. */
+.st-row .form { display: flex; justify-content: flex-end; gap: 4px; }
+.form-sq {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 4px;
+  font-size: 11px; font-weight: 700; color: #0b1220; background: var(--form-c);
+}
+.form-sq[data-result="W"] { --form-c: var(--form-w); }
+.form-sq[data-result="D"] { --form-c: var(--form-d); }
+.form-sq[data-result="L"] { --form-c: var(--form-l); }
 
 /* Zone marker: a thin rounded bar at the row's left edge (premierleague.com idiom). */
 .st-row { position: relative; }

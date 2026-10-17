@@ -8,6 +8,11 @@ import type { LeagueId, Match } from "./schema";
  * results already on the site.
  * ------------------------------------------------------------------------- */
 
+export type FormResult = "W" | "D" | "L";
+
+/** How many recent results the form column shows. */
+export const FORM_LENGTH = 5;
+
 export interface StandingRow {
   team: string; // team id
   played: number;
@@ -18,6 +23,8 @@ export interface StandingRow {
   ga: number;
   gd: number;
   points: number;
+  /** latest results, oldest first, at most FORM_LENGTH */
+  form: FormResult[];
 }
 
 /** Standard W/D/L table, sorted by points, then goal difference, then goals for. */
@@ -27,14 +34,20 @@ export function computeStandings(matches: Match[]): StandingRow[] {
   const row = (team: string) => {
     let r = rows.get(team);
     if (!r) {
-      r = { team, played: 0, won: 0, drawn: 0, lost: 0, gf: 0, ga: 0, gd: 0, points: 0 };
+      r = { team, played: 0, won: 0, drawn: 0, lost: 0, gf: 0, ga: 0, gd: 0, points: 0, form: [] };
       rows.set(team, r);
     }
     return r;
   };
 
-  for (const m of matches) {
-    if (m.status !== "played" || !m.score) continue;
+  // Chronological, so each team's form ends with its latest match. Array sort
+  // is stable, so same-kickoff matches keep their file order.
+  const played = matches
+    .filter((m) => m.status === "played" && m.score)
+    .sort((a, b) => Date.parse(a.kickoff) - Date.parse(b.kickoff));
+
+  for (const m of played) {
+    if (!m.score) continue;
     const home = row(m.home);
     const away = row(m.away);
     home.played++;
@@ -47,19 +60,28 @@ export function computeStandings(matches: Match[]): StandingRow[] {
       home.won++;
       home.points += 3;
       away.lost++;
+      home.form.push("W");
+      away.form.push("L");
     } else if (m.score.home < m.score.away) {
       away.won++;
       away.points += 3;
       home.lost++;
+      away.form.push("W");
+      home.form.push("L");
     } else {
       home.drawn++;
       away.drawn++;
       home.points++;
       away.points++;
+      home.form.push("D");
+      away.form.push("D");
     }
   }
 
-  for (const r of rows.values()) r.gd = r.gf - r.ga;
+  for (const r of rows.values()) {
+    r.gd = r.gf - r.ga;
+    r.form = r.form.slice(-FORM_LENGTH);
+  }
 
   return [...rows.values()].sort(
     (a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf

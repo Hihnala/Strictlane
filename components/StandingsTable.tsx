@@ -6,7 +6,8 @@ import { getDictionary } from "@/lib/i18n";
 /**
  * League table as grid rows; scrolls horizontally on phones. Promotion,
  * relegation and European places get a thin coloured bar at the row's left
- * edge, a screen-reader label, and a key under the table.
+ * edge, a screen-reader label, and a key under the table. The last column is the
+ * team's latest five results (oldest to newest) as W/D/L squares.
  */
 export function StandingsTable({
   rows,
@@ -20,6 +21,7 @@ export function StandingsTable({
   locale?: Locale;
 }) {
   const dict = getDictionary(locale).standings;
+  const letters = { W: dict.w, D: dict.d, L: dict.l };
   return (
     <div className="card standings" role="table">
       <div className="st-row gt-head" role="row">
@@ -31,6 +33,7 @@ export function StandingsTable({
         <span role="columnheader">{dict.l}</span>
         <span role="columnheader">{dict.gd}</span>
         <span role="columnheader">{dict.pts}</span>
+        <span role="columnheader">{dict.form}</span>
       </div>
       {rows.map((r, i) => {
         const zone = zoneFor(league, i + 1);
@@ -47,6 +50,11 @@ export function StandingsTable({
             <span role="cell">{r.lost}</span>
             <span role="cell">{r.gd > 0 ? `+${r.gd}` : r.gd}</span>
             <span className="pts" role="cell">{r.points}</span>
+            <span className="form" role="cell" aria-label={r.form.map((f) => letters[f]).join(" ")}>
+              {r.form.map((f, j) => (
+                <span key={j} className="form-sq" data-result={f} aria-hidden="true">{letters[f]}</span>
+              ))}
+            </span>
           </div>
         );
       })}

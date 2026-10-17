@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
   LEAGUES, getSeasons, getTeams, getMatchweek, listMatchweeks,
-  getCommentary, leagueMeta, latestPlayedMatchweek,
+  getCommentary, latestPlayedMatchweek,
 } from "@/lib/content";
 import type { LeagueId } from "@/lib/schema";
 import { summarise, drawWatch } from "@/lib/scoring";
@@ -45,7 +45,7 @@ export async function renderMatchweekMetadata(
 ): Promise<Metadata> {
   const n = parseMw(mw);
   if (!n || !LEAGUES.some((l) => l.id === league)) return {};
-  const title = `${leagueMeta(league as LeagueId).label} MW${n} · ${season}`;
+  const title = `${getDictionary(locale).leagues[league as LeagueId].label} MW${n} · ${season}`;
   return baseMetadata(locale, `/${season}/${league}/${mw}`, title);
 }
 
@@ -79,7 +79,6 @@ export async function renderMatchweekPage(locale: Locale, season: string, league
   const standings = computeStandings(throughMatches);
 
   const played = data.matches.filter((m) => m.status === "played").length;
-  const meta = leagueMeta(lid);
 
   const stats = [
     { k: dict.common.correct, v: `${s.hits}/${s.scored}`, s: "" },
@@ -95,7 +94,7 @@ export async function renderMatchweekPage(locale: Locale, season: string, league
     <>
       <Ambient variant="left" />
       <section className="wide page-head mw-head">
-        <Rise i={0} className="label-mono">{meta.label} · {season}</Rise>
+        <Rise i={0} className="label-mono">{dict.leagues[lid].label} · {season}</Rise>
         <div className="head-row">
           <Rise i={1} as="h1" className="h1-sealed">{dict.common.matchweekHeading(n)}</Rise>
           <Rise i={2} style={{ maxWidth: "100%" }}>
