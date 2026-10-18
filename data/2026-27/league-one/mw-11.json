@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 11,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-16)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-18)",
   "importedAt": "2026-10-11T11:10:38.251Z",
   "matches": [
     {
@@ -29,8 +29,15 @@
       "home": "mk-dons",
       "away": "luton",
       "kickoff": "2026-10-17T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -40,8 +47,15 @@
       "home": "peterborough",
       "away": "burton",
       "kickoff": "2026-10-17T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -51,8 +65,15 @@
       "home": "barnsley",
       "away": "cambridge",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -62,8 +83,15 @@
       "home": "bradford",
       "away": "stevenage",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -73,8 +101,15 @@
       "home": "leicester",
       "away": "doncaster",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -84,8 +119,15 @@
       "home": "leyton-orient",
       "away": "blackpool",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -95,8 +137,15 @@
       "home": "plymouth",
       "away": "huddersfield",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -106,8 +155,15 @@
       "home": "sheffield-wednesday",
       "away": "afc-wimbledon",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 3,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -139,8 +195,15 @@
       "home": "stockport",
       "away": "bromley",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -150,8 +213,15 @@
       "home": "wigan",
       "away": "reading",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -161,8 +231,15 @@
       "home": "wycombe",
       "away": "notts-county",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
