@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 7,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-18)",
   "importedAt": "2026-10-11T11:10:38.251Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "everton",
       "away": "chelsea",
       "kickoff": "2026-10-17T11:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -22,8 +29,15 @@
       "home": "brentford",
       "away": "liverpool",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -54,8 +68,15 @@
       "home": "fulham",
       "away": "hull",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -86,8 +107,15 @@
       "home": "man-city",
       "away": "ipswich",
       "kickoff": "2026-10-17T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -119,8 +147,15 @@
       "home": "newcastle",
       "away": "aston-villa",
       "kickoff": "2026-10-17T16:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
