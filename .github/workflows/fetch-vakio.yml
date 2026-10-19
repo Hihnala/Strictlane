@@ -1,12 +1,14 @@
 name: Fetch Vakio coupon
 
 # Stage 1 of three. This job only captures the coupon — it never publishes a
-# round, because a round needs forecasts and those are written by hand before
-# kickoff. It opens a PR; you add the forecasts and merge.
+# round, because a round needs forecasts and those are written before kickoff.
+# It opens a PR with the draft; merge it straight away. validate.ts ignores
+# data/rounds/drafts/, and once the draft is on main the home page shows it as
+# the upcoming coupon until Friday's forecasts are promoted. Fetch odds then
+# branches off main for the forecasts.
 #
-# It must NOT push to main. A fetched draft has no matchIds and no forecasts, so
-# it cannot satisfy the Round schema, and pushing it to main would fail
-# `prebuild` on Vercel and take the site's build down.
+# It still opens a PR rather than pushing to main, so an unmapped or odd
+# coupon gets a look before it reaches the site.
 #
 # Schedule history: originally polled 3x/day, Tue–Fri (cron "0 6,12,18 * * 2,3,4,5"),
 # to catch the coupon's publication time without guessing it. Veikkaus reliably
@@ -115,15 +117,18 @@ jobs:
           git push -u origin "$BRANCH"
 
           gh pr create --title "Coupon draft $DATE" --body-file - <<'BODY'
-          Fetched from the Veikkaus open-games endpoint. **Not publishable yet.**
+          Fetched from the Veikkaus open-games endpoint. **Merge this now** — the
+          draft has no forecasts, the validator ignores `data/rounds/drafts/`, and
+          once it is on main the home page shows it as the upcoming coupon.
 
-          To finish:
+          Then, before kickoff:
 
-          1. Add any missing fixtures to the relevant `data/{season}/{league}/mw-NN.json`
-          2. Write a forecast on each coupon match — `probs`, `marks`, and a
-             `capturedAt` **before kickoff**
-          3. `npx tsx scripts/promote-round.ts <round-id>` to build the round file
-          4. `npm run validate`, then merge
+          1. Run **Fetch odds** for this round. It branches off main, pre-fills the
+             forecasts and opens the PR you review.
+          2. Or by hand: add any missing fixtures to `data/{season}/{league}/mw-NN.json`,
+             write a forecast on each coupon match with `capturedAt` **before kickoff**,
+             then `npx tsx scripts/promote-round.ts <round-id>`
+          3. `npm run validate`, then merge
 
           The raw API payload is committed alongside the draft. The open-games
           endpoint drops closed coupons permanently, so that snapshot is the only

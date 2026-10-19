@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {
   LEAGUES, currentSeason, getTeams, latestSettledRound, openRound, getRoundSummaries,
-  latestPlayedMatchweek, getMatchweek, listMatchweeks, type RoundSummary,
+  latestPlayedMatchweek, getMatchweek, listMatchweeks, upcomingDraft, type RoundSummary,
 } from "@/lib/content";
 import type { Team } from "@/lib/schema";
 import { summarise, coverage, couponOutlook, resultSign, verdict } from "@/lib/scoring";
@@ -27,9 +27,11 @@ import { CountUp } from "@/components/motion/CountUp";
  *  (default, metadata, generateStaticParams, …), so the actual render logic lives here instead
  *  and the two page.tsx files stay thin wrappers that just pick a locale.
  *
- *  Two hero states, derived at build time (the site rebuilds on push):
- *    open     a coupon is live (no results yet) → sealed coupon hero + coupon list + last round
- *    between  no live coupon → settled hero with countdown + the season's last six coupons */
+ *  Three hero states, derived at build time (the site rebuilds on push), in priority order:
+ *    open      a promoted round is live (no results yet) → sealed coupon hero + coupon list + last round
+ *    upcoming  next weekend's draft is on main, no forecasts yet → unmarked coupon hero with
+ *              countdown + last round + the season's last six coupons
+ *    between   neither → settled hero with countdown + the season's last six coupons */
 
 function slipRows(r: RoundSummary, teams: Map<string, Team>): SlipRow[] {
   return r.located.map(({ match: m }, i) => ({
@@ -62,6 +64,7 @@ export async function renderHome(locale: Locale) {
   const season = await currentSeason();
   const teams = await getTeams();
   const open = await openRound();
+  const upcoming = open ? null : await upcomingDraft();
   const last = await latestSettledRound();
 
   const cards = await Promise.all(
@@ -128,10 +131,67 @@ export async function renderHome(locale: Locale) {
     );
   }
 
+  /* -------------------------------------------------------- upcoming --- */
+  let upcomingHero: React.ReactNode = null;
+  if (upcoming) {
+    const { draft } = upcoming;
+    const close = draft.veikkaus?.closeTime ?? null;
+    const firstKickoff = upcoming.fixtures.map((f) => f.match?.kickoff).filter((x): x is string => !!x).sort()[0];
+    const kickoffAt = Date.parse(firstKickoff ?? close ?? zonedInstant(upcoming.id, 15, 0, "Europe/London").toISOString());
+    const publishedAt = draft.veikkaus?.capturedAt ? Date.parse(draft.veikkaus.capturedAt) : Date.now();
+    const fri = addDays(upcoming.id, -1);
+    const forecastAt = zonedInstant(fri, 19, 0, "Europe/Helsinki").getTime();
+
+    upcomingHero = (
+      <section className="hero">
+        <div>
+          <Rise i={0}>
+            <span className="eyebrow-pill"><span className="dot ring" />{t.eyebrowUpcoming(fmtDay(upcoming.id, locale))}</span>
+          </Rise>
+          <Rise i={1} as="h1">{t.h1Upcoming}</Rise>
+          <Rise i={2} as="p" className="hero-sub">{t.subUpcoming}</Rise>
+          <Rise i={3}>
+            <HeroTimeline
+              buildNow={Date.now()}
+              settledAt={publishedAt}
+              fetchAt={forecastAt}
+              kickoffAt={kickoffAt}
+              steps={[
+                { label: t.stepOut, date: fmtDay(new Date(publishedAt), locale), at: publishedAt },
+                { label: t.stepForecasts, date: fmtDay(fri, locale), at: forecastAt },
+                { label: t.stepSealed, date: fmtDay(new Date(kickoffAt), locale), at: kickoffAt },
+              ]}
+              labels={{
+                toKickoff: t.toKickoff(fmtTime(new Date(kickoffAt), locale)),
+                now: t.now, unitD: t.unitD, unitH: t.unitH, unitM: t.unitM, passed: t.passed,
+              }}
+            />
+          </Rise>
+        </div>
+        <Rise i={2} style={{ width: "100%" }}>
+          <CouponCard
+            locale={locale}
+            title={<>{draft.name} <span className="data">{upcoming.id}</span></>}
+            replayLabel={t.replay}
+            rows={upcoming.fixtures.map((f, i) => ({
+              n: i + 1,
+              home: teams.get(f.home)?.name ?? f.home,
+              away: teams.get(f.away)?.name ?? f.away,
+            }))}
+            seal={{
+              variant: "upcoming",
+              label: t.upcomingLine,
+              value: close ? t.upcomingClose(fmtDay(close, locale), fmtTime(close, locale)) : "",
+            }}
+          />
+        </Rise>
+      </section>
+    );
+  }
+
   /* --------------------------------------------------------- between --- */
   let betweenHero: React.ReactNode = null;
-  let seasonSection: React.ReactNode = null;
-  if (!open && last) {
+  if (!open && !upcoming && last) {
     const exp = fmtDec(expectedCovered(last), 2, locale);
     const fri = nextWeekday(last.id, 5);
     const sat = nextWeekday(fri, 6);
@@ -187,7 +247,11 @@ export async function renderHome(locale: Locale) {
         </Rise>
       </section>
     );
+  }
 
+  /* ---------------------------------------------- season (upcoming, between) --- */
+  let seasonSection: React.ReactNode = null;
+  if (!open && last) {
     // This season: settled rounds whose matches belong to the current season, oldest first.
     const seasonRounds = (await getRoundSummaries())
       .filter((r) => r.status === "settled" && r.located[0]?.season === season.id)
@@ -242,6 +306,7 @@ export async function renderHome(locale: Locale) {
     <>
       <Ambient variant="home" />
       {openHero}
+      {upcomingHero}
       {betweenHero}
 
       {open && (
@@ -267,7 +332,7 @@ export async function renderHome(locale: Locale) {
         </section>
       )}
 
-      {open && last && (
+      {(open || upcoming) && last && (
         <section className="wide home-last">
           <Reveal className="label-mono">{dict.home.lastRound} · {last.id}</Reveal>
           <Reveal as="h2" className="big">{last.round.name}</Reveal>
@@ -305,7 +370,7 @@ export async function renderHome(locale: Locale) {
 
       {seasonSection}
 
-      {!open && !last && (
+      {!open && !upcoming && !last && (
         <section className="wide" style={{ paddingTop: 64 }}>
           <div className="empty">{dict.home.noRoundsYet}</div>
         </section>

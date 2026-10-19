@@ -23,7 +23,7 @@ type Props = {
   meta?: React.ReactNode;
   replayLabel: string;
   rows: SlipRow[];
-  seal: { variant: "open" | "settled"; label: string; value: string };
+  seal: { variant: "upcoming" | "open" | "settled"; label: string; value: string };
   locale: Locale;
 };
 

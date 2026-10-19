@@ -126,3 +126,33 @@ export const Round = z.object({
   matchIds: z.array(z.string()).min(1),
 });
 export type Round = z.infer<typeof Round>;
+
+/**
+ * A coupon fetched by scripts/fetch-vakio.ts but not yet promoted into a
+ * Round — fixtures only, no forecasts. Lives in data/rounds/drafts/ and is
+ * merged to main as soon as Veikkaus publishes it, so the home page can show
+ * the upcoming coupon all week. Only the fields the site reads are modelled.
+ */
+export const Draft = z.object({
+  id: z.string().regex(/^\d{4}-\d{2}-\d{2}$/), // the coupon's playing date
+  name: z.string().min(1),
+  veikkaus: z
+    .object({
+      drawId: z.string().optional(),
+      closeTime: z.string().datetime().nullish(),
+      capturedAt: z.string().datetime().optional(),
+    })
+    .optional(),
+  /** in coupon order */
+  fixtures: z
+    .array(
+      z.object({
+        homeRaw: z.string(),
+        awayRaw: z.string(),
+        home: z.string().nullable(),
+        away: z.string().nullable(),
+      })
+    )
+    .min(1),
+});
+export type Draft = z.infer<typeof Draft>;

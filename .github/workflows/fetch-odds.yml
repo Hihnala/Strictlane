@@ -5,8 +5,11 @@ name: Fetch odds
 # Saturday morning — football-data.co.uk uploads the weekend's odds on Friday
 # afternoon, and the coupon closes just before the first kickoff.
 #
-#   1. Finds the open coupon PR whose draft is this round. If there is none, it
-#      fetches the coupon itself and opens that PR, as fetch-vakio.yml would.
+#   1. Finds this round's draft: on an open coupon PR, or already merged to main
+#      (the usual case — the draft PR is merged midweek so the home page can
+#      show the upcoming coupon), in which case it branches off main. If there
+#      is neither, it fetches the coupon itself and opens that PR, as
+#      fetch-vakio.yml would.
 #   2. scripts/fetch-odds.ts writes a forecast and pool popularity onto every
 #      coupon match that has no forecast yet.
 #   3. scripts/promote-round.ts builds data/rounds/{id}.json once all 13 have one.
@@ -38,8 +41,8 @@ jobs:
   odds:
     runs-on: ubuntu-latest
     steps:
-      # A draft only ever lives on its PR branch, never on main, so look for it
-      # there before fetching the coupon again.
+      # The draft is either still on its PR branch or already merged to main.
+      # Look in both before fetching the coupon again.
       - name: Find this round's coupon PR
         id: target
         env:
@@ -65,6 +68,9 @@ jobs:
           if gh api "repos/$GITHUB_REPOSITORY/contents/data/rounds/$ROUND.json" --silent 2>/dev/null; then
             echo "::notice::Round $ROUND is already published on main — nothing to do."
             echo "skip=true" >> "$GITHUB_OUTPUT"
+          elif gh api "repos/$GITHUB_REPOSITORY/contents/data/rounds/drafts/$ROUND.json" --silent 2>/dev/null; then
+            echo "Round $ROUND: draft already on main — branching off main for the odds."
+            echo "onmain=true" >> "$GITHUB_OUTPUT"
           else
             echo "Round $ROUND: no open coupon PR — fetching the coupon first."
           fi
@@ -86,7 +92,7 @@ jobs:
       # The same capture fetch-vakio.yml does, for a week nobody ran it.
       - name: Fetch the coupon and open its PR
         id: coupon
-        if: steps.target.outputs.skip != 'true' && steps.target.outputs.branch == ''
+        if: steps.target.outputs.skip != 'true' && steps.target.outputs.branch == '' && steps.target.outputs.onmain != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           ROUND: ${{ steps.target.outputs.round }}
@@ -133,6 +139,21 @@ jobs:
           copy that will ever exist.
           BODY
 
+      # The draft PR was merged midweek, so there is no PR to commit to yet. The
+      # PR itself is opened after the odds commit — GitHub refuses a PR with no
+      # commits ahead of main.
+      - name: Branch off main for a merged draft
+        id: mainbranch
+        if: steps.target.outputs.skip != 'true' && steps.target.outputs.onmain == 'true'
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          BRANCH="coupon/$DATE"
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null; then
+            BRANCH="$BRANCH-$(date -u +%H%M)"
+          fi
+          git checkout -b "$BRANCH"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+
       # Exit code 1 = nothing written: the coupon has closed, or football-data
       # hasn't uploaded the weekend's odds yet. The reason is in the log.
       - name: Pre-fill forecasts from odds
@@ -161,11 +182,17 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           ROUND: ${{ steps.target.outputs.round }}
-          BRANCH: ${{ steps.coupon.outputs.branch || steps.target.outputs.branch }}
+          BRANCH: ${{ steps.coupon.outputs.branch || steps.mainbranch.outputs.branch || steps.target.outputs.branch }}
+          ONMAIN: ${{ steps.target.outputs.onmain }}
         run: |
           cat odds-summary.md >> "$GITHUB_STEP_SUMMARY"
           if [ -z "$(git status --porcelain data)" ]; then
             echo "Nothing new to commit."
+            if [ "$ONMAIN" = "true" ]; then
+              # No commit means no PR to comment on; the summary above says why.
+              echo "::warning::Nothing written for $ROUND, so no PR was opened."
+              exit 0
+            fi
           else
             git config user.name  "strictlane-bot"
             git config user.email "bot@users.noreply.github.com"
@@ -174,5 +201,21 @@ jobs:
             # evidence that the forecasts predate kickoff.
             git commit -m "Odds pre-fill $ROUND"
             git push origin "HEAD:refs/heads/$BRANCH"
+            if [ "$ONMAIN" = "true" ]; then
+              gh pr create --head "$BRANCH" --title "Odds pre-fill $ROUND" --body-file - <<'BODY'
+          Forecasts pre-filled from bookmaker odds for a coupon whose draft was
+          already merged to main — the review table is in the comment below.
+          **Not publishable until you've reviewed it.**
+
+          To finish:
+
+          1. Change any `probs` or `marks` you disagree with in the matchweek files,
+             keeping 5 singles and 8 doubles. If you change a match, set its
+             `capturedAt` to the time of your edit — before kickoff.
+          2. Fill in anything the comment lists under "Needs a human", then
+             `npx tsx scripts/promote-round.ts <round-id>`
+          3. `npm run validate`, then merge
+          BODY
+            fi
           fi
           gh pr comment "$BRANCH" --body-file odds-summary.md

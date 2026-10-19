@@ -101,6 +101,13 @@ export interface Dictionary {
     seasonTotals: string;
     seasonNote: string;
     roundsSettled: string;
+    eyebrowUpcoming: (date: string) => string;
+    h1Upcoming: string;
+    subUpcoming: string;
+    upcomingLine: string;
+    upcomingClose: (day: string, time: string) => string;
+    stepOut: string;
+    stepForecasts: string;
   };
   matchweekPage: {
     scoring: string;
@@ -305,6 +312,14 @@ const en: Dictionary = {
     seasonTotals: "Season to date",
     seasonNote: "Filled: correct. Outline: missed. Number under each date: mean RPS, lower is better.",
     roundsSettled: "Rounds settled",
+    eyebrowUpcoming: (date) => `Next coupon · ${date}`,
+    h1Upcoming: "The coupon is out.",
+    subUpcoming:
+      "Thirteen matches, no marks yet. Forecasts are added Friday and sealed before Saturday's kickoff.",
+    upcomingLine: "No marks yet · forecasts Friday",
+    upcomingClose: (day, time) => `Closes ${day} ${time} UK`,
+    stepOut: "Coupon published",
+    stepForecasts: "Forecasts",
   },
   matchweekPage: {
     scoring: "Scoring",
@@ -567,6 +582,14 @@ const fi: Dictionary = {
     seasonTotals: "Kausi tähän mennessä",
     seasonNote: "Täytetty: osuma. Ääriviiva: huti. Päivämäärän alla: RPS keskiarvo, pienempi on parempi.",
     roundsSettled: "Ratkenneet kierrokset",
+    eyebrowUpcoming: (date) => `Seuraava kuponki · ${date}`,
+    h1Upcoming: "Kuponki on julkaistu.",
+    subUpcoming:
+      "Kolmetoista ottelua, ei vielä merkintöjä. Ennusteet lisätään perjantaina ja lukitaan ennen lauantain avausta.",
+    upcomingLine: "Ei vielä merkintöjä · ennusteet perjantaina",
+    upcomingClose: (day, time) => `Sulkeutuu ${day} klo ${time}`,
+    stepOut: "Kuponki julkaistu",
+    stepForecasts: "Ennusteet",
   },
   matchweekPage: {
     scoring: "Arviointi",

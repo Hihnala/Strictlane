@@ -4,6 +4,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import {
+  Draft,
   Matchweek,
   Round,
   TeamsFile,
@@ -264,6 +265,64 @@ export async function latestSettledRound(): Promise<RoundSummary | null> {
 export async function openRound(): Promise<RoundSummary | null> {
   const all = await getRoundSummaries();
   return all.find((r) => r.status === "open" || r.status === "partial") ?? null;
+}
+
+/* ------------------------------------------------------------ upcoming --- */
+
+/**
+ * A fetched coupon that has no promoted round yet: the fixtures are public,
+ * the forecasts are not written. Each fixture is joined to its match record
+ * when one exists (for kickoff times); `match` is null otherwise and the
+ * page falls back to the draft's own team names.
+ */
+export interface UpcomingCoupon {
+  id: string;
+  draft: Draft;
+  fixtures: Array<{ home: string; away: string; match: Match | null }>;
+}
+
+/**
+ * The newest draft in data/rounds/drafts/ that is newer than every promoted
+ * round and still open for betting at build time. Null when the week's
+ * coupon hasn't been fetched and merged yet, once it is promoted (the open
+ * state takes over), or after its closeTime passes unpromoted.
+ */
+export async function upcomingDraft(): Promise<UpcomingCoupon | null> {
+  return memo("upcoming", async () => {
+    const dir = path.join(DATA, "rounds", "drafts");
+    if (!existsSync(dir)) return null;
+    const rounds = await listRounds(); // newest first
+    const ids = (await readdir(dir))
+      .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+      .map((f) => f.replace(/\.json$/, ""))
+      .filter((id) => !rounds.includes(id) && (!rounds[0] || id > rounds[0]))
+      .sort()
+      .reverse();
+
+    for (const id of ids) {
+      const parsed = Draft.safeParse(JSON.parse(await readFile(path.join(dir, `${id}.json`), "utf8")));
+      if (!parsed.success) continue;
+      const draft = parsed.data;
+      const close = draft.veikkaus?.closeTime;
+      if (close && Date.parse(close) <= Date.now()) continue;
+
+      // Same pairing rule as promote-round.ts, narrowed to kickoffs within a few
+      // days of the coupon so last season's fixture can never match.
+      const coupon = Date.parse(`${id}T12:00:00Z`);
+      const all = [...(await matchIndex()).values()];
+      const fixtures = draft.fixtures.map((f) => {
+        const hit = all.find(
+          (l) =>
+            l.match.home === f.home &&
+            l.match.away === f.away &&
+            Math.abs(Date.parse(l.match.kickoff) - coupon) < 4 * 864e5
+        );
+        return { home: f.home ?? f.homeRaw, away: f.away ?? f.awayRaw, match: hit?.match ?? null };
+      });
+      return { id, draft, fixtures };
+    }
+    return null;
+  });
 }
 
 /** Neighbours for prev/next links on a round page. */

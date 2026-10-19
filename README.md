@@ -95,14 +95,16 @@ drift out of sync with the data that produced it.
 ## Weekly workflow
 
 1. Run **Fetch Vakio coupon** (`.github/workflows/fetch-vakio.yml`, manual)
-   once the coupon is out. `scripts/fetch-vakio.ts` opens a PR with a draft
-   coupon at `data/rounds/drafts/{id}.json` plus a raw API payload for
-   provenance. It never pushes to `main` — a draft has no `matchIds` and no
-   forecasts, so it can't satisfy the Round schema.
+   once the coupon is out (Veikkaus publishes it Monday or Tuesday).
+   `scripts/fetch-vakio.ts` opens a PR with a draft coupon at
+   `data/rounds/drafts/{id}.json` plus a raw API payload for provenance.
+   Merge it straight away: the validator ignores `drafts/`, and with the draft
+   on `main` the home page shows it as the upcoming coupon (fixtures, no marks)
+   until the round is promoted.
 2. On Saturday morning, run **Fetch odds** (`.github/workflows/fetch-odds.yml`,
-   manual; it fetches the coupon itself if step 1 was skipped).
-   `scripts/fetch-odds.ts` pre-fills a forecast for each coupon match on that
-   PR branch: `probs` from football-data.co.uk's Friday odds (Betfair
+   manual; it branches off `main` when the draft is merged, and fetches the
+   coupon itself if step 1 was skipped). `scripts/fetch-odds.ts` pre-fills a
+   forecast for each coupon match on that PR branch: `probs` from football-data.co.uk's Friday odds (Betfair
    Exchange, Bet365, Paddy Power, Sky Bet and bwin, each margin-stripped by the
    power method, then averaged), `marks` by the 8+0 rule steered by Veikkaus
    pool popularity, and that popularity as `pool`. It then runs

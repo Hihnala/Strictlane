@@ -88,6 +88,9 @@
 .seal.open .seal-k { color: var(--link); }
 .seal.settled { background: rgba(255,255,255,0.05); }
 .seal.settled .seal-k { color: var(--ink); }
+/* Fixtures out, no marks yet — deliberately the quietest of the three. */
+.seal.upcoming { border-top-style: dashed; }
+.seal.upcoming .seal-k { color: var(--ink-muted); }
 
 @media (max-width: 520px) {
   .slip { padding: 20px; border-radius: var(--r-card); }
