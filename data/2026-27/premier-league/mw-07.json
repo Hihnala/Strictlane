@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 7,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-19)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-21)",
   "importedAt": "2026-10-11T11:10:38.251Z",
   "matches": [
     {
@@ -259,8 +259,15 @@
       "home": "tottenham",
       "away": "coventry",
       "kickoff": "2026-10-19T19:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
