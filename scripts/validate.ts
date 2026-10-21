@@ -46,7 +46,7 @@ const err = (where: string, msg: string) => issues.push({ level: "error", where,
 const warn = (where: string, msg: string) => issues.push({ level: "warn", where, msg });
 
 interface SeasonsFile {
-  seasons: Array<{ id: string; label: string; status: "current" | "archive" }>;
+  seasons: Array<{ id: string; label: string; status: "current" | "closed" }>;
 }
 
 async function readJson<T>(file: string): Promise<T> {
@@ -80,11 +80,19 @@ async function main() {
   /* --------------------------------------------------------- seasons --- */
   const seasonsFile = path.join(DATA, "seasons.json");
   if (!existsSync(seasonsFile)) {
-    err("data/seasons.json", "missing — the validator needs it to know which seasons are archive");
+    err("data/seasons.json", "missing — the validator needs it to know which season is current and which are closed");
     return report(warnOnly);
   }
   const seasons = await readJson<SeasonsFile>(seasonsFile);
-  const archiveSeasons = new Set(seasons.seasons.filter((s) => s.status === "archive").map((s) => s.id));
+  // "archive" was retired with the import feature: it meant imported history
+  // that must carry no forecasts. A finished season of the site's own is
+  // "closed" — it keeps its forecasts and must be fully settled.
+  for (const s of seasons.seasons) {
+    if (s.status !== "current" && s.status !== "closed") {
+      err("data/seasons.json", `season "${s.id}" has status "${s.status}" — must be "current" or "closed"`);
+    }
+  }
+  const closedSeasons = new Set(seasons.seasons.filter((s) => s.status === "closed").map((s) => s.id));
   const knownSeasons = new Set(seasons.seasons.map((s) => s.id));
   if (seasons.seasons.filter((s) => s.status === "current").length !== 1) {
     err("data/seasons.json", "exactly one season must have status \"current\"");
@@ -173,9 +181,9 @@ async function main() {
             }
           }
 
-          // -- archive seasons carry no forecasts
-          if (archiveSeasons.has(season) && m.forecast) {
-            err(at, `archive season has a forecast — hindsight predictions corrupt calibration`);
+          // -- a closed season is a settled record: nothing left pending
+          if (closedSeasons.has(season) && m.status === "pending") {
+            err(at, `closed season has a pending match — settle it (score or "postponed") before closing the season`);
           }
 
           // -- results

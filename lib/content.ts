@@ -54,7 +54,7 @@ export function leagueMeta(id: LeagueId) {
 export interface Season {
   id: string;
   label: string;
-  status: "current" | "archive";
+  status: "current" | "closed";
 }
 
 export async function getSeasons(): Promise<Season[]> {

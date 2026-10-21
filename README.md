@@ -81,7 +81,7 @@ JSON and Markdown are joined **by path**, never by an id inside the prose.
 | Rule | Why |
 | --- | --- |
 | `forecast.capturedAt` must precede `kickoff` | Backfilling a prediction would make every number on the site a lie — a build failure, not a convention. |
-| Archive seasons must carry `forecast: null` | Hindsight predictions would corrupt calibration output. |
+| A `closed` season has no `pending` matches | A finished season is a settled record; close it only once every match is played or postponed. |
 | Match ids globally unique | Rounds resolve matches by id across leagues. |
 | A team appears at most once per matchweek | Catches import errors and duplicate fixtures. |
 | A round's system arithmetic must match its marks | `8+0` means 8 doubles → 2⁸ = 256 rows; a mismatch means one of the two is wrong. |
