@@ -1,0 +1,30 @@
+{
+  "runs": [
+    {
+      "fetchedAt": "2026-10-22T07:28:12.985Z",
+      "sources": [
+        "https://ballprediction.com/epl/results",
+        "https://ballprediction.com/epl/fixtures",
+        "https://ballprediction.com/efl/results",
+        "https://ballprediction.com/efl/fixtures",
+        "https://ballprediction.com/elo/results",
+        "https://ballprediction.com/elo/fixtures"
+      ],
+      "changes": [
+        {
+          "kind": "result",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-12.json",
+          "id": "2026-27-e2-12-reading-leyton-orient",
+          "line": "MW12 Reading 1–0 Leyton Orient (HT 0–0)"
+        }
+      ],
+      "halfTimesAdded": {
+        "premier-league": 0,
+        "championship": 0,
+        "league-one": 0
+      },
+      "needsReview": []
+    }
+  ]
+}
