@@ -60,8 +60,7 @@ Two axes, deliberately not nested, that cross-link: the **record** runs league
 → matchweek → match; the **forecasting log** runs round → coupon → review,
 where a "round" is a Finnish Vakio-style coupon of 13 matches picked by the
 pools operator, cutting across all three leagues. Weekly workflow: add
-`data/{season}/{league}/mw-NN.json` (results) and optionally
-`content/{season}/{league}/mw-NN.md` (commentary), then `git push` — the
+`data/{season}/{league}/mw-NN.json` (results), then `git push` — the
 matchweek rail, season grid, and calibration page all update automatically.
 The top nav is five fixed items for the site's life; growth lives in the
 matchweek rail and season grid, never in nav edits. Season rollover requires
@@ -152,8 +151,8 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   (replaced Rasti in October 2026; documented in `docs/DESIGN.md` — visual
   details belong there, not here).
 - Two voices, walled apart: interface copy (nav, labels, stat cells, tags,
-  empty states, method page) stays flat and neutral. Commentary in
-  `content/**/*.md` is opinionated, sharp, and funny where a match earns it.
+  empty states, method page) stays flat and neutral. Round reviews in
+  `content/rounds/*.md` are opinionated, sharp, and funny where a match earns it.
   Full guide: [docs/VOICE.md](docs/VOICE.md).
 - Declared bias: Arsenal (favourite team), Ipswich Town (soft spot) — stated
   openly rather than hidden. Both are held to the same standard as any other

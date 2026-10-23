@@ -2,8 +2,8 @@ name: Fetch results
 
 # Syncs results, half-time scores, kickoff times and fixtures from
 # ballprediction.com into data/{season}/{league}/mw-NN.json, then opens a PR.
-# Manual only, like fetch-vakio.yml. It never pushes to main: review the PR,
-# write commentary on its branch if you like, and merge.
+# Manual only, like fetch-vakio.yml. It never pushes to main: review the PR
+# and merge.
 
 on:
   workflow_dispatch:

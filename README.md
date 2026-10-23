@@ -58,7 +58,7 @@ components/                           presentational, no data fetching
 lib/                                  schema.ts, scoring.ts, content.ts
 scripts/                              validate.ts, fetch-vakio.ts, fetch-odds.ts, fetch-results.ts, promote-round.ts
 data/                                 source of truth (JSON)
-content/                              commentary (Markdown)
+content/                              round reviews (Markdown)
 docs/                                 TECH-SHEET.md, DESIGN.md, VOICE.md, archive/ (old Rasti style guide)
 .github/workflows/fetch-vakio.yml     weekly Vakio coupon fetch
 .github/workflows/fetch-odds.yml      Saturday odds pre-fill of the coupon's forecasts
@@ -70,11 +70,10 @@ data/teams.json                       canonical team ids + external-source alias
 data/{season}/{league}/mw-NN.json     matches — the source of truth
 data/rounds/{id}.json                 coupon: system + ordered match ids
 data/results/{date}.json              log of each results sync: what changed, from which page, when
-content/{season}/{league}/mw-NN.md    commentary, joined by path convention
 content/rounds/{id}.md                round review
 ```
 
-JSON and Markdown are joined **by path**, never by an id inside the prose.
+Round JSON and its review are joined **by path**, never by an id inside the prose.
 
 ## Data rules the validator enforces
 
@@ -135,7 +134,7 @@ After the weekend (and after midweek rounds), sync results and fixtures:
    `npm run validate`, then a PR with `results-summary.md` as its body if
    `git status --porcelain data` shows changes. Exit code 1 means the run
    aborted and wrote nothing.
-3. Review the PR, write the commentary on that branch, merge.
+3. Review the PR and merge.
 
 `--dry` prints the report without writing; `--raw` prints what was parsed
 from the site. The site's robots.txt asks for a 10-second crawl delay, so a
@@ -147,8 +146,8 @@ draft is the only copy of that data that will ever exist.
 
 ## Two voices
 
-Interface copy (labels, tags, empty states) is flat and neutral. Commentary
-under `content/**/*.md` is opinionated, sharp, and openly biased toward
+Interface copy (labels, tags, empty states) is flat and neutral. Round
+reviews under `content/rounds/` are opinionated, sharp, and openly biased toward
 Arsenal and Ipswich Town — declared rather than hidden, and held to the same
 standard as any other team. The wall between the two is load-bearing: opinion
 never touches a forecast probability, a mark, or a calibration figure. Full

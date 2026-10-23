@@ -389,7 +389,7 @@
 .scell.on { box-shadow: inset 0 -3px 0 currentColor; }
 .scell:hover { color: var(--ink); }
 
-.standings { margin-top: 16px; padding: 8px 20px; max-width: 680px; overflow-x: auto; }
+.standings { margin: 16px auto 0; padding: 8px 28px; max-width: 780px; overflow-x: auto; }
 .st-row {
   display: grid; grid-template-columns: 28px minmax(0, 1fr) repeat(5, 36px) 40px 148px; gap: 6px; align-items: center;
   min-width: 600px; height: 40px; border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -426,7 +426,7 @@
 [data-zone="relegation"] { --zone-color: var(--zone-relegation); }
 .st-key {
   display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 4px; padding: 14px 0 10px;
-  border-top: 1px solid rgba(255,255,255,0.1); list-style: none;
+  list-style: none;
   font-size: 13px; color: var(--ink-muted);
 }
 .st-key li { display: inline-flex; align-items: center; gap: 8px; }

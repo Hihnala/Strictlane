@@ -637,7 +637,7 @@ function report(runs: LeagueRun[], today: string, created: string[]) {
   out.push(`### Needs a human (${review.length})`, "");
   out.push(...(review.length ? review.map((x) => `- ${x}`) : ["Nothing — the site and the data agree everywhere else."]), "");
   out.push(
-    "Forecasts and pool data were not touched. Commentary in `content/` is still yours to write.",
+    "Forecasts and pool data were not touched.",
     ""
   );
   return out.join("\n");
