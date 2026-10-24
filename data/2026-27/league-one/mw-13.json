@@ -80,8 +80,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100577",
+        "probs": {
+          "1": 42.01,
+          "2": 30.24,
+          "X": 27.76
+        },
+        "capturedAt": "2026-10-24T05:47:45.961Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-24",
+        "probs": {
+          "1": 40,
+          "2": 34,
+          "X": 26
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-10-24T05:47:44.315Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-13-doncaster-sheffield-wednesday",
@@ -113,8 +135,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100577",
+        "probs": {
+          "1": 35.04,
+          "2": 34.38,
+          "X": 30.58
+        },
+        "capturedAt": "2026-10-24T05:47:45.961Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-24",
+        "probs": {
+          "1": 35,
+          "2": 37,
+          "X": 28
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-10-24T05:47:44.315Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-13-reading-barnsley",

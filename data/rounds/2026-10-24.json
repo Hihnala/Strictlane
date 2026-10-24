@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-24",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100577",
+  "system": {
+    "type": "8+0",
+    "singles": 5,
+    "doubles": 8,
+    "triples": 0,
+    "rows": 256
+  },
+  "matchIds": [
+    "2026-27-e0-08-chelsea-tottenham",
+    "2026-27-e0-08-arsenal-everton",
+    "2026-27-e0-08-coventry-fulham",
+    "2026-27-e1-12-west-ham-southampton",
+    "2026-27-e1-12-qpr-swansea",
+    "2026-27-e1-12-cardiff-birmingham",
+    "2026-27-e1-12-preston-west-brom",
+    "2026-27-e1-12-stoke-bristol-city",
+    "2026-27-e1-12-blackburn-wrexham",
+    "2026-27-e1-12-wolves-watford",
+    "2026-27-e1-12-lincoln-burnley",
+    "2026-27-e2-13-cambridge-plymouth",
+    "2026-27-e2-13-oxford-bradford"
+  ]
+}
