@@ -1,0 +1,120 @@
+{
+  "season": "2026-27",
+  "league": "premier-league",
+  "matchweek": 9,
+  "matchweekDerived": false,
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-26)",
+  "importedAt": "2026-10-26T05:31:00.363Z",
+  "matches": [
+    {
+      "id": "2026-27-e0-09-chelsea-man-united",
+      "home": "chelsea",
+      "away": "man-united",
+      "kickoff": "2026-10-31T12:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-bournemouth-leeds",
+      "home": "bournemouth",
+      "away": "leeds",
+      "kickoff": "2026-10-31T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-brentford-nottingham-forest",
+      "home": "brentford",
+      "away": "nottingham-forest",
+      "kickoff": "2026-10-31T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-coventry-sunderland",
+      "home": "coventry",
+      "away": "sunderland",
+      "kickoff": "2026-10-31T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-hull-ipswich",
+      "home": "hull",
+      "away": "ipswich",
+      "kickoff": "2026-10-31T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-man-city-brighton",
+      "home": "man-city",
+      "away": "brighton",
+      "kickoff": "2026-10-31T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-tottenham-crystal-palace",
+      "home": "tottenham",
+      "away": "crystal-palace",
+      "kickoff": "2026-10-31T17:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-aston-villa-fulham",
+      "home": "aston-villa",
+      "away": "fulham",
+      "kickoff": "2026-10-31T20:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-liverpool-arsenal",
+      "home": "liverpool",
+      "away": "arsenal",
+      "kickoff": "2026-11-01T16:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e0-09-newcastle-everton",
+      "home": "newcastle",
+      "away": "everton",
+      "kickoff": "2026-11-02T20:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
