@@ -69,8 +69,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100578",
+        "probs": {
+          "1": 37.34,
+          "2": 35.31,
+          "X": 27.35
+        },
+        "capturedAt": "2026-10-30T15:09:16.676Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-31",
+        "probs": {
+          "1": 46,
+          "2": 27,
+          "X": 27
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-30T15:09:15.595Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e1-13-middlesbrough-charlton",
@@ -80,8 +101,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100578",
+        "probs": {
+          "1": 81.14,
+          "2": 7.42,
+          "X": 11.44
+        },
+        "capturedAt": "2026-10-30T15:09:16.676Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-31",
+        "probs": {
+          "1": 78,
+          "2": 8,
+          "X": 14
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-30T15:09:15.595Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e1-13-millwall-derby",
@@ -102,8 +144,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100578",
+        "probs": {
+          "1": 55.83,
+          "2": 19.63,
+          "X": 24.54
+        },
+        "capturedAt": "2026-10-30T15:09:16.676Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-31",
+        "probs": {
+          "1": 54,
+          "2": 23,
+          "X": 23
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-10-30T15:09:15.595Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e1-13-swansea-blackburn",
@@ -113,8 +177,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100578",
+        "probs": {
+          "1": 55.65,
+          "2": 20.62,
+          "X": 23.74
+        },
+        "capturedAt": "2026-10-30T15:09:16.676Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-31",
+        "probs": {
+          "1": 54,
+          "2": 20,
+          "X": 26
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-30T15:09:15.595Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e1-13-west-ham-west-brom",
@@ -124,8 +209,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100578",
+        "probs": {
+          "1": 59.31,
+          "2": 16.66,
+          "X": 24.03
+        },
+        "capturedAt": "2026-10-30T15:09:16.676Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-31",
+        "probs": {
+          "1": 60,
+          "2": 18,
+          "X": 22
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-10-30T15:09:15.595Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e1-13-wolves-cardiff",
@@ -135,8 +241,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100578",
+        "probs": {
+          "1": 63.71,
+          "2": 15.33,
+          "X": 20.96
+        },
+        "capturedAt": "2026-10-30T15:09:16.676Z"
+      },
+      "forecast": {
+        "roundId": "2026-10-31",
+        "probs": {
+          "1": 58,
+          "2": 20,
+          "X": 22
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-10-30T15:09:15.595Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     }
   ]
 }
