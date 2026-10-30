@@ -1,0 +1,1052 @@
+{
+  "runs": [
+    {
+      "capturedAt": "2026-10-30T15:09:15.595Z",
+      "odds": {
+        "source": "https://football-data.co.uk/fixtures.csv",
+        "lastModified": "2026-10-30T09:33:33.000Z",
+        "books": [
+          "BFE",
+          "B365",
+          "PP",
+          "SKB",
+          "BW"
+        ],
+        "rows": [
+          {
+            "position": 0,
+            "matchId": "2026-27-e0-09-man-city-brighton",
+            "cells": {
+              "Div": "E0",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Man City",
+              "AwayTeam": "Brighton",
+              "Referee": "C Pawson",
+              "B365H": "1.6",
+              "B365D": "4.5",
+              "B365A": "4.75",
+              "BFDH": "1.67",
+              "BFDD": "4.33",
+              "BFDA": "4.6",
+              "BVH": "1.6",
+              "BVD": "4.33",
+              "BVA": "4.6",
+              "BWH": "1.65",
+              "BWD": "4.4",
+              "BWA": "4.5",
+              "PPH": "1.62",
+              "PPD": "4.33",
+              "PPA": "4.75",
+              "SKBH": "1.6",
+              "SKBD": "4.2",
+              "SKBA": "4.6",
+              "MaxH": "1.67",
+              "MaxD": "4.5",
+              "MaxA": "4.9",
+              "AvgH": "1.62",
+              "AvgD": "4.37",
+              "AvgA": "4.58",
+              "BFEH": "1.68",
+              "BFED": "4.7",
+              "BFEA": "5",
+              "B365>2.5": "1.4",
+              "B365<2.5": "3",
+              "Max>2.5": "1.44",
+              "Max<2.5": "3",
+              "Avg>2.5": "1.39",
+              "Avg<2.5": "2.84",
+              "BFE>2.5": "1.44",
+              "BFE<2.5": "3.2",
+              "AHh": "-1",
+              "B365AHH": "2",
+              "B365AHA": "1.85",
+              "MaxAHH": "2",
+              "MaxAHA": "1.85",
+              "AvgAHH": "1.96",
+              "AvgAHA": "1.79",
+              "BFEAHH": "2.09",
+              "BFEAHA": "1.89"
+            }
+          },
+          {
+            "position": 1,
+            "matchId": "2026-27-e0-09-brentford-nottingham-forest",
+            "cells": {
+              "Div": "E0",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Brentford",
+              "AwayTeam": "Nott'm Forest",
+              "Referee": "D England",
+              "B365H": "2.05",
+              "B365D": "3.6",
+              "B365A": "3.5",
+              "BFDH": "2",
+              "BFDD": "3.75",
+              "BFDA": "3.4",
+              "BVH": "2",
+              "BVD": "3.6",
+              "BVA": "3.3",
+              "BWH": "2.05",
+              "BWD": "3.7",
+              "BWA": "3.4",
+              "PPH": "2",
+              "PPD": "3.6",
+              "PPA": "3.4",
+              "SKBH": "2.05",
+              "SKBD": "3.6",
+              "SKBA": "3.4",
+              "MaxH": "2.1",
+              "MaxD": "3.75",
+              "MaxA": "3.5",
+              "AvgH": "2.04",
+              "AvgD": "3.64",
+              "AvgA": "3.36",
+              "BFEH": "2.14",
+              "BFED": "3.8",
+              "BFEA": "3.65",
+              "B365>2.5": "1.73",
+              "B365<2.5": "2.1",
+              "Max>2.5": "1.73",
+              "Max<2.5": "2.15",
+              "Avg>2.5": "1.69",
+              "Avg<2.5": "2.09",
+              "BFE>2.5": "1.8",
+              "BFE<2.5": "2.2",
+              "AHh": "-0.25",
+              "B365AHH": "1.75",
+              "B365AHA": "2.05",
+              "MaxAHH": "1.78",
+              "MaxAHA": "2.05",
+              "AvgAHH": "1.75",
+              "AvgAHA": "1.99",
+              "BFEAHH": "1.85",
+              "BFEAHA": "2.14"
+            }
+          },
+          {
+            "position": 2,
+            "matchId": "2026-27-e0-09-bournemouth-leeds",
+            "cells": {
+              "Div": "E0",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Bournemouth",
+              "AwayTeam": "Leeds",
+              "Referee": "M Salisbury",
+              "B365H": "2.1",
+              "B365D": "3.4",
+              "B365A": "3.5",
+              "BFDH": "2.15",
+              "BFDD": "3.5",
+              "BFDA": "3.3",
+              "BVH": "2.1",
+              "BVD": "3.4",
+              "BVA": "3.3",
+              "BWH": "2.1",
+              "BWD": "3.4",
+              "BWA": "3.4",
+              "PPH": "2.1",
+              "PPD": "3.3",
+              "PPA": "3.4",
+              "SKBH": "2.1",
+              "SKBD": "3.3",
+              "SKBA": "3.4",
+              "MaxH": "2.16",
+              "MaxD": "3.5",
+              "MaxA": "3.5",
+              "AvgH": "2.11",
+              "AvgD": "3.38",
+              "AvgA": "3.36",
+              "BFEH": "2.22",
+              "BFED": "3.5",
+              "BFEA": "3.7",
+              "B365>2.5": "1.88",
+              "B365<2.5": "1.98",
+              "Max>2.5": "1.88",
+              "Max<2.5": "1.98",
+              "Avg>2.5": "1.83",
+              "Avg<2.5": "1.9",
+              "BFE>2.5": "1.96",
+              "BFE<2.5": "2.02",
+              "AHh": "-0.25",
+              "B365AHH": "1.85",
+              "B365AHA": "2",
+              "MaxAHH": "1.85",
+              "MaxAHA": "2",
+              "AvgAHH": "1.8",
+              "AvgAHA": "1.94",
+              "BFEAHH": "1.9",
+              "BFEAHA": "2.08"
+            }
+          },
+          {
+            "position": 3,
+            "matchId": "2026-27-e0-09-coventry-sunderland",
+            "cells": {
+              "Div": "E0",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Coventry",
+              "AwayTeam": "Sunderland",
+              "Referee": "S Hooper",
+              "B365H": "3.2",
+              "B365D": "3.4",
+              "B365A": "2.25",
+              "BFDH": "3",
+              "BFDD": "3.5",
+              "BFDA": "2.3",
+              "BVH": "3",
+              "BVD": "3.3",
+              "BVA": "2.25",
+              "BWH": "3.1",
+              "BWD": "3.3",
+              "BWA": "2.3",
+              "PPH": "3.1",
+              "PPD": "3.25",
+              "PPA": "2.25",
+              "SKBH": "3.1",
+              "SKBD": "3.2",
+              "SKBA": "2.25",
+              "MaxH": "3.2",
+              "MaxD": "3.5",
+              "MaxA": "2.35",
+              "AvgH": "3.05",
+              "AvgD": "3.32",
+              "AvgA": "2.28",
+              "BFEH": "3.3",
+              "BFED": "3.45",
+              "BFEA": "2.4",
+              "B365>2.5": "1.98",
+              "B365<2.5": "1.88",
+              "Max>2.5": "1.98",
+              "Max<2.5": "1.88",
+              "Avg>2.5": "1.92",
+              "Avg<2.5": "1.82",
+              "BFE>2.5": "2.06",
+              "BFE<2.5": "1.9",
+              "AHh": "0.25",
+              "B365AHH": "1.85",
+              "B365AHA": "2",
+              "MaxAHH": "1.85",
+              "MaxAHA": "2",
+              "AvgAHH": "1.8",
+              "AvgAHA": "1.95",
+              "BFEAHH": "1.93",
+              "BFEAHA": "2.06"
+            }
+          },
+          {
+            "position": 4,
+            "matchId": "2026-27-e0-09-hull-ipswich",
+            "cells": {
+              "Div": "E0",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Hull",
+              "AwayTeam": "Ipswich",
+              "Referee": "T Kirk",
+              "B365H": "2.6",
+              "B365D": "3.4",
+              "B365A": "2.7",
+              "BFDH": "2.63",
+              "BFDD": "3.5",
+              "BFDA": "2.6",
+              "BVH": "2.5",
+              "BVD": "3.4",
+              "BVA": "2.63",
+              "BWH": "2.6",
+              "BWD": "3.5",
+              "BWA": "2.55",
+              "PPH": "2.6",
+              "PPD": "3.3",
+              "PPA": "2.7",
+              "SKBH": "2.5",
+              "SKBD": "3.25",
+              "SKBA": "2.63",
+              "MaxH": "2.65",
+              "MaxD": "3.5",
+              "MaxA": "2.7",
+              "AvgH": "2.58",
+              "AvgD": "3.39",
+              "AvgA": "2.62",
+              "BFEH": "2.7",
+              "BFED": "3.5",
+              "BFEA": "2.86",
+              "B365>2.5": "1.88",
+              "B365<2.5": "1.98",
+              "Max>2.5": "1.88",
+              "Max<2.5": "2",
+              "Avg>2.5": "1.8",
+              "Avg<2.5": "1.94",
+              "BFE>2.5": "1.92",
+              "BFE<2.5": "2.04",
+              "AHh": "0",
+              "B365AHH": "1.88",
+              "B365AHA": "1.98",
+              "MaxAHH": "1.88",
+              "MaxAHA": "1.98",
+              "AvgAHH": "1.85",
+              "AvgAHA": "1.9",
+              "BFEAHH": "1.93",
+              "BFEAHA": "2.05"
+            }
+          },
+          {
+            "position": 5,
+            "matchId": "2026-27-e0-09-tottenham-crystal-palace",
+            "cells": {
+              "Div": "E0",
+              "Date": "31/10/2026",
+              "Time": "17:30",
+              "HomeTeam": "Tottenham",
+              "AwayTeam": "Crystal Palace",
+              "Referee": "M Oliver",
+              "B365H": "1.53",
+              "B365D": "4.5",
+              "B365A": "5.5",
+              "BFDH": "1.53",
+              "BFDD": "4.33",
+              "BFDA": "6",
+              "BVH": "1.5",
+              "BVD": "4.33",
+              "BVA": "5.5",
+              "BWH": "1.53",
+              "BWD": "4.33",
+              "BWA": "5.75",
+              "PPH": "1.53",
+              "PPD": "4.33",
+              "PPA": "5.5",
+              "SKBH": "1.53",
+              "SKBD": "4.2",
+              "SKBA": "5.5",
+              "MaxH": "1.57",
+              "MaxD": "4.5",
+              "MaxA": "6",
+              "AvgH": "1.53",
+              "AvgD": "4.35",
+              "AvgA": "5.5",
+              "BFEH": "1.6",
+              "BFED": "4.7",
+              "BFEA": "6",
+              "B365>2.5": "1.57",
+              "B365<2.5": "2.38",
+              "Max>2.5": "1.6",
+              "Max<2.5": "2.38",
+              "Avg>2.5": "1.56",
+              "Avg<2.5": "2.31",
+              "BFE>2.5": "1.65",
+              "BFE<2.5": "2.46",
+              "AHh": "-1",
+              "B365AHH": "1.9",
+              "B365AHA": "1.95",
+              "MaxAHH": "1.9",
+              "MaxAHA": "1.95",
+              "AvgAHH": "1.86",
+              "AvgAHA": "1.88",
+              "BFEAHH": "1.96",
+              "BFEAHA": "1.99"
+            }
+          },
+          {
+            "position": 6,
+            "matchId": "2026-27-e0-09-aston-villa-fulham",
+            "cells": {
+              "Div": "E0",
+              "Date": "31/10/2026",
+              "Time": "20:00",
+              "HomeTeam": "Aston Villa",
+              "AwayTeam": "Fulham",
+              "Referee": "S Barrott",
+              "B365H": "1.91",
+              "B365D": "3.75",
+              "B365A": "3.8",
+              "BFDH": "2",
+              "BFDD": "3.75",
+              "BFDA": "3.5",
+              "BVH": "1.9",
+              "BVD": "3.7",
+              "BVA": "3.6",
+              "BWH": "1.95",
+              "BWD": "3.75",
+              "BWA": "3.6",
+              "PPH": "1.91",
+              "PPD": "3.6",
+              "PPA": "3.75",
+              "SKBH": "1.91",
+              "SKBD": "3.6",
+              "SKBA": "3.75",
+              "MaxH": "2",
+              "MaxD": "3.75",
+              "MaxA": "3.8",
+              "AvgH": "1.93",
+              "AvgD": "3.7",
+              "AvgA": "3.61",
+              "BFEH": "2",
+              "BFED": "3.85",
+              "BFEA": "4.1",
+              "B365>2.5": "1.67",
+              "B365<2.5": "2.2",
+              "Max>2.5": "1.7",
+              "Max<2.5": "2.2",
+              "Avg>2.5": "1.66",
+              "Avg<2.5": "2.14",
+              "BFE>2.5": "1.75",
+              "BFE<2.5": "2.28",
+              "AHh": "-0.5",
+              "B365AHH": "1.93",
+              "B365AHA": "1.93",
+              "MaxAHH": "1.93",
+              "MaxAHA": "1.93",
+              "AvgAHH": "1.89",
+              "AvgAHA": "1.84",
+              "BFEAHH": "2",
+              "BFEAHA": "1.98"
+            }
+          },
+          {
+            "position": 7,
+            "matchId": "2026-27-e1-13-west-ham-west-brom",
+            "cells": {
+              "Div": "E1",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "West Ham",
+              "AwayTeam": "West Brom",
+              "Referee": "R Jones",
+              "B365H": "1.57",
+              "B365D": "4.2",
+              "B365A": "4.75",
+              "BFDH": "1.6",
+              "BFDD": "4",
+              "BFDA": "4.6",
+              "BVH": "1.6",
+              "BVD": "4",
+              "BVA": "5",
+              "BWH": "1.61",
+              "BWD": "4.1",
+              "BWA": "5",
+              "PPH": "1.6",
+              "PPD": "4.2",
+              "PPA": "5",
+              "SKBH": "1.6",
+              "SKBD": "4.2",
+              "SKBA": "5",
+              "MaxH": "1.65",
+              "MaxD": "4.2",
+              "MaxA": "5.25",
+              "AvgH": "1.61",
+              "AvgD": "4.11",
+              "AvgA": "4.86",
+              "BFEH": "1.66",
+              "BFED": "4.5",
+              "BFEA": "5.4",
+              "B365>2.5": "1.67",
+              "B365<2.5": "2.2",
+              "Max>2.5": "1.67",
+              "Max<2.5": "2.3",
+              "Avg>2.5": "1.6",
+              "Avg<2.5": "2.23",
+              "BFE>2.5": "1.65",
+              "BFE<2.5": "2.4",
+              "AHh": "-1",
+              "B365AHH": "2.05",
+              "B365AHA": "1.75",
+              "MaxAHH": "2.05",
+              "MaxAHA": "1.77",
+              "AvgAHH": "2.02",
+              "AvgAHA": "1.73",
+              "BFEAHH": "2.11",
+              "BFEAHA": "1.85"
+            }
+          },
+          {
+            "position": 8,
+            "matchId": "2026-27-e1-13-swansea-blackburn",
+            "cells": {
+              "Div": "E1",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Swansea",
+              "AwayTeam": "Blackburn",
+              "Referee": "G Ward",
+              "B365H": "1.76",
+              "B365D": "3.4",
+              "B365A": "4.5",
+              "BFDH": "1.73",
+              "BFDD": "3.6",
+              "BFDA": "4.2",
+              "BVH": "1.75",
+              "BVD": "3.7",
+              "BVA": "4.33",
+              "BWH": "1.78",
+              "BWD": "3.75",
+              "BWA": "4.4",
+              "PPH": "1.75",
+              "PPD": "3.5",
+              "PPA": "4.4",
+              "SKBH": "1.8",
+              "SKBD": "3.5",
+              "SKBA": "4.33",
+              "MaxH": "1.83",
+              "MaxD": "3.75",
+              "MaxA": "4.5",
+              "AvgH": "1.78",
+              "AvgD": "3.63",
+              "AvgA": "4.31",
+              "BFEH": "1.85",
+              "BFED": "3.75",
+              "BFEA": "4.8",
+              "B365>2.5": "1.91",
+              "B365<2.5": "1.91",
+              "Max>2.5": "1.91",
+              "Max<2.5": "1.95",
+              "Avg>2.5": "1.84",
+              "Avg<2.5": "1.88",
+              "BFE>2.5": "1.93",
+              "BFE<2.5": "2",
+              "AHh": "-0.5",
+              "B365AHH": "1.8",
+              "B365AHA": "2.05",
+              "MaxAHH": "1.8",
+              "MaxAHA": "2.05",
+              "AvgAHH": "1.75",
+              "AvgAHA": "2",
+              "BFEAHH": "1.86",
+              "BFEAHA": "2.13"
+            }
+          },
+          {
+            "position": 9,
+            "matchId": "2026-27-e1-13-southampton-qpr",
+            "cells": {
+              "Div": "E1",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Southampton",
+              "AwayTeam": "QPR",
+              "Referee": "T Robinson",
+              "B365H": "1.76",
+              "B365D": "3.8",
+              "B365A": "4",
+              "BFDH": "1.8",
+              "BFDD": "3.75",
+              "BFDA": "3.75",
+              "BVH": "1.8",
+              "BVD": "3.9",
+              "BVA": "3.8",
+              "BWH": "1.75",
+              "BWD": "4",
+              "BWA": "4.2",
+              "PPH": "1.8",
+              "PPD": "3.8",
+              "PPA": "3.8",
+              "SKBH": "1.8",
+              "SKBD": "3.9",
+              "SKBA": "3.9",
+              "MaxH": "1.83",
+              "MaxD": "4",
+              "MaxA": "4.2",
+              "AvgH": "1.8",
+              "AvgD": "3.87",
+              "AvgA": "3.93",
+              "BFEH": "1.89",
+              "BFED": "4.1",
+              "BFEA": "4.2",
+              "B365>2.5": "1.57",
+              "B365<2.5": "2.38",
+              "Max>2.5": "1.58",
+              "Max<2.5": "2.4",
+              "Avg>2.5": "1.54",
+              "Avg<2.5": "2.37",
+              "BFE>2.5": "1.63",
+              "BFE<2.5": "2.5",
+              "AHh": "-0.5",
+              "B365AHH": "1.83",
+              "B365AHA": "2.03",
+              "MaxAHH": "1.83",
+              "MaxAHA": "2.03",
+              "AvgAHH": "1.77",
+              "AvgAHA": "1.98",
+              "BFEAHH": "1.89",
+              "BFEAHA": "2.1"
+            }
+          },
+          {
+            "position": 10,
+            "matchId": "2026-27-e1-13-burnley-portsmouth",
+            "cells": {
+              "Div": "E1",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Burnley",
+              "AwayTeam": "Portsmouth",
+              "Referee": "R Ricardo",
+              "B365H": "2.05",
+              "B365D": "3.4",
+              "B365A": "3.4",
+              "BFDH": "2.05",
+              "BFDD": "3.4",
+              "BFDA": "3.2",
+              "BVH": "2.1",
+              "BVD": "3.4",
+              "BVA": "3.3",
+              "BWH": "2.05",
+              "BWD": "3.6",
+              "BWA": "3.4",
+              "PPH": "2.1",
+              "PPD": "3.4",
+              "PPA": "3.3",
+              "SKBH": "2.1",
+              "SKBD": "3.4",
+              "SKBA": "3.3",
+              "MaxH": "2.18",
+              "MaxD": "3.6",
+              "MaxA": "3.4",
+              "AvgH": "2.11",
+              "AvgD": "3.41",
+              "AvgA": "3.3",
+              "BFEH": "2.2",
+              "BFED": "3.55",
+              "BFEA": "3.65",
+              "B365>2.5": "1.93",
+              "B365<2.5": "1.93",
+              "Max>2.5": "1.93",
+              "Max<2.5": "1.95",
+              "Avg>2.5": "1.86",
+              "Avg<2.5": "1.88",
+              "BFE>2.5": "1.94",
+              "BFE<2.5": "1.96",
+              "AHh": "-0.25",
+              "B365AHH": "1.83",
+              "B365AHA": "2.03",
+              "MaxAHH": "1.84",
+              "MaxAHA": "2.03",
+              "AvgAHH": "1.79",
+              "AvgAHA": "1.95",
+              "BFEAHH": "1.89",
+              "BFEAHA": "2.08"
+            }
+          },
+          {
+            "position": 11,
+            "matchId": "2026-27-e1-13-middlesbrough-charlton",
+            "cells": {
+              "Div": "E1",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Middlesbrough",
+              "AwayTeam": "Charlton",
+              "Referee": "W Finnie",
+              "B365H": "1.22",
+              "B365D": "6",
+              "B365A": "10",
+              "BFDH": "1.22",
+              "BFDD": "6",
+              "BFDA": "9.5",
+              "BVH": "1.22",
+              "BVD": "6",
+              "BVA": "11",
+              "BWH": "1.3",
+              "BWD": "5.75",
+              "BWA": "9.25",
+              "PPH": "1.22",
+              "PPD": "6",
+              "PPA": "10",
+              "SKBH": "1.25",
+              "SKBD": "6",
+              "SKBA": "9.5",
+              "MaxH": "1.3",
+              "MaxD": "6.25",
+              "MaxA": "12",
+              "AvgH": "1.25",
+              "AvgD": "5.98",
+              "AvgA": "9.89",
+              "BFEH": "1.28",
+              "BFED": "6.8",
+              "BFEA": "12.5",
+              "B365>2.5": "1.44",
+              "B365<2.5": "2.75",
+              "Max>2.5": "1.44",
+              "Max<2.5": "2.9",
+              "Avg>2.5": "1.4",
+              "Avg<2.5": "2.82",
+              "BFE>2.5": "1.43",
+              "BFE<2.5": "3.15",
+              "AHh": "-1.75",
+              "B365AHH": "1.9",
+              "B365AHA": "1.95",
+              "MaxAHH": "1.9",
+              "MaxAHA": "1.95",
+              "AvgAHH": "1.85",
+              "AvgAHA": "1.89",
+              "BFEAHH": "1.9",
+              "BFEAHA": "2.06"
+            }
+          },
+          {
+            "position": 12,
+            "matchId": "2026-27-e1-13-wolves-cardiff",
+            "cells": {
+              "Div": "E1",
+              "Date": "31/10/2026",
+              "Time": "15:00",
+              "HomeTeam": "Wolves",
+              "AwayTeam": "Cardiff",
+              "Referee": "J Smith",
+              "B365H": "1.62",
+              "B365D": "3.9",
+              "B365A": "4.75",
+              "BFDH": "1.62",
+              "BFDD": "4",
+              "BFDA": "4.33",
+              "BVH": "1.65",
+              "BVD": "4.1",
+              "BVA": "4.4",
+              "BWH": "1.68",
+              "BWD": "4.2",
+              "BWA": "4.5",
+              "PPH": "1.67",
+              "PPD": "4.2",
+              "PPA": "4.4",
+              "SKBH": "1.67",
+              "SKBD": "4.2",
+              "SKBA": "4.33",
+              "MaxH": "1.68",
+              "MaxD": "4.2",
+              "MaxA": "4.85",
+              "AvgH": "1.65",
+              "AvgD": "4.15",
+              "AvgA": "4.49",
+              "BFEH": "1.72",
+              "BFED": "4.4",
+              "BFEA": "5",
+              "B365>2.5": "1.5",
+              "B365<2.5": "2.63",
+              "Max>2.5": "1.5",
+              "Max<2.5": "2.65",
+              "Avg>2.5": "1.45",
+              "Avg<2.5": "2.62",
+              "BFE>2.5": "1.52",
+              "BFE<2.5": "2.78",
+              "AHh": "-0.75",
+              "B365AHH": "1.85",
+              "B365AHA": "2",
+              "MaxAHH": "1.85",
+              "MaxAHA": "2",
+              "AvgAHH": "1.79",
+              "AvgAHA": "1.96",
+              "BFEAHH": "1.89",
+              "BFEAHA": "2.07"
+            }
+          }
+        ]
+      },
+      "pool": {
+        "source": "https://www.veikkaus.fi/api/sport-popularity/v1/games/SPORT/draws/100578/popularity",
+        "capturedAt": "2026-10-30T15:09:16.676Z",
+        "reply": {
+          "exchange": 13592400,
+          "timestamp": 1793372956676,
+          "resultPopularities": [
+            {
+              "awdPercentage": 6434,
+              "eventId": 0,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 6380
+            },
+            {
+              "awdPercentage": 2145,
+              "eventId": 0,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2100
+            },
+            {
+              "awdPercentage": 1421,
+              "eventId": 0,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1520
+            },
+            {
+              "awdPercentage": 5742,
+              "eventId": 1,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 5691
+            },
+            {
+              "awdPercentage": 2309,
+              "eventId": 1,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2330
+            },
+            {
+              "awdPercentage": 1949,
+              "eventId": 1,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1979
+            },
+            {
+              "awdPercentage": 4765,
+              "eventId": 2,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 4808
+            },
+            {
+              "awdPercentage": 2939,
+              "eventId": 2,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2818
+            },
+            {
+              "awdPercentage": 2296,
+              "eventId": 2,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 2373
+            },
+            {
+              "awdPercentage": 3821,
+              "eventId": 3,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 3421
+            },
+            {
+              "awdPercentage": 3059,
+              "eventId": 3,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 3064
+            },
+            {
+              "awdPercentage": 3120,
+              "eventId": 3,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 3515
+            },
+            {
+              "awdPercentage": 3915,
+              "eventId": 4,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 3854
+            },
+            {
+              "awdPercentage": 3285,
+              "eventId": 4,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 3163
+            },
+            {
+              "awdPercentage": 2800,
+              "eventId": 4,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 2984
+            },
+            {
+              "awdPercentage": 6936,
+              "eventId": 5,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 6822
+            },
+            {
+              "awdPercentage": 1568,
+              "eventId": 5,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 1811
+            },
+            {
+              "awdPercentage": 1497,
+              "eventId": 5,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1368
+            },
+            {
+              "awdPercentage": 6552,
+              "eventId": 6,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 6357
+            },
+            {
+              "awdPercentage": 1877,
+              "eventId": 6,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2013
+            },
+            {
+              "awdPercentage": 1571,
+              "eventId": 6,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1630
+            },
+            {
+              "eventId": 7,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 5931
+            },
+            {
+              "eventId": 7,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2403
+            },
+            {
+              "eventId": 7,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1666
+            },
+            {
+              "eventId": 8,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 5565
+            },
+            {
+              "eventId": 8,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2374
+            },
+            {
+              "eventId": 8,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 2062
+            },
+            {
+              "eventId": 9,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 5583
+            },
+            {
+              "eventId": 9,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2454
+            },
+            {
+              "eventId": 9,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1963
+            },
+            {
+              "eventId": 10,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 3734
+            },
+            {
+              "eventId": 10,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2735
+            },
+            {
+              "eventId": 10,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 3531
+            },
+            {
+              "eventId": 11,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 8114
+            },
+            {
+              "eventId": 11,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 1144
+            },
+            {
+              "eventId": 11,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 742
+            },
+            {
+              "eventId": 12,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 6371
+            },
+            {
+              "eventId": 12,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2096
+            },
+            {
+              "eventId": 12,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1533
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
