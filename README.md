@@ -56,12 +56,13 @@ rules below are enforced mechanically, not by discipline.
 app/                                  Next.js App Router
 components/                           presentational, no data fetching
 lib/                                  schema.ts, scoring.ts, content.ts
-scripts/                              validate.ts, fetch-vakio.ts, fetch-odds.ts, fetch-results.ts, promote-round.ts
+scripts/                              validate.ts, fetch-vakio.ts, fetch-odds.ts, fetch-results.ts, promote-round.ts, apply-review.ts
 data/                                 source of truth (JSON)
 content/                              round reviews (Markdown)
 docs/                                 TECH-SHEET.md, DESIGN.md, VOICE.md, archive/ (old Rasti style guide)
 .github/workflows/fetch-vakio.yml     weekly Vakio coupon fetch
 .github/workflows/fetch-odds.yml      Saturday odds pre-fill of the coupon's forecasts
+.github/workflows/review-table.yml    applies edits to the odds review comment; Review table check
 ```
 
 ```
@@ -110,11 +111,23 @@ drift out of sync with the data that produced it.
    `promote-round.ts`, which joins the draft to the real match records and
    derives the round's system block from the marks, and comments a review
    table on the PR.
-3. Review the suggestions on the PR branch and change anything you disagree
-   with, keeping 5 singles and 8 doubles. A changed forecast gets a new
-   `capturedAt`, still **before kickoff**. Anything listed under "Needs a
-   human" (a missing fixture, odds not in the file yet) is yours to fill in,
-   then `npx tsx scripts/promote-round.ts <round-id>`.
+3. Review the suggestions **in the PR comment's table**. To change one, edit
+   the comment: change the Marks (or Probs) cell and save, keeping 5 singles
+   and 8 doubles. The **Review table** workflow
+   (`.github/workflows/review-table.yml`) runs `scripts/apply-review.ts`,
+   which writes every changed row into the matchweek files with `capturedAt`
+   set to the moment GitHub recorded your edit, refuses any row whose kickoff
+   has passed, re-promotes the round, validates, commits to the PR branch and
+   replies with what changed (or why nothing did). Only the repository
+   owner's edits are applied. Its *Review table* status stays red while the
+   table and the files disagree. **Wait for the ✅ reply before merging.** Edit
+   the table after merging and it opens a follow-up PR instead.
+   Editing the matchweek files directly still works, in which case leave the
+   table alone and set each changed `capturedAt` yourself, before kickoff.
+   Anything listed under "Needs a human" (a missing fixture, odds not in the
+   file yet) is yours to fill in, then
+   `npx tsx scripts/promote-round.ts <round-id>`.
+   Locally: `npm run apply-review -- --comment review.md --at <ISO time> [--dry | --check]`.
 4. `npm run validate`, then merge.
 
 After the weekend (and after midweek rounds), sync results and fixtures:

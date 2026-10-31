@@ -1,0 +1,233 @@
+name: Review table
+
+# Stage 2½: turns the odds review comment into an editing surface.
+#
+# Fetch odds posts its suggestions as a table in a PR comment. Edit that
+# comment — change a Marks or Probs cell and save — and this workflow:
+#
+#   1. reads the edited table (scripts/apply-review.ts) and writes every row
+#      that differs into the matchweek files, with capturedAt = the moment
+#      GitHub recorded the edit, refusing rows whose kickoff has passed;
+#   2. re-promotes the round, validates, and commits to the PR branch — or, if
+#      the PR was already merged, to a new branch off main with its own PR;
+#   3. replies on the PR with what changed, or why nothing was;
+#   4. reports a "Review table" commit status: red while the table and the
+#      files disagree, so the merge box warns you (and blocks, if the check is
+#      required in the branch protection rules for main).
+#
+# Only the repository owner's edits are applied. Anyone else's edit, and every
+# other trigger, just recomputes the status.
+#
+# GitHub doesn't start workflows for commits and PRs made with the workflow
+# token, so the fetch workflows post the status on their own PRs, and this one
+# posts it on every commit it makes.
+
+on:
+  issue_comment:
+    types: [edited]
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+    inputs:
+      pr:
+        description: "PR number"
+        type: number
+        required: true
+      apply:
+        description: "Apply the review table (as if it had just been edited)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  statuses: write
+
+concurrency:
+  group: review-table-${{ github.event.issue.number || github.event.pull_request.number || inputs.pr }}
+  cancel-in-progress: false
+
+jobs:
+  review:
+    # Comment edits only matter on a PR's own review comment.
+    if: >-
+      github.event_name != 'issue_comment' ||
+      (github.event.issue.pull_request &&
+       github.event.comment.user.login == 'github-actions[bot]' &&
+       startsWith(github.event.comment.body, '## Odds pre-fill'))
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      CONTEXT: Review table
+    steps:
+      - name: Find the PR and its review comment
+        id: pr
+        env:
+          PR: ${{ github.event.issue.number || github.event.pull_request.number || inputs.pr }}
+          EVENT: ${{ github.event_name }}
+          SENDER: ${{ github.event.sender.login }}
+          OWNER: ${{ github.repository_owner }}
+          APPLY_INPUT: ${{ inputs.apply }}
+        run: |
+          gh api "repos/$REPO/pulls/$PR" > "$RUNNER_TEMP/pr.json"
+          echo "number=$PR" >> "$GITHUB_OUTPUT"
+          echo "sha=$(jq -r .head.sha "$RUNNER_TEMP/pr.json")" >> "$GITHUB_OUTPUT"
+          echo "ref=$(jq -r .head.ref "$RUNNER_TEMP/pr.json")" >> "$GITHUB_OUTPUT"
+          echo "merged=$(jq -r .merged "$RUNNER_TEMP/pr.json")" >> "$GITHUB_OUTPUT"
+          echo "state=$(jq -r .state "$RUNNER_TEMP/pr.json")" >> "$GITHUB_OUTPUT"
+
+          gh api --paginate "repos/$REPO/issues/$PR/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## Odds pre-fill"))) | {id, created_at, updated_at}' \
+            | tail -n 1 > "$RUNNER_TEMP/comment.json"
+          if [ ! -s "$RUNNER_TEMP/comment.json" ]; then
+            echo "No odds review comment on #$PR."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          C="$RUNNER_TEMP/comment.json"
+          gh api "repos/$REPO/issues/comments/$(jq -r .id "$C")" --jq .body > "$RUNNER_TEMP/review.md"
+          echo "edited_at=$(jq -r .updated_at "$C")" >> "$GITHUB_OUTPUT"
+          # The bot never edits its own comment, so a later updated_at is a hand edit.
+          if [ "$(jq -r .updated_at "$C")" != "$(jq -r .created_at "$C")" ]; then
+            echo "edited=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          APPLY=false
+          if [ "$EVENT" = issue_comment ]; then
+            if [ "$SENDER" = "$OWNER" ]; then APPLY=true
+            else echo "::notice::Edit by $SENDER, not $OWNER, so it is not applied."; fi
+          fi
+          if [ "$EVENT" = workflow_dispatch ] && [ "$APPLY_INPUT" = true ]; then APPLY=true; fi
+          echo "apply=$APPLY" >> "$GITHUB_OUTPUT"
+
+      - name: Mark the check pending
+        if: steps.pr.outputs.found == 'true' && steps.pr.outputs.apply == 'true' && steps.pr.outputs.state == 'open'
+        env:
+          SHA: ${{ steps.pr.outputs.sha }}
+        run: |
+          gh api "repos/$REPO/statuses/$SHA" -f state=pending -f context="$CONTEXT" \
+            -f description="Applying the edited review table…" --silent
+
+      - uses: actions/checkout@v4
+        if: steps.pr.outputs.found == 'true'
+        with:
+          # A merged PR's edit is applied on top of main, in a follow-up PR.
+          ref: ${{ steps.pr.outputs.merged == 'true' && github.event.repository.default_branch || steps.pr.outputs.ref }}
+
+      - uses: actions/setup-node@v4
+        if: steps.pr.outputs.found == 'true'
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+        if: steps.pr.outputs.found == 'true'
+
+      - name: Apply the edited table
+        id: apply
+        if: steps.pr.outputs.found == 'true' && steps.pr.outputs.apply == 'true' && (steps.pr.outputs.state == 'open' || steps.pr.outputs.merged == 'true')
+        env:
+          AT: ${{ steps.pr.outputs.edited_at }}
+        run: |
+          REVIEW="$RUNNER_TEMP/review.md"
+          SUMMARY="$RUNNER_TEMP/apply-summary.md"
+          set +e
+          npx tsx scripts/apply-review.ts --comment "$REVIEW" --at "$AT" --summary "$SUMMARY"
+          code=$?
+          set -e
+          cat "$SUMMARY" >> "$GITHUB_STEP_SUMMARY"
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          if [ "$code" = 0 ] && [ -n "$(git status --porcelain data)" ]; then
+            ROUND=$(grep -oP 'strictlane:review round=\K\S+' "$REVIEW" || grep -oP '^## Odds pre-fill.*\K\d{4}-\d{2}-\d{2}' "$REVIEW")
+            npx tsx scripts/promote-round.ts "$ROUND"
+            npm run validate
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "round=$ROUND" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit
+        id: commit
+        if: steps.apply.outputs.changed == 'true'
+        env:
+          BRANCH: ${{ steps.pr.outputs.ref }}
+          MERGED: ${{ steps.pr.outputs.merged }}
+          PR: ${{ steps.pr.outputs.number }}
+          ROUND: ${{ steps.apply.outputs.round }}
+        run: |
+          git config user.name  "strictlane-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data
+          # Like the odds pre-fill's, this commit's timestamp is independent
+          # evidence that the edited forecasts predate kickoff.
+          git commit -m "Review table edits $ROUND" -m "Applied from the edited review comment on #$PR."
+          if [ "$MERGED" = true ]; then
+            NEW="review/$ROUND-$(date -u +%H%M%S)"
+            git push origin "HEAD:refs/heads/$NEW"
+            {
+              echo "#$PR was merged before its review table was edited, so the edit is applied here."
+              echo
+              cat "$RUNNER_TEMP/apply-summary.md"
+              echo
+              echo "Merge this to publish it."
+            } > "$RUNNER_TEMP/pr-body.md"
+            URL=$(gh pr create --head "$NEW" --title "Review table edits $ROUND" --body-file "$RUNNER_TEMP/pr-body.md")
+            echo "followup=$URL" >> "$GITHUB_OUTPUT"
+          else
+            git push origin "HEAD:refs/heads/$BRANCH"
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Reply on the PR
+        if: steps.apply.outcome == 'success'
+        env:
+          PR: ${{ steps.pr.outputs.number }}
+          FOLLOWUP: ${{ steps.commit.outputs.followup }}
+        run: |
+          REPLY="$RUNNER_TEMP/reply.md"
+          if [ -n "$FOLLOWUP" ]; then
+            printf '%s\n\n' "This PR was already merged, so the edit went to a follow-up PR: $FOLLOWUP" > "$REPLY"
+          else
+            : > "$REPLY"
+          fi
+          cat "$RUNNER_TEMP/apply-summary.md" >> "$REPLY"
+          gh pr comment "$PR" --body-file "$REPLY"
+
+      # Unedited table: the files are the truth (they may have been edited by
+      # hand). Edited table: it must agree with the files.
+      - name: Report the Review table status
+        if: always()
+        env:
+          FOUND: ${{ steps.pr.outputs.found }}
+          EDITED: ${{ steps.pr.outputs.edited }}
+          OPEN: ${{ steps.pr.outputs.state == 'open' }}
+          APPLY_OUTCOME: ${{ steps.apply.outcome }}
+          COMMIT_OUTCOME: ${{ steps.commit.outcome }}
+          SHA: ${{ steps.commit.outputs.sha || steps.pr.outputs.sha }}
+          FOLLOWUP: ${{ steps.commit.outputs.followup }}
+        run: |
+          post() { gh api "repos/$REPO/statuses/$1" -f state="$2" -f context="$CONTEXT" -f description="$3" --silent; echo "$CONTEXT on $1: $2 — $3"; }
+
+          # A follow-up PR carries no review comment of its own.
+          if [ -n "$FOLLOWUP" ]; then post "$SHA" success "Applied from the merged PR's review table"; exit 0; fi
+          [ "$OPEN" = true ] || exit 0
+
+          if [ "$APPLY_OUTCOME" = failure ] || [ "$COMMIT_OUTCOME" = failure ]; then
+            post "$SHA" failure "Applying the review table failed; see the workflow log"
+          elif [ "$FOUND" != true ]; then
+            post "$SHA" success "No odds review on this PR"
+          elif [ "$EDITED" != true ]; then
+            post "$SHA" success "Review table not edited"
+          else
+            set +e
+            npx tsx scripts/apply-review.ts --comment "$RUNNER_TEMP/review.md" --check > "$RUNNER_TEMP/check.md"
+            code=$?
+            set -e
+            cat "$RUNNER_TEMP/check.md" >> "$GITHUB_STEP_SUMMARY"
+            case "$code" in
+              0) post "$SHA" success "Review table and matchweek files agree" ;;
+              3) post "$SHA" failure "Review table edits are not in the matchweek files" ;;
+              *) post "$SHA" failure "Review table can't be applied; see the bot's reply" ;;
+            esac
+          fi
