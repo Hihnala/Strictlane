@@ -109,10 +109,11 @@
           "X": 28
         },
         "marks": [
+          "X",
           "2"
         ],
-        "capturedAt": "2026-10-30T15:09:15.595Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "capturedAt": "2026-10-31T07:34:44.878Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand from the PR #23 review"
       }
     },
     {
@@ -207,11 +208,10 @@
           "X": 21
         },
         "marks": [
-          "1",
-          "2"
+          "1"
         ],
-        "capturedAt": "2026-10-30T15:09:15.595Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "capturedAt": "2026-10-31T07:34:44.878Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand from the PR #23 review"
       }
     },
     {
@@ -240,11 +240,10 @@
           "X": 25
         },
         "marks": [
-          "1",
-          "2"
+          "1"
         ],
-        "capturedAt": "2026-10-30T15:09:15.595Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "capturedAt": "2026-10-31T07:34:44.878Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand from the PR #23 review"
       }
     },
     {
