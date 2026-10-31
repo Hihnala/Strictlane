@@ -277,6 +277,8 @@ interface Line {
   position: number;
   label: string;
   state: "new" | "kept" | "skipped";
+  /** the match record this row refers to; written into the comment for apply-review.ts */
+  matchId?: string;
   /** exact market fractions, or the kept forecast's */
   p: Triple | null;
   probs: Record<Sign, number> | null;
@@ -286,6 +288,12 @@ interface Line {
   books: string[];
 }
 
+/** Match ids indexed by the table's row number (position), blank where a row has none. */
+const byRow = (lines: Line[]) => {
+  const ids: string[] = Array(Math.max(0, ...lines.map((l) => l.position + 1))).fill("");
+  for (const l of lines) ids[l.position] = l.matchId ?? "";
+  return ids;
+};
 const stamp = (iso: string) => `${iso.slice(0, 16).replace("T", " ")} UTC`;
 const tri = (r: Record<Sign, number>, dp = 0) => SIGNS.map((s) => r[s].toFixed(dp)).join(" / ");
 
@@ -345,13 +353,18 @@ function report(o: {
   out.push(
     "### Before merging",
     "",
-    "- These are suggestions. Change any `probs` or `marks` you disagree with in the matchweek files, keeping 5 singles and 8 doubles.",
-    "- If you change a match, set its `capturedAt` to the time of your edit. It must stay before kickoff.",
+    "- These are suggestions. To change one, **edit this comment**: change the Marks (or Probs) in the table above and save, keeping 5 singles and 8 doubles. " +
+      "The Review table workflow writes your edit into the matchweek files, timestamped with the edit, and replies here.",
+    "- **Wait for its ✅ reply before merging.** The *Review table* check stays red while the table and the files disagree.",
+    "- Editing the matchweek files directly still works; then leave this table alone and set each changed `capturedAt` yourself, before kickoff.",
     ...(review.length
       ? [`- Fill in what's listed above, then \`npx tsx scripts/promote-round.ts ${draft.id}\` and \`npm run validate\`.`]
       : []),
     ""
   );
+  // Invisible on GitHub; lets apply-review.ts map each row to its match even
+  // before the round is promoted, and survives the comment being edited.
+  out.push(`<!-- strictlane:review round=${draft.id} ids=${byRow(lines).join(",")} -->`, "");
   return out.join("\n");
 }
 
@@ -438,6 +451,7 @@ async function main() {
       continue;
     }
     const match = hit.week.data.matches[hit.index];
+    line.matchId = match.id;
 
     if (match.forecast) {
       Object.assign(line, {

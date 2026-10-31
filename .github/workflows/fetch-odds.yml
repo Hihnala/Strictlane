@@ -31,6 +31,9 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  # The Review table check (review-table.yml) never runs for this workflow's
+  # own PRs, so it is posted here.
+  statuses: write
 
 # Shares the coupon/* branches with fetch-vakio.yml, so the two queue, not race.
 concurrency:
@@ -127,9 +130,10 @@ jobs:
 
           To finish:
 
-          1. Change any `probs` or `marks` you disagree with in the matchweek files,
-             keeping 5 singles and 8 doubles. If you change a match, set its
-             `capturedAt` to the time of your edit — before kickoff.
+          1. Change any `marks` or `probs` you disagree with by **editing the review
+             comment's table** and saving, keeping 5 singles and 8 doubles. The
+             Review table workflow writes it into the matchweek files and replies;
+             wait for its ✅ before merging.
           2. Fill in anything the comment lists under "Needs a human", then
              `npx tsx scripts/promote-round.ts <round-id>`
           3. `npm run validate`, then merge
@@ -209,9 +213,10 @@ jobs:
 
           To finish:
 
-          1. Change any `probs` or `marks` you disagree with in the matchweek files,
-             keeping 5 singles and 8 doubles. If you change a match, set its
-             `capturedAt` to the time of your edit — before kickoff.
+          1. Change any `marks` or `probs` you disagree with by **editing the review
+             comment's table** and saving, keeping 5 singles and 8 doubles. The
+             Review table workflow writes it into the matchweek files and replies;
+             wait for its ✅ before merging.
           2. Fill in anything the comment lists under "Needs a human", then
              `npx tsx scripts/promote-round.ts <round-id>`
           3. `npm run validate`, then merge
@@ -219,3 +224,5 @@ jobs:
             fi
           fi
           gh pr comment "$BRANCH" --body-file odds-summary.md
+          gh api "repos/$GITHUB_REPOSITORY/statuses/$(git rev-parse HEAD)" -f state=success \
+            -f context="Review table" -f description="Review table posted, not edited yet" --silent
