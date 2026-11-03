@@ -430,6 +430,14 @@
       ]
     },
     {
+      "id": "crewe",
+      "name": "Crewe Alexandra",
+      "short": "Crewe",
+      "aliases": [
+        "Crewe"
+      ]
+    },
+    {
       "id": "doncaster",
       "name": "Doncaster Rovers",
       "short": "Doncaster",
