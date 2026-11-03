@@ -37,10 +37,16 @@ async function memo<T>(key: string, fn: () => Promise<T>): Promise<T> {
   return cache.get(key) as T;
 }
 
-export const LEAGUES: Array<{ id: LeagueId; label: string; short: string; teams: number }> = [
+/**
+ * `teams: null` marks a knockout cup: no table, no fixed round size, and
+ * "matchweek" is the cup round number. Cup ties reach the coupon only
+ * occasionally, so the home page shows the cup only once it has data.
+ */
+export const LEAGUES: Array<{ id: LeagueId; label: string; short: string; teams: number | null }> = [
   { id: "premier-league", label: "Premier League", short: "PL", teams: 20 },
   { id: "championship", label: "Championship", short: "Champ", teams: 24 },
   { id: "league-one", label: "League One", short: "L1", teams: 24 },
+  { id: "fa-cup", label: "FA Cup", short: "FAC", teams: null },
 ];
 
 export function leagueMeta(id: LeagueId) {

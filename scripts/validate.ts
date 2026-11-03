@@ -30,10 +30,12 @@ import { resultSign } from "../lib/scoring";
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DATA = path.join(ROOT, "data");
 
-const TEAMS_PER_LEAGUE: Record<LeagueId, number> = {
+// null = knockout cup: round sizes vary, so no match-count check
+const TEAMS_PER_LEAGUE: Record<LeagueId, number | null> = {
   "premier-league": 20,
   championship: 24,
   "league-one": 24,
+  "fa-cup": null,
 };
 
 interface Issue {
@@ -134,11 +136,14 @@ async function main() {
         seenWeeks.add(mw.matchweek);
 
         // -- round shape
-        const expected = TEAMS_PER_LEAGUE[lid] / 2;
-        if (mw.matches.length > expected) {
-          err(where, `${mw.matches.length} matches, but a ${TEAMS_PER_LEAGUE[lid]}-team round holds ${expected}`);
-        } else if (mw.matches.length < expected) {
-          warn(where, `${mw.matches.length}/${expected} matches — fine mid-season, wrong once the round is complete`);
+        const teamCount = TEAMS_PER_LEAGUE[lid];
+        if (teamCount !== null) {
+          const expected = teamCount / 2;
+          if (mw.matches.length > expected) {
+            err(where, `${mw.matches.length} matches, but a ${teamCount}-team round holds ${expected}`);
+          } else if (mw.matches.length < expected) {
+            warn(where, `${mw.matches.length}/${expected} matches — fine mid-season, wrong once the round is complete`);
+          }
         }
 
         // -- a team plays at most once per matchweek

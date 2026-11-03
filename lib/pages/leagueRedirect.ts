@@ -8,7 +8,11 @@ export async function leagueRedirectStaticParams() {
   const seasons = await getSeasons();
   const out: Array<{ season: string; league: string }> = [];
   for (const s of seasons) {
-    for (const l of LEAGUES) out.push({ season: s.id, league: l.id });
+    for (const l of LEAGUES) {
+      // a cup with no ties logged yet has nothing to redirect to
+      if (l.teams === null && (await listMatchweeks(s.id, l.id)).length === 0) continue;
+      out.push({ season: s.id, league: l.id });
+    }
   }
   return out;
 }

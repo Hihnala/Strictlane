@@ -16,7 +16,7 @@ import { z } from "zod";
  * apart.
  * ------------------------------------------------------------------------- */
 
-export const LeagueId = z.enum(["premier-league", "championship", "league-one"]);
+export const LeagueId = z.enum(["premier-league", "championship", "league-one", "fa-cup"]);
 export type LeagueId = z.infer<typeof LeagueId>;
 
 /** "2026-27" */

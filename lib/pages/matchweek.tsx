@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import {
-  LEAGUES, getSeasons, getTeams, getMatchweek, listMatchweeks,
+  LEAGUES, leagueMeta, getSeasons, getTeams, getMatchweek, listMatchweeks,
   getCommentary, latestPlayedMatchweek,
 } from "@/lib/content";
 import type { LeagueId } from "@/lib/schema";
@@ -76,7 +76,7 @@ export async function renderMatchweekPage(locale: Locale, season: string, league
     cells.push({ matchweek: w, state: forecast ? "forecast" : played ? "logged" : "upcoming" });
     if (week && w <= n) throughMatches.push(...week.matches);
   }
-  const standings = computeStandings(throughMatches);
+  const standings = leagueMeta(lid).teams === null ? [] : computeStandings(throughMatches);
 
   const played = data.matches.filter((m) => m.status === "played").length;
 

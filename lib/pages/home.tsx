@@ -379,7 +379,7 @@ export async function renderHome(locale: Locale) {
       <section className="wide home-leagues">
         <Reveal className="label-mono">{dict.home.byLeague}</Reveal>
         <div className="league-grid">
-          {cards.map((c, i) => (
+          {cards.filter((c) => c.teams !== null || c.has).map((c, i) => (
             <Reveal key={c.id} delay={i * 0.08}>
               <Link className="league-card" href={`${prefix}/${season.id}/${c.id}`}>
                 <span className="name">{dict.leagues[c.id].label}</span>
