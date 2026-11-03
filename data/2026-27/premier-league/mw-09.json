@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 9,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-26)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-03)",
   "importedAt": "2026-10-26T05:31:00.363Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "chelsea",
       "away": "man-united",
       "kickoff": "2026-10-31T12:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -22,8 +29,15 @@
       "home": "bournemouth",
       "away": "leeds",
       "kickoff": "2026-10-31T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -55,8 +69,15 @@
       "home": "brentford",
       "away": "nottingham-forest",
       "kickoff": "2026-10-31T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -88,8 +109,15 @@
       "home": "coventry",
       "away": "sunderland",
       "kickoff": "2026-10-31T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -121,8 +149,15 @@
       "home": "hull",
       "away": "ipswich",
       "kickoff": "2026-10-31T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -154,8 +189,15 @@
       "home": "man-city",
       "away": "brighton",
       "kickoff": "2026-10-31T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -187,8 +229,15 @@
       "home": "tottenham",
       "away": "crystal-palace",
       "kickoff": "2026-10-31T17:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -219,8 +268,15 @@
       "home": "aston-villa",
       "away": "fulham",
       "kickoff": "2026-10-31T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -251,8 +307,15 @@
       "home": "liverpool",
       "away": "arsenal",
       "kickoff": "2026-11-01T16:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -262,8 +325,15 @@
       "home": "newcastle",
       "away": "everton",
       "kickoff": "2026-11-02T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
