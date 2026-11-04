@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 9,
   "matchweekDerived": false,
-  "source": "hand-entered from results listing provided 2026-10-10 — 9/12 MW9 fixtures known (3 played, 6 postponed); Blackpool, Cambridge, Leicester, Oxford, Sheffield Wednesday, and Stockport's fixtures not yet known, to be added once confirmed; kickoff times are placeholders (originally scheduled matchday) as exact dates were not yet available; results for the 3 played fixtures (Reading-Bradford, Burton Albion-Huddersfield, Leyton Orient-Plymouth) supplied by Markku 2026-10-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-03)",
+  "source": "hand-entered from results listing provided 2026-10-10 — 9/12 MW9 fixtures known (3 played, 6 postponed); Blackpool, Cambridge, Leicester, Oxford, Sheffield Wednesday, and Stockport's fixtures not yet known, to be added once confirmed; kickoff times are placeholders (originally scheduled matchday) as exact dates were not yet available; results for the 3 played fixtures (Reading-Bradford, Burton Albion-Huddersfield, Leyton Orient-Plymouth) supplied by Markku 2026-10-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-04)",
   "importedAt": "2026-10-10T00:00:00.000Z",
   "matches": [
     {
@@ -65,8 +65,15 @@
       "home": "wigan",
       "away": "mansfield",
       "kickoff": "2026-11-03T19:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null

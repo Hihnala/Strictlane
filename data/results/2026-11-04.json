@@ -1,0 +1,100 @@
+{
+  "runs": [
+    {
+      "fetchedAt": "2026-11-04T12:29:06.793Z",
+      "sources": [
+        "https://ballprediction.com/epl/results",
+        "https://ballprediction.com/epl/fixtures",
+        "https://ballprediction.com/efl/results",
+        "https://ballprediction.com/efl/fixtures",
+        "https://ballprediction.com/elo/results",
+        "https://ballprediction.com/elo/fixtures"
+      ],
+      "changes": [
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-watford-lincoln",
+          "line": "MW14 Watford 1–0 Lincoln City (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-preston-sheffield-united",
+          "line": "MW14 Preston North End 2–3 Sheffield United (HT 1–3)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-blackburn-stoke",
+          "line": "MW14 Blackburn Rovers 1–2 Stoke City (HT 0–1)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-derby-norwich",
+          "line": "MW14 Derby County 0–4 Norwich City (HT 0–3)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-qpr-burnley",
+          "line": "MW14 Queens Park Rangers 1–1 Burnley (HT 0–1)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-charlton-bolton",
+          "line": "MW14 Charlton Athletic 0–1 Bolton Wanderers (HT 0–1)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-portsmouth-swansea",
+          "line": "MW14 Portsmouth 3–1 Swansea City (HT 1–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-birmingham-millwall",
+          "line": "MW14 Birmingham City 3–0 Millwall (HT 3–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-west-brom-southampton",
+          "line": "MW14 West Bromwich Albion 1–1 Southampton (HT 1–0)"
+        },
+        {
+          "kind": "result",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-08.json",
+          "id": "2026-27-e2-08-huddersfield-luton",
+          "line": "MW8 Huddersfield Town 1–1 Luton Town (HT 0–1)"
+        },
+        {
+          "kind": "result",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-09.json",
+          "id": "2026-27-e2-09-wigan-mansfield",
+          "line": "MW9 Wigan Athletic 0–0 Mansfield Town (HT 0–0)"
+        }
+      ],
+      "halfTimesAdded": {
+        "premier-league": 0,
+        "championship": 0,
+        "league-one": 0
+      },
+      "needsReview": []
+    }
+  ]
+}
