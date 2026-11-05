@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 3,
   "matchweekDerived": false,
-  "source": "hand-entered from fixture listings, 25 Aug 2026 — all 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep, then postponed again (Reading in the Carabao Cup), no new date as of 10 Sep 2026; MW3 results from BBC Sport; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-10-11)",
+  "source": "hand-entered from fixture listings, 25 Aug 2026 — all 12 fixtures confirmed; Oxford v Reading rearranged to 8 Sep, then postponed again (Reading in the Carabao Cup), no new date as of 10 Sep 2026; MW3 results from BBC Sport; results and closing markets merged from football-data.co.uk 2026-27 (closing AvgC, B365C fallback; proportional), 2026-09-10; results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-05)",
   "importedAt": "2026-08-25T17:30:00.000Z",
   "matches": [
     {
@@ -307,8 +307,15 @@
       "home": "oxford",
       "away": "reading",
       "kickoff": "2026-11-04T19:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null

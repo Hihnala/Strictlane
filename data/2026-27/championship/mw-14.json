@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 14,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-04)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-05)",
   "importedAt": "2026-10-26T05:31:00.363Z",
   "matches": [
     {
@@ -173,8 +173,15 @@
       "home": "cardiff",
       "away": "west-ham",
       "kickoff": "2026-11-04T19:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 3
+      },
+      "halfTime": {
+        "home": 3,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -184,8 +191,15 @@
       "home": "wrexham",
       "away": "middlesbrough",
       "kickoff": "2026-11-04T19:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -195,8 +209,15 @@
       "home": "bristol-city",
       "away": "wolves",
       "kickoff": "2026-11-04T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
