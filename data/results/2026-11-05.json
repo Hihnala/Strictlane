@@ -1,0 +1,51 @@
+{
+  "runs": [
+    {
+      "fetchedAt": "2026-11-05T12:18:16.194Z",
+      "sources": [
+        "https://ballprediction.com/epl/results",
+        "https://ballprediction.com/epl/fixtures",
+        "https://ballprediction.com/efl/results",
+        "https://ballprediction.com/efl/fixtures",
+        "https://ballprediction.com/elo/results",
+        "https://ballprediction.com/elo/fixtures"
+      ],
+      "changes": [
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-cardiff-west-ham",
+          "line": "MW14 Cardiff City 3–3 West Ham United (HT 3–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-wrexham-middlesbrough",
+          "line": "MW14 Wrexham 2–0 Middlesbrough (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-14.json",
+          "id": "2026-27-e1-14-bristol-city-wolves",
+          "line": "MW14 Bristol City 1–2 Wolverhampton Wanderers (HT 1–0)"
+        },
+        {
+          "kind": "result",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-03.json",
+          "id": "2026-27-e2-03-oxford-reading",
+          "line": "MW3 Oxford United 2–0 Reading (HT 0–0)"
+        }
+      ],
+      "halfTimesAdded": {
+        "premier-league": 0,
+        "championship": 0,
+        "league-one": 0
+      },
+      "needsReview": []
+    }
+  ]
+}
