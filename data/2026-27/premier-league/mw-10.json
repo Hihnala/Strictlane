@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 10,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-03)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-07)",
   "importedAt": "2026-11-03T09:28:53.121Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "everton",
       "away": "coventry",
       "kickoff": "2026-11-06T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null

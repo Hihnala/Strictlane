@@ -1,0 +1,123 @@
+{
+  "runs": [
+    {
+      "fetchedAt": "2026-11-07T07:16:33.295Z",
+      "sources": [
+        "https://ballprediction.com/epl/results",
+        "https://ballprediction.com/epl/fixtures",
+        "https://ballprediction.com/efl/results",
+        "https://ballprediction.com/efl/fixtures",
+        "https://ballprediction.com/elo/results",
+        "https://ballprediction.com/elo/fixtures"
+      ],
+      "changes": [
+        {
+          "kind": "result",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-10.json",
+          "id": "2026-27-e0-10-everton-coventry",
+          "line": "MW10 Everton 3–1 Coventry City (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-derby-bolton",
+          "line": "MW15 Derby County 3–1 Bolton Wanderers (HT 0–1)"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-leicester-bradford",
+          "line": "MW15 Leicester City v Bradford City: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-wigan-barnsley",
+          "line": "MW15 Wigan Athletic v Barnsley: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-sheffield-wednesday-plymouth",
+          "line": "MW15 Sheffield Wednesday v Plymouth Argyle: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-afc-wimbledon-blackpool",
+          "line": "MW15 AFC Wimbledon v Blackpool: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-mk-dons-burton",
+          "line": "MW15 Milton Keynes Dons v Burton Albion: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-peterborough-oxford",
+          "line": "MW15 Peterborough United v Oxford United: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-doncaster-leyton-orient",
+          "line": "MW15 Doncaster Rovers v Leyton Orient: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-wycombe-huddersfield",
+          "line": "MW15 Wycombe Wanderers v Huddersfield Town: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-luton-cambridge",
+          "line": "MW15 Luton Town v Cambridge United: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-stevenage-mansfield",
+          "line": "MW15 Stevenage v Mansfield Town: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-bromley-notts-county",
+          "line": "MW15 Bromley v Notts County: 2026-11-14T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-stockport-reading",
+          "line": "MW15 Stockport County v Reading: 2026-11-14T15:00:00.000Z"
+        }
+      ],
+      "halfTimesAdded": {
+        "premier-league": 0,
+        "championship": 0,
+        "league-one": 0
+      },
+      "needsReview": [
+        "Premier League — Brentford v Liverpool: half-time 1–0 here, 0–1 on the site — left as is"
+      ]
+    }
+  ]
+}
