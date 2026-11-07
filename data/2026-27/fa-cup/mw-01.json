@@ -1,0 +1,76 @@
+{
+  "season": "2026-27",
+  "league": "fa-cup",
+  "matchweek": 1,
+  "matchweekDerived": false,
+  "source": "FA Cup first round, hand-entered (fixtures from the Veikkaus Lauantaivakio coupon, draw 100579)",
+  "importedAt": "2026-11-07T07:59:31.000Z",
+  "matches": [
+    {
+      "id": "2026-27-fac-01-crewe-afc-wimbledon",
+      "home": "crewe",
+      "away": "afc-wimbledon",
+      "kickoff": "2026-11-07T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100579",
+        "probs": {
+          "1": 39.96,
+          "2": 30.71,
+          "X": 29.33
+        },
+        "capturedAt": "2026-11-07T07:13:32.717Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-07",
+        "probs": {
+          "1": 39,
+          "2": 32,
+          "X": 29
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-11-07T07:59:31.000Z",
+        "note": "pre-filled from OddsPortal 1X2 odds (single snapshot; power method); marks steered by Veikkaus pool popularity"
+      }
+    },
+    {
+      "id": "2026-27-fac-01-oxford-stevenage",
+      "home": "oxford",
+      "away": "stevenage",
+      "kickoff": "2026-11-07T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100579",
+        "probs": {
+          "1": 55.49,
+          "2": 18.99,
+          "X": 25.52
+        },
+        "capturedAt": "2026-11-07T07:13:32.717Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-07",
+        "probs": {
+          "1": 46,
+          "2": 26,
+          "X": 28
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-11-07T07:59:31.000Z",
+        "note": "pre-filled from OddsPortal 1X2 odds (single snapshot; power method); marks steered by Veikkaus pool popularity"
+      }
+    }
+  ]
+}
