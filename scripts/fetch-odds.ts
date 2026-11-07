@@ -343,7 +343,7 @@ function report(o: {
     "",
     "Probs are the books' margin-free average, rounded; a kept row shows the forecast already on file. " +
       "Value is market ÷ pool: above 1 the crowd underplays the sign. Doubles pair the favourite with the " +
-      "better-value other sign; singles go to the safest favourites the pool doesn't overplay.",
+      "better-value other sign, or with the draw when home and away are within 10 points; singles go to the safest favourites the pool doesn't overplay.",
     ""
   );
 
