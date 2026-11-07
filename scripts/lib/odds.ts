@@ -86,7 +86,9 @@ export interface MarkPick {
  * value = market probability ÷ pool share. Above 1 the crowd underplays a
  * sign, so a correct row through it is shared with fewer winners.
  *
- *   doubles  the market favourite plus whichever other sign has the better value
+ *   doubles  the market favourite plus whichever other sign has the better value —
+ *            except in an open match, where home and away are within DRAW_GAP
+ *            of each other: there the second mark is the draw
  *   singles  the `singles` safest favourites — safest meaning the favourite
  *            keeps the largest share of what the two likeliest signs cover —
  *            chosen only among favourites the pool doesn't overplay (value ≥ 1).
@@ -95,14 +97,26 @@ export interface MarkPick {
  * The pool steers marks only, never probabilities: crowd behaviour folded into
  * `forecast.probs` would corrupt every RPS figure on the site.
  */
+/**
+ * Home and away this close (as fractions) make an open match, and an open match's
+ * double carries the draw. Value steering alone almost never picked it: the pool
+ * prices the draw about fairly but underplays the outsider, so the double took
+ * the outsider and the draw went uncovered exactly where it is likeliest. Of 29
+ * draws on the coupons up to 31 October, 11 came within 10 points; the rule
+ * would have covered 11 rather than 6.
+ */
+export const DRAW_GAP = 0.1;
+
 export function pickMarks(matches: MarkInput[], singles: number): MarkPick[] {
   const rows = matches.map(({ p, q }) => {
     const value = (q ? p.map((x, i) => x / Math.max(q[i], 1e-4)) : [1, 1, 1]) as Triple;
     const byProb = [0, 1, 2].sort((a, b) => p[b] - p[a] || value[b] - value[a] || a - b);
     const fav = byProb[0];
-    const partner = [0, 1, 2]
-      .filter((i) => i !== fav)
-      .sort((a, b) => value[b] - value[a] || p[b] - p[a] || a - b)[0];
+    // The epsilon keeps a gap of exactly 10 points open despite float error (0.45 − 0.35 > 0.1).
+    const open = fav !== 1 && Math.abs(p[0] - p[2]) <= DRAW_GAP + 1e-9;
+    const partner = open
+      ? 1
+      : [0, 1, 2].filter((i) => i !== fav).sort((a, b) => value[b] - value[a] || p[b] - p[a] || a - b)[0];
     return { fav, partner, value, safety: p[fav] / (p[fav] + p[byProb[1]]) };
   });
 
