@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 10,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-07)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-08)",
   "importedAt": "2026-11-03T09:28:53.121Z",
   "matches": [
     {
@@ -29,8 +29,15 @@
       "home": "leeds",
       "away": "tottenham",
       "kickoff": "2026-11-07T12:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -40,8 +47,15 @@
       "home": "arsenal",
       "away": "hull",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -72,8 +86,15 @@
       "home": "fulham",
       "away": "newcastle",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -104,8 +125,15 @@
       "home": "nottingham-forest",
       "away": "man-city",
       "kickoff": "2026-11-07T17:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
