@@ -1,0 +1,130 @@
+{
+  "runs": [
+    {
+      "fetchedAt": "2026-11-08T07:56:54.778Z",
+      "sources": [
+        "https://ballprediction.com/epl/results",
+        "https://ballprediction.com/epl/fixtures",
+        "https://ballprediction.com/efl/results",
+        "https://ballprediction.com/efl/fixtures",
+        "https://ballprediction.com/elo/results",
+        "https://ballprediction.com/elo/fixtures"
+      ],
+      "changes": [
+        {
+          "kind": "result",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-10.json",
+          "id": "2026-27-e0-10-leeds-tottenham",
+          "line": "MW10 Leeds United 1–0 Tottenham Hotspur (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-10.json",
+          "id": "2026-27-e0-10-fulham-newcastle",
+          "line": "MW10 Fulham 1–1 Newcastle United (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-10.json",
+          "id": "2026-27-e0-10-arsenal-hull",
+          "line": "MW10 Arsenal 1–0 Hull City (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-10.json",
+          "id": "2026-27-e0-10-nottingham-forest-man-city",
+          "line": "MW10 Nottingham Forest 3–1 Manchester City (HT 2–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-bristol-city-norwich",
+          "line": "MW15 Bristol City 0–5 Norwich City (HT 0–1)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-portsmouth-stoke",
+          "line": "MW15 Portsmouth 1–2 Stoke City (HT 1–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-wrexham-wolves",
+          "line": "MW15 Wrexham 1–1 Wolverhampton Wanderers (HT 1–1)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-watford-middlesbrough",
+          "line": "MW15 Watford 0–0 Middlesbrough (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-cardiff-burnley",
+          "line": "MW15 Cardiff City 5–4 Burnley (HT 1–2)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-birmingham-swansea",
+          "line": "MW15 Birmingham City 2–1 Swansea City (HT 1–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-preston-southampton",
+          "line": "MW15 Preston North End 1–0 Southampton (HT 1–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-west-brom-millwall",
+          "line": "MW15 West Bromwich Albion 3–0 Millwall (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-blackburn-west-ham",
+          "line": "MW15 Blackburn Rovers 2–1 West Ham United (HT 0–0)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-qpr-lincoln",
+          "line": "MW15 Queens Park Rangers 2–1 Lincoln City (HT 1–1)"
+        },
+        {
+          "kind": "result",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-15.json",
+          "id": "2026-27-e1-15-charlton-sheffield-united",
+          "line": "MW15 Charlton Athletic 2–1 Sheffield United (HT 1–1)"
+        }
+      ],
+      "halfTimesAdded": {
+        "premier-league": 0,
+        "championship": 0,
+        "league-one": 0
+      },
+      "needsReview": [
+        "Premier League — Brentford v Liverpool: half-time 1–0 here, 0–1 on the site — left as is"
+      ]
+    }
+  ]
+}

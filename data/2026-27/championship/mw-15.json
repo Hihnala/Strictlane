@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 15,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-07)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-08)",
   "importedAt": "2026-11-03T09:28:53.121Z",
   "matches": [
     {
@@ -29,8 +29,15 @@
       "home": "bristol-city",
       "away": "norwich",
       "kickoff": "2026-11-07T12:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 5
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -40,8 +47,15 @@
       "home": "portsmouth",
       "away": "stoke",
       "kickoff": "2026-11-07T12:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -51,8 +65,15 @@
       "home": "wrexham",
       "away": "wolves",
       "kickoff": "2026-11-07T12:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -62,8 +83,15 @@
       "home": "birmingham",
       "away": "swansea",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -94,8 +122,15 @@
       "home": "blackburn",
       "away": "west-ham",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -126,8 +161,15 @@
       "home": "cardiff",
       "away": "burnley",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 5,
+        "away": 4
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -159,8 +201,15 @@
       "home": "charlton",
       "away": "sheffield-united",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -192,8 +241,15 @@
       "home": "preston",
       "away": "southampton",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -225,8 +281,15 @@
       "home": "qpr",
       "away": "lincoln",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -258,8 +321,15 @@
       "home": "watford",
       "away": "middlesbrough",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -290,8 +360,15 @@
       "home": "west-brom",
       "away": "millwall",
       "kickoff": "2026-11-07T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
