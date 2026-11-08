@@ -35,8 +35,8 @@
         "away": 2
       },
       "halfTime": {
-        "home": 1,
-        "away": 0
+        "home": 0,
+        "away": 1
       },
       "market": null,
       "pool": {
