@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 10,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-08)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-09)",
   "importedAt": "2026-11-03T09:28:53.121Z",
   "matches": [
     {
@@ -165,8 +165,15 @@
       "home": "brighton",
       "away": "brentford",
       "kickoff": "2026-11-08T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -176,8 +183,15 @@
       "home": "crystal-palace",
       "away": "liverpool",
       "kickoff": "2026-11-08T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -187,8 +201,15 @@
       "home": "ipswich",
       "away": "bournemouth",
       "kickoff": "2026-11-08T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -198,8 +219,15 @@
       "home": "sunderland",
       "away": "chelsea",
       "kickoff": "2026-11-08T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -209,8 +237,15 @@
       "home": "man-united",
       "away": "aston-villa",
       "kickoff": "2026-11-08T16:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 4
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
