@@ -503,7 +503,7 @@ const fi: Dictionary = {
     statement:
       "Strictlane on henkilökohtainen kirjanpito — jalkapallon ennusteita tehtynä ennen ottelua " +
       "Valioliigassa, Championshipissa ja League Onessa, arvioituna ajan mittaan omilla ehdoillaan. " +
-      "Osumat ja huti molemmat jäävät kirjoihin.",
+      "Osumat ja hudit molemmat jäävät kirjoihin.",
     credit: "© 2026 Strictlane/Markku Hihnala. Kaikki oikeudet pidätetään.",
   },
   nav: {
