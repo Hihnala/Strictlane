@@ -577,6 +577,146 @@
       "aliases": [
         "Wycombe"
       ]
+    },
+    {
+      "id": "accrington",
+      "name": "Accrington Stanley",
+      "short": "Accrington",
+      "aliases": [
+        "Accrington",
+        "Accrington S"
+      ]
+    },
+    {
+      "id": "barnet",
+      "name": "Barnet",
+      "short": "Barnet",
+      "aliases": [
+        "Barnet FC"
+      ]
+    },
+    {
+      "id": "cheltenham",
+      "name": "Cheltenham Town",
+      "short": "Cheltenham",
+      "aliases": [
+        "Cheltenham",
+        "Cheltenham T"
+      ]
+    },
+    {
+      "id": "chesterfield",
+      "name": "Chesterfield",
+      "short": "Chesterfield",
+      "aliases": [
+        "Chesterfield FC"
+      ]
+    },
+    {
+      "id": "colchester",
+      "name": "Colchester United",
+      "short": "Colchester",
+      "aliases": [
+        "Colchester",
+        "Colchester U"
+      ]
+    },
+    {
+      "id": "fleetwood",
+      "name": "Fleetwood Town",
+      "short": "Fleetwood",
+      "aliases": [
+        "Fleetwood",
+        "Fleetwood T"
+      ]
+    },
+    {
+      "id": "gillingham",
+      "name": "Gillingham",
+      "short": "Gillingham",
+      "aliases": [
+        "Gillingham FC"
+      ]
+    },
+    {
+      "id": "grimsby",
+      "name": "Grimsby Town",
+      "short": "Grimsby",
+      "aliases": [
+        "Grimsby",
+        "Grimsby T"
+      ]
+    },
+    {
+      "id": "newport",
+      "name": "Newport County",
+      "short": "Newport",
+      "aliases": [
+        "Newport",
+        "Newport Co",
+        "Newport C"
+      ]
+    },
+    {
+      "id": "oldham",
+      "name": "Oldham Athletic",
+      "short": "Oldham",
+      "aliases": [
+        "Oldham",
+        "Oldham A"
+      ]
+    },
+    {
+      "id": "rochdale",
+      "name": "Rochdale",
+      "short": "Rochdale",
+      "aliases": [
+        "Rochdale AFC"
+      ]
+    },
+    {
+      "id": "salford",
+      "name": "Salford City",
+      "short": "Salford",
+      "aliases": [
+        "Salford",
+        "Salford C"
+      ]
+    },
+    {
+      "id": "swindon",
+      "name": "Swindon Town",
+      "short": "Swindon",
+      "aliases": [
+        "Swindon",
+        "Swindon T"
+      ]
+    },
+    {
+      "id": "tranmere",
+      "name": "Tranmere Rovers",
+      "short": "Tranmere",
+      "aliases": [
+        "Tranmere",
+        "Tranmere R"
+      ]
+    },
+    {
+      "id": "walsall",
+      "name": "Walsall",
+      "short": "Walsall",
+      "aliases": [
+        "Walsall FC"
+      ]
+    },
+    {
+      "id": "york",
+      "name": "York City",
+      "short": "York",
+      "aliases": [
+        "York",
+        "York C"
+      ]
     }
   ]
 }
