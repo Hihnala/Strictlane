@@ -242,6 +242,7 @@ const en: Dictionary = {
     "premier-league": { label: "Premier League", short: "PL" },
     championship: { label: "Championship", short: "Champ" },
     "league-one": { label: "League One", short: "L1" },
+    "league-two": { label: "League Two", short: "L2" },
     "fa-cup": { label: "FA Cup", short: "FAC" },
   },
   common: {
@@ -452,6 +453,7 @@ const en: Dictionary = {
       "premier-league": "Premier League Statistics So Far",
       championship: "Championship Statistics So Far",
       "league-one": "League One Statistics So Far",
+      "league-two": "League Two Statistics So Far",
       "fa-cup": "FA Cup Statistics So Far",
     },
     homeWins: "Home Wins",
@@ -514,6 +516,7 @@ const fi: Dictionary = {
     "premier-league": { label: "Valioliiga", short: "VL" },
     championship: { label: "Championship", short: "Champ" },
     "league-one": { label: "League One", short: "L1" },
+    "league-two": { label: "League Two", short: "L2" },
     "fa-cup": { label: "FA Cup", short: "FAC" },
   },
   common: {
@@ -725,6 +728,7 @@ const fi: Dictionary = {
       "premier-league": "Valioliigan tilastot tähän mennessä",
       championship: "Championshipin tilastot tähän mennessä",
       "league-one": "League Onen tilastot tähän mennessä",
+      "league-two": "League Twon tilastot tähän mennessä",
       "fa-cup": "FA Cupin tilastot tähän mennessä",
     },
     homeWins: "Kotivoitot",

@@ -46,6 +46,10 @@ export const LEAGUES: Array<{ id: LeagueId; label: string; short: string; teams:
   { id: "premier-league", label: "Premier League", short: "PL", teams: 20 },
   { id: "championship", label: "Championship", short: "Champ", teams: 24 },
   { id: "league-one", label: "League One", short: "L1", teams: 24 },
+  // Coupon-only: League Two is not followed, only labelled when Veikkaus puts
+  // its matches on the coupon. `teams: null` gives it the cup treatment — no
+  // table from partial data, no home card or full-round check until data exists.
+  { id: "league-two", label: "League Two", short: "L2", teams: null },
   { id: "fa-cup", label: "FA Cup", short: "FAC", teams: null },
 ];
 

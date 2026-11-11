@@ -35,6 +35,7 @@ const TEAMS_PER_LEAGUE: Record<LeagueId, number | null> = {
   "premier-league": 20,
   championship: 24,
   "league-one": 24,
+  "league-two": null, // coupon-only: matchweek files hold just the coupon matches
   "fa-cup": null,
 };
 

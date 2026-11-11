@@ -114,6 +114,7 @@ const ZONES: Record<LeagueId, Array<{ zone: Zone; from: number; to: number }>> =
     { zone: "playoff", from: 3, to: 6 },
     { zone: "relegation", from: 21, to: 24 },
   ],
+  "league-two": [], // coupon-only: not followed, no table
   "fa-cup": [], // knockout: no table
 };
 
