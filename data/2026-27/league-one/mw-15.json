@@ -32,10 +32,11 @@
           "X": 27
         },
         "marks": [
+          "X",
           "2"
         ],
-        "capturedAt": "2026-11-14T07:52:33.405Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
       }
     },
     {
@@ -111,7 +112,7 @@
           "1"
         ],
         "capturedAt": "2026-11-14T07:52:33.405Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
       }
     },
     {
@@ -151,10 +152,11 @@
           "X": 26
         },
         "marks": [
-          "1"
+          "1",
+          "X"
         ],
-        "capturedAt": "2026-11-14T07:52:33.405Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
       }
     },
     {
@@ -197,7 +199,7 @@
           "1"
         ],
         "capturedAt": "2026-11-14T07:52:33.405Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
       }
     },
     {
@@ -226,10 +228,11 @@
           "X": 25
         },
         "marks": [
-          "1"
+          "1",
+          "X"
         ],
-        "capturedAt": "2026-11-14T07:52:33.405Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
       }
     },
     {
