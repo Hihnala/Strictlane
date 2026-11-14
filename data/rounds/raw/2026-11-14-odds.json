@@ -1,0 +1,604 @@
+{
+  "runs": [
+    {
+      "capturedAt": "2026-11-14T07:52:33.405Z",
+      "odds": {
+        "source": "https://football-data.co.uk/fixtures.csv",
+        "lastModified": "2026-11-13T14:16:25.000Z",
+        "books": [
+          "BFE",
+          "B365",
+          "PP",
+          "SKB",
+          "BW"
+        ],
+        "rows": [
+          {
+            "position": 0,
+            "matchId": "2026-27-e2-15-stockport-reading",
+            "cells": {
+              "Div": "E2",
+              "Date": "14/11/2026",
+              "Time": "15:00",
+              "HomeTeam": "Stockport",
+              "AwayTeam": "Reading",
+              "Referee": "R Madley",
+              "B365H": "1.79",
+              "B365D": "3.7",
+              "B365A": "3.9",
+              "BFDH": "1.8",
+              "BFDD": "3.75",
+              "BFDA": "3.75",
+              "BVH": "1.83",
+              "BVD": "3.8",
+              "BVA": "3.9",
+              "BWH": "1.88",
+              "BWD": "3.75",
+              "BWA": "3.6",
+              "PPH": "1.85",
+              "PPD": "3.8",
+              "PPA": "3.8",
+              "SKBH": "1.83",
+              "SKBD": "3.6",
+              "SKBA": "3.6",
+              "MaxH": "1.91",
+              "MaxD": "3.8",
+              "MaxA": "4.1",
+              "AvgH": "1.85",
+              "AvgD": "3.75",
+              "AvgA": "3.76",
+              "BFEH": "1.92",
+              "BFED": "4",
+              "BFEA": "4.1",
+              "B365>2.5": "1.62",
+              "B365<2.5": "2.25",
+              "Max>2.5": "1.62",
+              "Max<2.5": "2.3",
+              "Avg>2.5": "1.59",
+              "Avg<2.5": "2.23",
+              "BFE>2.5": "1.68",
+              "BFE<2.5": "2.36",
+              "AHh": "-0.5",
+              "B365AHH": "1.83",
+              "B365AHA": "2.03",
+              "MaxAHH": "1.84",
+              "MaxAHA": "2.03",
+              "AvgAHH": "1.8",
+              "AvgAHA": "1.92",
+              "BFEAHH": "1.92",
+              "BFEAHA": "2.07"
+            }
+          },
+          {
+            "position": 1,
+            "matchId": "2026-27-e2-15-sheffield-wednesday-plymouth",
+            "cells": {
+              "Div": "E2",
+              "Date": "14/11/2026",
+              "Time": "15:00",
+              "HomeTeam": "Sheffield Weds",
+              "AwayTeam": "Plymouth",
+              "Referee": "A Backhouse",
+              "B365H": "2.25",
+              "B365D": "3.5",
+              "B365A": "2.82",
+              "BFDH": "2.25",
+              "BFDD": "3.5",
+              "BFDA": "2.8",
+              "BVH": "2.3",
+              "BVD": "3.7",
+              "BVA": "2.8",
+              "BWH": "2.25",
+              "BWD": "3.6",
+              "BWA": "2.85",
+              "PPH": "2.3",
+              "PPD": "3.7",
+              "PPA": "2.8",
+              "SKBH": "2.25",
+              "SKBD": "3.5",
+              "SKBA": "2.75",
+              "MaxH": "2.38",
+              "MaxD": "3.7",
+              "MaxA": "3",
+              "AvgH": "2.28",
+              "AvgD": "3.6",
+              "AvgA": "2.81",
+              "BFEH": "2.48",
+              "BFED": "3.75",
+              "BFEA": "2.9",
+              "B365>2.5": "1.57",
+              "B365<2.5": "2.35",
+              "Max>2.5": "1.58",
+              "Max<2.5": "2.4",
+              "Avg>2.5": "1.55",
+              "Avg<2.5": "2.34",
+              "BFE>2.5": "1.66",
+              "BFE<2.5": "2.4",
+              "AHh": "0",
+              "B365AHH": "1.68",
+              "B365AHA": "2.15",
+              "MaxAHH": "1.7",
+              "MaxAHA": "2.15",
+              "AvgAHH": "1.67",
+              "AvgAHA": "2.1",
+              "BFEAHH": "1.85",
+              "BFEAHA": "2.14"
+            }
+          },
+          {
+            "position": 2,
+            "matchId": "2026-27-e2-15-wigan-barnsley",
+            "cells": {
+              "Div": "E2",
+              "Date": "14/11/2026",
+              "Time": "15:00",
+              "HomeTeam": "Wigan",
+              "AwayTeam": "Barnsley",
+              "Referee": "S Parkinson",
+              "B365H": "2.25",
+              "B365D": "3.5",
+              "B365A": "2.75",
+              "BFDH": "2.3",
+              "BFDD": "3.5",
+              "BFDA": "2.75",
+              "BVH": "2.38",
+              "BVD": "3.7",
+              "BVA": "2.7",
+              "BWH": "2.25",
+              "BWD": "3.7",
+              "BWA": "2.75",
+              "PPH": "2.3",
+              "PPD": "3.6",
+              "PPA": "2.75",
+              "SKBH": "2.3",
+              "SKBD": "3.5",
+              "SKBA": "2.7",
+              "MaxH": "2.38",
+              "MaxD": "3.75",
+              "MaxA": "2.9",
+              "AvgH": "2.31",
+              "AvgD": "3.6",
+              "AvgA": "2.75",
+              "BFEH": "2.48",
+              "BFED": "3.8",
+              "BFEA": "2.84",
+              "B365>2.5": "1.6",
+              "B365<2.5": "2.3",
+              "Max>2.5": "1.6",
+              "Max<2.5": "2.4",
+              "Avg>2.5": "1.55",
+              "Avg<2.5": "2.33",
+              "BFE>2.5": "1.62",
+              "BFE<2.5": "2.46",
+              "AHh": "0",
+              "B365AHH": "1.7",
+              "B365AHA": "2.1",
+              "MaxAHH": "1.73",
+              "MaxAHA": "2.1",
+              "AvgAHH": "1.71",
+              "AvgAHA": "2.04",
+              "BFEAHH": "1.84",
+              "BFEAHA": "2.12"
+            }
+          },
+          {
+            "position": 3,
+            "matchId": "2026-27-e2-15-afc-wimbledon-blackpool",
+            "cells": {
+              "Div": "E2",
+              "Date": "14/11/2026",
+              "Time": "15:00",
+              "HomeTeam": "AFC Wimbledon",
+              "AwayTeam": "Blackpool",
+              "Referee": "O Mackey",
+              "B365H": "2.5",
+              "B365D": "3.4",
+              "B365A": "2.5",
+              "BFDH": "2.63",
+              "BFDD": "3.3",
+              "BFDA": "2.5",
+              "BVH": "2.63",
+              "BVD": "3.5",
+              "BVA": "2.5",
+              "BWH": "2.65",
+              "BWD": "3.5",
+              "BWA": "2.45",
+              "PPH": "2.63",
+              "PPD": "3.4",
+              "PPA": "2.5",
+              "SKBH": "2.6",
+              "SKBD": "3.3",
+              "SKBA": "2.5",
+              "MaxH": "2.8",
+              "MaxD": "3.5",
+              "MaxA": "2.6",
+              "AvgH": "2.65",
+              "AvgD": "3.4",
+              "AvgA": "2.49",
+              "BFEH": "2.72",
+              "BFED": "3.55",
+              "BFEA": "2.76",
+              "B365>2.5": "1.8",
+              "B365<2.5": "2",
+              "Max>2.5": "1.8",
+              "Max<2.5": "2.02",
+              "Avg>2.5": "1.75",
+              "Avg<2.5": "1.98",
+              "BFE>2.5": "1.86",
+              "BFE<2.5": "2.04",
+              "AHh": "0",
+              "B365AHH": "1.93",
+              "B365AHA": "1.93",
+              "MaxAHH": "1.95",
+              "MaxAHA": "1.93",
+              "AvgAHH": "1.91",
+              "AvgAHA": "1.82",
+              "BFEAHH": "1.97",
+              "BFEAHA": "2"
+            }
+          },
+          {
+            "position": 4,
+            "matchId": "2026-27-e2-15-mk-dons-burton",
+            "cells": {
+              "Div": "E2",
+              "Date": "14/11/2026",
+              "Time": "15:00",
+              "HomeTeam": "Milton Keynes Dons",
+              "AwayTeam": "Burton",
+              "Referee": "E Duckworth",
+              "B365H": "1.61",
+              "B365D": "3.8",
+              "B365A": "4.75",
+              "BFDH": "1.67",
+              "BFDD": "3.75",
+              "BFDA": "4.5",
+              "BVH": "1.65",
+              "BVD": "4",
+              "BVA": "4.8",
+              "BWH": "1.66",
+              "BWD": "4",
+              "BWA": "4.5",
+              "PPH": "1.67",
+              "PPD": "4",
+              "PPA": "4.5",
+              "SKBH": "1.67",
+              "SKBD": "3.9",
+              "SKBA": "4.33",
+              "MaxH": "1.68",
+              "MaxD": "4.2",
+              "MaxA": "4.8",
+              "AvgH": "1.66",
+              "AvgD": "3.97",
+              "AvgA": "4.56",
+              "BFEH": "1.69",
+              "BFED": "4.2",
+              "BFEA": "5",
+              "B365>2.5": "1.65",
+              "B365<2.5": "2.2",
+              "Max>2.5": "1.67",
+              "Max<2.5": "2.25",
+              "Avg>2.5": "1.63",
+              "Avg<2.5": "2.18",
+              "BFE>2.5": "1.67",
+              "BFE<2.5": "2.28",
+              "AHh": "-0.75",
+              "B365AHH": "1.85",
+              "B365AHA": "2",
+              "MaxAHH": "1.85",
+              "MaxAHA": "2",
+              "AvgAHH": "1.81",
+              "AvgAHA": "1.92",
+              "BFEAHH": "1.86",
+              "BFEAHA": "2.07"
+            }
+          }
+        ]
+      },
+      "pool": {
+        "source": "https://www.veikkaus.fi/api/sport-popularity/v1/games/SPORT/draws/100580/popularity",
+        "capturedAt": "2026-11-14T07:52:30.077Z",
+        "reply": {
+          "exchange": 19731175,
+          "timestamp": 1794642750077,
+          "resultPopularities": [
+            {
+              "awdPercentage": 6156,
+              "eventId": 0,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 6030
+            },
+            {
+              "awdPercentage": 2230,
+              "eventId": 0,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2127
+            },
+            {
+              "awdPercentage": 1614,
+              "eventId": 0,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1843
+            },
+            {
+              "awdPercentage": 4610,
+              "eventId": 1,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 4419
+            },
+            {
+              "awdPercentage": 2555,
+              "eventId": 1,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2477
+            },
+            {
+              "awdPercentage": 2836,
+              "eventId": 1,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 3105
+            },
+            {
+              "awdPercentage": 4807,
+              "eventId": 2,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 4723
+            },
+            {
+              "awdPercentage": 2848,
+              "eventId": 2,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2521
+            },
+            {
+              "awdPercentage": 2345,
+              "eventId": 2,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 2756
+            },
+            {
+              "awdPercentage": 3637,
+              "eventId": 3,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 3572
+            },
+            {
+              "awdPercentage": 2894,
+              "eventId": 3,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2857
+            },
+            {
+              "awdPercentage": 3468,
+              "eventId": 3,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 3571
+            },
+            {
+              "awdPercentage": 6658,
+              "eventId": 4,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 6609
+            },
+            {
+              "awdPercentage": 1924,
+              "eventId": 4,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 1880
+            },
+            {
+              "awdPercentage": 1418,
+              "eventId": 4,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1511
+            },
+            {
+              "awdPercentage": 3132,
+              "eventId": 5,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 2956
+            },
+            {
+              "awdPercentage": 2506,
+              "eventId": 5,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2466
+            },
+            {
+              "awdPercentage": 4362,
+              "eventId": 5,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 4577
+            },
+            {
+              "awdPercentage": 5576,
+              "eventId": 6,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 5199
+            },
+            {
+              "awdPercentage": 2417,
+              "eventId": 6,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2504
+            },
+            {
+              "awdPercentage": 2007,
+              "eventId": 6,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 2297
+            },
+            {
+              "eventId": 7,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 7097
+            },
+            {
+              "eventId": 7,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 1729
+            },
+            {
+              "eventId": 7,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 1173
+            },
+            {
+              "eventId": 8,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 4173
+            },
+            {
+              "eventId": 8,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2837
+            },
+            {
+              "eventId": 8,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 2990
+            },
+            {
+              "eventId": 9,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 4296
+            },
+            {
+              "eventId": 9,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2582
+            },
+            {
+              "eventId": 9,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 3123
+            },
+            {
+              "eventId": 10,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 3488
+            },
+            {
+              "eventId": 10,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2519
+            },
+            {
+              "eventId": 10,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 3993
+            },
+            {
+              "eventId": 11,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 2195
+            },
+            {
+              "eventId": 11,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2108
+            },
+            {
+              "eventId": 11,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 5697
+            },
+            {
+              "eventId": 12,
+              "outcomes": [
+                "1"
+              ],
+              "percentage": 5455
+            },
+            {
+              "eventId": 12,
+              "outcomes": [
+                "X"
+              ],
+              "percentage": 2470
+            },
+            {
+              "eventId": 12,
+              "outcomes": [
+                "2"
+              ],
+              "percentage": 2076
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

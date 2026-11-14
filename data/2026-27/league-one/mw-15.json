@@ -14,8 +14,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 35.72,
+          "2": 35.71,
+          "X": 28.57
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 36,
+          "2": 37,
+          "X": 27
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-11-14T07:52:33.405Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-15-bromley-notts-county",
@@ -69,8 +90,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 66.09,
+          "2": 15.11,
+          "X": 18.8
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 58,
+          "2": 19,
+          "X": 23
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-14T07:52:33.405Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-15-peterborough-oxford",
@@ -91,8 +133,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 44.19,
+          "2": 31.05,
+          "X": 24.77
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 41,
+          "2": 33,
+          "X": 26
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-14T07:52:33.405Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-15-stevenage-mansfield",
@@ -113,8 +176,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 60.3,
+          "2": 18.43,
+          "X": 21.27
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 52,
+          "2": 24,
+          "X": 24
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-14T07:52:33.405Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-15-wigan-barnsley",
@@ -124,8 +208,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 47.23,
+          "2": 27.56,
+          "X": 25.21
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 41,
+          "2": 34,
+          "X": 25
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-14T07:52:33.405Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks steered by Veikkaus pool popularity"
+      }
     },
     {
       "id": "2026-27-e2-15-wycombe-huddersfield",
