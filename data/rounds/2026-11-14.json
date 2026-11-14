@@ -1,0 +1,27 @@
+{
+  "id": "2026-11-14",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100580",
+  "system": {
+    "type": "8+0",
+    "singles": 5,
+    "doubles": 8,
+    "triples": 0,
+    "rows": 256
+  },
+  "matchIds": [
+    "2026-27-e2-15-stockport-reading",
+    "2026-27-e2-15-sheffield-wednesday-plymouth",
+    "2026-27-e2-15-wigan-barnsley",
+    "2026-27-e2-15-afc-wimbledon-blackpool",
+    "2026-27-e2-15-mk-dons-burton",
+    "2026-27-e3-15-swindon-grimsby",
+    "2026-27-e3-15-crewe-newport",
+    "2026-27-e3-15-salford-northampton",
+    "2026-27-e3-15-shrewsbury-oldham",
+    "2026-27-e3-15-colchester-gillingham",
+    "2026-27-e3-15-bristol-rovers-chesterfield",
+    "2026-27-e3-15-rochdale-york",
+    "2026-27-e3-15-port-vale-accrington"
+  ]
+}

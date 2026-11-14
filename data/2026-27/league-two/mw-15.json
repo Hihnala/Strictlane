@@ -1,0 +1,271 @@
+{
+  "season": "2026-27",
+  "league": "league-two",
+  "matchweek": 15,
+  "matchweekDerived": false,
+  "source": "League Two, coupon matches only, hand-entered (fixtures from the Veikkaus Lauantaivakio coupon, draw 100580)",
+  "importedAt": "2026-11-14T09:19:55.000Z",
+  "matches": [
+    {
+      "id": "2026-27-e3-15-swindon-grimsby",
+      "home": "swindon",
+      "away": "grimsby",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 29.56,
+          "2": 45.77,
+          "X": 24.66
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 28,
+          "2": 47,
+          "X": 25
+        },
+        "marks": [
+          "X",
+          "2"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    },
+    {
+      "id": "2026-27-e3-15-crewe-newport",
+      "home": "crewe",
+      "away": "newport",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 51.99,
+          "2": 22.97,
+          "X": 25.04
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 46,
+          "2": 27,
+          "X": 27
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    },
+    {
+      "id": "2026-27-e3-15-salford-northampton",
+      "home": "salford",
+      "away": "northampton",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 70.98,
+          "2": 11.73,
+          "X": 17.29
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 60,
+          "2": 16,
+          "X": 24
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    },
+    {
+      "id": "2026-27-e3-15-shrewsbury-oldham",
+      "home": "shrewsbury",
+      "away": "oldham",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 41.73,
+          "2": 29.9,
+          "X": 28.37
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 37,
+          "2": 35,
+          "X": 28
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    },
+    {
+      "id": "2026-27-e3-15-colchester-gillingham",
+      "home": "colchester",
+      "away": "gillingham",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 42.96,
+          "2": 31.23,
+          "X": 25.82
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 45,
+          "2": 28,
+          "X": 27
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    },
+    {
+      "id": "2026-27-e3-15-bristol-rovers-chesterfield",
+      "home": "bristol-rovers",
+      "away": "chesterfield",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 34.88,
+          "2": 39.93,
+          "X": 25.19
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 32,
+          "2": 41,
+          "X": 27
+        },
+        "marks": [
+          "X",
+          "2"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    },
+    {
+      "id": "2026-27-e3-15-rochdale-york",
+      "home": "rochdale",
+      "away": "york",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 21.95,
+          "2": 56.97,
+          "X": 21.08
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 22,
+          "2": 55,
+          "X": 23
+        },
+        "marks": [
+          "2"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    },
+    {
+      "id": "2026-27-e3-15-port-vale-accrington",
+      "home": "port-vale",
+      "away": "accrington",
+      "kickoff": "2026-11-14T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100580",
+        "probs": {
+          "1": 54.54,
+          "2": 20.76,
+          "X": 24.7
+        },
+        "capturedAt": "2026-11-14T07:52:30.077Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-14",
+        "probs": {
+          "1": 49,
+          "2": 24,
+          "X": 27
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-14T09:19:55.000Z",
+        "note": "probs from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand"
+      }
+    }
+  ]
+}
