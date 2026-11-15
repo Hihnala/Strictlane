@@ -1,0 +1,142 @@
+{
+  "season": "2026-27",
+  "league": "league-one",
+  "matchweek": 16,
+  "matchweekDerived": false,
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-15)",
+  "importedAt": "2026-11-15T07:15:47.634Z",
+  "matches": [
+    {
+      "id": "2026-27-e2-16-barnsley-sheffield-wednesday",
+      "home": "barnsley",
+      "away": "sheffield-wednesday",
+      "kickoff": "2026-11-20T20:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-blackpool-wigan",
+      "home": "blackpool",
+      "away": "wigan",
+      "kickoff": "2026-11-21T12:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-reading-bromley",
+      "home": "reading",
+      "away": "bromley",
+      "kickoff": "2026-11-21T12:30:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-bradford-doncaster",
+      "home": "bradford",
+      "away": "doncaster",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-burton-luton",
+      "home": "burton",
+      "away": "luton",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-cambridge-stockport",
+      "home": "cambridge",
+      "away": "stockport",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-huddersfield-leicester",
+      "home": "huddersfield",
+      "away": "leicester",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-leyton-orient-afc-wimbledon",
+      "home": "leyton-orient",
+      "away": "afc-wimbledon",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-mansfield-mk-dons",
+      "home": "mansfield",
+      "away": "mk-dons",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-notts-county-stevenage",
+      "home": "notts-county",
+      "away": "stevenage",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-oxford-wycombe",
+      "home": "oxford",
+      "away": "wycombe",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e2-16-plymouth-peterborough",
+      "home": "plymouth",
+      "away": "peterborough",
+      "kickoff": "2026-11-21T15:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
