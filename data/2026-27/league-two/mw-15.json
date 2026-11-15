@@ -3,7 +3,7 @@
   "league": "league-two",
   "matchweek": 15,
   "matchweekDerived": false,
-  "source": "League Two, coupon matches only, hand-entered (fixtures from the Veikkaus Lauantaivakio coupon, draw 100580)",
+  "source": "League Two, coupon matches only, hand-entered (fixtures from the Veikkaus Lauantaivakio coupon, draw 100580); results from footballwebpages.co.uk, entered by hand",
   "importedAt": "2026-11-14T09:19:55.000Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "swindon",
       "away": "grimsby",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -44,8 +51,15 @@
       "home": "crewe",
       "away": "newport",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 2
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -77,8 +91,15 @@
       "home": "salford",
       "away": "northampton",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -109,8 +130,15 @@
       "home": "shrewsbury",
       "away": "oldham",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -142,8 +170,15 @@
       "home": "colchester",
       "away": "gillingham",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -175,8 +210,15 @@
       "home": "bristol-rovers",
       "away": "chesterfield",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -208,8 +250,15 @@
       "home": "rochdale",
       "away": "york",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -240,8 +289,15 @@
       "home": "port-vale",
       "away": "accrington",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
