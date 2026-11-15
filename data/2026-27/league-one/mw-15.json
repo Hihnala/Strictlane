@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 15,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-07)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-15)",
   "importedAt": "2026-11-07T07:16:33.295Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "afc-wimbledon",
       "away": "blackpool",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -44,7 +51,7 @@
       "home": "bromley",
       "away": "notts-county",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
@@ -55,7 +62,7 @@
       "home": "doncaster",
       "away": "leyton-orient",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
@@ -66,7 +73,7 @@
       "home": "leicester",
       "away": "bradford",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
@@ -77,7 +84,7 @@
       "home": "luton",
       "away": "cambridge",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
@@ -88,8 +95,15 @@
       "home": "mk-dons",
       "away": "burton",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 6,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -120,7 +134,7 @@
       "home": "peterborough",
       "away": "oxford",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
@@ -131,8 +145,15 @@
       "home": "sheffield-wednesday",
       "away": "plymouth",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -164,7 +185,7 @@
       "home": "stevenage",
       "away": "mansfield",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
@@ -175,8 +196,15 @@
       "home": "stockport",
       "away": "reading",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 1
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -207,8 +235,15 @@
       "home": "wigan",
       "away": "barnsley",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": {
         "source": "veikkaus:sport-popularity",
@@ -240,7 +275,7 @@
       "home": "wycombe",
       "away": "huddersfield",
       "kickoff": "2026-11-14T15:00:00.000Z",
-      "status": "pending",
+      "status": "postponed",
       "score": null,
       "market": null,
       "pool": null,
