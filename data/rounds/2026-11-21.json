@@ -1,0 +1,27 @@
+{
+  "id": "2026-11-21",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100581",
+  "system": {
+    "type": "8+0",
+    "singles": 5,
+    "doubles": 8,
+    "triples": 0,
+    "rows": 256
+  },
+  "matchIds": [
+    "2026-27-e0-11-newcastle-arsenal",
+    "2026-27-e0-11-chelsea-leeds",
+    "2026-27-e0-11-bournemouth-nottingham-forest",
+    "2026-27-e0-11-aston-villa-sunderland",
+    "2026-27-e0-11-tottenham-ipswich",
+    "2026-27-e0-11-coventry-crystal-palace",
+    "2026-27-e1-16-stoke-birmingham",
+    "2026-27-e1-16-swansea-west-brom",
+    "2026-27-e1-16-wolves-charlton",
+    "2026-27-e1-16-middlesbrough-bristol-city",
+    "2026-27-e1-16-lincoln-wrexham",
+    "2026-27-e1-16-bolton-portsmouth",
+    "2026-27-e1-16-sheffield-united-watford"
+  ]
+}
