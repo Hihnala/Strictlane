@@ -1,0 +1,408 @@
+{
+  "runs": [
+    {
+      "fetchedAt": "2026-11-21T07:13:07.887Z",
+      "sources": [
+        "https://ballprediction.com/epl/results",
+        "https://ballprediction.com/epl/fixtures",
+        "https://ballprediction.com/efl/results",
+        "https://ballprediction.com/efl/fixtures",
+        "https://ballprediction.com/elo/results",
+        "https://ballprediction.com/elo/fixtures"
+      ],
+      "changes": [
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-nottingham-forest-chelsea",
+          "line": "MW12 Nottingham Forest v Chelsea: 2026-11-27T20:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-man-united-brentford",
+          "line": "MW12 Manchester United v Brentford: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-leeds-coventry",
+          "line": "MW12 Leeds United v Coventry City: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-ipswich-aston-villa",
+          "line": "MW12 Ipswich Town v Aston Villa: 2026-11-28T17:30:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-everton-liverpool",
+          "line": "MW12 Everton v Liverpool: 2026-11-29T12:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-fulham-bournemouth",
+          "line": "MW12 Fulham v AFC Bournemouth: 2026-11-29T14:05:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-brighton-newcastle",
+          "line": "MW12 Brighton & Hove Albion v Newcastle United: 2026-11-29T14:05:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-crystal-palace-hull",
+          "line": "MW12 Crystal Palace v Hull City: 2026-11-29T14:05:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-sunderland-tottenham",
+          "line": "MW12 Sunderland v Tottenham Hotspur: 2026-11-29T14:05:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "premier-league",
+          "file": "data/2026-27/premier-league/mw-12.json",
+          "id": "2026-27-e0-12-arsenal-man-city",
+          "line": "MW12 Arsenal v Manchester City: 2026-11-29T16:30:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-cardiff-preston",
+          "line": "MW17 Cardiff City v Preston North End: 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-bristol-city-wrexham",
+          "line": "MW17 Bristol City v Wrexham: 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-sheffield-united-southampton",
+          "line": "MW17 Sheffield United v Southampton: 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-middlesbrough-swansea",
+          "line": "MW17 Middlesbrough v Swansea City: 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-norwich-qpr",
+          "line": "MW17 Norwich City v Queens Park Rangers: 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-charlton-lincoln",
+          "line": "MW17 Charlton Athletic v Lincoln City: 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-portsmouth-west-ham",
+          "line": "MW17 Portsmouth v West Ham United: 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-wolves-derby",
+          "line": "MW17 Wolverhampton Wanderers v Derby County: 2026-11-24T20:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-watford-blackburn",
+          "line": "MW17 Watford v Blackburn Rovers: 2026-11-25T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-burnley-birmingham",
+          "line": "MW17 Burnley v Birmingham City: 2026-11-25T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-bolton-west-brom",
+          "line": "MW17 Bolton Wanderers v West Bromwich Albion: 2026-11-25T19:45:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-17.json",
+          "id": "2026-27-e1-17-stoke-millwall",
+          "line": "MW17 Stoke City v Millwall: 2026-11-25T20:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-southampton-middlesbrough",
+          "line": "MW18 Southampton v Middlesbrough: 2026-11-27T20:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-preston-norwich",
+          "line": "MW18 Preston North End v Norwich City: 2026-11-28T12:30:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-blackburn-charlton",
+          "line": "MW18 Blackburn Rovers v Charlton Athletic: 2026-11-28T12:30:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-lincoln-wolves",
+          "line": "MW18 Lincoln City v Wolverhampton Wanderers: 2026-11-28T12:30:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-west-ham-stoke",
+          "line": "MW18 West Ham United v Stoke City: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-birmingham-bolton",
+          "line": "MW18 Birmingham City v Bolton Wanderers: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-millwall-burnley",
+          "line": "MW18 Millwall v Burnley: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-west-brom-bristol-city",
+          "line": "MW18 West Bromwich Albion v Bristol City: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-derby-watford",
+          "line": "MW18 Derby County v Watford: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-qpr-sheffield-united",
+          "line": "MW18 Queens Park Rangers v Sheffield United: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-wrexham-portsmouth",
+          "line": "MW18 Wrexham v Portsmouth: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "championship",
+          "file": "data/2026-27/championship/mw-18.json",
+          "id": "2026-27-e1-18-swansea-cardiff",
+          "line": "MW18 Swansea City v Cardiff City: 2026-11-29T12:00:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-08.json",
+          "id": "2026-27-e2-08-notts-county-blackpool",
+          "line": "MW8 Notts County v Blackpool: rescheduled to 2027-01-12T19:45:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-09.json",
+          "id": "2026-27-e2-09-blackpool-leicester",
+          "line": "MW9 Blackpool v Leicester City: rescheduled to 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-09.json",
+          "id": "2026-27-e2-09-bromley-wycombe",
+          "line": "MW9 Bromley v Wycombe Wanderers: rescheduled to 2026-11-24T19:45:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-09.json",
+          "id": "2026-27-e2-09-barnsley-mk-dons",
+          "line": "MW9 Barnsley v Milton Keynes Dons: rescheduled to 2026-12-15T19:45:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-09.json",
+          "id": "2026-27-e2-09-peterborough-notts-county",
+          "line": "MW9 Peterborough United v Notts County: rescheduled to 2026-12-15T19:45:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-09.json",
+          "id": "2026-27-e2-09-afc-wimbledon-stevenage",
+          "line": "MW9 AFC Wimbledon v Stevenage: rescheduled to 2027-01-26T19:45:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-peterborough-oxford",
+          "line": "MW15 Peterborough United v Oxford United: rescheduled to 2026-12-05T15:00:00.000Z"
+        },
+        {
+          "kind": "rescheduled",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-15.json",
+          "id": "2026-27-e2-15-luton-cambridge",
+          "line": "MW15 Luton Town v Cambridge United: rescheduled to 2027-02-02T19:45:00.000Z"
+        },
+        {
+          "kind": "result",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-16.json",
+          "id": "2026-27-e2-16-barnsley-sheffield-wednesday",
+          "line": "MW16 Barnsley 1–2 Sheffield Wednesday (HT 1–2)"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-doncaster-huddersfield",
+          "line": "MW17 Doncaster Rovers v Huddersfield Town: 2026-11-26T20:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-mk-dons-notts-county",
+          "line": "MW17 Milton Keynes Dons v Notts County: 2026-11-28T12:30:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-peterborough-cambridge",
+          "line": "MW17 Peterborough United v Cambridge United: 2026-11-28T12:30:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-leicester-mansfield",
+          "line": "MW17 Leicester City v Mansfield Town: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-wigan-plymouth",
+          "line": "MW17 Wigan Athletic v Plymouth Argyle: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-sheffield-wednesday-reading",
+          "line": "MW17 Sheffield Wednesday v Reading: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-afc-wimbledon-barnsley",
+          "line": "MW17 AFC Wimbledon v Barnsley: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-wycombe-bradford",
+          "line": "MW17 Wycombe Wanderers v Bradford City: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-luton-oxford",
+          "line": "MW17 Luton Town v Oxford United: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-stevenage-blackpool",
+          "line": "MW17 Stevenage v Blackpool: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-bromley-burton",
+          "line": "MW17 Bromley v Burton Albion: 2026-11-28T15:00:00.000Z"
+        },
+        {
+          "kind": "added",
+          "league": "league-one",
+          "file": "data/2026-27/league-one/mw-17.json",
+          "id": "2026-27-e2-17-stockport-leyton-orient",
+          "line": "MW17 Stockport County v Leyton Orient: 2026-11-28T15:00:00.000Z"
+        }
+      ],
+      "halfTimesAdded": {
+        "premier-league": 0,
+        "championship": 0,
+        "league-one": 0
+      },
+      "needsReview": []
+    }
+  ]
+}

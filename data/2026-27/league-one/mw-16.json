@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 16,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-15)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-21)",
   "importedAt": "2026-11-15T07:15:47.634Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "barnsley",
       "away": "sheffield-wednesday",
       "kickoff": "2026-11-20T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null

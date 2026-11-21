@@ -1,0 +1,142 @@
+{
+  "season": "2026-27",
+  "league": "championship",
+  "matchweek": 17,
+  "matchweekDerived": false,
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-21)",
+  "importedAt": "2026-11-21T07:13:07.887Z",
+  "matches": [
+    {
+      "id": "2026-27-e1-17-bristol-city-wrexham",
+      "home": "bristol-city",
+      "away": "wrexham",
+      "kickoff": "2026-11-24T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-cardiff-preston",
+      "home": "cardiff",
+      "away": "preston",
+      "kickoff": "2026-11-24T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-charlton-lincoln",
+      "home": "charlton",
+      "away": "lincoln",
+      "kickoff": "2026-11-24T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-middlesbrough-swansea",
+      "home": "middlesbrough",
+      "away": "swansea",
+      "kickoff": "2026-11-24T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-norwich-qpr",
+      "home": "norwich",
+      "away": "qpr",
+      "kickoff": "2026-11-24T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-portsmouth-west-ham",
+      "home": "portsmouth",
+      "away": "west-ham",
+      "kickoff": "2026-11-24T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-sheffield-united-southampton",
+      "home": "sheffield-united",
+      "away": "southampton",
+      "kickoff": "2026-11-24T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-wolves-derby",
+      "home": "wolves",
+      "away": "derby",
+      "kickoff": "2026-11-24T20:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-bolton-west-brom",
+      "home": "bolton",
+      "away": "west-brom",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-burnley-birmingham",
+      "home": "burnley",
+      "away": "birmingham",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-watford-blackburn",
+      "home": "watford",
+      "away": "blackburn",
+      "kickoff": "2026-11-25T19:45:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    },
+    {
+      "id": "2026-27-e1-17-stoke-millwall",
+      "home": "stoke",
+      "away": "millwall",
+      "kickoff": "2026-11-25T20:00:00.000Z",
+      "status": "pending",
+      "score": null,
+      "market": null,
+      "pool": null,
+      "forecast": null
+    }
+  ]
+}
