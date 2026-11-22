@@ -155,7 +155,8 @@ const sameProbs = (table: Probs, file: Probs) => SIGNS.every((s) => table[s] ===
 
 /** What an earlier hand edit appended, so the provenance note never stacks. */
 const HAND_RE = /;\s*(?:marks|probs|probs and marks) set by hand (?:in|from) the PR(?: #\d+)? review.*$/;
-const MARKS_FROM_POOL = /;\s*marks steered by Veikkaus pool popularity$/;
+/** The rule's own provenance for the marks, current and older wordings; dropped once marks are set by hand. */
+const MARKS_FROM_POOL = /;\s*marks (?:by the 8\+0 coverage rule|steered by Veikkaus pool popularity|by market alone, no pool popularity)$/;
 
 /* ------------------------------------------------------------------ main --- */
 

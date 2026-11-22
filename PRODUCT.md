@@ -136,8 +136,9 @@ updating three redirects in `next.config.mjs` and flipping `status` in
   writes a suggested forecast onto the coupon PR: probabilities from
   margin-stripped bookmaker odds (football-data.co.uk's Friday prices from
   Betfair Exchange, Bet365, Paddy Power, Sky Bet and bwin; power method,
-  averaged) and marks from the 8+0 rule, steered by pool popularity. Pool
-  popularity steers only the marks, never the probabilities. The final
+  averaged) and marks from the 8+0 coverage rule: singles on the five safest
+  favourites, doubles on the favourite and the second most likely sign. Pool
+  popularity is recorded for the reviews but steers nothing. The final
   probabilities and marks are reviewed, adjusted where needed, and merged
   by hand before kickoff.
 - Veikkaus's licence terms need a read before strictlane.com goes live —

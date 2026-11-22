@@ -17,8 +17,8 @@
  *          weekend's prices collected on Friday afternoon. Each of BOOKS is
  *          stripped of its margin by the power method, the books are averaged
  *          equally, and the result is rounded to whole percentages.
- *   marks  the 8+0 house rule, steered by Veikkaus pool popularity — see
- *          pickMarks() in scripts/lib/odds.ts.
+ *   marks  the 8+0 house rule, covering as many results as possible — see
+ *          pickMarks() in scripts/lib/odds.ts. The pool doesn't steer them.
  *   pool   that popularity, re-read at run time: by Saturday the copy in a
  *          draft fetched midweek is days old.
  *
@@ -342,8 +342,8 @@ function report(o: {
   out.push(
     "",
     "Probs are the books' margin-free average, rounded; a kept row shows the forecast already on file. " +
-      "Value is market ÷ pool: above 1 the crowd underplays the sign. Doubles pair the favourite with the " +
-      "better-value other sign, or with the draw when home and away are within 10 points; singles go to the safest favourites the pool doesn't overplay.",
+      "Value is market ÷ pool: above 1 the crowd underplays the sign. It is shown for reference and doesn't steer the marks. " +
+      "Doubles pair the favourite with the second most likely sign; singles go to the five safest favourites.",
     ""
   );
 
@@ -559,7 +559,7 @@ async function main() {
       capturedAt,
       note:
         `pre-filled from football-data.co.uk odds (${line.books.join(", ")}; power method, averaged); ` +
-        (line.pool ? "marks steered by Veikkaus pool popularity" : "marks by market alone, no pool popularity"),
+        "marks by the 8+0 coverage rule",
     };
     week.changed = true;
   }

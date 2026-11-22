@@ -76,62 +76,51 @@ export interface MarkInput {
 export interface MarkPick {
   marks: Sign[];
   favourite: Sign;
-  /** market ÷ pool per sign; 1 throughout when the pool is unknown */
+  /** market ÷ pool per sign, for the review table only; 1 throughout when the pool is unknown */
   value: Triple;
 }
 
 /**
- * The marks for an 8+0 coupon, steered by pool popularity.
+ * The marks for an 8+0 coupon, chosen to cover as many results as possible.
  *
- * value = market probability ÷ pool share. Above 1 the crowd underplays a
- * sign, so a correct row through it is shared with fewer winners.
+ *   doubles  the favourite plus the second most likely sign
+ *   singles  the `singles` safest favourites, safest meaning the favourite
+ *            keeps the largest share of what the two likeliest signs cover
  *
- *   doubles  the market favourite plus whichever other sign has the better value —
- *            except in an open match, where home and away are within DRAW_GAP
- *            of each other: there the second mark is the draw
- *   singles  the `singles` safest favourites — safest meaning the favourite
- *            keeps the largest share of what the two likeliest signs cover —
- *            chosen only among favourites the pool doesn't overplay (value ≥ 1).
- *            If too few qualify, the least-overplayed favourites fill the gap.
+ * Ties go to the earlier coupon position. Given the probabilities, this is the
+ * 8+0 split that maximises expected hits: a single gives up only its second
+ * sign, so the singles belong where that sign is least likely.
  *
- * The pool steers marks only, never probabilities: crowd behaviour folded into
- * `forecast.probs` would corrupt every RPS figure on the site.
+ * The pool doesn't steer anything. Until 22 November 2026 it did: singles went
+ * only to favourites the pool didn't overplay, the doubles' second mark went
+ * to the better-value sign, and open matches (home and away within 10 points)
+ * carried the draw. Over the twelve rounds to 21 November that rule cost about
+ * half a hit per round by the market's own numbers. It cut the chance of 13/13
+ * to under a third of this rule's, in exchange for a bigger share of a prize
+ * the coupon would rarely win. The draw rule lost on both counts: in the 46
+ * open matches the outsider won 17 times and the draw came 14 times. See the
+ * model review of 22 November 2026 in git history.
+ *
+ * `value` is still computed so the review table can show where the crowd
+ * over- and underplays a sign. It never touches marks or probabilities.
  */
-/**
- * Home and away this close (as fractions) make an open match, and an open match's
- * double carries the draw. Value steering alone almost never picked it: the pool
- * prices the draw about fairly but underplays the outsider, so the double took
- * the outsider and the draw went uncovered exactly where it is likeliest. Of 29
- * draws on the coupons up to 31 October, 11 came within 10 points; the rule
- * would have covered 11 rather than 6.
- */
-export const DRAW_GAP = 0.1;
-
 export function pickMarks(matches: MarkInput[], singles: number): MarkPick[] {
   const rows = matches.map(({ p, q }) => {
     const value = (q ? p.map((x, i) => x / Math.max(q[i], 1e-4)) : [1, 1, 1]) as Triple;
-    const byProb = [0, 1, 2].sort((a, b) => p[b] - p[a] || value[b] - value[a] || a - b);
-    const fav = byProb[0];
-    // The epsilon keeps a gap of exactly 10 points open despite float error (0.45 − 0.35 > 0.1).
-    const open = fav !== 1 && Math.abs(p[0] - p[2]) <= DRAW_GAP + 1e-9;
-    const partner = open
-      ? 1
-      : [0, 1, 2].filter((i) => i !== fav).sort((a, b) => value[b] - value[a] || p[b] - p[a] || a - b)[0];
-    return { fav, partner, value, safety: p[fav] / (p[fav] + p[byProb[1]]) };
+    const [fav, second] = [0, 1, 2].sort((a, b) => p[b] - p[a] || a - b);
+    return { fav, second, value, safety: p[fav] / (p[fav] + p[second]) };
   });
 
-  const idx = rows.map((_, i) => i);
-  const qualify = idx
-    .filter((i) => rows[i].value[rows[i].fav] >= 1)
-    .sort((a, b) => rows[b].safety - rows[a].safety || a - b);
-  const overplayed = idx
-    .filter((i) => rows[i].value[rows[i].fav] < 1)
-    .sort((a, b) => rows[b].value[rows[b].fav] - rows[a].value[rows[a].fav] || a - b);
-  const single = new Set([...qualify, ...overplayed].slice(0, Math.max(0, singles)));
+  const single = new Set(
+    rows
+      .map((_, i) => i)
+      .sort((a, b) => rows[b].safety - rows[a].safety || a - b)
+      .slice(0, Math.max(0, singles))
+  );
 
   return rows.map((r, i) => ({
     favourite: SIGNS[r.fav],
     value: r.value,
-    marks: single.has(i) ? [SIGNS[r.fav]] : [r.fav, r.partner].sort((a, b) => a - b).map((k) => SIGNS[k]),
+    marks: single.has(i) ? [SIGNS[r.fav]] : [r.fav, r.second].sort((a, b) => a - b).map((k) => SIGNS[k]),
   }));
 }

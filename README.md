@@ -106,8 +106,8 @@ drift out of sync with the data that produced it.
    coupon itself if step 1 was skipped). `scripts/fetch-odds.ts` pre-fills a
    forecast for each coupon match on that PR branch: `probs` from football-data.co.uk's Friday odds (Betfair
    Exchange, Bet365, Paddy Power, Sky Bet and bwin, each margin-stripped by the
-   power method, then averaged), `marks` by the 8+0 rule steered by Veikkaus
-   pool popularity, and that popularity as `pool`. It then runs
+   power method, then averaged), `marks` by the 8+0 coverage rule, and Veikkaus
+   pool popularity as `pool` (recorded, not used for the marks). It then runs
    `promote-round.ts`, which joins the draft to the real match records and
    derives the round's system block from the marks, and comments a review
    table on the PR.
