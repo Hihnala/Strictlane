@@ -1,0 +1,183 @@
+{
+  "id": "2026-11-28",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100582",
+  "veikkaus": {
+    "drawId": "100582",
+    "listIndex": "1",
+    "closeTime": "2026-11-28T14:58:00.000Z",
+    "capturedAt": "2026-11-24T06:59:55.000Z"
+  },
+  "fixtures": [
+    {
+      "eventId": 0,
+      "eventRef": "104918636",
+      "homeRaw": "Manchester U",
+      "awayRaw": "Brentford",
+      "home": "man-united",
+      "away": "brentford",
+      "poolPopularity": {
+        "1": 49.64,
+        "2": 24.29,
+        "X": 26.07
+      }
+    },
+    {
+      "eventId": 1,
+      "eventRef": "104918641",
+      "homeRaw": "Leeds U",
+      "awayRaw": "Coventry C",
+      "home": "leeds",
+      "away": "coventry",
+      "poolPopularity": {
+        "1": 73.52,
+        "2": 9.62,
+        "X": 16.86
+      }
+    },
+    {
+      "eventId": 2,
+      "eventRef": "104918647",
+      "homeRaw": "Ipswich T",
+      "awayRaw": "Aston Villa",
+      "home": "ipswich",
+      "away": "aston-villa",
+      "poolPopularity": {
+        "1": 27.17,
+        "2": 47.35,
+        "X": 25.48
+      }
+    },
+    {
+      "eventId": 3,
+      "eventRef": "104942756",
+      "homeRaw": "Birmingham",
+      "awayRaw": "Bolton",
+      "home": "birmingham",
+      "away": "bolton",
+      "poolPopularity": {
+        "1": 76.41,
+        "2": 11.6,
+        "X": 11.98
+      }
+    },
+    {
+      "eventId": 4,
+      "eventRef": "104942745",
+      "homeRaw": "West Ham",
+      "awayRaw": "Stoke",
+      "home": "west-ham",
+      "away": "stoke",
+      "poolPopularity": {
+        "1": 39.25,
+        "2": 35.12,
+        "X": 25.64
+      }
+    },
+    {
+      "eventId": 5,
+      "eventRef": "104942750",
+      "homeRaw": "West Bromwich",
+      "awayRaw": "Bristol C",
+      "home": "west-brom",
+      "away": "bristol-city",
+      "poolPopularity": {
+        "1": 72.65,
+        "2": 13.33,
+        "X": 14.02
+      }
+    },
+    {
+      "eventId": 6,
+      "eventRef": "104942739",
+      "homeRaw": "Millwall",
+      "awayRaw": "Burnley",
+      "home": "millwall",
+      "away": "burnley",
+      "poolPopularity": {
+        "1": 39.85,
+        "2": 26.47,
+        "X": 33.68
+      }
+    },
+    {
+      "eventId": 7,
+      "eventRef": "104942740",
+      "homeRaw": "Wrexham",
+      "awayRaw": "Portsmouth",
+      "home": "wrexham",
+      "away": "portsmouth",
+      "poolPopularity": {
+        "1": 49.06,
+        "2": 22.74,
+        "X": 28.19
+      }
+    },
+    {
+      "eventId": 8,
+      "eventRef": "104942746",
+      "homeRaw": "Derby",
+      "awayRaw": "Watford",
+      "home": "derby",
+      "away": "watford",
+      "poolPopularity": {
+        "1": 43.86,
+        "2": 29.02,
+        "X": 27.12
+      }
+    },
+    {
+      "eventId": 9,
+      "eventRef": "104942760",
+      "homeRaw": "QPR",
+      "awayRaw": "Sheffield U",
+      "home": "qpr",
+      "away": "sheffield-united",
+      "poolPopularity": {
+        "1": 40.53,
+        "2": 28.83,
+        "X": 30.64
+      }
+    },
+    {
+      "eventId": 10,
+      "eventRef": "104943256",
+      "homeRaw": "Luton",
+      "awayRaw": "Oxford U",
+      "home": "luton",
+      "away": "oxford",
+      "poolPopularity": {
+        "1": 49.43,
+        "2": 26.84,
+        "X": 23.73
+      }
+    },
+    {
+      "eventId": 11,
+      "eventRef": "104943259",
+      "homeRaw": "Leicester",
+      "awayRaw": "Mansfield",
+      "home": "leicester",
+      "away": "mansfield",
+      "poolPopularity": {
+        "1": 65.85,
+        "2": 15.94,
+        "X": 18.22
+      }
+    },
+    {
+      "eventId": 12,
+      "eventRef": "104943262",
+      "homeRaw": "Sheffield W",
+      "awayRaw": "Reading FC",
+      "home": "sheffield-wednesday",
+      "away": "reading",
+      "poolPopularity": {
+        "1": 58.47,
+        "2": 18.64,
+        "X": 22.89
+      }
+    }
+  ],
+  "matchIds": []
+}
