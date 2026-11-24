@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 11,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-22)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-24)",
   "importedAt": "2026-11-15T07:15:47.634Z",
   "matches": [
     {
@@ -268,8 +268,15 @@
       "home": "hull",
       "away": "brighton",
       "kickoff": "2026-11-22T14:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -279,8 +286,15 @@
       "home": "liverpool",
       "away": "man-united",
       "kickoff": "2026-11-22T16:30:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -290,8 +304,15 @@
       "home": "brentford",
       "away": "everton",
       "kickoff": "2026-11-23T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 4,
+        "away": 0
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null

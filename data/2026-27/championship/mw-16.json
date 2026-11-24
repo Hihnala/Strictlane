@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 16,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-22)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-24)",
   "importedAt": "2026-11-15T07:15:47.634Z",
   "matches": [
     {
@@ -359,8 +359,15 @@
       "home": "burnley",
       "away": "blackburn",
       "kickoff": "2026-11-22T12:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
