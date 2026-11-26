@@ -3,7 +3,7 @@
   "league": "championship",
   "matchweek": 17,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-25)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-26)",
   "importedAt": "2026-11-21T07:13:07.887Z",
   "matches": [
     {
@@ -155,8 +155,15 @@
       "home": "bolton",
       "away": "west-brom",
       "kickoff": "2026-11-25T19:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -166,8 +173,15 @@
       "home": "burnley",
       "away": "birmingham",
       "kickoff": "2026-11-25T19:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 1
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -177,8 +191,15 @@
       "home": "watford",
       "away": "blackburn",
       "kickoff": "2026-11-25T19:45:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 0,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
@@ -188,8 +209,15 @@
       "home": "stoke",
       "away": "millwall",
       "kickoff": "2026-11-25T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "halfTime": {
+        "home": 2,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null
