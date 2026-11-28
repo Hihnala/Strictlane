@@ -3,7 +3,7 @@
   "league": "premier-league",
   "matchweek": 12,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-21)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-28)",
   "importedAt": "2026-11-21T07:13:07.887Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "nottingham-forest",
       "away": "chelsea",
       "kickoff": "2026-11-27T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 0
+      },
       "market": null,
       "pool": null,
       "forecast": null

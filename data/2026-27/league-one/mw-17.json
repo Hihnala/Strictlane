@@ -3,7 +3,7 @@
   "league": "league-one",
   "matchweek": 17,
   "matchweekDerived": false,
-  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-21)",
+  "source": "results, half-time scores, kickoff times and fixtures synced from ballprediction.com (fetched 2026-11-28)",
   "importedAt": "2026-11-21T07:13:07.887Z",
   "matches": [
     {
@@ -11,8 +11,15 @@
       "home": "doncaster",
       "away": "huddersfield",
       "kickoff": "2026-11-26T20:00:00.000Z",
-      "status": "pending",
-      "score": null,
+      "status": "played",
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "halfTime": {
+        "home": 1,
+        "away": 2
+      },
       "market": null,
       "pool": null,
       "forecast": null
