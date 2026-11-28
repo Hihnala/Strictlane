@@ -239,10 +239,11 @@
           "X": 22
         },
         "marks": [
-          "1"
+          "1",
+          "2"
         ],
-        "capturedAt": "2026-11-28T07:27:44.491Z",
-        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+        "capturedAt": "2026-11-28T07:41:32.000Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks set by hand in the PR review"
       }
     },
     {
