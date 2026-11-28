@@ -25,8 +25,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 72.15,
+          "2": 9.69,
+          "X": 18.16
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 66,
+          "2": 14,
+          "X": 20
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e0-12-man-united-brentford",
@@ -36,8 +57,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 43.1,
+          "2": 30.65,
+          "X": 26.25
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 46,
+          "2": 29,
+          "X": 25
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e0-12-ipswich-aston-villa",
@@ -47,8 +90,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 22.5,
+          "2": 49.99,
+          "X": 27.51
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 26,
+          "2": 49,
+          "X": 25
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e0-12-everton-liverpool",

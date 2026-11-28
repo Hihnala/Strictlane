@@ -69,8 +69,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 69.27,
+          "2": 13.09,
+          "X": 17.64
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 64,
+          "2": 16,
+          "X": 20
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e2-17-luton-oxford",
@@ -80,8 +101,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 53.82,
+          "2": 21.43,
+          "X": 24.76
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 55,
+          "2": 22,
+          "X": 23
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e2-17-sheffield-wednesday-reading",
@@ -91,8 +134,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 50.13,
+          "2": 24.18,
+          "X": 25.68
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 42,
+          "2": 33,
+          "X": 25
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e2-17-stevenage-blackpool",

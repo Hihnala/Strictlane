@@ -58,8 +58,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 74.37,
+          "2": 10.41,
+          "X": 15.22
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 64,
+          "2": 15,
+          "X": 21
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e1-18-derby-watford",
@@ -69,8 +90,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 40,
+          "2": 31.23,
+          "X": 28.77
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 43,
+          "2": 29,
+          "X": 28
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e1-18-millwall-burnley",
@@ -80,8 +123,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 46.01,
+          "2": 25.89,
+          "X": 28.11
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 45,
+          "2": 29,
+          "X": 26
+        },
+        "marks": [
+          "1",
+          "2"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e1-18-qpr-sheffield-united",
@@ -91,8 +156,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 45.83,
+          "2": 25.84,
+          "X": 28.32
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 48,
+          "2": 26,
+          "X": 26
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e1-18-west-brom-bristol-city",
@@ -102,8 +189,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 66.68,
+          "2": 13.77,
+          "X": 19.55
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 58,
+          "2": 18,
+          "X": 24
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e1-18-west-ham-stoke",
@@ -113,8 +221,29 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 47.88,
+          "2": 27.85,
+          "X": 24.27
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 58,
+          "2": 20,
+          "X": 22
+        },
+        "marks": [
+          "1"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e1-18-wrexham-portsmouth",
@@ -124,8 +253,30 @@
       "status": "pending",
       "score": null,
       "market": null,
-      "pool": null,
-      "forecast": null
+      "pool": {
+        "source": "veikkaus:sport-popularity",
+        "drawId": "100582",
+        "probs": {
+          "1": 45.93,
+          "2": 23.81,
+          "X": 30.26
+        },
+        "capturedAt": "2026-11-28T07:27:45.868Z"
+      },
+      "forecast": {
+        "roundId": "2026-11-28",
+        "probs": {
+          "1": 45,
+          "2": 26,
+          "X": 29
+        },
+        "marks": [
+          "1",
+          "X"
+        ],
+        "capturedAt": "2026-11-28T07:27:44.491Z",
+        "note": "pre-filled from football-data.co.uk odds (BFE, B365, PP, SKB, BW; power method, averaged); marks by the 8+0 coverage rule"
+      }
     },
     {
       "id": "2026-27-e1-18-swansea-cardiff",

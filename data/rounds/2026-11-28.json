@@ -1,0 +1,27 @@
+{
+  "id": "2026-11-28",
+  "name": "Lauantaivakio",
+  "sourceUrl": "https://www.veikkaus.fi/fi/vedonlyonti/vakio?kohde=a_100582",
+  "system": {
+    "type": "8+0",
+    "singles": 5,
+    "doubles": 8,
+    "triples": 0,
+    "rows": 256
+  },
+  "matchIds": [
+    "2026-27-e0-12-man-united-brentford",
+    "2026-27-e0-12-leeds-coventry",
+    "2026-27-e0-12-ipswich-aston-villa",
+    "2026-27-e1-18-birmingham-bolton",
+    "2026-27-e1-18-west-ham-stoke",
+    "2026-27-e1-18-west-brom-bristol-city",
+    "2026-27-e1-18-millwall-burnley",
+    "2026-27-e1-18-wrexham-portsmouth",
+    "2026-27-e1-18-derby-watford",
+    "2026-27-e1-18-qpr-sheffield-united",
+    "2026-27-e2-17-luton-oxford",
+    "2026-27-e2-17-leicester-mansfield",
+    "2026-27-e2-17-sheffield-wednesday-reading"
+  ]
+}
